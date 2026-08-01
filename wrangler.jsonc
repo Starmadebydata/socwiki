@@ -1,0 +1,37 @@
+/**
+ * Cloudflare Workers config for SoC Wiki (socwiki.app)
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "socwiki",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-08-01",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": {
+    "binding": "ASSETS",
+    "directory": ".open-next/assets"
+  },
+  "images": {
+    "binding": "IMAGES"
+  },
+  "services": [
+    {
+      "binding": "WORKER_SELF_REFERENCE",
+      "service": "socwiki"
+    }
+  ],
+  // Custom domain — attach after first deploy, or via CF Dashboard:
+  // Workers → socwiki → Settings → Domains & Routes → Add socwiki.app
+  "routes": [
+    { "pattern": "socwiki.app/*", "zone_name": "socwiki.app" },
+    { "pattern": "www.socwiki.app/*", "zone_name": "socwiki.app" }
+  ],
+  // Optional workers.dev URL (enable in Dashboard if 404):
+  // Workers → socwiki → Settings → Domains → workers.dev
+  "workers_dev": true,
+  "observability": {
+    "enabled": true
+  },
+  "upload_source_maps": true
+}

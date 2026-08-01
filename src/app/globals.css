@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0c0f14;
+  --foreground: #e8edf5;
+  --muted: #9aa8bc;
+  --card: #141a24;
+  --card-hover: #1a2332;
+  --border: #243044;
+  --accent: #c9a227;
+  --accent-soft: rgba(201, 162, 39, 0.15);
+  --link: #7eb6ff;
+  --tier-sss: #ff4d6d;
+  --tier-ss: #ff7a45;
+  --tier-sp: #ffc53d;
+  --tier-s: #73d13d;
+  --tier-a: #40a9ff;
+  --tier-b: #9254de;
+  --tier-c: #8c8c8c;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-card: var(--card);
+  --color-card-hover: var(--card-hover);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-link: var(--link);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.prose-muted {
+  color: var(--muted);
+}

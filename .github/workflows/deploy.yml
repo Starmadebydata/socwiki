@@ -1,0 +1,49 @@
+# Auto-deploy SoC Wiki to Cloudflare Workers on push to main.
+#
+# Required repository secrets (Settings → Secrets and variables → Actions):
+#   CLOUDFLARE_API_TOKEN  — Create at https://dash.cloudflare.com/profile/api-tokens
+#                           Template "Edit Cloudflare Workers" is enough
+#   CLOUDFLARE_ACCOUNT_ID — 9960510abfc7d4b64dd5847d2565462b
+#
+# Optional (Dashboard Git binding, same outcome without GH secrets):
+#   Workers & Pages → socwiki → Settings → Builds → Connect repository
+#   Build command: (leave empty or npm ci)
+#   Deploy command: npm run deploy
+#   Root directory: /
+#   Production branch: main
+
+name: Deploy to Cloudflare Workers
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build OpenNext bundle & deploy Worker
+        run: npm run deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
