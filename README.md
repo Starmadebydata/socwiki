@@ -2,7 +2,8 @@
 
 Sword of Convallaria community database (builds, tier lists, tools).
 
-- **Domain:** https://socwiki.app  
+- **Live:** https://socwiki.app · https://www.socwiki.app  
+- **GitHub:** https://github.com/Starmadebydata/socwiki  
 - **Stack:** Next.js 16 · Tailwind 4 · OpenNext · Cloudflare Workers  
 - **Product docs:** [docs/PRD_AND_SEO.md](./docs/PRD_AND_SEO.md)  
 - **Deploy:** [docs/DEPLOY_CLOUDFLARE.md](./docs/DEPLOY_CLOUDFLARE.md)
