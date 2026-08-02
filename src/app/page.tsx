@@ -10,13 +10,14 @@ import { hasCharacterImage } from "@/data/character-images";
 import { getAllGear } from "@/data/gear";
 import { SITE_DESCRIPTION, SITE_FULL_NAME } from "@/lib/site";
 
-/** Prefer units with client art so the portrait rail never shows empty placeholders. */
+/**
+ * Featured rail: top tier first, but only units that have a portrait/art.
+ * Falls back to any remaining imaged units so cards are never empty.
+ */
 function getFeaturedCharacters(all: ReturnType<typeof getAllCharacters>, limit = 12) {
   const sorted = sortByOverallTier(all);
   const withImg = sorted.filter((c) => hasCharacterImage(c.slug));
-  if (withImg.length >= limit) return withImg.slice(0, limit);
-  const rest = sorted.filter((c) => !hasCharacterImage(c.slug));
-  return [...withImg, ...rest].slice(0, limit);
+  return withImg.slice(0, limit);
 }
 
 const HUB_ICONS: Record<string, string> = {
@@ -184,10 +185,10 @@ export default function HomePage() {
           <div className="mb-5 flex flex-wrap items-end justify-between gap-4">
             <div>
               <h2 id="hot-heading" className="soc-section-title">
-                Featured characters
+                Hot characters
               </h2>
               <p className="mt-1.5 text-xs text-muted">
-                Client captures from device — portraits &amp; battle sprites
+                Meta picks with official-style portraits
               </p>
             </div>
             <Link
