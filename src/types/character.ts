@@ -73,7 +73,18 @@ export interface GearItem {
   kind: GearKind;
   rarity: Rarity | "Legendary" | "Epic" | "Rare";
   summary: string;
+  /** Short mechanical notes for the effect table */
   effect: string;
   bestFor: string[];
   lastUpdated: string;
+  /** Playstyle tags for filters & “good for” chips */
+  tags?: string[];
+  /** Roles that commonly equip this piece */
+  roles?: Role[];
+  /** Alternative gear slugs (same slot / similar job) */
+  alternatives?: string[];
+  /** Acquisition hint (gacha, craft, event…) */
+  howToGet?: string;
+  /** When to prefer this over alternatives */
+  whenToUse?: string;
 }

@@ -17,6 +17,12 @@ export const gearItems: GearItem[] = [
       "High crit synergy; strong when the wearer chains kills or Act Again turns.",
     bestFor: [],
     lastUpdated: "2026-08-02",
+    tags: ["Crit", "Assassin", "Act Again"],
+    roles: ["Seeker", "Breaker"],
+    alternatives: ["ceremonial-knife", "shadow-edge"],
+    howToGet: "Limited weapon banner / gacha pools featuring assassin signatures.",
+    whenToUse: "Default for multi-kill Seekers (Col, etc.) when you can fuel Act Again loops.",
+
   },
   {
     slug: "newborn-blade",
@@ -27,6 +33,12 @@ export const gearItems: GearItem[] = [
     effect: "Balanced ATK profile; safe default when signature weapons are missing.",
     bestFor: [],
     lastUpdated: "2026-08-02",
+    tags: ["Generalist", "Physical"],
+    roles: ["Seeker", "Breaker"],
+    alternatives: ["blade-of-strategem", "shadow-edge"],
+    howToGet: "Standard legendary weapon pool / exchange shops depending on patch.",
+    whenToUse: "Safe all-rounder until a signature dagger or tempo blade is available.",
+
   },
   {
     slug: "blade-of-strategem",
@@ -47,6 +59,12 @@ export const gearItems: GearItem[] = [
     effect: "Pairs with support + AoE hybrid kits (e.g. SP Inanna line).",
     bestFor: [],
     lastUpdated: "2026-08-02",
+    tags: ["Support", "Hybrid", "Light"],
+    roles: ["Watcher"],
+    alternatives: ["staff-of-iria", "arcane-scepter"],
+    howToGet: "Signature-adjacent pool for SP Inanna / light support lines.",
+    whenToUse: "When the wearer both heals/buffs and deals meaningful AoE.",
+
   },
   {
     slug: "staff-of-iria",
@@ -57,6 +75,12 @@ export const gearItems: GearItem[] = [
     effect: "Improves support uptime and NRG comfort on healer kits.",
     bestFor: [],
     lastUpdated: "2026-08-02",
+    tags: ["Healing", "Support", "Iria"],
+    roles: ["Watcher"],
+    alternatives: ["dawnlight", "life-fondness"],
+    howToGet: "Iria-themed banners and general support weapon pools.",
+    whenToUse: "Pure heal/buff Watchers (Inanna, Cocoa-style supports).",
+
   },
   {
     slug: "spear-of-iria",
@@ -77,6 +101,12 @@ export const gearItems: GearItem[] = [
     effect: "Amplifies sustained chip and anti-shield pressure.",
     bestFor: [],
     lastUpdated: "2026-08-02",
+    tags: ["DoT", "Magic"],
+    roles: ["Destroyer", "Watcher"],
+    alternatives: ["arcane-scepter"],
+    howToGet: "Caster weapon banners.",
+    whenToUse: "Infection / piercing DoT kits over pure burst mages.",
+
   },
   {
     slug: "icebreaker-bow",
@@ -97,6 +127,12 @@ export const gearItems: GearItem[] = [
     effect: "Boosts survivability and frontline control tools.",
     bestFor: [],
     lastUpdated: "2026-08-02",
+    tags: ["Tank", "Cover", "Control"],
+    roles: ["Defender"],
+    alternatives: ["tower-shield-spear", "heavy-cleaver"],
+    howToGet: "Defender weapon pool.",
+    whenToUse: "Cover tanks and knockback Defenders holding the front.",
+
   },
   {
     slug: "ceremonial-knife",
@@ -169,6 +205,12 @@ export const gearItems: GearItem[] = [
     effect: "Survivability while detached from the main blob.",
     bestFor: [],
     lastUpdated: "2026-08-02",
+    tags: ["Dodge", "Crit", "Roam"],
+    roles: ["Seeker"],
+    alternatives: ["focus-lens", "breath-concealing-ring"],
+    howToGet: "Assassin trinket banners / late-game exchange.",
+    whenToUse: "Carries who fight detached from the main blob.",
+
   },
   {
     slug: "life-fondness",
@@ -179,6 +221,12 @@ export const gearItems: GearItem[] = [
     effect: "Healing and sustain amplification.",
     bestFor: [],
     lastUpdated: "2026-08-02",
+    tags: ["Healing", "Sustain"],
+    roles: ["Watcher", "Defender"],
+    alternatives: ["great-company", "vitality-brooch"],
+    howToGet: "Support trinket pool; often a long-term craft/exchange target.",
+    whenToUse: "Default healer trinket before Great Company.",
+
   },
   {
     slug: "great-company",
@@ -189,6 +237,12 @@ export const gearItems: GearItem[] = [
     effect: "Teamwide value on Act Again / aura supports.",
     bestFor: [],
     lastUpdated: "2026-08-02",
+    tags: ["Support", "Aura", "Meta"],
+    roles: ["Watcher"],
+    alternatives: ["life-fondness", "nrg-battery-charm"],
+    howToGet: "High-end support trinket banner / limited shops.",
+    whenToUse: "Top meta enablers (SP Inanna, Taair-class supports) once farmed.",
+
   },
   {
     slug: "cage-mask",
@@ -291,6 +345,12 @@ export const gearItems: GearItem[] = [
     effect: "Crit / execute-style combat bonuses.",
     bestFor: [],
     lastUpdated: "2026-08-02",
+    tags: ["Crit", "Execute"],
+    roles: ["Seeker", "Breaker"],
+    alternatives: ["death", "strength"],
+    howToGet: "Tarot gacha / whisper summons.",
+    whenToUse: "Assassins and finishers who already stack crit.",
+
   },
   {
     slug: "the-empress",
@@ -301,6 +361,12 @@ export const gearItems: GearItem[] = [
     effect: "Amplifies ally care and utility turns.",
     bestFor: [],
     lastUpdated: "2026-08-02",
+    tags: ["Support", "Healing"],
+    roles: ["Watcher"],
+    alternatives: ["the-sun", "the-star"],
+    howToGet: "Tarot gacha.",
+    whenToUse: "Classic pure supports prioritizing heal/buff uptime.",
+
   },
   {
     slug: "the-star",
@@ -311,6 +377,12 @@ export const gearItems: GearItem[] = [
     effect: "Balanced offense-support scaling.",
     bestFor: [],
     lastUpdated: "2026-08-02",
+    tags: ["Hybrid", "Meta"],
+    roles: ["Watcher", "Seeker"],
+    alternatives: ["the-empress", "wheel-of-fortune"],
+    howToGet: "Tarot gacha; often contested bis for hybrid cores.",
+    whenToUse: "Enablers who both enable and deal damage.",
+
   },
   {
     slug: "the-chariot",
@@ -440,4 +512,30 @@ export function gearPath(item: GearItem): string {
   if (item.kind === "weapon") return `/weapons/${item.slug}`;
   if (item.kind === "trinket") return `/trinkets/${item.slug}`;
   return `/tarots/${item.slug}`;
+}
+
+/** Same-kind alternatives: explicit list first, else same rarity peers. */
+export function getGearAlternatives(item: GearItem, limit = 4): GearItem[] {
+  const explicit = (item.alternatives ?? [])
+    .map((s) => getGearBySlug(s))
+    .filter((g): g is GearItem => g != null && g.slug !== item.slug);
+
+  if (explicit.length >= limit) return explicit.slice(0, limit);
+
+  const peers = gearItems.filter(
+    (g) =>
+      g.kind === item.kind &&
+      g.slug !== item.slug &&
+      !explicit.some((e) => e.slug === g.slug) &&
+      (g.rarity === item.rarity ||
+        (item.rarity === "Legendary" && g.rarity === "Epic")),
+  );
+
+  return [...explicit, ...peers].slice(0, limit);
+}
+
+export function kindLabel(kind: GearItem["kind"]): string {
+  if (kind === "weapon") return "Weapon";
+  if (kind === "trinket") return "Trinket";
+  return "Tarot Whisper";
 }
