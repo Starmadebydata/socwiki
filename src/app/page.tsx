@@ -188,7 +188,7 @@ export default function HomePage() {
                 Hot characters
               </h2>
               <p className="mt-1.5 text-xs text-muted">
-                Meta picks with official-style portraits
+                Meta picks · official client art when available
               </p>
             </div>
             <Link

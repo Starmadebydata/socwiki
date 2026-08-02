@@ -1,12 +1,12 @@
-/** Auto-generated: device captures + GameWith web portraits */
+/** Character images: official client extracts preferred, GameWith gacha as fallback. */
 
 export type CharacterImageSet = {
   portrait: string;
   art?: string;
-  /** Full-body battle sprite from unit deployment tray */
   sprite?: string;
-  /** In-combat HUD face crop */
   combat?: string;
+  /** true when art/portrait came from official game client assets */
+  official?: boolean;
 };
 
 export const CHARACTER_IMAGES: Record<string, CharacterImageSet> = {
@@ -21,6 +21,7 @@ export const CHARACTER_IMAGES: Record<string, CharacterImageSet> = {
   "agatha": {
     portrait: "/characters/agatha.webp",
     art: "/characters/agatha-art.webp",
+    official: true,
   },
   "alexei": {
     portrait: "/characters/alexei.webp",
@@ -37,14 +38,19 @@ export const CHARACTER_IMAGES: Record<string, CharacterImageSet> = {
   "ayishah": {
     portrait: "/characters/ayishah.webp",
     art: "/characters/ayishah-art.webp",
+    combat: "/characters/ayishah-combat.webp",
+    official: true,
   },
   "beryl": {
     portrait: "/characters/beryl.webp",
     art: "/characters/beryl-art.webp",
+    combat: "/characters/beryl-combat.webp",
+    official: true,
   },
   "camelot": {
     portrait: "/characters/camelot.webp",
     art: "/characters/camelot-art.webp",
+    official: true,
   },
   "caris": {
     portrait: "/characters/caris.webp",
@@ -53,10 +59,12 @@ export const CHARACTER_IMAGES: Record<string, CharacterImageSet> = {
   "ciri": {
     portrait: "/characters/ciri.webp",
     art: "/characters/ciri-art.webp",
+    official: true,
   },
   "clara": {
     portrait: "/characters/clara.webp",
     art: "/characters/clara-art.webp",
+    official: true,
   },
   "cocoa": {
     portrait: "/characters/cocoa.webp",
@@ -65,6 +73,7 @@ export const CHARACTER_IMAGES: Record<string, CharacterImageSet> = {
   "col": {
     portrait: "/characters/col.webp",
     art: "/characters/col-art.webp",
+    official: true,
   },
   "credenza": {
     portrait: "/characters/credenza.webp",
@@ -78,6 +87,7 @@ export const CHARACTER_IMAGES: Record<string, CharacterImageSet> = {
   "dantalion": {
     portrait: "/characters/dantalion.webp",
     art: "/characters/dantalion-art.webp",
+    official: true,
   },
   "edda": {
     portrait: "/characters/edda.webp",
@@ -90,10 +100,12 @@ export const CHARACTER_IMAGES: Record<string, CharacterImageSet> = {
   "falin": {
     portrait: "/characters/falin.webp",
     art: "/characters/falin-art.webp",
+    official: true,
   },
   "faycal": {
     portrait: "/characters/faycal.webp",
     art: "/characters/faycal-art.webp",
+    official: true,
   },
   "flavia": {
     portrait: "/characters/flavia.webp",
@@ -106,10 +118,13 @@ export const CHARACTER_IMAGES: Record<string, CharacterImageSet> = {
   "geralt": {
     portrait: "/characters/geralt.webp",
     art: "/characters/geralt-art.webp",
+    combat: "/characters/geralt-combat.webp",
+    official: true,
   },
   "gloria": {
     portrait: "/characters/gloria.webp",
     art: "/characters/gloria-art.webp",
+    official: true,
   },
   "guzman": {
     portrait: "/characters/guzman.webp",
@@ -118,10 +133,12 @@ export const CHARACTER_IMAGES: Record<string, CharacterImageSet> = {
   "hasna": {
     portrait: "/characters/hasna.webp",
     art: "/characters/hasna-art.webp",
+    official: true,
   },
   "heshan": {
     portrait: "/characters/heshan.webp",
     art: "/characters/heshan-art.webp",
+    official: true,
   },
   "homa": {
     portrait: "/characters/homa.webp",
@@ -134,6 +151,8 @@ export const CHARACTER_IMAGES: Record<string, CharacterImageSet> = {
   "inanna": {
     portrait: "/characters/inanna.webp",
     art: "/characters/inanna-art.webp",
+    combat: "/characters/inanna-combat.webp",
+    official: true,
   },
   "ka-archer": {
     portrait: "/characters/ka-archer.webp",
@@ -166,6 +185,7 @@ export const CHARACTER_IMAGES: Record<string, CharacterImageSet> = {
   "kvare": {
     portrait: "/characters/kvare.webp",
     art: "/characters/kvare-art.webp",
+    official: true,
   },
   "layla": {
     portrait: "/characters/layla.webp",
@@ -186,6 +206,7 @@ export const CHARACTER_IMAGES: Record<string, CharacterImageSet> = {
   "lutfi": {
     portrait: "/characters/lutfi.webp",
     art: "/characters/lutfi-art.webp",
+    official: true,
   },
   "luvata": {
     portrait: "/characters/luvata.webp",
@@ -194,16 +215,19 @@ export const CHARACTER_IMAGES: Record<string, CharacterImageSet> = {
   "magnus": {
     portrait: "/characters/magnus.webp",
     art: "/characters/magnus-art.webp",
+    official: true,
   },
   "maitha": {
     portrait: "/characters/maitha.webp",
     art: "/characters/maitha-art.webp",
     sprite: "/characters/maitha-sprite.webp",
     combat: "/characters/maitha-combat.webp",
+    official: true,
   },
   "marcille": {
     portrait: "/characters/marcille.webp",
     art: "/characters/marcille-art.webp",
+    official: true,
   },
   "miguel": {
     portrait: "/characters/miguel.webp",
@@ -220,6 +244,7 @@ export const CHARACTER_IMAGES: Record<string, CharacterImageSet> = {
   "nonowill": {
     portrait: "/characters/nonowill.webp",
     art: "/characters/nonowill-art.webp",
+    official: true,
   },
   "nungal": {
     portrait: "/characters/nungal.webp",
@@ -240,6 +265,7 @@ export const CHARACTER_IMAGES: Record<string, CharacterImageSet> = {
   "parsifal": {
     portrait: "/characters/parsifal.webp",
     art: "/characters/parsifal-art.webp",
+    official: true,
   },
   "pooch-runrun": {
     portrait: "/characters/pooch-runrun.webp",
@@ -248,6 +274,7 @@ export const CHARACTER_IMAGES: Record<string, CharacterImageSet> = {
   "rawiyah": {
     portrait: "/characters/rawiyah.webp",
     art: "/characters/rawiyah-art.webp",
+    official: true,
   },
   "recruited-assassin": {
     portrait: "/characters/recruited-assassin.webp",
@@ -264,18 +291,23 @@ export const CHARACTER_IMAGES: Record<string, CharacterImageSet> = {
   "rico": {
     portrait: "/characters/rico.webp",
     art: "/characters/rico-art.webp",
+    official: true,
   },
   "safiyyah": {
     portrait: "/characters/safiyyah.webp",
     art: "/characters/safiyyah-art.webp",
+    official: true,
   },
   "samantha": {
     portrait: "/characters/samantha.webp",
     art: "/characters/samantha-art.webp",
+    combat: "/characters/samantha-combat.webp",
+    official: true,
   },
   "schacklulu": {
     portrait: "/characters/schacklulu.webp",
     art: "/characters/schacklulu-art.webp",
+    official: true,
   },
   "selina": {
     portrait: "/characters/selina.webp",
@@ -284,6 +316,7 @@ export const CHARACTER_IMAGES: Record<string, CharacterImageSet> = {
   "senshi": {
     portrait: "/characters/senshi.webp",
     art: "/characters/senshi-art.webp",
+    official: true,
   },
   "shahnaz": {
     portrait: "/characters/shahnaz.webp",
@@ -292,18 +325,33 @@ export const CHARACTER_IMAGES: Record<string, CharacterImageSet> = {
   "shams": {
     portrait: "/characters/shams.webp",
     art: "/characters/shams-art.webp",
+    official: true,
   },
   "simona": {
     portrait: "/characters/simona.webp",
     art: "/characters/simona-art.webp",
   },
+  "sp-agatha": {
+    portrait: "/characters/sp-agatha.webp",
+    combat: "/characters/sp-agatha-combat.webp",
+    official: true,
+  },
+  "sp-alexei": {
+    portrait: "/characters/sp-alexei.webp",
+    combat: "/characters/sp-alexei-combat.webp",
+    official: true,
+  },
   "sp-faycal": {
     portrait: "/characters/sp-faycal.webp",
     art: "/characters/sp-faycal-art.webp",
+    combat: "/characters/sp-faycal-combat.webp",
+    official: true,
   },
   "sp-inanna": {
     portrait: "/characters/sp-inanna.webp",
     art: "/characters/sp-inanna-art.webp",
+    combat: "/characters/sp-inanna-combat.webp",
+    official: true,
   },
   "sp-maitha": {
     portrait: "/characters/sp-maitha.webp",
@@ -324,6 +372,8 @@ export const CHARACTER_IMAGES: Record<string, CharacterImageSet> = {
   "sp-samantha": {
     portrait: "/characters/sp-samantha.webp",
     art: "/characters/sp-samantha-art.webp",
+    combat: "/characters/sp-samantha-combat.webp",
+    official: true,
   },
   "taair": {
     portrait: "/characters/taair.webp",
@@ -332,14 +382,17 @@ export const CHARACTER_IMAGES: Record<string, CharacterImageSet> = {
   "teadon": {
     portrait: "/characters/teadon.webp",
     art: "/characters/teadon-art.webp",
+    official: true,
   },
   "team-meteor": {
     portrait: "/characters/team-meteor.webp",
     art: "/characters/team-meteor-art.webp",
+    official: true,
   },
   "triss": {
     portrait: "/characters/triss.webp",
     art: "/characters/triss-art.webp",
+    official: true,
   },
   "tristan": {
     portrait: "/characters/tristan.webp",
@@ -353,6 +406,7 @@ export const CHARACTER_IMAGES: Record<string, CharacterImageSet> = {
   "xavier": {
     portrait: "/characters/xavier.webp",
     art: "/characters/xavier-art.webp",
+    official: true,
   },
   "yeganeh": {
     portrait: "/characters/yeganeh.webp",
@@ -361,10 +415,12 @@ export const CHARACTER_IMAGES: Record<string, CharacterImageSet> = {
   "yennefer": {
     portrait: "/characters/yennefer.webp",
     art: "/characters/yennefer-art.webp",
+    official: true,
   },
   "yserinde": {
     portrait: "/characters/yserinde.webp",
     art: "/characters/yserinde-art.webp",
+    official: true,
   },
 };
 
@@ -376,22 +432,18 @@ export function hasCharacterPortrait(slug: string): boolean {
   return Boolean(CHARACTER_IMAGES[slug]?.portrait);
 }
 
-/** Any client-captured or web visual usable on cards */
 export function hasCharacterImage(slug: string): boolean {
   const i = CHARACTER_IMAGES[slug];
   return Boolean(i?.portrait || i?.art || i?.sprite || i?.combat);
 }
 
-/**
- * Best image for tall portrait cards.
- * Prefer large art → roster portrait → combat face → battle sprite.
- */
 export function getPortraitCardImage(slug: string): {
   src: string;
   kind: "art" | "portrait" | "combat" | "sprite";
 } | undefined {
   const i = CHARACTER_IMAGES[slug];
   if (!i) return undefined;
+  // Prefer official full-body art, then gacha portrait, then faces/sprites
   if (i.art) return { src: i.art, kind: "art" };
   if (i.portrait) return { src: i.portrait, kind: "portrait" };
   if (i.combat) return { src: i.combat, kind: "combat" };
