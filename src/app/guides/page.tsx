@@ -37,23 +37,26 @@ const GUIDES: {
   {
     href: "/guides/early-teams",
     title: "Best Early Game Teams",
-    blurb: "Sample comps for the first weeks of account progress.",
+    blurb:
+      "Four sample comps with swap rules, job labels, and character links.",
     tag: "Teams",
-    read: "8 min",
+    read: "10 min",
   },
   {
     href: "/guides/party-building",
     title: "Party Building",
-    blurb: "How to structure a 5–6 unit squad by role and faction.",
+    blurb:
+      "Slot structure, turn economy, matchups, faction auras, deploy checklist.",
     tag: "Teams",
-    read: "8 min",
+    read: "10 min",
   },
   {
     href: "/guides/shard-priority",
     title: "Shard Farming Priority",
-    blurb: "Who to star up first when materials are tight.",
+    blurb:
+      "Spend order, star breakpoints, and a ranked core list from tier data.",
     tag: "Investment",
-    read: "6 min",
+    read: "10 min",
   },
   {
     href: "/guides/role-matchups",
