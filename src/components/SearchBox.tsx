@@ -32,16 +32,16 @@ export function SearchBox() {
         value={q}
         onChange={(e) => setQ(e.target.value)}
         placeholder="Search characters, roles, factions…"
-        className="w-full rounded-full border border-[var(--border-soft)] bg-[var(--card-deep)] px-5 py-3 text-foreground outline-none placeholder:text-muted focus:border-[var(--border-bright)] focus:shadow-[0_0_0_3px_var(--accent-soft)]"
+        className="soc-search"
         autoComplete="off"
       />
       {results.length > 0 && (
-        <ul className="soc-frame absolute z-20 mt-2 w-full overflow-hidden shadow-xl">
+        <ul className="soc-frame absolute z-20 mt-2 w-full overflow-hidden py-1 shadow-xl">
           {results.map((c) => (
             <li key={c.slug}>
               <Link
                 href={`/characters/${c.slug}`}
-                className="flex items-center justify-between border-b border-[var(--border-soft)]/40 px-4 py-2.5 last:border-0 hover:bg-[var(--accent-soft)]"
+                className="flex items-center justify-between border-b border-[var(--border-soft)]/30 px-4 py-2.5 last:border-0 hover:bg-[var(--accent-soft)]"
                 onClick={() => setQ("")}
               >
                 <span className="font-display font-medium tracking-wide">
