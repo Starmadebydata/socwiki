@@ -16,19 +16,26 @@ export function CharacterCard({
   variant?: "row" | "portrait";
 }) {
   const rs = roleStyle(c.role);
-  const portrait = getCharacterImage(c.slug)?.portrait;
+  const imgs = getCharacterImage(c.slug);
+  /** Prefer battle sprite for portrait cards, then combat face, then roster portrait */
+  const portraitArt =
+    imgs?.sprite ?? imgs?.combat ?? imgs?.portrait;
 
   if (variant === "portrait") {
     return (
       <Link href={`/characters/${c.slug}`} className="soc-char-card group">
         <div className="soc-char-card__art">
           <div className="soc-char-card__frame" />
-          {portrait ? (
+          {portraitArt ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img
-              src={portrait}
+              src={portraitArt}
               alt=""
-              className="absolute inset-0 h-full w-full object-cover object-top transition duration-500 group-hover:scale-105"
+              className={`absolute inset-0 h-full w-full transition duration-500 group-hover:scale-105 ${
+                imgs?.sprite
+                  ? "object-contain object-bottom bg-gradient-to-b from-[#1a1e2a] to-[#0c0e14] p-2"
+                  : "object-cover object-top"
+              }`}
               loading="lazy"
               decoding="async"
             />

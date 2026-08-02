@@ -37,7 +37,9 @@ export function RoleAvatar({
 }) {
   const style = roleStyle(role);
   const mono = initials(name);
-  const portrait = slug ? getCharacterImage(slug)?.portrait : undefined;
+  const imgs = slug ? getCharacterImage(slug) : undefined;
+  /** Prefer combat HUD face, then roster portrait */
+  const portrait = imgs?.combat ?? imgs?.portrait;
 
   const inner = (
     <div
