@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { CharacterCard } from "@/components/CharacterCard";
 import { TierBadge } from "@/components/TierBadge";
 import { JsonLd } from "@/components/JsonLd";
 import { getAllCharacters, ROLES } from "@/data/characters";
@@ -106,21 +107,9 @@ export default function TierListPage() {
                 ({units.length})
               </span>
             </h2>
-            <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {units.map((c) => (
-                <Link
-                  key={c.slug}
-                  href={`/characters/${c.slug}`}
-                  className="flex items-center justify-between rounded-xl border border-border bg-card px-4 py-3 hover:bg-card-hover"
-                >
-                  <div>
-                    <div className="font-medium">{c.name}</div>
-                    <div className="text-xs text-muted">
-                      {c.role} · Reroll {c.tier.reroll}
-                    </div>
-                  </div>
-                  <span className="text-xs text-link">Build →</span>
-                </Link>
+                <CharacterCard key={c.slug} character={c} compact />
               ))}
             </div>
           </section>
@@ -140,21 +129,9 @@ export default function TierListPage() {
                 All {role}s →
               </Link>
             </div>
-            <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {units.map((c) => (
-                <Link
-                  key={c.slug}
-                  href={`/characters/${c.slug}`}
-                  className="flex items-center justify-between rounded-xl border border-border bg-card px-4 py-3 hover:bg-card-hover"
-                >
-                  <div>
-                    <div className="font-medium">{c.name}</div>
-                    <div className="text-xs text-muted">
-                      {c.factions[0]}
-                    </div>
-                  </div>
-                  <TierBadge tier={c.tier.overall} />
-                </Link>
+                <CharacterCard key={c.slug} character={c} compact />
               ))}
             </div>
           </section>

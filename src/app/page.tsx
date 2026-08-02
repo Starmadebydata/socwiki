@@ -1,6 +1,6 @@
 import Link from "next/link";
+import { CharacterCard } from "@/components/CharacterCard";
 import { SearchBox } from "@/components/SearchBox";
-import { TierBadge } from "@/components/TierBadge";
 import {
   getAllCharacters,
   HUB_CATEGORIES,
@@ -9,6 +9,17 @@ import {
 import { getAllGear } from "@/data/gear";
 import { SITE_DESCRIPTION, SITE_FULL_NAME } from "@/lib/site";
 
+const HUB_ICONS: Record<string, string> = {
+  Characters: "⚔",
+  "Tier Lists": "🏆",
+  Weapons: "🗡",
+  Trinkets: "💍",
+  "Tarot Whispers": "🃏",
+  Teams: "👥",
+  Guides: "📖",
+  Codes: "🎟",
+};
+
 export default function HomePage() {
   const all = getAllCharacters();
   const hot = sortByOverallTier(all).slice(0, 12);
@@ -16,19 +27,25 @@ export default function HomePage() {
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-10">
-      <section className="mb-12 text-center">
-        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
-          {SITE_FULL_NAME}
-        </h1>
-        <p className="mx-auto mt-3 max-w-2xl text-muted">{SITE_DESCRIPTION}</p>
-        <p className="mt-3 text-sm text-muted">
-          <span className="text-foreground font-medium">{all.length}</span>{" "}
-          characters ·{" "}
-          <span className="text-foreground font-medium">{gearCount}</span> gear
-          entries · tier lists & team tools
-        </p>
-        <div className="mt-8 flex justify-center">
-          <SearchBox />
+      <section className="relative mb-14 overflow-hidden rounded-3xl border border-border bg-card/60 px-6 py-12 text-center sm:px-10">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(212,175,55,0.12),transparent_55%)]" />
+        <div className="relative">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+            Community Database
+          </p>
+          <h1 className="mt-3 text-3xl font-bold tracking-tight sm:text-5xl">
+            {SITE_FULL_NAME}
+          </h1>
+          <p className="mx-auto mt-4 max-w-2xl text-muted">{SITE_DESCRIPTION}</p>
+          <p className="mt-4 text-sm text-muted">
+            <span className="font-semibold text-foreground">{all.length}</span>{" "}
+            characters ·{" "}
+            <span className="font-semibold text-foreground">{gearCount}</span>{" "}
+            gear entries · tier lists & team tools
+          </p>
+          <div className="mt-8 flex justify-center">
+            <SearchBox />
+          </div>
         </div>
       </section>
 
@@ -41,9 +58,10 @@ export default function HomePage() {
             <Link
               key={cat.href}
               href={cat.href}
-              className="group rounded-2xl border border-border bg-card p-5 transition hover:border-accent/40 hover:bg-card-hover"
+              className="group rounded-2xl border border-border bg-card p-5 transition hover:-translate-y-0.5 hover:border-accent/40 hover:bg-card-hover hover:shadow-lg"
             >
-              <div className="font-semibold text-foreground group-hover:text-accent">
+              <div className="text-xl">{HUB_ICONS[cat.title] ?? "✦"}</div>
+              <div className="mt-2 font-semibold text-foreground group-hover:text-accent">
                 {cat.title}
               </div>
               <p className="mt-1 text-sm text-muted">{cat.blurb}</p>
@@ -61,21 +79,9 @@ export default function HomePage() {
             All characters →
           </Link>
         </div>
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {hot.map((c) => (
-            <Link
-              key={c.slug}
-              href={`/characters/${c.slug}`}
-              className="flex items-center justify-between rounded-xl border border-border bg-card px-4 py-3 hover:bg-card-hover"
-            >
-              <div>
-                <div className="font-medium">{c.name}</div>
-                <div className="text-xs text-muted">
-                  {c.role} · {c.factions[0]}
-                </div>
-              </div>
-              <TierBadge tier={c.tier.overall} />
-            </Link>
+            <CharacterCard key={c.slug} character={c} />
           ))}
         </div>
       </section>
@@ -89,52 +95,18 @@ export default function HomePage() {
         </h2>
         <ul className="mt-3 space-y-2 text-sm text-muted">
           <li>
-            Roster expanded to {all.length} character build pages with gear
-            deep-links.
+            Visual refresh: role-colored portraits, character cards, and detail
+            hero layouts.
+          </li>
+          <li>
+            Roster at {all.length} units with full skill tables (type / NRG / CD
+            / priority).
           </li>
           <li>
             <Link href="/weapons" className="text-link hover:underline">
-              Weapons
-            </Link>
-            ,{" "}
-            <Link href="/trinkets" className="text-link hover:underline">
-              trinkets
-            </Link>
-            , and{" "}
-            <Link href="/tarots" className="text-link hover:underline">
-              tarots
+              Gear databases
             </Link>{" "}
-            database with Best-on reverse links.
-          </li>
-          <li>
-            <Link href="/tier-list" className="text-link hover:underline">
-              Tier list
-            </Link>{" "}
-            now includes overall + by-role tables.
-          </li>
-          <li>
-            New guides:{" "}
-            <Link
-              href="/guides/party-building"
-              className="text-link hover:underline"
-            >
-              party building
-            </Link>
-            ,{" "}
-            <Link
-              href="/guides/early-teams"
-              className="text-link hover:underline"
-            >
-              early teams
-            </Link>
-            ,{" "}
-            <Link
-              href="/guides/shard-priority"
-              className="text-link hover:underline"
-            >
-              shard priority
-            </Link>
-            .
+            with Best-on reverse links.
           </li>
         </ul>
       </section>

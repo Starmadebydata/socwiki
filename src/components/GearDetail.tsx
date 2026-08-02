@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { getCharactersUsingGear } from "@/data/characters";
 import type { GearItem } from "@/types/character";
-import { TierBadge } from "@/components/TierBadge";
+import { CharacterCard } from "@/components/CharacterCard";
 
 export function GearDetail({ item }: { item: GearItem }) {
   const users = getCharactersUsingGear(item.slug);
@@ -18,6 +18,9 @@ export function GearDetail({ item }: { item: GearItem }) {
         ? "/trinkets"
         : "/tarots";
 
+  const icon =
+    item.kind === "weapon" ? "🗡" : item.kind === "trinket" ? "💍" : "🃏";
+
   return (
     <article className="mx-auto max-w-6xl px-4 py-10">
       <nav className="mb-4 text-sm text-muted">
@@ -27,13 +30,20 @@ export function GearDetail({ item }: { item: GearItem }) {
         <span className="mx-2">/</span>
         <span className="text-foreground">{item.name}</span>
       </nav>
-      <h1 className="text-3xl font-bold">{item.name}</h1>
-      <p className="mt-1 text-sm text-muted">
-        {item.rarity} · {item.kind} · Updated {item.lastUpdated}
-      </p>
-      <p className="mt-4 max-w-2xl text-muted">{item.summary}</p>
+      <header className="panel mb-8 flex flex-col gap-4 p-6 sm:flex-row sm:items-center">
+        <div className="flex h-20 w-20 items-center justify-center rounded-2xl border border-border bg-accent-soft text-3xl">
+          {icon}
+        </div>
+        <div>
+          <h1 className="text-3xl font-bold">{item.name}</h1>
+          <p className="mt-1 text-sm text-muted">
+            {item.rarity} · {item.kind} · Updated {item.lastUpdated}
+          </p>
+          <p className="mt-3 max-w-2xl text-muted">{item.summary}</p>
+        </div>
+      </header>
 
-      <section className="mt-8 rounded-2xl border border-border bg-card p-5">
+      <section className="panel p-5">
         <h2 className="text-lg font-semibold">Effect notes</h2>
         <p className="mt-2 text-sm text-muted">{item.effect}</p>
       </section>
@@ -45,22 +55,11 @@ export function GearDetail({ item }: { item: GearItem }) {
             No character Quick Builds reference this piece yet.
           </p>
         ) : (
-          <ul className="grid gap-2 sm:grid-cols-2">
+          <div className="grid gap-3 sm:grid-cols-2">
             {users.map((c) => (
-              <li key={c.slug}>
-                <Link
-                  href={`/characters/${c.slug}`}
-                  className="flex items-center justify-between rounded-xl border border-border bg-card px-4 py-3 hover:bg-card-hover"
-                >
-                  <div>
-                    <div className="font-medium">{c.name}</div>
-                    <div className="text-xs text-muted">{c.role}</div>
-                  </div>
-                  <TierBadge tier={c.tier.overall} />
-                </Link>
-              </li>
+              <CharacterCard key={c.slug} character={c} compact />
             ))}
-          </ul>
+          </div>
         )}
       </section>
     </article>

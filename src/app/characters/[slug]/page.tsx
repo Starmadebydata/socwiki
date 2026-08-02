@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/JsonLd";
+import { RoleAvatar, RolePill } from "@/components/RoleAvatar";
 import { TierBadge } from "@/components/TierBadge";
 import {
   getAllCharacters,
@@ -9,6 +10,7 @@ import {
   getCharacterMap,
 } from "@/data/characters";
 import { gearPath, getGearBySlug } from "@/data/gear";
+import { roleStyle } from "@/lib/role-styles";
 import { SITE_URL, pageTitle } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -23,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!c) return { title: "Character not found" };
 
   const title = `${c.name} Build & Skill Tree Guide`;
-  const description = `Best ${c.name} build in Sword of Convallaria (SoC): skill tree, weapon, trinket, tarot, and team synergies. Role: ${c.role}. Updated ${c.lastUpdated}.`;
+  const description = `Best ${c.name} build in Sword of Convallaria (SoC): skill table, weapon, trinket, tarot, and team synergies. Role: ${c.role}. Updated ${c.lastUpdated}.`;
 
   return {
     title,
@@ -47,6 +49,7 @@ export default async function CharacterPage({ params }: Props) {
   const weapon = getGearBySlug(c.build.weaponSlug);
   const trinket = getGearBySlug(c.build.trinketSlug);
   const tarot = getGearBySlug(c.build.tarotSlug);
+  const rs = roleStyle(c.role);
 
   const gearRows = [
     ["Weapon", weapon],
@@ -121,125 +124,103 @@ export default async function CharacterPage({ params }: Props) {
         <span className="text-foreground">{c.name}</span>
       </nav>
 
-      <header className="mb-8 flex flex-wrap items-start justify-between gap-4">
-        <div className="flex gap-4">
-          <div
-            className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl border border-border bg-accent-soft text-xl font-bold text-accent"
-            aria-hidden
-          >
-            {c.name.slice(0, 2)}
+      {/* Hero */}
+      <header
+        className="relative mb-8 overflow-hidden rounded-3xl border border-border p-5 sm:p-7"
+        style={{
+          background: `linear-gradient(135deg, ${rs.soft} 0%, rgba(18,24,34,0.95) 48%, #121822 100%)`,
+        }}
+      >
+        <div
+          className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full opacity-30 blur-3xl"
+          style={{ background: rs.hex }}
+        />
+        <div className="relative flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
+          <div className="flex gap-4 sm:gap-5">
+            <RoleAvatar name={c.name} role={c.role} size="xl" />
+            <div>
+              <div className="flex flex-wrap items-center gap-2">
+                <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
+                  {c.name}
+                </h1>
+                <TierBadge tier={c.tier.overall} />
+              </div>
+              <div className="mt-2 flex flex-wrap items-center gap-2">
+                <RolePill role={c.role} />
+                <span className="text-xs text-muted">{c.rarity}</span>
+                <span className="text-xs text-muted">·</span>
+                <span className="text-xs text-muted">
+                  {c.factions.join(" · ")}
+                </span>
+              </div>
+              <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted sm:text-base">
+                {c.summary}
+              </p>
+              <p className="mt-2 text-xs text-muted">
+                Last updated: {c.lastUpdated}
+              </p>
+            </div>
           </div>
-          <div>
-            <h1 className="text-3xl font-bold">{c.name}</h1>
-            <p className="mt-2 max-w-2xl text-muted">{c.summary}</p>
-            <p className="mt-2 text-xs text-muted">
-              Last updated: {c.lastUpdated}
-            </p>
-          </div>
-        </div>
-        <div className="flex flex-wrap gap-2">
-          <TierBadge tier={c.tier.overall} />
           <Link
             href="/tier-list"
-            className="rounded-md border border-border px-2 py-0.5 text-xs text-muted hover:text-foreground"
+            className="shrink-0 rounded-xl border border-border bg-card/80 px-3 py-2 text-center text-xs text-muted hover:text-foreground"
           >
-            Full tier list
+            View tier list →
           </Link>
         </div>
       </header>
 
-      <section className="mb-8 overflow-x-auto rounded-2xl border border-border">
-        <table className="w-full text-sm">
-          <tbody>
-            <tr className="border-b border-border">
-              <th className="bg-card px-4 py-2 text-left font-medium text-muted">
-                Rarity
-              </th>
-              <td className="px-4 py-2">{c.rarity}</td>
-              <th className="bg-card px-4 py-2 text-left font-medium text-muted">
-                Role
-              </th>
-              <td className="px-4 py-2">
-                <Link
-                  href={`/characters/role/${c.role.toLowerCase()}`}
-                  className="text-link hover:underline"
-                >
-                  {c.role}
-                </Link>
-              </td>
-            </tr>
-            <tr className="border-b border-border">
-              <th className="bg-card px-4 py-2 text-left font-medium text-muted">
-                Factions
-              </th>
-              <td className="px-4 py-2" colSpan={3}>
-                {c.factions.join(" · ")}
-              </td>
-            </tr>
-            <tr className="border-b border-border">
-              <th className="bg-card px-4 py-2 text-left font-medium text-muted">
-                Move / Jump
-              </th>
-              <td className="px-4 py-2" colSpan={3}>
-                Move {c.move} · High {c.highJump} · Low {c.lowJump}
-              </td>
-            </tr>
-            <tr>
-              <th className="bg-card px-4 py-2 text-left font-medium text-muted">
-                Tiers
-              </th>
-              <td className="px-4 py-2" colSpan={3}>
-                <span className="mr-3 inline-flex items-center gap-1">
-                  Overall <TierBadge tier={c.tier.overall} />
-                </span>
-                <span className="mr-3 inline-flex items-center gap-1">
-                  ST <TierBadge tier={c.tier.single} />
-                </span>
-                <span className="mr-3 inline-flex items-center gap-1">
-                  AoE <TierBadge tier={c.tier.multi} />
-                </span>
-                <span className="inline-flex items-center gap-1">
-                  Reroll <TierBadge tier={c.tier.reroll} />
-                </span>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+      {/* Stats strip */}
+      <section className="mb-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        {[
+          ["Move", String(c.move)],
+          ["High / Low Jump", `${c.highJump} / ${c.lowJump}`],
+          ["ST / AoE tier", `${c.tier.single} / ${c.tier.multi}`],
+          ["Reroll tier", c.tier.reroll],
+        ].map(([label, value]) => (
+          <div key={label} className="panel px-4 py-3">
+            <div className="text-[11px] uppercase tracking-wide text-muted">
+              {label}
+            </div>
+            <div className="mt-1 font-semibold">{value}</div>
+          </div>
+        ))}
       </section>
 
+      {/* Quick Build */}
       <section className="mb-10" aria-labelledby="build-heading">
         <h2 id="build-heading" className="mb-3 text-xl font-semibold">
           Quick Build
         </h2>
-        <div className="overflow-x-auto rounded-2xl border border-border">
+        <div className="panel overflow-x-auto">
           <table className="w-full min-w-[520px] text-sm">
-            <thead className="bg-card text-muted">
-              <tr>
-                <th className="px-4 py-2 text-left font-medium">Slot</th>
-                <th className="px-4 py-2 text-left font-medium">
+            <thead className="text-muted">
+              <tr className="border-b border-border">
+                <th className="px-4 py-3 text-left font-medium">Slot</th>
+                <th className="px-4 py-3 text-left font-medium">
                   Recommendation
                 </th>
               </tr>
             </thead>
             <tbody>
-              <tr className="border-t border-border">
-                <td className="px-4 py-2 font-medium text-muted">
+              <tr className="border-t border-border/80">
+                <td className="px-4 py-2.5 font-medium text-muted">
                   Basic Attack
                 </td>
-                <td className="px-4 py-2">{c.build.basicAttack}</td>
+                <td className="px-4 py-2.5">{c.build.basicAttack}</td>
               </tr>
-              <tr className="border-t border-border">
-                <td className="px-4 py-2 font-medium text-muted">Reaction</td>
-                <td className="px-4 py-2">{c.build.reaction}</td>
+              <tr className="border-t border-border/80">
+                <td className="px-4 py-2.5 font-medium text-muted">Reaction</td>
+                <td className="px-4 py-2.5">{c.build.reaction}</td>
               </tr>
-              <tr className="border-t border-border">
-                <td className="px-4 py-2 font-medium text-muted">Skills</td>
-                <td className="px-4 py-2">{c.build.skills.join(" · ")}</td>
+              <tr className="border-t border-border/80">
+                <td className="px-4 py-2.5 font-medium text-muted">Skills</td>
+                <td className="px-4 py-2.5">{c.build.skills.join(" · ")}</td>
               </tr>
               {gearRows.map(([label, item]) => (
-                <tr key={label} className="border-t border-border">
-                  <td className="px-4 py-2 font-medium text-muted">{label}</td>
-                  <td className="px-4 py-2">
+                <tr key={label} className="border-t border-border/80">
+                  <td className="px-4 py-2.5 font-medium text-muted">{label}</td>
+                  <td className="px-4 py-2.5">
                     {item ? (
                       <Link
                         href={gearPath(item)}
@@ -259,9 +240,9 @@ export default async function CharacterPage({ params }: Props) {
       </section>
 
       <section className="mb-10 grid gap-8 lg:grid-cols-2">
-        <div>
+        <div className="panel p-5">
           <h2 className="mb-3 text-xl font-semibold">Pros</h2>
-          <ul className="list-disc space-y-1 pl-5 text-sm text-muted">
+          <ul className="list-disc space-y-1.5 pl-5 text-sm text-muted">
             {c.pros.map((p) => (
               <li key={p} className="text-foreground/90">
                 {p}
@@ -269,40 +250,62 @@ export default async function CharacterPage({ params }: Props) {
             ))}
           </ul>
         </div>
-        <div>
+        <div className="panel p-5">
           <h2 className="mb-3 text-xl font-semibold">How to use</h2>
           <p className="text-sm leading-relaxed text-muted">{c.howToUse}</p>
           <p className="mt-3 text-sm">
             <span className="text-muted">Star priority: </span>
-            {c.starPriority}
+            <span className="text-accent">{c.starPriority}</span>
           </p>
         </div>
       </section>
 
+      {/* Full skill table */}
       <section className="mb-10" aria-labelledby="skills-heading">
         <h2 id="skills-heading" className="mb-3 text-xl font-semibold">
-          Skill priority
+          Skill table
         </h2>
-        <div className="overflow-x-auto rounded-2xl border border-border">
-          <table className="w-full min-w-[520px] text-sm">
-            <thead className="bg-card text-muted">
-              <tr>
-                <th className="px-4 py-2 text-left font-medium">Skill</th>
-                <th className="px-4 py-2 text-left font-medium">Priority</th>
-                <th className="px-4 py-2 text-left font-medium">Notes</th>
+        <p className="mb-3 text-sm text-muted">
+          Priority stars are SoC Wiki recommendations for general PvE. NRG/CD
+          values are approximate guide bands—confirm in-game for patches.
+        </p>
+        <div className="panel overflow-x-auto">
+          <table className="w-full min-w-[720px] text-sm">
+            <thead className="text-muted">
+              <tr className="border-b border-border">
+                <th className="px-3 py-3 text-left font-medium">Skill</th>
+                <th className="px-3 py-3 text-left font-medium">Type</th>
+                <th className="px-3 py-3 text-left font-medium">NRG</th>
+                <th className="px-3 py-3 text-left font-medium">CD</th>
+                <th className="px-3 py-3 text-left font-medium">Priority</th>
+                <th className="px-3 py-3 text-left font-medium">Notes</th>
               </tr>
             </thead>
             <tbody>
               {c.skillPriority.map((s) => (
-                <tr key={s.name} className="border-t border-border">
-                  <td className="px-4 py-2 font-medium">{s.name}</td>
-                  <td className="px-4 py-2 text-accent">
+                <tr key={s.name} className="border-t border-border/80 align-top">
+                  <td className="px-3 py-3 font-medium">{s.name}</td>
+                  <td className="px-3 py-3">
+                    <span className="rounded-md border border-border bg-background/60 px-1.5 py-0.5 text-[11px] text-muted">
+                      {s.kind}
+                    </span>
+                  </td>
+                  <td className="px-3 py-3 text-muted">{s.nrg ?? "—"}</td>
+                  <td className="px-3 py-3 text-muted">{s.cd ?? "—"}</td>
+                  <td className="px-3 py-3 text-accent whitespace-nowrap">
                     {"★".repeat(s.stars)}
                     <span className="text-muted">
                       {"★".repeat(Math.max(0, 5 - s.stars))}
                     </span>
                   </td>
-                  <td className="px-4 py-2 text-muted">{s.note}</td>
+                  <td className="px-3 py-3 text-muted">
+                    <div>{s.note}</div>
+                    {s.description && (
+                      <div className="mt-1 text-xs opacity-80">
+                        {s.description}
+                      </div>
+                    )}
+                  </td>
                 </tr>
               ))}
             </tbody>
@@ -315,17 +318,21 @@ export default async function CharacterPage({ params }: Props) {
           <h2 id="synergy-heading" className="mb-3 text-xl font-semibold">
             Synergies
           </h2>
-          <div className="flex flex-wrap gap-2">
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {synergyChars.map(
               (s) =>
                 s && (
                   <Link
                     key={s.slug}
                     href={`/characters/${s.slug}`}
-                    className="rounded-lg border border-border bg-card px-3 py-2 text-sm hover:bg-card-hover"
+                    className="flex items-center gap-3 rounded-2xl border border-border bg-card p-3 hover:bg-card-hover"
                   >
-                    {s.name}{" "}
-                    <span className="text-muted">({s.role})</span>
+                    <RoleAvatar name={s.name} role={s.role} size="sm" />
+                    <div className="min-w-0">
+                      <div className="truncate font-medium">{s.name}</div>
+                      <div className="text-xs text-muted">{s.role}</div>
+                    </div>
+                    <TierBadge tier={s.tier.overall} />
                   </Link>
                 ),
             )}
@@ -333,7 +340,7 @@ export default async function CharacterPage({ params }: Props) {
         </section>
       )}
 
-      <section className="mb-6 rounded-2xl border border-border bg-card p-5">
+      <section className="panel mb-6 p-5">
         <h2 className="mb-3 text-lg font-semibold">FAQ</h2>
         <dl className="space-y-4 text-sm">
           <div>
@@ -341,8 +348,8 @@ export default async function CharacterPage({ params }: Props) {
               What is the best build for {c.name}?
             </dt>
             <dd className="mt-1 text-muted">
-              Use the Quick Build table above for the default loadout, then
-              adjust skills for stage constraints.
+              Use Quick Build and the skill table above, then adjust for stage
+              constraints (NRG, cover, single vs multi).
             </dd>
           </div>
           <div>

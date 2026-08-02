@@ -1,8 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import Link from "next/link";
-import { TierBadge } from "@/components/TierBadge";
+import { CharacterCard } from "@/components/CharacterCard";
 import type { Character, Role, Tier } from "@/types/character";
 
 const ROLES: Array<Role | "All"> = [
@@ -29,6 +28,7 @@ export function CharacterFilters({ characters }: { characters: Character[] }) {
   const [role, setRole] = useState<(typeof ROLES)[number]>("All");
   const [tier, setTier] = useState<(typeof TIERS)[number]>("All");
   const [q, setQ] = useState("");
+  const [view, setView] = useState<"grid" | "compact">("grid");
 
   const factions = useMemo(() => {
     const set = new Set<string>();
@@ -57,16 +57,41 @@ export function CharacterFilters({ characters }: { characters: Character[] }) {
     });
   }, [characters, role, tier, faction, q]);
 
+  const chip = (active: boolean) =>
+    `rounded-full border px-3 py-1 text-xs transition ${
+      active
+        ? "border-accent bg-accent-soft text-accent"
+        : "border-border text-muted hover:text-foreground"
+    }`;
+
   return (
     <div>
-      <div className="mt-6 flex flex-col gap-3 rounded-2xl border border-border bg-card p-4">
-        <input
-          type="search"
-          value={q}
-          onChange={(e) => setQ(e.target.value)}
-          placeholder="Filter by name…"
-          className="w-full rounded-lg border border-border bg-background px-3 py-2 text-sm outline-none ring-accent focus:ring-2"
-        />
+      <div className="mt-6 flex flex-col gap-3 rounded-2xl border border-border bg-card/90 p-4 shadow-lg backdrop-blur">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+          <input
+            type="search"
+            value={q}
+            onChange={(e) => setQ(e.target.value)}
+            placeholder="Search name, role, faction…"
+            className="w-full flex-1 rounded-xl border border-border bg-background px-3 py-2.5 text-sm outline-none ring-accent focus:ring-2"
+          />
+          <div className="flex shrink-0 gap-1 rounded-xl border border-border p-1">
+            <button
+              type="button"
+              onClick={() => setView("grid")}
+              className={`rounded-lg px-3 py-1.5 text-xs ${view === "grid" ? "bg-accent-soft text-accent" : "text-muted"}`}
+            >
+              Cards
+            </button>
+            <button
+              type="button"
+              onClick={() => setView("compact")}
+              className={`rounded-lg px-3 py-1.5 text-xs ${view === "compact" ? "bg-accent-soft text-accent" : "text-muted"}`}
+            >
+              Compact
+            </button>
+          </div>
+        </div>
         <div className="flex flex-wrap gap-2">
           <span className="w-full text-xs text-muted sm:w-auto sm:py-1">
             Role
@@ -76,11 +101,7 @@ export function CharacterFilters({ characters }: { characters: Character[] }) {
               key={r}
               type="button"
               onClick={() => setRole(r)}
-              className={`rounded-full border px-3 py-1 text-xs ${
-                role === r
-                  ? "border-accent bg-accent-soft text-accent"
-                  : "border-border text-muted hover:text-foreground"
-              }`}
+              className={chip(role === r)}
             >
               {r}
             </button>
@@ -95,11 +116,7 @@ export function CharacterFilters({ characters }: { characters: Character[] }) {
               key={t}
               type="button"
               onClick={() => setTier(t)}
-              className={`rounded-full border px-3 py-1 text-xs ${
-                tier === t
-                  ? "border-accent bg-accent-soft text-accent"
-                  : "border-border text-muted hover:text-foreground"
-              }`}
+              className={chip(tier === t)}
             >
               {t}
             </button>
@@ -114,11 +131,7 @@ export function CharacterFilters({ characters }: { characters: Character[] }) {
               key={f}
               type="button"
               onClick={() => setFaction(f)}
-              className={`rounded-full border px-3 py-1 text-xs ${
-                faction === f
-                  ? "border-accent bg-accent-soft text-accent"
-                  : "border-border text-muted hover:text-foreground"
-              }`}
+              className={chip(faction === f)}
             >
               {f}
             </button>
@@ -129,43 +142,20 @@ export function CharacterFilters({ characters }: { characters: Character[] }) {
         </p>
       </div>
 
-      <div className="mt-8 overflow-x-auto rounded-2xl border border-border">
-        <table className="w-full min-w-[640px] text-left text-sm">
-          <thead className="bg-card text-muted">
-            <tr>
-              <th className="px-4 py-3 font-medium">Name</th>
-              <th className="px-4 py-3 font-medium">Role</th>
-              <th className="px-4 py-3 font-medium">Faction</th>
-              <th className="px-4 py-3 font-medium">Rarity</th>
-              <th className="px-4 py-3 font-medium">Tier</th>
-            </tr>
-          </thead>
-          <tbody>
-            {filtered.map((c) => (
-              <tr
-                key={c.slug}
-                className="border-t border-border hover:bg-card/60"
-              >
-                <td className="px-4 py-3">
-                  <Link
-                    href={`/characters/${c.slug}`}
-                    className="font-medium text-link hover:underline"
-                  >
-                    {c.name}
-                  </Link>
-                </td>
-                <td className="px-4 py-3 text-muted">{c.role}</td>
-                <td className="px-4 py-3 text-muted">
-                  {c.factions.join(", ")}
-                </td>
-                <td className="px-4 py-3 text-muted">{c.rarity}</td>
-                <td className="px-4 py-3">
-                  <TierBadge tier={c.tier.overall} />
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      <div
+        className={
+          view === "grid"
+            ? "mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+            : "mt-8 grid gap-3 sm:grid-cols-2"
+        }
+      >
+        {filtered.map((c) => (
+          <CharacterCard
+            key={c.slug}
+            character={c}
+            compact={view === "compact"}
+          />
+        ))}
       </div>
       {filtered.length === 0 && (
         <p className="mt-6 text-center text-sm text-muted">

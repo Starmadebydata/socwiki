@@ -11,11 +11,32 @@ export type Tier = "SSS" | "SS" | "S+" | "S" | "A" | "B" | "C";
 
 export type GearKind = "weapon" | "trinket" | "tarot";
 
+export type SkillKind =
+  | "Basic"
+  | "Active"
+  | "Passive"
+  | "Reaction"
+  | "Trait"
+  | "Ascension"
+  | "Aura";
+
+export interface SkillRow {
+  name: string;
+  kind: SkillKind;
+  stars: number;
+  /** NRG cost if known / applicable */
+  nrg?: string;
+  /** Cooldown turns if known */
+  cd?: string;
+  note: string;
+  /** Longer description for wiki table */
+  description?: string;
+}
+
 export interface CharacterBuild {
   basicAttack: string;
   reaction: string;
   skills: string[];
-  /** Gear slugs — resolve display names via gear data */
   weaponSlug: string;
   trinketSlug: string;
   tarotSlug: string;
@@ -40,7 +61,7 @@ export interface Character {
   pros: string[];
   howToUse: string;
   build: CharacterBuild;
-  skillPriority: { name: string; stars: number; note: string }[];
+  skillPriority: SkillRow[];
   starPriority: string;
   synergies: string[];
   lastUpdated: string;
@@ -53,6 +74,6 @@ export interface GearItem {
   rarity: Rarity | "Legendary" | "Epic" | "Rare";
   summary: string;
   effect: string;
-  bestFor: string[]; // character slugs
+  bestFor: string[];
   lastUpdated: string;
 }

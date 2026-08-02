@@ -1,15 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0c0f14;
-  --foreground: #e8edf5;
-  --muted: #9aa8bc;
-  --card: #141a24;
-  --card-hover: #1a2332;
-  --border: #243044;
-  --accent: #c9a227;
-  --accent-soft: rgba(201, 162, 39, 0.15);
+  --background: #090c12;
+  --foreground: #eef2f8;
+  --muted: #8b9bb0;
+  --card: #121822;
+  --card-hover: #182131;
+  --border: #263246;
+  --accent: #d4af37;
+  --accent-soft: rgba(212, 175, 55, 0.14);
   --link: #7eb6ff;
+  --surface-glow: radial-gradient(
+    1200px 600px at 50% -10%,
+    rgba(212, 175, 55, 0.08),
+    transparent 55%
+  );
   --tier-sss: #ff4d6d;
   --tier-ss: #ff7a45;
   --tier-sp: #ffc53d;
@@ -34,7 +39,9 @@
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
+  background-image: var(--surface-glow);
+  background-attachment: fixed;
   color: var(--foreground);
   font-family: var(--font-geist-sans), system-ui, sans-serif;
   min-height: 100vh;
@@ -47,4 +54,22 @@ a {
 
 .prose-muted {
   color: var(--muted);
+}
+
+/* subtle card panel used on detail pages */
+.panel {
+  border: 1px solid var(--border);
+  background: linear-gradient(
+    180deg,
+    rgba(24, 32, 48, 0.95) 0%,
+    rgba(16, 22, 34, 0.98) 100%
+  );
+  border-radius: 1rem;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
