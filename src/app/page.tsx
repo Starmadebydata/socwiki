@@ -6,8 +6,18 @@ import {
   HUB_CATEGORIES,
   sortByOverallTier,
 } from "@/data/characters";
+import { hasCharacterImage } from "@/data/character-images";
 import { getAllGear } from "@/data/gear";
 import { SITE_DESCRIPTION, SITE_FULL_NAME } from "@/lib/site";
+
+/** Prefer units with client art so the portrait rail never shows empty placeholders. */
+function getFeaturedCharacters(all: ReturnType<typeof getAllCharacters>, limit = 12) {
+  const sorted = sortByOverallTier(all);
+  const withImg = sorted.filter((c) => hasCharacterImage(c.slug));
+  if (withImg.length >= limit) return withImg.slice(0, limit);
+  const rest = sorted.filter((c) => !hasCharacterImage(c.slug));
+  return [...withImg, ...rest].slice(0, limit);
+}
 
 const HUB_ICONS: Record<string, string> = {
   Characters: "⚔",
@@ -33,7 +43,7 @@ function OrnateCorners() {
 
 export default function HomePage() {
   const all = getAllCharacters();
-  const hot = sortByOverallTier(all).slice(0, 12);
+  const hot = getFeaturedCharacters(all, 12);
   const gearCount = getAllGear().length;
 
   return (
@@ -169,12 +179,17 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ── Portrait rail — vertical cards, not list boxes ── */}
+        {/* ── Portrait rail — client-captured art first ── */}
         <section aria-labelledby="hot-heading" className="mb-16">
-          <div className="mb-5 flex items-end justify-between gap-4">
-            <h2 id="hot-heading" className="soc-section-title">
-              Hot characters
-            </h2>
+          <div className="mb-5 flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <h2 id="hot-heading" className="soc-section-title">
+                Featured characters
+              </h2>
+              <p className="mt-1.5 text-xs text-muted">
+                Client captures from device — portraits &amp; battle sprites
+              </p>
+            </div>
             <Link
               href="/characters"
               className="soc-btn !py-1.5 !text-xs"

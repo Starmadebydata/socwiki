@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Character } from "@/types/character";
 import { RoleAvatar, RolePill } from "@/components/RoleAvatar";
 import { TierBadge } from "@/components/TierBadge";
-import { getCharacterImage } from "@/data/character-images";
+import { getPortraitCardImage } from "@/data/character-images";
 import { roleStyle } from "@/lib/role-styles";
 
 export function CharacterCard({
@@ -16,24 +16,22 @@ export function CharacterCard({
   variant?: "row" | "portrait";
 }) {
   const rs = roleStyle(c.role);
-  const imgs = getCharacterImage(c.slug);
-  /** Prefer battle sprite for portrait cards, then combat face, then roster portrait */
-  const portraitArt =
-    imgs?.sprite ?? imgs?.combat ?? imgs?.portrait;
+  const cardImg = getPortraitCardImage(c.slug);
 
   if (variant === "portrait") {
+    const isSprite = cardImg?.kind === "sprite";
     return (
       <Link href={`/characters/${c.slug}`} className="soc-char-card group">
         <div className="soc-char-card__art">
           <div className="soc-char-card__frame" />
-          {portraitArt ? (
+          {cardImg ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img
-              src={portraitArt}
+              src={cardImg.src}
               alt=""
               className={`absolute inset-0 h-full w-full transition duration-500 group-hover:scale-105 ${
-                imgs?.sprite
-                  ? "object-contain object-bottom bg-gradient-to-b from-[#1a1e2a] to-[#0c0e14] p-2"
+                isSprite
+                  ? "object-contain object-bottom bg-gradient-to-b from-[#1a1e2a] to-[#0c0e14] p-3"
                   : "object-cover object-top"
               }`}
               loading="lazy"

@@ -71,3 +71,26 @@ export function getCharacterImage(slug: string): CharacterImageSet | undefined {
 export function hasCharacterPortrait(slug: string): boolean {
   return Boolean(CHARACTER_IMAGES[slug]?.portrait);
 }
+
+/** Any client-captured visual usable on cards */
+export function hasCharacterImage(slug: string): boolean {
+  const i = CHARACTER_IMAGES[slug];
+  return Boolean(i?.portrait || i?.art || i?.sprite || i?.combat);
+}
+
+/**
+ * Best image for tall portrait cards.
+ * Prefer large art → roster portrait → combat face → battle sprite.
+ */
+export function getPortraitCardImage(slug: string): {
+  src: string;
+  kind: "art" | "portrait" | "combat" | "sprite";
+} | undefined {
+  const i = CHARACTER_IMAGES[slug];
+  if (!i) return undefined;
+  if (i.art) return { src: i.art, kind: "art" };
+  if (i.portrait) return { src: i.portrait, kind: "portrait" };
+  if (i.combat) return { src: i.combat, kind: "combat" };
+  if (i.sprite) return { src: i.sprite, kind: "sprite" };
+  return undefined;
+}
