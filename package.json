@@ -15,6 +15,8 @@
     "collect:clean": "node scripts/collect/clean-collected.mjs",
     "collect:reparse": "node scripts/collect/reparse-and-apply.mjs",
     "collect:ocr": "node scripts/collect/ocr-screenshots.mjs",
+    "collect:device": "node scripts/collect/collect-device.mjs",
+    "collect:device:boot": "node scripts/collect/collect-device.mjs -- --boot",
     "collect:validate": "node scripts/collect/validate.mjs",
     "collect:merge": "node scripts/collect/merge-to-site.mjs",
     "collect": "npm run collect:public && npm run collect:reparse && npm run collect:validate",

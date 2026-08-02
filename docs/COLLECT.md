@@ -32,28 +32,46 @@ npm run collect:auto
 
 > 注意：公开 HTML 解析会有噪声；**Top 20 手写稿（`src/data/top20.ts`）仍是线上主数据**。collected 用于对照与后续批量升级。
 
-## 客户端截图抓取（精确 NRG/CD）
+## 客户端 / 模拟器采集（adb）
 
-1. 手机/模拟器打开角色技能页  
-2. 截图保存到：
+本机已具备：Android Studio、SDK、`Pixel_7` AVD。  
+`~/.zshrc` 已写入 `ANDROID_HOME` + PATH（新开终端生效）。
 
-```
-content/raw/screenshots/col-skills.png
-content/raw/screenshots/sp-inanna-build.png
-```
-
-3. 运行（需 `tesseract`，本机已有）：
+### 一键状态 / 启动模拟器
 
 ```bash
-npm run collect:ocr
-npm run collect:validate
+# 新开一个终端，或: source ~/.zshrc
+npm run collect:device -- --status
+npm run collect:device -- --boot          # 启动 Pixel_7 并进入交互
 ```
 
-4. 人工打开 `content/collected/{slug}.json`，把 `confidence` 改为 `"high"`，`source` 改为 `"client"`  
-5. 合并：
+### 交互采集（推荐）
+
+1. `npm run collect:device -- --boot`  
+2. 在模拟器里打开 **Sword of Convallaria**，进入角色技能页  
+3. 在终端输入：
+
+```text
+shot col-skills
+shot sp-inanna-build
+ocr
+quit
+```
+
+截图自动落到 `content/raw/screenshots/`，`ocr` 会跑 tesseract + validate。
+
+### 单次命令
 
 ```bash
-npm run collect:merge -- --write
+npm run collect:device -- --boot --shot col-skills --ocr
+```
+
+### 手动截图（无 adb 时）
+
+把图丢到 `content/raw/screenshots/{slug}-skills.png`，然后：
+
+```bash
+npm run collect:ocr && npm run collect:validate
 ```
 
 ## 命令一览
