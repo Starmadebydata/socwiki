@@ -1,0 +1,204 @@
+#!/usr/bin/env node
+/**
+ * Merge content/collected/*.json with source=device-ocr into site data:
+ *   → src/data/device-ocr-refined.ts
+ *
+ * Device layer sits above AUTO_REFINED (client skills win) and below TOP20.
+ * Characters not yet in rawCharacters are exported as full Character seeds
+ * so they appear on /characters.
+ *
+ * Usage:
+ *   node scripts/collect/apply-device-ocr.mjs
+ *   node scripts/collect/apply-device-ocr.mjs --write
+ */
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const ROOT = path.resolve(__dirname, "../..");
+const COLLECTED = path.join(ROOT, "content/collected");
+const OUT_TS = path.join(ROOT, "src/data/device-ocr-refined.ts");
+const WRITE = process.argv.includes("--write");
+
+const ROLE_SET = new Set([
+  "Breaker",
+  "Defender",
+  "Destroyer",
+  "Watcher",
+  "Seeker",
+]);
+const RARITY_SET = new Set(["Legendary", "Epic", "Rare"]);
+
+function loadDeviceDocs() {
+  return fs
+    .readdirSync(COLLECTED)
+    .filter((f) => f.endsWith(".json") && !f.startsWith("_"))
+    .map((f) => JSON.parse(fs.readFileSync(path.join(COLLECTED, f), "utf8")))
+    .filter(
+      (d) =>
+        d.slug &&
+        d.source === "device-ocr" &&
+        Array.isArray(d.skills) &&
+        d.skills.length > 0 &&
+        (d.confidence === "high" || d.confidence === "medium"),
+    );
+}
+
+function skillKind(s) {
+  const k = s.kind || "Active";
+  const ok = new Set([
+    "Basic",
+    "Active",
+    "Passive",
+    "Reaction",
+    "Trait",
+    "Ascension",
+    "Aura",
+  ]);
+  return ok.has(k) ? k : "Active";
+}
+
+function toSkillRows(doc) {
+  return (doc.skills || []).map((s) => ({
+    name: s.name,
+    kind: skillKind(s),
+    stars: typeof s.priority === "number" ? s.priority : 3,
+    nrg: s.nrg != null && s.nrg !== "" ? String(s.nrg) : "—",
+    cd: s.cd != null && s.cd !== "" ? String(s.cd) : "—",
+    note: (s.note || "device-ocr").slice(0, 180),
+    description: (s.description || s.note || s.name || "").slice(0, 600),
+  }));
+}
+
+function toPartial(doc) {
+  const skillPriority = toSkillRows(doc);
+  const role = ROLE_SET.has(doc.role) ? doc.role : "Watcher";
+  const rarity = RARITY_SET.has(doc.rarity) ? doc.rarity : "Rare";
+  const ba =
+    doc.build?.basicAttack ||
+    skillPriority.find((s) => s.kind === "Basic")?.name ||
+    "Basic Attack";
+  const reaction =
+    doc.build?.reaction ||
+    skillPriority.find((s) => s.kind === "Reaction")?.name ||
+    "Reaction";
+  const skills =
+    doc.build?.skills?.length > 0
+      ? doc.build.skills.slice(0, 4)
+      : skillPriority
+          .filter((s) => ["Active", "Passive", "Aura"].includes(s.kind))
+          .slice(0, 3)
+          .map((s) => s.name);
+
+  return {
+    slug: doc.slug,
+    name: doc.name || doc.slug,
+    rarity,
+    role,
+    factions: Array.isArray(doc.factions) && doc.factions.length ? doc.factions : ["Iria"],
+    move: doc.stats?.move ?? 3,
+    highJump: doc.stats?.highJump ?? 2,
+    lowJump: doc.stats?.lowJump ?? 2,
+    summary:
+      doc.summary ||
+      `${doc.name || doc.slug}: skills captured from live client (device-ocr).`,
+    pros: doc.pros?.length ? doc.pros : ["Client-verified skill names", "See skill table"],
+    howToUse:
+      doc.howToUse ||
+      doc.summary ||
+      "Skill data from in-game tooltips on a physical device.",
+    build: {
+      basicAttack: ba,
+      reaction,
+      skills: skills.length ? skills : skillPriority.slice(0, 3).map((s) => s.name),
+      weaponSlug: "newborn-blade",
+      trinketSlug: "focus-lens",
+      tarotSlug: "temperance",
+    },
+    skillPriority,
+    starPriority: doc.starPriority || "See client stars",
+    lastUpdated: (doc.collectedAt || new Date().toISOString()).slice(0, 10),
+    confidence: doc.confidence || "medium",
+    source: "device-ocr",
+  };
+}
+
+/** Full Character seed for units not in rawCharacters (strict Character shape) */
+function toFullCharacter(partial) {
+  const {
+    confidence: _c,
+    source: _s,
+    ...rest
+  } = partial;
+  return {
+    ...rest,
+    tier: {
+      overall: partial.rarity === "Legendary" ? "A" : partial.rarity === "Epic" ? "B" : "C",
+      single: "B",
+      multi: "B",
+      reroll: "C",
+    },
+    synergies: [],
+  };
+}
+
+function main() {
+  const docs = loadDeviceDocs();
+  console.log(`Device-OCR collected files: ${docs.length}`);
+  for (const d of docs) {
+    console.log(
+      ` - ${d.slug.padEnd(22)} conf=${String(d.confidence).padEnd(6)} skills=${d.skills.length}`,
+    );
+  }
+
+  const partials = docs.map(toPartial);
+  const fullSeeds = partials.map(toFullCharacter);
+
+  if (!WRITE) {
+    console.log("\nDry run. Re-run with --write to emit src/data/device-ocr-refined.ts");
+    return;
+  }
+
+  const lines = [];
+  lines.push(`import type { Character, Role, Tier, SkillRow } from "@/types/character";`);
+  lines.push(``);
+  lines.push(
+    `/** Auto-generated by scripts/collect/apply-device-ocr.mjs — client skill tooltips. */`,
+  );
+  lines.push(
+    `export type DeviceOcrPartial = Partial<Character> & { slug: string; name: string; confidence?: string; source?: string };`,
+  );
+  lines.push(``);
+  lines.push(
+    `export const DEVICE_OCR_REFINED: DeviceOcrPartial[] = ${JSON.stringify(partials, null, 2)} as DeviceOcrPartial[];`,
+  );
+  lines.push(``);
+  lines.push(
+    `/** Full Character rows for slugs not present in rawCharacters seed. */`,
+  );
+  lines.push(
+    `export const DEVICE_OCR_CHARACTERS: Character[] = ${JSON.stringify(fullSeeds, null, 2)} as Character[];`,
+  );
+  lines.push(``);
+  lines.push(`export function getDeviceOcrMap(): Record<string, DeviceOcrPartial> {`);
+  lines.push(
+    `  return Object.fromEntries(DEVICE_OCR_REFINED.map((c) => [c.slug, c]));`,
+  );
+  lines.push(`}`);
+  lines.push(``);
+  lines.push(`export function getDeviceOcrCharacterMap(): Record<string, Character> {`);
+  lines.push(
+    `  return Object.fromEntries(DEVICE_OCR_CHARACTERS.map((c) => [c.slug, c]));`,
+  );
+  lines.push(`}`);
+  lines.push(``);
+
+  fs.writeFileSync(OUT_TS, lines.join("\n"));
+  console.log(`\nWrote ${OUT_TS}`);
+  console.log(`  DEVICE_OCR_REFINED: ${partials.length}`);
+  console.log(`  DEVICE_OCR_CHARACTERS: ${fullSeeds.length}`);
+  console.log("Wire: characters.ts applyDevice after applyAuto; append device-only seeds.");
+}
+
+main();

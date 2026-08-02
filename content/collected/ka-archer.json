@@ -1,0 +1,75 @@
+{
+  "slug": "ka-archer",
+  "name": "K.A. Archer",
+  "source": "device-ocr",
+  "sources": [
+    {
+      "type": "device",
+      "device": "Pixel_7",
+      "uid": "988054108",
+      "capturedAt": "2026-08-02T13:46:24.671879+00:00"
+    }
+  ],
+  "role": "Breaker",
+  "factions": [
+    "The Union"
+  ],
+  "rarity": "Rare",
+  "stats": {
+    "power": 1299,
+    "level": "60/60",
+    "rank": "RK13",
+    "atk": 1254,
+    "pdef": 403,
+    "hp": 2784
+  },
+  "skills": [
+    {
+      "name": "Curved Shot",
+      "kind": "Basic",
+      "description": "(Basic Attack) Fires a projectile dealing Physical DMG. Ranged 2-3.",
+      "priority": 3,
+      "note": "device"
+    },
+    {
+      "name": "Defense (AoE)",
+      "kind": "Reaction",
+      "description": "(Reaction) When hit by active AoE, reduces DMG taken.",
+      "priority": 3,
+      "note": "device"
+    },
+    {
+      "name": "Full Draw",
+      "kind": "Active",
+      "description": "(Support) After use, basic attack DMG increases; NRG not recovered at end of turn.",
+      "priority": 4,
+      "note": "device"
+    },
+    {
+      "name": "Dharana",
+      "kind": "Passive",
+      "description": "(Passive) At start of turn, if no enemies within 2 tiles, gains a buff for 1 turn.",
+      "priority": 3,
+      "note": "device"
+    },
+    {
+      "name": "Covering Shot",
+      "kind": "Active",
+      "description": "(Support) Performs covering fire against nearby enemies, up to 2 times per round.",
+      "priority": 5,
+      "note": "device"
+    }
+  ],
+  "build": {
+    "basicAttack": "Curved Shot",
+    "reaction": "Defense (AoE)",
+    "skills": [
+      "Covering Shot",
+      "Full Draw",
+      "Dharana"
+    ]
+  },
+  "summary": "Rare archer with covering fire and positioning passive.",
+  "confidence": "high",
+  "collectedAt": "2026-08-02T13:46:24.671879+00:00"
+}

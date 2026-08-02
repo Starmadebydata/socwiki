@@ -1,0 +1,80 @@
+{
+  "slug": "crimson-falcon",
+  "name": "Crimson Falcon",
+  "source": "device-ocr",
+  "sources": [
+    {
+      "type": "device",
+      "device": "Pixel_7",
+      "uid": "988054108",
+      "capturedAt": "2026-08-02T13:01:28.158470+00:00"
+    }
+  ],
+  "role": "Breaker",
+  "factions": [
+    "Iria"
+  ],
+  "rarity": "Epic",
+  "stats": {
+    "power": 1508,
+    "level": "60/60",
+    "rank": "RK13",
+    "atk": 1419,
+    "pdef": 450,
+    "mdef": 450,
+    "hp": 3517
+  },
+  "skills": [
+    {
+      "name": "Armor-Piercing Strike",
+      "kind": "Basic",
+      "description": "(Basic Attack) Deals physical DMG 2 times and inflicts debuffs on the target. Melee range 1-1.",
+      "priority": 3,
+      "note": "device tooltip"
+    },
+    {
+      "name": "Vital Guard",
+      "kind": "Reaction",
+      "description": "(Reaction) When hit by an active attack, DMG taken decreased. If injured, gains a buff for 1 turn. Up to 1 time per round.",
+      "priority": 4,
+      "note": "device tooltip partial OCR"
+    },
+    {
+      "name": "Inspiration of Comrades",
+      "kind": "Passive",
+      "description": "(Passive) At start of turn, if 2+ allies within 2 tiles, gains a buff for 1 turn. When hit with 2+ allies nearby, decreases DMG taken.",
+      "priority": 4,
+      "note": "device tooltip partial OCR"
+    },
+    {
+      "name": "Flurry of Stabs",
+      "kind": "Active",
+      "nrg": "2",
+      "cd": null,
+      "description": "(Physical DMG) Deals 45% DMG 3 times. When attacking, Crit increases by 20%. Melee range 1-1.",
+      "priority": 5,
+      "note": "Class Skill NRG 2"
+    },
+    {
+      "name": "Shadow Gait",
+      "kind": "Active",
+      "nrg": "1",
+      "cd": "3",
+      "description": "(Support) [Instant] Teleports behind the enemy and steals 1 random Attribute Buff from the target. Range 1-1.",
+      "priority": 5,
+      "note": "Class Skill NRG 1 CD 3"
+    }
+  ],
+  "build": {
+    "basicAttack": "Armor-Piercing Strike",
+    "reaction": "Vital Guard",
+    "skills": [
+      "Flurry of Stabs",
+      "Shadow Gait",
+      "Inspiration of Comrades"
+    ]
+  },
+  "summary": "Epic melee breaker with multi-hit, crit buff skill, and Instant teleport steal (Shadow Gait).",
+  "confidence": "high",
+  "collectedAt": "2026-08-02T13:01:28.158470+00:00"
+}

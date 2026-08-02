@@ -1,0 +1,74 @@
+{
+  "slug": "recruited-assassin",
+  "name": "Recruited Assassin",
+  "source": "device-ocr",
+  "sources": [
+    {
+      "type": "device",
+      "device": "Pixel_7",
+      "uid": "988054108",
+      "capturedAt": "2026-08-02T13:46:24.671879+00:00"
+    }
+  ],
+  "role": "Breaker",
+  "factions": [],
+  "rarity": "Rare",
+  "stats": {
+    "power": 1265,
+    "level": "60/60",
+    "rank": "RK13",
+    "atk": 1310,
+    "pdef": 413,
+    "mdef": 441,
+    "hp": 3237
+  },
+  "skills": [
+    {
+      "name": "Dual Blade Strike",
+      "kind": "Basic",
+      "description": "(Basic Attack) Deals physical DMG 2 times. Melee range 1-1.",
+      "priority": 3,
+      "note": "device"
+    },
+    {
+      "name": "Counterattack",
+      "kind": "Reaction",
+      "description": "(Reaction) When hit by active attack from front or side, performs basic attack if attacker in range, up to 1/round.",
+      "priority": 3,
+      "note": "device"
+    },
+    {
+      "name": "Hunting Impulse",
+      "kind": "Active",
+      "description": "(Physical DMG) Single-target. Crit increases before attack. If target defeated, recovers 3 NRG. Melee 1-1.",
+      "priority": 4,
+      "note": "device"
+    },
+    {
+      "name": "Hookshot",
+      "kind": "Active",
+      "description": "(Debuff) Selects 1 enemy in cross range, drags to self, inflicts debuff 1 turn. Range 1-4.",
+      "priority": 5,
+      "note": "device"
+    },
+    {
+      "name": "Fancy Footwork",
+      "kind": "Active",
+      "description": "(Support) Takes less AoE DMG and gains dodge attempts for turns.",
+      "priority": 4,
+      "note": "device"
+    }
+  ],
+  "build": {
+    "basicAttack": "Dual Blade Strike",
+    "reaction": "Counterattack",
+    "skills": [
+      "Hookshot",
+      "Hunting Impulse",
+      "Fancy Footwork"
+    ]
+  },
+  "summary": "Rare assassin with pull (Hookshot) and multi-hit basic.",
+  "confidence": "high",
+  "collectedAt": "2026-08-02T13:46:24.671879+00:00"
+}

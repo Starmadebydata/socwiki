@@ -1,0 +1,32 @@
+{
+  "display": [
+    2400,
+    1080
+  ],
+  "note": "roster X user-confirmed; skill X from Maitha success (not over-shifted)",
+  "roster_x": {
+    "outlaw-axeman": 362,
+    "crimson-falcon": 540,
+    "recruited-guard": 718,
+    "maitha": 896,
+    "ka-light-conjurer": 1074,
+    "recruited-assassin": 1252,
+    "recruited-pikeman": 1430,
+    "ka-fire-conjurer": 1608,
+    "ka-archer": 1786,
+    "knighted-pikeman": 1964
+  },
+  "roster_y": 500,
+  "skill_x": [
+    1770,
+    1844,
+    1952,
+    2057,
+    2172
+  ],
+  "skill_y": 850,
+  "back_xy": [
+    200,
+    55
+  ]
+}

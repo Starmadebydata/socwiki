@@ -1,0 +1,75 @@
+{
+  "slug": "recruited-pikeman",
+  "name": "Recruited Pikeman",
+  "source": "device-ocr",
+  "sources": [
+    {
+      "type": "device",
+      "device": "Pixel_7",
+      "uid": "988054108",
+      "capturedAt": "2026-08-02T13:46:24.671879+00:00"
+    }
+  ],
+  "role": "Destroyer",
+  "factions": [
+    "The Union"
+  ],
+  "rarity": "Rare",
+  "stats": {
+    "power": 1273,
+    "level": "60/60",
+    "rank": "RK13",
+    "atk": 1425,
+    "pdef": 506,
+    "hp": 3343
+  },
+  "skills": [
+    {
+      "name": "Slash",
+      "kind": "Basic",
+      "description": "(Basic Attack) Deals Physical DMG. Range 1-1.",
+      "priority": 2,
+      "note": "device"
+    },
+    {
+      "name": "Counterattack",
+      "kind": "Reaction",
+      "description": "(Reaction) Front/side hit triggers basic attack counter, 1/round.",
+      "priority": 3,
+      "note": "device"
+    },
+    {
+      "name": "Shieldbreak Jab",
+      "kind": "Active",
+      "description": "(Physical DMG) AoE in target direction up to 4 tiles, inflicts debuff 2 turns.",
+      "priority": 5,
+      "note": "device"
+    },
+    {
+      "name": "Crumbling Smash",
+      "kind": "Active",
+      "description": "(Physical DMG) Single-target. Gains a buff before attacking. Range 1-1.",
+      "priority": 4,
+      "note": "device"
+    },
+    {
+      "name": "Rupture Armor",
+      "kind": "Passive",
+      "description": "(Passive) Chance to inflict armor-break debuff for 2 turns before single-target attack.",
+      "priority": 3,
+      "note": "device"
+    }
+  ],
+  "build": {
+    "basicAttack": "Slash",
+    "reaction": "Counterattack",
+    "skills": [
+      "Shieldbreak Jab",
+      "Crumbling Smash",
+      "Rupture Armor"
+    ]
+  },
+  "summary": "Rare pikeman with line AoE shieldbreak.",
+  "confidence": "high",
+  "collectedAt": "2026-08-02T13:46:24.671879+00:00"
+}

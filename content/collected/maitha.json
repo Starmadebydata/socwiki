@@ -1,186 +1,99 @@
 {
   "slug": "maitha",
   "name": "Maitha",
-  "source": "public-structured",
+  "source": "device-ocr",
   "sources": [
     {
-      "type": "gamewith-html-cache",
-      "id": "48263",
-      "parsedAt": "2026-08-02T04:48:37.022Z"
+      "type": "device",
+      "device": "Pixel_7",
+      "uid": "988054108",
+      "capturedAt": "2026-08-02T12:54:54.658986+00:00"
     }
   ],
   "role": "Defender",
   "factions": [
-    "Iria",
-    "SoC"
+    "The Union"
   ],
   "rarity": "Legendary",
   "stats": {
     "move": null,
     "highJump": null,
-    "lowJump": 3
+    "lowJump": null,
+    "power": 1632,
+    "level": "60/60",
+    "rank": "RK13",
+    "atk": 1393,
+    "pdef": 649,
+    "mdef": 406,
+    "hp": 3952
   },
   "skills": [
     {
-      "name": "Armor-Piercing Strike Block Counter Leave",
+      "name": "Powerful Attack",
       "kind": "Basic",
-      "nrg": "0",
-      "cd": "—",
-      "description": "Recommended Basic from Best Build table.",
-      "note": "Best Build Basic",
-      "priority": 5
+      "nrg": null,
+      "cd": null,
+      "description": "(Basic Attack) Deals 110% Physical DMG. Melee range 1-1.",
+      "priority": 3,
+      "note": "device tooltip"
     },
     {
-      "name": "It",
+      "name": "Block and Counter",
       "kind": "Reaction",
-      "nrg": "—",
-      "cd": "—",
-      "description": "Recommended Reaction from Best Build table.",
-      "note": "Best Build Reaction",
-      "priority": 5
+      "nrg": null,
+      "cd": null,
+      "description": "(Reaction) When receiving a melee attack from the front or side, 100% chance to trigger Block. Leads to Strike Back with basic attack dealing 70% physical DMG. 1 time per round.",
+      "priority": 5,
+      "note": "device tooltip"
     },
     {
-      "name": "Invulnerable",
+      "name": "Come On, Everybody!",
       "kind": "Active",
-      "nrg": "1",
-      "cd": "5",
-      "description": "(Support) Gains DMG Reduction IV , Mind's Eye , and Immunity to Disrupt for 3 turns.",
-      "note": "Gains DMG Reduction IV , Mind's Eye , and Immunity to Disrupt for 3 turns.",
-      "priority": 4
+      "nrg": "3",
+      "cd": null,
+      "description": "(Support) Restores 20% HP and grants ATK I and P.DEF I to all allies within 3 tiles. Takes physical attacks from the enemy for allies within 2 tiles for 2 turns.",
+      "priority": 5,
+      "note": "Class Skill NRG 3"
     },
     {
-      "name": "Bandage",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "3",
-      "description": "(Healing) Instant Single-target healing. Heals 30% HP.",
-      "note": "Instant Single-target healing. Heals 30% HP.",
-      "priority": 3
-    },
-    {
-      "name": "Block Counter -",
-      "kind": "Reaction",
-      "nrg": "—",
-      "cd": "—",
-      "description": "(Reaction) When receiving a melee attack from front or side , there is a 100% chance to trigger Block . This leads to a Strike Back with basic attack , dealing 70% physical DMG to the attacker. This effect can be activated 1 time per round.",
-      "note": "When receiving a melee attack from front or side , there is a 100% chance to trigger Block . This leads to a Strike Back with basic attack ,",
-      "priority": 3
-    },
-    {
-      "name": "Co-Defense -",
-      "kind": "Passive",
-      "nrg": "—",
-      "cd": "—",
-      "description": "(Passive) For each ally within a 2-tile radius of the character, DEF increases by 10%, up to 40%.",
-      "note": "For each ally within a 2-tile radius of the character, DEF increases by 10%, up to 40%.",
-      "priority": 3
-    },
-    {
-      "name": "Leg Slam",
+      "name": "Maitha's Combo",
       "kind": "Active",
       "nrg": "2",
-      "cd": "2",
-      "description": "(Physical DMG) Deals 120% DMG, knocks the target back by 2 tiles, and inflicts ▽ Move I for 1 turn.",
-      "note": "Deals 120% DMG, knocks the target back by 2 tiles, and inflicts ▽ Move I for 1 turn.",
-      "priority": 3
-    },
-    {
-      "name": "Maitha's Base Skills Skill Range  Slash",
-      "kind": "Basic",
-      "nrg": "—",
-      "cd": "—",
-      "description": "(Basic Attack) Deals 100% Physical DMG.",
-      "note": "Deals 100% Physical DMG.",
-      "priority": 3
+      "cd": "4",
+      "description": "(Physical DMG) Deals 20% DMG 1 time, 50% DMG 3 times, and knocks the target back by 2 tiles. Melee range 1-1.",
+      "priority": 4,
+      "note": "Class Skill NRG 2 CD 4"
     },
     {
       "name": "Maitha's Charge",
       "kind": "Active",
       "nrg": "1",
       "cd": "5",
-      "description": "(Physical DMG) Maitha charges at 1 enemy within a cross-shaped range around her, dealing 130% DMG and knocking the target back by 2 tiles.",
-      "note": "Maitha charges at 1 enemy within a cross-shaped range around her, dealing 130% DMG and knocking the target back by 2 tiles.",
-      "priority": 3
-    },
-    {
-      "name": "Powerful Attack",
-      "kind": "Basic",
-      "nrg": "—",
-      "cd": "—",
-      "description": "(Basic Attack) Deals 110% Physical DMG.",
-      "note": "Deals 110% Physical DMG.",
-      "priority": 3
-    },
-    {
-      "name": "RK11 Skill Range  Maitha's Combo",
-      "kind": "Active",
-      "nrg": "2",
-      "cd": "4",
-      "description": "(Physical DMG) Maitha deals 20% DMG 1 time, 50% DMG 3 times, and she knocks the target back by 2 tiles.",
-      "note": "Maitha deals 20% DMG 1 time, 50% DMG 3 times, and she knocks the target back by 2 tiles.",
-      "priority": 3
-    },
-    {
-      "name": "RK5 Skill Range  Endurance Activation -",
-      "kind": "Reaction",
-      "nrg": "—",
-      "cd": "—",
-      "description": "(Reaction) When receiving healing, gains DMG Reduction II for 2 turns.",
-      "note": "When receiving healing, gains DMG Reduction II for 2 turns.",
-      "priority": 3
-    },
-    {
-      "name": "RK9 Skill Range  Armor-Piercing Strike",
-      "kind": "Basic",
-      "nrg": "—",
-      "cd": "—",
-      "description": "(Basic Attack) Deals 100% physical DMG and inflicts ▽ P.DEF I and ▽ M.DEF I on the target, lasting for 2 turns.",
-      "note": "Deals 100% physical DMG and inflicts ▽ P.DEF I and ▽ M.DEF I on the target, lasting for 2 turns.",
-      "priority": 3
-    },
-    {
-      "name": "Skill Range  Battle Flag of Convallaria -",
-      "kind": "Active",
-      "nrg": "—",
-      "cd": "—",
-      "description": "(Leader's Aura) For all Sword of Convallaria allies in battle, increases ATK by 10% and DEF by 20%.",
-      "note": "For all Sword of Convallaria allies in battle, increases ATK by 10% and DEF by 20%.",
-      "priority": 3
-    },
-    {
-      "name": "Skill Range  Guard -",
-      "kind": "Passive",
-      "nrg": "—",
-      "cd": "—",
-      "description": "(Passive) Takes physical attacks for all other allies within a 2-tile radius of the character. When triggered, DEF is increased by 20%. Can be activated up to 1 time per round.",
-      "note": "Takes physical attacks for all other allies within a 2-tile radius of the character. When triggered, DEF is increased by 20%. Can be activat",
-      "priority": 3
-    },
-    {
-      "name": "SP Skill Skill Range  Bulwark Charge",
-      "kind": "Active",
-      "nrg": "1",
-      "cd": "0",
-      "description": "(Piercing DMG) Rally Command Selects target to perform Charge ; if the target is an enemy, charges to their side and deals Piercing DMG equal to 80% of P.ATK. ✦ Auxiliary Passive . Effect: Increases Movement by 1 tile. After an active attack, the character can Move Again for a distance equal to the remaining Movement. When SP Maitha learns RK1 Bulwark Charge , and Maitha (Original) is enhanced to 3-star, the SP Skill is unlocked. Skills That Can",
-      "note": "Rally Command Selects target to perform Charge ; if the target is an enemy, charges to their side and deals Piercing DMG equal to 80% of P.A",
-      "priority": 3
+      "description": "(Physical DMG) Charges at 1 enemy within a cross-shaped range, dealing 130% DMG and knocking the target back by 2 tiles. Range 1-3.",
+      "priority": 4,
+      "note": "Class Skill NRG 1 CD 5"
     }
   ],
   "build": {
-    "basicAttack": "Armor-Piercing Strike Block Counter Leave",
-    "reaction": "It",
-    "ascension": "Me",
+    "basicAttack": "Powerful Attack",
+    "reaction": "Block and Counter",
     "skills": [
-      "Invulnerable"
+      "Come On, Everybody!",
+      "Maitha's Combo",
+      "Maitha's Charge"
     ],
     "weapon": "",
     "trinket": "",
     "tarot": ""
   },
-  "summary": "here! Table of Contents Maitha Tier & Basic Info Strength & How to Use",
-  "pros": [],
-  "howToUse": "",
+  "summary": "Starter Defender captured from live client on Pixel 7. Skill tooltips include NRG/CD for class skills.",
+  "pros": [
+    "Team heal + ATK/P.DEF buffs",
+    "Block and Counter reaction",
+    "Knockback tools"
+  ],
+  "howToUse": "Open with Come On, Everybody! for party sustain/buffs; use Combo/Charge for chip and knockback.",
   "starPriority": "",
-  "confidence": "medium",
-  "collectedAt": "2026-08-02T04:48:37.022Z"
+  "confidence": "high",
+  "collectedAt": "2026-08-02T12:54:54.660043+00:00"
 }

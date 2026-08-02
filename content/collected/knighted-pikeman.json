@@ -1,0 +1,75 @@
+{
+  "slug": "knighted-pikeman",
+  "name": "Knighted Pikeman",
+  "source": "device-ocr",
+  "sources": [
+    {
+      "type": "device",
+      "device": "Pixel_7",
+      "uid": "988054108",
+      "capturedAt": "2026-08-02T13:46:24.671879+00:00"
+    }
+  ],
+  "role": "Defender",
+  "factions": [
+    "The Union"
+  ],
+  "rarity": "Epic",
+  "stats": {
+    "power": 1385,
+    "level": "60/60",
+    "rank": "RK13",
+    "atk": 1439,
+    "pdef": 548,
+    "hp": 3519
+  },
+  "skills": [
+    {
+      "name": "Slash",
+      "kind": "Basic",
+      "description": "(Basic Attack) Deals Physical DMG. Melee 1-1.",
+      "priority": 2,
+      "note": "device"
+    },
+    {
+      "name": "Preempt",
+      "kind": "Reaction",
+      "description": "(Reaction) Before active attack from front/side, Strike Back up to 1/round.",
+      "priority": 4,
+      "note": "device"
+    },
+    {
+      "name": "Parry",
+      "kind": "Passive",
+      "description": "(Passive) Before physical melee attack, faces attacker and adds P.ATK to P.DEF.",
+      "priority": 4,
+      "note": "device"
+    },
+    {
+      "name": "Crescendo Combo",
+      "kind": "Active",
+      "description": "(Physical DMG) Single-target, dispels 2 buffs, then Pursuit dealing DMG. Range 1-1.",
+      "priority": 5,
+      "note": "device"
+    },
+    {
+      "name": "Knightly Spirit",
+      "kind": "Passive",
+      "description": "(Passive) Increases ATK when attacking from front; increases DEF when attacked from front.",
+      "priority": 4,
+      "note": "device"
+    }
+  ],
+  "build": {
+    "basicAttack": "Slash",
+    "reaction": "Preempt",
+    "skills": [
+      "Crescendo Combo",
+      "Parry",
+      "Knightly Spirit"
+    ]
+  },
+  "summary": "Epic frontline pikeman with Preempt counter and Crescendo Combo.",
+  "confidence": "high",
+  "collectedAt": "2026-08-02T13:46:24.671879+00:00"
+}

@@ -1,0 +1,76 @@
+{
+  "slug": "outlaw-axeman",
+  "name": "Outlaw Axeman",
+  "source": "device-ocr",
+  "sources": [
+    {
+      "type": "device",
+      "device": "Pixel_7",
+      "uid": "988054108",
+      "capturedAt": "2026-08-02T13:01:28.158470+00:00"
+    }
+  ],
+  "role": "Destroyer",
+  "factions": [],
+  "rarity": "Rare",
+  "stats": {
+    "power": 1266,
+    "level": "60/60",
+    "rank": "RK13",
+    "atk": 1458,
+    "pdef": 454,
+    "mdef": 337,
+    "hp": 3450
+  },
+  "skills": [
+    {
+      "name": "Slash",
+      "kind": "Basic",
+      "description": "(Basic Attack) Deals Physical DMG. Melee range 1-1.",
+      "priority": 2,
+      "note": "device tooltip"
+    },
+    {
+      "name": "Defense (Back Attack)",
+      "kind": "Reaction",
+      "description": "(Reaction) Reduces DMG taken from active attacks; additional reduction vs back attacks.",
+      "priority": 3,
+      "note": "device tooltip partial OCR"
+    },
+    {
+      "name": "Tearing Whirlwind",
+      "kind": "Active",
+      "nrg": "2",
+      "cd": "3",
+      "description": "(Physical DMG) Deals 90% AoE DMG to all enemies within 1-tile radius and inflicts Decreased Healing Received for 2 turns.",
+      "priority": 5,
+      "note": "Class Skill NRG 2 CD 3"
+    },
+    {
+      "name": "Powerful Throw",
+      "kind": "Active",
+      "description": "(Physical DMG) Single-target ranged attack. Range 1-2.",
+      "priority": 3,
+      "note": "device tooltip partial OCR"
+    },
+    {
+      "name": "Shield Break",
+      "kind": "Passive",
+      "description": "(Passive) Increases ATK when attacking enemies with a shield.",
+      "priority": 3,
+      "note": "device tooltip partial OCR"
+    }
+  ],
+  "build": {
+    "basicAttack": "Slash",
+    "reaction": "Defense (Back Attack)",
+    "skills": [
+      "Tearing Whirlwind",
+      "Powerful Throw",
+      "Shield Break"
+    ]
+  },
+  "summary": "Rare axeman with AoE heal-reduction whirlwind.",
+  "confidence": "medium",
+  "collectedAt": "2026-08-02T13:01:28.158470+00:00"
+}

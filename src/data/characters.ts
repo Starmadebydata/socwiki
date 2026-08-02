@@ -1,6 +1,10 @@
 import type { Character, Role, Tier } from "@/types/character";
 import { getTop20Map } from "@/data/top20";
 import { getAutoRefinedMap } from "@/data/auto-refined";
+import {
+  getDeviceOcrMap,
+  getDeviceOcrCharacterMap,
+} from "@/data/device-ocr-refined";
 
 /** Auto-maintained character DB — visual + skill table ready. */
 const rawCharacters: Character[] = [
@@ -5419,9 +5423,13 @@ const rawCharacters: Character[] = [
 
 const TOP20 = getTop20Map();
 const AUTO = getAutoRefinedMap();
+const DEVICE = getDeviceOcrMap();
+const DEVICE_CHARS = getDeviceOcrCharacterMap();
 
-function applyAuto(c: Character): Character {
-  const a = AUTO[c.slug];
+function applyPartial(
+  c: Character,
+  a: Partial<Character> | undefined,
+): Character {
   if (!a) return c;
   return {
     ...c,
@@ -5452,16 +5460,34 @@ function applyAuto(c: Character): Character {
   };
 }
 
+function applyAuto(c: Character): Character {
+  return applyPartial(c, AUTO[c.slug]);
+}
+
+function applyDevice(c: Character): Character {
+  return applyPartial(c, DEVICE[c.slug]);
+}
+
 /**
  * Merge order:
  * 1) rawCharacters (seed roster)
  * 2) AUTO_REFINED structured scrape (skills/NRG/CD/build)
- * 3) TOP20 hand-refined full override (wins for meta cores)
+ * 3) DEVICE_OCR client tooltips (wins over auto for same slug)
+ * 4) TOP20 hand-refined full override (wins for meta cores)
+ * 5) device-only units not in seed (minions / generics from capture)
  */
-export const characters: Character[] = rawCharacters.map((c) => {
+const refinedCore: Character[] = rawCharacters.map((c) => {
   const withAuto = applyAuto(c);
-  return TOP20[c.slug] ?? withAuto;
+  const withDevice = applyDevice(withAuto);
+  return TOP20[c.slug] ?? withDevice;
 });
+
+const seedSlugs = new Set(rawCharacters.map((c) => c.slug));
+const deviceOnly: Character[] = Object.values(DEVICE_CHARS).filter(
+  (c) => !seedSlugs.has(c.slug),
+);
+
+export const characters: Character[] = [...refinedCore, ...deviceOnly];
 
 export function getAllCharacters(): Character[] {
   return characters;

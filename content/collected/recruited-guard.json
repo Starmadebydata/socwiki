@@ -1,0 +1,68 @@
+{
+  "slug": "recruited-guard",
+  "name": "Recruited Guard",
+  "source": "device-ocr",
+  "sources": [
+    {
+      "type": "device",
+      "device": "Pixel_7",
+      "uid": "988054108",
+      "capturedAt": "2026-08-02T13:01:28.158470+00:00"
+    }
+  ],
+  "role": "Defender",
+  "factions": [
+    "The Union"
+  ],
+  "rarity": "Rare",
+  "stats": {},
+  "skills": [
+    {
+      "name": "Slash",
+      "kind": "Basic",
+      "description": "(Basic Attack) Deals Physical DMG. Range 1-1.",
+      "priority": 2,
+      "note": "device tooltip"
+    },
+    {
+      "name": "Front Defense",
+      "kind": "Reaction",
+      "description": "(Reaction) When hit by an active attack from the front, DMG taken decreased.",
+      "priority": 3,
+      "note": "device tooltip partial OCR"
+    },
+    {
+      "name": "Defensive Stance",
+      "kind": "Active",
+      "description": "(Support) Gains a shield based on HP and a buff for 2 turns.",
+      "priority": 4,
+      "note": "device tooltip partial OCR"
+    },
+    {
+      "name": "Global Guard",
+      "kind": "Active",
+      "description": "(Support) Takes physical attacks for all other allies within 2 tiles. Gains buffs for 3 turns when activated.",
+      "priority": 5,
+      "note": "device tooltip"
+    },
+    {
+      "name": "Knock-Out Blow",
+      "kind": "Active",
+      "description": "(Physical DMG) Single-target attack dealing DMG and inflicting a debuff for 1 turn. Range 1-1.",
+      "priority": 3,
+      "note": "device tooltip partial OCR"
+    }
+  ],
+  "build": {
+    "basicAttack": "Slash",
+    "reaction": "Front Defense",
+    "skills": [
+      "Global Guard",
+      "Defensive Stance",
+      "Knock-Out Blow"
+    ]
+  },
+  "summary": "Rare frontline guard with party physical cover (Global Guard).",
+  "confidence": "medium",
+  "collectedAt": "2026-08-02T13:01:28.158470+00:00"
+}

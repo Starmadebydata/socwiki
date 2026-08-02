@@ -1,0 +1,72 @@
+{
+  "slug": "ka-light-conjurer",
+  "name": "K.A. Light Conjurer",
+  "source": "device-ocr",
+  "sources": [
+    {
+      "type": "device",
+      "device": "Pixel_7",
+      "uid": "988054108",
+      "capturedAt": "2026-08-02T13:46:24.671879+00:00"
+    }
+  ],
+  "role": "Watcher",
+  "factions": [
+    "The Union"
+  ],
+  "rarity": "Rare",
+  "stats": {
+    "power": 1313,
+    "level": "60/60",
+    "rank": "RK13"
+  },
+  "skills": [
+    {
+      "name": "Energy Wave",
+      "kind": "Basic",
+      "description": "(Basic Attack) Deals 80% Magical DMG. Ranged 1-2.",
+      "priority": 2,
+      "note": "device"
+    },
+    {
+      "name": "Endure",
+      "kind": "Reaction",
+      "description": "(Reaction) Takes less DoT.",
+      "priority": 2,
+      "note": "device"
+    },
+    {
+      "name": "Regenerate",
+      "kind": "Passive",
+      "description": "(Passive) End of turn: heals lowest-HP ally within 3 tiles by % of M.ATK.",
+      "priority": 4,
+      "note": "device"
+    },
+    {
+      "name": "Sanction",
+      "kind": "Active",
+      "description": "(Magical DMG) Single-target 150% DMG; after attack dispels 2 buffs. Ranged 1-2.",
+      "priority": 5,
+      "note": "device"
+    },
+    {
+      "name": "Healing Spell",
+      "kind": "Active",
+      "description": "(Healing) Heals target by M.ATK and dispels 1 debuff. Range 0-2.",
+      "priority": 5,
+      "note": "device"
+    }
+  ],
+  "build": {
+    "basicAttack": "Energy Wave",
+    "reaction": "Endure",
+    "skills": [
+      "Healing Spell",
+      "Sanction",
+      "Regenerate"
+    ]
+  },
+  "summary": "Rare Union healer/mage with Sanction dispel and Healing Spell.",
+  "confidence": "high",
+  "collectedAt": "2026-08-02T13:46:24.671879+00:00"
+}
