@@ -87,31 +87,25 @@ Store Cloudflare API token as secret; ensure build env has no secrets needed for
 
 ## GitHub + auto deploy
 
-Repo: create/push under your GitHub account (see README). Two CI options:
+Repo: https://github.com/Starmadebydata/socwiki
 
-### Option A — GitHub Actions (this repo includes workflow)
+### Primary — Cloudflare Workers Builds ✅ (已绑定)
 
-1. Create API token: [API Tokens](https://dash.cloudflare.com/profile/api-tokens) → **Edit Cloudflare Workers**
-2. GitHub repo → **Settings → Secrets and variables → Actions**:
-   - `CLOUDFLARE_API_TOKEN` = token
-   - `CLOUDFLARE_ACCOUNT_ID` = `9960510abfc7d4b64dd5847d2565462b`
-3. Push to `main` → workflow **Deploy to Cloudflare Workers** runs `npm run deploy`
-
-### Option B — Cloudflare Workers Builds (Dashboard Git bind)
-
-> Workers Builds Git linking is **Dashboard-only** (no public API as of 2026).
-
-1. Open [Workers → socwiki → Settings → Builds](https://dash.cloudflare.com/9960510abfc7d4b64dd5847d2565462b/workers/services/view/socwiki/settings)
-2. **Connect** → authorize GitHub → select this repository
-3. Settings:
+1. Dashboard: [Workers → socwiki → Settings → Builds](https://dash.cloudflare.com/9960510abfc7d4b64dd5847d2565462b/workers/services/view/socwiki/settings)
+2. 推荐配置：
    - **Production branch:** `main`
-   - **Root directory:** `/` (repo root)
-   - **Build command:** leave empty (deploy script builds)
+   - **Root directory:** `/`
+   - **Build command:** 留空（`npm run deploy` 内含 build）
    - **Deploy command:** `npm run deploy`
-4. Ensure Worker name in dashboard matches `name` in `wrangler.jsonc` (`socwiki`)
-5. Push to `main` to trigger a build
+3. Worker 名须与 `wrangler.jsonc` 的 `name` 一致：`socwiki`
+4. 推送到 `main` 即触发构建
 
-You can use A, B, or both; if both run, deploys may race — prefer one primary path.
+若 Build 失败，在 Deployments / Build history 看日志；常见原因是 Deploy command 写成了 `wrangler deploy` 而不是 `npm run deploy`（OpenNext 需要先打包）。
+
+### Fallback — GitHub Actions（已关闭 push）
+
+`.github/workflows/deploy.yml` 仅保留 `workflow_dispatch`，避免与 Workers Builds 双重部署。  
+需要时：`gh workflow enable "Deploy to Cloudflare Workers"` 并恢复 `on.push`。
 
 ## Official docs
 

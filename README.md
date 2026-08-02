@@ -28,9 +28,11 @@ Domain **socwiki.app** is already routed on Worker `socwiki`.
 
 ### CI / push-to-deploy
 
-- **GitHub Actions:** `.github/workflows/deploy.yml` — set secrets `CLOUDFLARE_API_TOKEN` + `CLOUDFLARE_ACCOUNT_ID`
-- **Workers Builds:** Dashboard → Worker `socwiki` → Settings → Builds → Connect this repo  
-  Deploy command: `npm run deploy` · branch: `main`
+**Primary:** Cloudflare Workers Builds（仓库已在 Dashboard 绑定）  
+- 推送到 `main` → CF 自动 build & deploy  
+- 建议 Deploy command：`npm run deploy` · Production branch：`main`
+
+**Fallback:** GitHub Actions（已关闭 push 触发，仅 `workflow_dispatch` 备用）
 
 Details: [docs/DEPLOY_CLOUDFLARE.md](./docs/DEPLOY_CLOUDFLARE.md)
 

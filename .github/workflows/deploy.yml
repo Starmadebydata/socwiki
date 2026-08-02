@@ -1,22 +1,17 @@
-# Auto-deploy SoC Wiki to Cloudflare Workers on push to main.
+# DISABLED by default — Cloudflare Workers Builds is the primary CI path
+# (Dashboard: Workers → socwiki → Settings → Builds → connected to this repo).
 #
-# Required repository secrets (Settings → Secrets and variables → Actions):
-#   CLOUDFLARE_API_TOKEN  — Create at https://dash.cloudflare.com/profile/api-tokens
-#                           Template "Edit Cloudflare Workers" is enough
-#   CLOUDFLARE_ACCOUNT_ID — 9960510abfc7d4b64dd5847d2565462b
-#
-# Optional (Dashboard Git binding, same outcome without GH secrets):
-#   Workers & Pages → socwiki → Settings → Builds → Connect repository
-#   Build command: (leave empty or npm ci)
-#   Deploy command: npm run deploy
-#   Root directory: /
-#   Production branch: main
+# Keeping this file as a manual fallback only.
+# Enable with: gh workflow enable "Deploy to Cloudflare Workers"
+# Requires secrets: CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID
 
 name: Deploy to Cloudflare Workers
 
 on:
-  push:
-    branches: [main]
+  # Push deploys are handled by Cloudflare Workers Builds.
+  # Uncomment the push trigger only if you disconnect CF Builds.
+  # push:
+  #   branches: [main]
   workflow_dispatch:
 
 concurrency:
