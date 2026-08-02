@@ -1,150 +1,203 @@
 {
   "slug": "estra",
   "name": "Estra",
-  "source": "public",
+  "source": "public-structured",
   "sources": [
     {
-      "type": "url",
-      "url": "https://gamewith.net/sword-of-convallaria/55738",
-      "fetchedAt": "2026-08-02T04:31:02.186Z",
-      "publisher": "gamewith"
-    },
-    {
-      "type": "url",
-      "url": "https://dotgg.gg/sword-of-convallaria/estra/",
-      "fetchedAt": "2026-08-02T04:31:53.469Z",
-      "publisher": "dotgg"
+      "type": "gamewith-html-cache",
+      "id": "55738",
+      "parsedAt": "2026-08-02T04:48:37.005Z"
     }
   ],
   "role": "Seeker",
   "factions": [
     "Alacrity",
-    "SoC",
-    "Drifter"
+    "Drifter",
+    "SoC"
   ],
   "rarity": "Legendary",
   "stats": {
     "move": null,
     "highJump": null,
-    "lowJump": null
+    "lowJump": 5
   },
   "skills": [
     {
-      "name": "Shadow Blitz",
+      "name": "No Restraints",
       "kind": "Active",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "nrg": "3",
+      "cd": "2",
+      "description": "(Physical DMG) Single-target attack. Ignores Reaction Skill ; First deals 40% DMG to the target. Then deals 100% DMG; before attacking, for each 1 NRG the target is missing, DMG dealt increases to 130%, up to 190%. When defeating an enemy, the character recovers 3 NRG.",
+      "note": "Deals massive damage when the enemy's NRG is low. With the 5-star effect or cooldown reduction from allies, it can be used every turn. Prioritize [Shadow Blitz]",
+      "priority": 5
+    },
+    {
+      "name": "Potion",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Choice Skill with strong self-buffing effects. Both options offer overwhelming power, so it’s usually worth including in your build. Since each can only be used once, consider swapping this skill with something else for longer battles.",
+      "note": "A Choice Skill with strong self-buffing effects. Both options offer overwhelming power, so it’s usually worth including in your build. Since each can only be us",
+      "priority": 5
+    },
+    {
+      "name": "Priority and Details  Shadow Blitz",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "Move behind an enemy and perform a Basic Attack that has [Ignore Assist]. This powerful Skill allows you to attack again if you defeat the target. In stages with plenty of enemies, it enables free movement, so focus on boosting its damage and aim for consecutive takedowns.",
+      "note": "Move behind an enemy and perform a Basic Attack that has [Ignore Assist]. This powerful Skill allows you to attack again if you defeat the target. In stages wit",
+      "priority": 5
+    },
+    {
+      "name": "Shadow Evasion",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A powerful all-in-one Reaction with [Preempt] and action interruption. Note that it's ineffective against area attacks.",
+      "note": "A powerful all-in-one Reaction with [Preempt] and action interruption. Note that it's ineffective against area attacks.",
+      "priority": 5
+    },
+    {
+      "name": "Spine Pierce",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Single-target attack. Deals 110% physical DMG. When performing a Back Attack , ignores the target's Physical Shield . Skills That Can Be",
+      "note": "Deals high damage and bypasses Physical Shields when attacking from behind. This is usually the better option for a Basic Attack.",
+      "priority": 5
     },
     {
       "name": "Thunder Arrow",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "Deals light damage, reduces the enemy’s NRG, and applies ×Active Skills & ×NRG Restored. This lets you trigger your Trait’s damage boost, making it a strong passive for increasing overall damage.",
+      "note": "Deals light damage, reduces the enemy’s NRG, and applies ×Active Skills & ×NRG Restored. This lets you trigger your Trait’s damage boost, making it a strong pas",
+      "priority": 5
+    },
+    {
+      "name": "Doom Decoy",
       "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "nrg": "—",
+      "cd": "—",
+      "description": "Useful when enemy buffs or self-debuffs are problematic. Also helpful when Estra can’t easily receive buffs from other characters, as it provides a self-buff option.",
+      "note": "Useful when enemy buffs or self-debuffs are problematic. Also helpful when Estra can’t easily receive buffs from other characters, as it provides a self-buff op",
+      "priority": 4
     },
     {
       "name": "Shadow Step",
       "kind": "Active",
-      "nrg": "0",
-      "cd": "4",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "nrg": "—",
+      "cd": "—",
+      "description": "Though it has a long cooldown, it reduces enemy NRG and suppresses Skill use while boosting Trait damage. A good pick when Estra lacks NRG recovery support—include it when there is a clear need. Defense (Magical) ★★★★ Useful in stages or boss fights with AoE attacks where [Shadow Evasion] isn’t effective.",
+      "note": "Though it has a long cooldown, it reduces enemy NRG and suppresses Skill use while boosting Trait damage. A good pick when Estra lacks NRG recovery support—incl",
+      "priority": 4
     },
     {
       "name": "Hookshot",
       "kind": "Active",
       "nrg": "0",
       "cd": "4",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Debuff) Instant . Selects 1 enemy within a cross-shaped ranged around the character, drags them to the character, and inflicts × Reaction Skills for 1 turn.",
+      "note": "Instant . Selects 1 enemy within a cross-shaped ranged around the character, drags them to the character, and inflicts × Reaction Skills for",
       "priority": 3
     },
     {
-      "name": "Shadow Evasion",
+      "name": "RK1 Skill Range  Demon Hunting Trap",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "4",
+      "description": "(Support) Instant Places 1 Beast Trap .",
+      "note": "Instant Places 1 Beast Trap .",
+      "priority": 3
+    },
+    {
+      "name": "RK7 Skill Range  Stance of Exorcism",
+      "kind": "Active",
+      "nrg": "2",
+      "cd": "0",
+      "description": "(Support) Instant Gains a Magical Shield equal to 80% of P.ATK and gains ▲M.DEF II for 2 turns.",
+      "note": "Instant Gains a Magical Shield equal to 80% of P.ATK and gains ▲M.DEF II for 2 turns.",
+      "priority": 3
+    },
+    {
+      "name": "RK9 Skill Range  Feverish Attack",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% physical DMG and gains 20% Life Steal .",
+      "note": "Deals 100% physical DMG and gains 20% Life Steal .",
+      "priority": 3
+    },
+    {
+      "name": "Shadow Evasion -",
       "kind": "Reaction",
-      "nrg": "-",
+      "nrg": "—",
       "cd": "2",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Reaction) Before receiving an active single-target attack by an enemy from back or side within 3 tiles of the character, performs Preempt , teleports behind the target, performs a Basic Attack that deals 50% DMG, and interrupts the target's turn.",
+      "note": "Before receiving an active single-target attack by an enemy from back or side within 3 tiles of the character, performs Preempt , teleports ",
       "priority": 3
     },
     {
-      "name": "Potion",
+      "name": "Skill Range  Doom Decoy -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) Before a non- instant single-target active attack, steals 3 buffs from the target, and after the attack transfers 3 debuffs from the character to the target. If the target has no buffs and the character has no debuffs , the character gains 4 random Level 2 Buffs for 2 turns.",
+      "note": "Before a non- instant single-target active attack, steals 3 buffs from the target, and after the attack transfers 3 debuffs from the charact",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Shadow Step",
       "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "0",
+      "cd": "4",
+      "description": "(Support) Instant Teleports behind the enemy, steals 2 NRG from the target, and then depletes 2 NRG from the target.",
+      "note": "Instant Teleports behind the enemy, steals 2 NRG from the target, and then depletes 2 NRG from the target.",
       "priority": 3
     },
     {
-      "name": "Feverish Attack",
+      "name": "Skills Skill Range  Dual Blade Strike",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 50% physical DMG 2 times.",
+      "note": "Deals 50% physical DMG 2 times.",
       "priority": 3
     },
     {
-      "name": "Spine Pierce",
-      "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "name": "Thunder Arrow -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) When performing a non- instant single-target active attack, shoots a crossbow bolt at the target, dealing 30% physical DMG, depletes 1 NRG from the target, and inflicts ×Active Skill and ×NRG Recovery , lasting for 2 turns. Skills That Can Be",
+      "note": "When performing a non- instant single-target active attack, shoots a crossbow bolt at the target, dealing 30% physical DMG, depletes 1 NRG f",
       "priority": 3
-    },
-    {
-      "name": "Doom Decoy",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "No Restraints",
-      "kind": "Active",
-      "nrg": "3",
-      "cd": "2",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Defense",
-      "kind": "Active",
-      "note": "Priority section extract",
-      "priority": 4,
-      "description": ""
     }
   ],
   "build": {
-    "basicAttack": "Feverish Attack",
-    "reaction": "Shadow Step",
+    "basicAttack": "Spine Pierce",
+    "reaction": "",
+    "ascension": "",
     "skills": [
-      "Shadow Blitz",
-      "Thunder Arrow",
-      "Shadow Evasion",
-      "Hookshot",
+      "No Restraints",
       "Potion",
-      "Doom Decoy"
+      "Thunder Arrow"
     ],
-    "weapon": "",
+    "weapon": "Void Stab",
     "trinket": "Cage Mask",
     "tarot": "Verdict of Justice"
   },
-  "summary": "is able to apply self-buff by using her [Potion] skill .",
-  "pros": [],
-  "howToUse": "",
+  "summary": "here! Table of Contents Estra Tier & Basic Info Strength & How to Use",
+  "pros": [
+    "Priority and Details  Shadow Blitz: Move behind an enemy and perform a Basic Attack that has [Ignore Assist]. This p",
+    "Thunder Arrow: Deals light damage, reduces the enemy’s NRG, and applies ×Active Skills & ×NRG R",
+    "Shadow Evasion: A powerful all-in-one Reaction with [Preempt] and action interruption. Note that",
+    "Potion: A Choice Skill with strong self-buffing effects. Both options offer overwhelming"
+  ],
+  "howToUse": "Move behind an enemy and perform a Basic Attack that has [Ignore Assist]. This powerful Skill allows you to attack again if you defeat the target. In stages wit Deals light damage, reduces the enemy’s NRG, and applies ×Active Skills & ×NRG Restored. This lets you trigger your Trait’s damage boost, making it a strong pas A powerful all-in-one Reaction with [Preempt] and action interruption. Note that it's ineffective against area attacks.",
   "starPriority": "",
   "confidence": "medium",
-  "collectedAt": "2026-08-02T04:31:53.481Z",
-  "cleanedAt": "2026-08-02T04:32:57.413Z"
+  "collectedAt": "2026-08-02T04:48:37.005Z"
 }

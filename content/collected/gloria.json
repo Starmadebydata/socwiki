@@ -1,13 +1,12 @@
 {
   "slug": "gloria",
   "name": "Gloria",
-  "source": "public",
+  "source": "public-structured",
   "sources": [
     {
-      "type": "url",
-      "url": "https://gamewith.net/sword-of-convallaria/48258",
-      "fetchedAt": "2026-08-02T04:31:14.730Z",
-      "publisher": "gamewith"
+      "type": "gamewith-html-cache",
+      "id": "48258",
+      "parsedAt": "2026-08-02T04:48:37.029Z"
     }
   ],
   "role": "Watcher",
@@ -20,145 +19,185 @@
   "stats": {
     "move": null,
     "highJump": null,
-    "lowJump": null
+    "lowJump": 3
   },
   "skills": [
     {
-      "name": "Slash",
+      "name": "Front Defense",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "In high-difficulty stages, taking a single hit can be fatal, so this Reaction, which increases survivability, is highly recommended.",
+      "note": "In high-difficulty stages, taking a single hit can be fatal, so this Reaction, which increases survivability, is highly recommended.",
+      "priority": 5
+    },
+    {
+      "name": "Lance of Justice",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Longinus - Thrust",
-      "kind": "Active",
-      "nrg": "2",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Knightly Spirit",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Solemnity",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Longinus - Brilliance",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "4",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "nrg": "—",
+      "cd": "—",
+      "description": "In Spear Mode , it's an AoE attack; in Sword Mode , it's a Basic Attack whose power increases when attacking from the front. Generally, this Basic Attack is recommended, but its only drawback is the low damage in Spear Mode .",
+      "note": "In Spear Mode , it's an AoE attack; in Sword Mode , it's a Basic Attack whose power increases when attacking from the front. Generally, this Basic Attack is rec",
+      "priority": 5
     },
     {
       "name": "Lance of Longinus",
       "kind": "Active",
       "nrg": "1",
       "cd": "4",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "description": "Summons a Spear that buffs all allies nearby allies. In \"Spear Mode\", it's an essential Skill that increases the ATK/DEF and Move of nearby allies. Since you cannot switch to Sword Mode without this Skill, it is considered essential .",
+      "note": "Summons a Spear that buffs all allies nearby allies. In \"Spear Mode\", it's an essential Skill that increases the ATK/DEF and Move of nearby allies. Since you ca",
+      "priority": 5
     },
     {
-      "name": "Front Defense",
-      "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "name": "Longinus - Brilliance",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "In \"Spear Mode\", it supports allies; in \"Sword Mode\", it transforms into a powerful AoE Skill. Prioritize slotting it since it excels in both offense and defense.",
+      "note": "In \"Spear Mode\", it supports allies; in \"Sword Mode\", it transforms into a powerful AoE Skill. Prioritize slotting it since it excels in both offense and defens",
+      "priority": 5
     },
     {
-      "name": "Counterattack",
-      "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "name": "Longinus - Thrust",
+      "kind": "Active",
+      "nrg": "2",
+      "cd": "0",
+      "description": "In Spear Mode , it's an easy-to-use knockback Skill; in Sword Mode , it transforms into a powerful single-target attack Skill that requires no cost, with damage increases based on the distance moved. You'll want to equip this if you don't have many [Union] characters in your party.",
+      "note": "In Spear Mode , it's an easy-to-use knockback Skill; in Sword Mode , it transforms into a powerful single-target attack Skill that requires no cost, with damage",
+      "priority": 4
     },
     {
       "name": "Vow of Justice",
+      "kind": "Aura",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Leader's Aura that greatly buffs [Union] characters. If you don't have [Union] characters other than Gloria in your lineup, you could swap it with [Longinus - Thrust].",
+      "note": "A Leader's Aura that greatly buffs [Union] characters. If you don't have [Union] characters other than Gloria in your lineup, you could swap it with [Longinus -",
+      "priority": 4
+    },
+    {
+      "name": "Counterattack -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) When hit by an active attack from the front or side , performs a basic attack to Strike Back if the attacker is within range, dealing 70% of basic attack's DMG. The effect can be activated up to 1 time per round.",
+      "note": "When hit by an active attack from the front or side , performs a basic attack to Strike Back if the attacker is within range, dealing 70% of",
+      "priority": 3
+    },
+    {
+      "name": "Gloria's Base Skills Skill Range  Slash",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% Physical DMG.",
+      "note": "Deals 100% Physical DMG.",
+      "priority": 3
+    },
+    {
+      "name": "RK1 Skill Range  Knightly Spirit -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) Increases ATK by 20% when attacking from the front . Increases DEF by 40% when being attacked from the front .",
+      "note": "Increases ATK by 20% when attacking from the front . Increases DEF by 40% when being attacked from the front .",
+      "priority": 3
+    },
+    {
+      "name": "RK3 Skill Range  Longinus - Brilliance",
       "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "0",
+      "cd": "4",
+      "description": "(Support) Gloria grants all allies within 3 tiles of her ▲ ATK I and DMG Reduction II for 2 turns, and restores 1 NRG. If there is no Flag Waving aura on Gloria, the skill switches to Sword-Full Moon .",
+      "note": "Gloria grants all allies within 3 tiles of her ▲ ATK I and DMG Reduction II for 2 turns, and restores 1 NRG. If there is no Flag Waving aura",
+      "priority": 3
+    },
+    {
+      "name": "RK5 Skill Range  Front Defense -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) When hit by an active attack from the front , the DMG taken is decreased by 30%.",
+      "note": "When hit by an active attack from the front , the DMG taken is decreased by 30%.",
+      "priority": 3
+    },
+    {
+      "name": "RK7 Skill Range  Counterattack Mode",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "4",
+      "description": "(Support) Adds 20% of P.ATK to P.DEF and M.DEF, increases Strike Back DMG by 50%, gains Preempt , and increases Strike Back Range by 2 tiles, lasting for 2 turns.",
+      "note": "Adds 20% of P.ATK to P.DEF and M.DEF, increases Strike Back DMG by 50%, gains Preempt , and increases Strike Back Range by 2 tiles, lasting ",
+      "priority": 3
+    },
+    {
+      "name": "RK9 Skill Range  Lance of Justice",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Gloria deals 70% physical DMG to all enemies within 1 tile of the target. If there is no Flag Waving aura on Gloria, the skill switches to Sword of Justice .",
+      "note": "Gloria deals 70% physical DMG to all enemies within 1 tile of the target. If there is no Flag Waving aura on Gloria, the skill switches to S",
       "priority": 3
     },
     {
       "name": "Silencing Attack",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% physical DMG and inflicts × Active Skills on Injured targets before attacking, lasting for 2 turns. Skills That Can",
+      "note": "Deals 100% physical DMG and inflicts × Active Skills on Injured targets before attacking, lasting for 2 turns. Skills That Can",
       "priority": 3
     },
     {
-      "name": "Fair Duel",
+      "name": "Skill Range  Fair Duel",
       "kind": "Active",
       "nrg": "4",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Physical DMG) Single-target attack. Deals 180% DMG. Before attacking, dispels all debuffs on the character and all buffs on the target.",
+      "note": "Single-target attack. Deals 180% DMG. Before attacking, dispels all debuffs on the character and all buffs on the target.",
       "priority": 3
     },
     {
-      "name": "Knight's Glory",
+      "name": "Solemnity -",
       "kind": "Active",
-      "nrg": "0",
-      "cd": "4",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Aura) Decreases ATK of all enemies within the character's 2-tile radius by 10%.",
+      "note": "Decreases ATK of all enemies within the character's 2-tile radius by 10%.",
       "priority": 3
     },
     {
-      "name": "Longinus",
+      "name": "Vow of Justice -",
       "kind": "Active",
-      "note": "Priority section extract",
-      "priority": 4,
-      "description": ""
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Leader's Aura) For all The Union allies in battle, ATK is increased by 10%, DEF is increased by 20%. When performing an active attack, dMG is increased by 12%. When being Struck Back, DMG taken is decreased by 24%.",
+      "note": "For all The Union allies in battle, ATK is increased by 10%, DEF is increased by 20%. When performing an active attack, dMG is increased by ",
+      "priority": 3
     }
   ],
   "build": {
-    "basicAttack": "Slash",
-    "reaction": "Counterattack",
+    "basicAttack": "Lance of Justice",
+    "reaction": "Front Defense",
+    "ascension": "",
     "skills": [
-      "Longinus - Thrust",
-      "Knightly Spirit",
-      "Solemnity",
-      "Longinus - Brilliance",
       "Lance of Longinus",
-      "Vow of Justice"
+      "Longinus - Brilliance",
+      "Longinus - Thrust"
     ],
     "weapon": "",
     "trinket": "",
-    "tarot": "Judgement"
+    "tarot": ""
   },
-  "summary": "is a universally useful tool that allows you to chase fleeing targets, reach checkpoints in time, or even position your characters for better attacking angles.",
-  "pros": [],
-  "howToUse": "",
+  "summary": "here! Table of Contents Gloria Tier & Basic Info Strength & How to Use",
+  "pros": [
+    "Longinus - Brilliance: In \"Spear Mode\", it supports allies; in \"Sword Mode\", it transforms into a power",
+    "Lance of Longinus: Summons a Spear that buffs all allies nearby allies. In \"Spear Mode\", it's an es",
+    "Front Defense: In high-difficulty stages, taking a single hit can be fatal, so this Reaction, w",
+    "Lance of Justice: In Spear Mode , it's an AoE attack; in Sword Mode , it's a Basic Attack whose po"
+  ],
+  "howToUse": "In \"Spear Mode\", it supports allies; in \"Sword Mode\", it transforms into a powerful AoE Skill. Prioritize slotting it since it excels in both offense and defens Summons a Spear that buffs all allies nearby allies. In \"Spear Mode\", it's an essential Skill that increases the ATK/DEF and Move of nearby allies. Since you ca In high-difficulty stages, taking a single hit can be fatal, so this Reaction, which increases survivability, is highly recommended.",
   "starPriority": "",
-  "confidence": "medium",
-  "collectedAt": "2026-08-02T04:31:14.730Z",
-  "cleanedAt": "2026-08-02T04:32:57.414Z"
+  "confidence": "high",
+  "collectedAt": "2026-08-02T04:48:37.029Z"
 }

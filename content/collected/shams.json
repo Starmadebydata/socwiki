@@ -1,157 +1,212 @@
 {
   "slug": "shams",
   "name": "Shams",
-  "source": "public",
+  "source": "public-structured",
   "sources": [
     {
-      "type": "url",
-      "url": "https://gamewith.net/sword-of-convallaria/74060",
-      "fetchedAt": "2026-08-02T04:31:38.245Z",
-      "publisher": "gamewith"
+      "type": "gamewith-html-cache",
+      "id": "74060",
+      "parsedAt": "2026-08-02T04:48:37.072Z"
     }
   ],
   "role": "Breaker",
   "factions": [
     "Papal States",
-    "SoC",
-    "Elaman"
+    "Elaman",
+    "SoC"
   ],
   "rarity": "Legendary",
   "stats": {
     "move": null,
     "highJump": null,
-    "lowJump": null
+    "lowJump": 3
   },
   "skills": [
-    {
-      "name": "Slash",
-      "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Earthshatter Blaze",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "1",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
     {
       "name": "Everburning Sun",
       "kind": "Active",
       "nrg": "2",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Dawn's Resurgence",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Gathered Radiance",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Liberation - Toughness",
-      "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Sigil's Protection",
-      "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Imperial Blood Rite",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "description": "(Physical DMG) Unshackle Prepares for 1 turn to deal 180% DMG to the enemy 1 tile directly in front. ✦ When preparation begins, inflicts Move III (for 1 turn), Taunted , and The Challenger on the target for 2 turns; the character gains Basic Resistance and 1 stack of Gladiator Supreme until the start of the next turn. ✦ When preparation is complete, if having 10 stacks of Liberation , consumes 10 stacks to increase skill multiplier and P.ATK by 100% when attacking.",
+      "note": "A Skill that deals overwhelming damage under the right conditions. Be mindful of removing the [Prepared] status with the [Poised and Ready] buff, and increasing",
+      "priority": 5
     },
     {
       "name": "Sandfall Breach",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Basic Attack with conditional bonus effects. These conditions are generally easy to meet with Elaman units, so you should equip this over the other attack for more damage.",
+      "note": "A Basic Attack with conditional bonus effects. These conditions are generally easy to meet with Elaman units, so you should equip this over the other attack for",
+      "priority": 5
+    },
+    {
+      "name": "Sigil's Protection",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Reaction that can significantly reduce DMG taken. Despite having conditions such as having a Shield and when actively attacked, Shams can easily utilize this ability.",
+      "note": "A Reaction that can significantly reduce DMG taken. Despite having conditions such as having a Shield and when actively attacked, Shams can easily utilize this ",
+      "priority": 5
+    },
+    {
+      "name": "Solar Piercing",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "If you can reduce the turns of [Sigil Overdraw] via Star Levels or have other characters grant [Liberation], this Passive greatly increases the opportunities for [Poised and Ready]. However, if your Star Levels are low or you can't apply [Liberation] with other characters, we recommend equipping other Passives.",
+      "note": "If you can reduce the turns of [Sigil Overdraw] via Star Levels or have other characters grant [Liberation], this Passive greatly increases the opportunities fo",
+      "priority": 5
+    },
+    {
+      "name": "Earthshatter Blaze",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Skill that can apply a -60% DEF debuff while moving. Be careful as the attack range is a 3x2 area in front of the landing spot, so it can be hard to properly land the attack in some situations. It becomes [Instant ]with 10 stacks of [Liberation], so it's very powerful if you can maintain 10 stacks.",
+      "note": "A Skill that can apply a -60% DEF debuff while moving. Be careful as the attack range is a 3x2 area in front of the landing spot, so it can be hard to properly ",
+      "priority": 4
+    },
+    {
+      "name": "Gladiator's Strike",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "The core Skill for a [Strike Back] build. The more [Gladiator Supreme] buffs you have, the better the performance of [Strike Back], so it's essential to be mindful about obtaining [Poised and Ready], as well as 10 stacks of [Liberation].",
+      "note": "The core Skill for a [Strike Back] build. The more [Gladiator Supreme] buffs you have, the better the performance of [Strike Back], so it's essential to be mind",
+      "priority": 4
     },
     {
       "name": "Feverish Attack",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% physical DMG and gains 20% Life Steal .",
+      "note": "Deals 100% physical DMG and gains 20% Life Steal .",
       "priority": 3
     },
     {
-      "name": "Desert Warrior",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "name": "Gathered Radiance -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) At the end of the turn, if the 10-stack Liberation effect of Unshackle skills was not triggered this turn, gains Poised and Ready and 5 stacks of Liberation .",
+      "note": "At the end of the turn, if the 10-stack Liberation effect of Unshackle skills was not triggered this turn, gains Poised and Ready and 5 stac",
       "priority": 3
     },
     {
-      "name": "Insight",
+      "name": "Imperial Blood Rite -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) All effects of skill Sigil's Protection take effect regardless of conditions. ✦ Sigil Overdraw does not prevent HP recovery; if trait already has this effect, changes to: increases healing received by 30%. ✦ After casting or triggering Sigil - Full Luberation , gains Arcane Protection , Regeneration III , and Shield Regeneration III for 4 turns.",
+      "note": "All effects of skill Sigil's Protection take effect regardless of conditions. ✦ Sigil Overdraw does not prevent HP recovery; if trait alread",
+      "priority": 3
+    },
+    {
+      "name": "RK1 Skill Range  Gladiator's Strike",
       "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "2",
+      "cd": "0",
+      "description": "(Physical DMG) Unshackle Single-target attack. Deals 100% DMG. After attacking, inflicts Taunted and The Challenger on the enemy for 2 turns; the character gains Basic Resistance and 1 stack of Gladiator Supreme until the start of the next turn. ✦ When having Poised and Ready , consumes it after attacking and additionally gains 1 stack of Gladiator Supreme . ✦ When having 10 stacks of Liberation , consumes 10 stacks after attacking and additionally gains 2 stacks of Gladiator Supreme .",
+      "note": "Unshackle Single-target attack. Deals 100% DMG. After attacking, inflicts Taunted and The Challenger on the enemy for 2 turns; the character",
+      "priority": 3
+    },
+    {
+      "name": "RK11 Skill Range  Desert Warrior -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) Immune to Blind . After actively attacking, if t he target is on Soil , Sandbed , Wasteland , or Quicksand tiles, deals additional Sand Piercing DMG equal to 10% of ATK.",
+      "note": "Immune to Blind . After actively attacking, if t he target is on Soil , Sandbed , Wasteland , or Quicksand tiles, deals additional Sand Pier",
+      "priority": 3
+    },
+    {
+      "name": "RK3 Skill Range  Dawn's Resurgence",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "3",
+      "description": "(Support) Grants Poised and Ready to the target and the character. When cast on the character himself, the character can Re-attack .",
+      "note": "Grants Poised and Ready to the target and the character. When cast on the character himself, the character can Re-attack .",
+      "priority": 3
+    },
+    {
+      "name": "RK5 Skill Range  Liberation - Toughness -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) When Injured , for each stack of Liberation the character has, DEF increases by 3%.",
+      "note": "When Injured , for each stack of Liberation the character has, DEF increases by 3%.",
+      "priority": 3
+    },
+    {
+      "name": "RK7 Skill Range  Solar Piercing -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) At the start of the turn, if having 10 or more stacks of Liberation , gains Poised and Ready . When using Sigil - Full Liberation , the character can gain Poised and Ready .",
+      "note": "At the start of the turn, if having 10 or more stacks of Liberation , gains Poised and Ready . When using Sigil - Full Liberation , the char",
+      "priority": 3
+    },
+    {
+      "name": "RK9 Skill Range  Sandfall Breach",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Single-target attack. Deals 100% physical DMG. Against targets on Dust tiles or affected by Control , DMG is increased by 30% when attacking.",
+      "note": "Single-target attack. Deals 100% physical DMG. Against targets on Dust tiles or affected by Control , DMG is increased by 30% when attacking",
+      "priority": 3
+    },
+    {
+      "name": "Shams's Base Skills Skill Range  Slash",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% Physical DMG.",
+      "note": "Deals 100% Physical DMG.",
+      "priority": 3
+    },
+    {
+      "name": "Sigil's Protection -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) Reduces DMG taken and piercing DMG taken by 15%. ✦ When having Shield , additionally reduces DMG taken and piercing DMG taken by 15%. ✦ When actively attacked, further reduces DMG taken and piercing DMG taken by 15%.",
+      "note": "Reduces DMG taken and piercing DMG taken by 15%. ✦ When having Shield , additionally reduces DMG taken and piercing DMG taken by 15%. ✦ When",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Liberation - Toughness -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) When Injured , for each stack of Liberation the character has, DEF increases by 3%. Sigil's Protection -",
+      "note": "When Injured , for each stack of Liberation the character has, DEF increases by 3%. Sigil's Protection -",
       "priority": 3
     }
   ],
   "build": {
-    "basicAttack": "Slash",
-    "reaction": "Insight",
+    "basicAttack": "Sandfall Breach",
+    "reaction": "Sigil's Protection",
+    "ascension": "",
     "skills": [
-      "Earthshatter Blaze",
       "Everburning Sun",
-      "Dawn's Resurgence",
-      "Gathered Radiance",
-      "Liberation - Toughness",
-      "Imperial Blood Rite"
+      "Earthshatter Blaze",
+      "Solar Piercing"
     ],
-    "weapon": "",
-    "trinket": "Maverick's Cloak",
-    "tarot": "Verdict of Justice"
+    "weapon": "Verdict of Justice",
+    "trinket": "",
+    "tarot": ""
   },
-  "summary": "is also capable of using potent Strike Backs .",
-  "pros": [],
-  "howToUse": "",
+  "summary": "here! Table of Contents Shams Tier & Basic Info Strength & How to Use",
+  "pros": [
+    "Everburning Sun: A Skill that deals overwhelming damage under the right conditions. Be mindful of",
+    "Sigil's Protection: A Reaction that can significantly reduce DMG taken. Despite having conditions su",
+    "Solar Piercing: If you can reduce the turns of [Sigil Overdraw] via Star Levels or have other ch",
+    "Sandfall Breach: A Basic Attack with conditional bonus effects. These conditions are generally ea"
+  ],
+  "howToUse": "A Skill that deals overwhelming damage under the right conditions. Be mindful of removing the [Prepared] status with the [Poised and Ready] buff, and increasing A Reaction that can significantly reduce DMG taken. Despite having conditions such as having a Shield and when actively attacked, Shams can easily utilize this  If you can reduce the turns of [Sigil Overdraw] via Star Levels or have other characters grant [Liberation], this Passive greatly increases the opportunities fo",
   "starPriority": "",
-  "confidence": "medium",
-  "collectedAt": "2026-08-02T04:31:38.245Z",
-  "cleanedAt": "2026-08-02T04:32:57.416Z"
+  "confidence": "high",
+  "collectedAt": "2026-08-02T04:48:37.072Z"
 }

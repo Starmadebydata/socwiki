@@ -1,13 +1,12 @@
 {
   "slug": "tristan",
   "name": "Tristan",
-  "source": "public",
+  "source": "public-structured",
   "sources": [
     {
-      "type": "url",
-      "url": "https://gamewith.net/sword-of-convallaria/52554",
-      "fetchedAt": "2026-08-02T04:31:48.291Z",
-      "publisher": "gamewith"
+      "type": "gamewith-html-cache",
+      "id": "52554",
+      "parsedAt": "2026-08-02T04:48:37.091Z"
     }
   ],
   "role": "Destroyer",
@@ -19,70 +18,79 @@
   "stats": {
     "move": null,
     "highJump": null,
-    "lowJump": null
+    "lowJump": 3
   },
   "skills": [
     {
-      "name": "Slash",
-      "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Explosive Luxite-Dust",
-      "kind": "Active",
-      "nrg": "2",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Furious Pursuit",
-      "kind": "Active",
-      "nrg": "2",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Knockback Pursuit",
-      "kind": "Active",
-      "nrg": "3",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Fervent Lunge",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
       "name": "Blazing Blood",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A powerful passive that adds up to 50% of Magic Attack to Physical Attack, with the full effect easily reached during the [Berserk State]. Since it plays a key role in boosting Tristan’s offensive power, it should always be equipped.",
+      "note": "A powerful passive that adds up to 50% of Magic Attack to Physical Attack, with the full effect easily reached during the [Berserk State]. Since it plays a key ",
+      "priority": 5
+    },
+    {
+      "name": "Fatal Attack",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "While Tristan won't often use Basic Attacks, this attack pairs well with Tristan thanks to her Trait, which boosts Crit Damage and Crit Rate.",
+      "note": "While Tristan won't often use Basic Attacks, this attack pairs well with Tristan thanks to her Trait, which boosts Crit Damage and Crit Rate.",
+      "priority": 5
     },
     {
       "name": "Street Style",
       "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Reaction that reduces damage from [Strike Back], [Preempt] attacks, and melee damage. Not only does it offer significant damage reduction, but it also counterattacks when hit by Strike Back, making it a strong, general Reaction.",
+      "note": "A Reaction that reduces damage from [Strike Back], [Preempt] attacks, and melee damage. Not only does it offer significant damage reduction, but it also counter",
+      "priority": 5
+    },
+    {
+      "name": "Fervent Lunge",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "An [Instant] skill moves, grants a buff, and immediately attacks—making it both easy to use and highly effective. Useful in both single-target and multi-target battles.",
+      "note": "An [Instant] skill moves, grants a buff, and immediately attacks—making it both easy to use and highly effective. Useful in both single-target and multi-target ",
+      "priority": 4
+    },
+    {
+      "name": "Furious Pursuit",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Skill that deals high single-target damage at the cost of HP. When aiming to boost the effects of the \"Brutal Axe\" weapon and [Blazing Blood], the HP reduction can be seen as a benefit. Prioritize slotting this skill when focusing on single-target offense.",
+      "note": "A Skill that deals high single-target damage at the cost of HP. When aiming to boost the effects of the \"Brutal Axe\" weapon and [Blazing Blood], the HP reductio",
+      "priority": 4
+    },
+    {
+      "name": "One-Punch Burial",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "Deals damage to enemies within 2 tiles after a knockback. As an area attack, this has high damage potential and can be used every turn if you have a way to reduce cooldown. Be mindful—the warp-to-ally effect has both advantages and drawbacks.",
+      "note": "Deals damage to enemies within 2 tiles after a knockback. As an area attack, this has high damage potential and can be used every turn if you have a way to redu",
+      "priority": 4
+    },
+    {
+      "name": "Base Skills Skill Range  Slash",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% Physical DMG. Explosive Luxite-Dust",
+      "note": "Deals 100% Physical DMG. Explosive Luxite-Dust",
+      "priority": 3
+    },
+    {
+      "name": "Blazing Blood -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) When Healthy , adds 15% of the character's M.ATK to P.ATK. When Injured , adds 25% of the character's M.ATK to P.ATK. When possessing Berserk State , the effect is doubled.",
+      "note": "When Healthy , adds 15% of the character's M.ATK to P.ATK. When Injured , adds 25% of the character's M.ATK to P.ATK. When possessing Berser",
       "priority": 3
     },
     {
@@ -90,35 +98,8 @@
       "kind": "Active",
       "nrg": "2",
       "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Sealing Attack",
-      "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Fatal Attack",
-      "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Family",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Debuff) Instant Inflicts Controlled Demolition on the target.",
+      "note": "Instant Inflicts Controlled Demolition on the target.",
       "priority": 3
     },
     {
@@ -126,38 +107,122 @@
       "kind": "Active",
       "nrg": "3",
       "cd": "2",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Physical DMG) Deals 50% AoE DMG to all enemies within a 4-tile radius around the character and inflicts 2 random Level 2 Attribute Debuffs for 2 turns.",
+      "note": "Deals 50% AoE DMG to all enemies within a 4-tile radius around the character and inflicts 2 random Level 2 Attribute Debuffs for 2 turns.",
       "priority": 3
     },
     {
-      "name": "Assisting Cover",
+      "name": "Explosive Luxite-Dust",
+      "kind": "Active",
+      "nrg": "2",
+      "cd": "0",
+      "description": "(Physical DMG) Deals 85% DMG to all enemies within 2 tiles of the target and inflicts 1 random Level 2 Attribute Debuff , lasting for 2 turns.",
+      "note": "Deals 85% DMG to all enemies within 2 tiles of the target and inflicts 1 random Level 2 Attribute Debuff , lasting for 2 turns.",
+      "priority": 3
+    },
+    {
+      "name": "Knockback Pursuit",
+      "kind": "Active",
+      "nrg": "3",
+      "cd": "0",
+      "description": "(Physical DMG) Single-target attack. Deals 70% DMG. After attacking, performs Pursuit , dealing 70% DMG and knocking the target back by 2 tiles. Skills That Can Be",
+      "note": "Single-target attack. Deals 70% DMG. After attacking, performs Pursuit , dealing 70% DMG and knocking the target back by 2 tiles. Skills Tha",
+      "priority": 3
+    },
+    {
+      "name": "RK1 Skill Range  Furious Pursuit",
+      "kind": "Active",
+      "nrg": "2",
+      "cd": "0",
+      "description": "(Physical DMG) Single-target attack. Deals 120% DMG. If the target isn't defeated, performs Pursuit at the cost of 20% of current HP and deals an additional 60% DMG.",
+      "note": "Single-target attack. Deals 120% DMG. If the target isn't defeated, performs Pursuit at the cost of 20% of current HP and deals an additiona",
+      "priority": 3
+    },
+    {
+      "name": "RK3 Skill Range  Fervent Lunge",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "3",
+      "description": "(Support) Instant Charges to a location within a 1-tile radius and gains ▲DMG II for 1 turn. After use, the skill switches to Fervent Headbutt for 2 turns. Blazing Blood -",
+      "note": "Instant Charges to a location within a 1-tile radius and gains ▲DMG II for 1 turn. After use, the skill switches to Fervent Headbutt for 2 t",
+      "priority": 3
+    },
+    {
+      "name": "RK5 Skill Range  Street Style -",
       "kind": "Reaction",
-      "note": "Name confirmed in page text",
-      "priority": 4,
-      "description": ""
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) Melee DMG taken decreases by 20%. When being Preempted or Strike Back , performs Block and additionally reduces DMG taken by 50%. After being struck back, pursues, dealing 70% Physical DMG. This effect can be triggered up to 1 time per round. Defense (Ranged Attack) - [Reaction] Cost: - / CD: - (Reaction) When hit by a ranged attack, the DMG taken is decreased by 25%.",
+      "note": "Melee DMG taken decreases by 20%. When being Preempted or Strike Back , performs Block and additionally reduces DMG taken by 50%. After bein",
+      "priority": 3
+    },
+    {
+      "name": "RK7 Skill Range  One-Punch Burial",
+      "kind": "Active",
+      "nrg": "3",
+      "cd": "2",
+      "description": "(Physical DMG) Single-target attack. Deals 20% DMG, knocking the target back by 1 tile. Then deals 110% Fire AoE DMG to enemies within 2 tiles of the target range. If not in Berserk State , the character teleports to the side of the closest ally within 4 tiles after attacking.",
+      "note": "Single-target attack. Deals 20% DMG, knocking the target back by 1 tile. Then deals 110% Fire AoE DMG to enemies within 2 tiles of the targe",
+      "priority": 3
+    },
+    {
+      "name": "RK9 Skill Range  Sealing Attack",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% physical DMG and inflicts × Passive Skills on Injured targets before attacking, lasting for 2 turns.",
+      "note": "Deals 100% physical DMG and inflicts × Passive Skills on Injured targets before attacking, lasting for 2 turns.",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Family -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) When Healthy , performs Assisting Cover for other allies within 2 tiles of the character. When Dying , causes other allies within 2 tiles of the character to assisting cover for the character. After either effect is triggered, all other allies within 3 tiles of the character gain ▲ATK II and DMG Reduction II for 2 turns, can be activated up to 1 time per round.",
+      "note": "When Healthy , performs Assisting Cover for other allies within 2 tiles of the character. When Dying , causes other allies within 2 tiles of",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Fervent Lunge",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "3",
+      "description": "(Support) Instant Charges to a location within a 1-tile radius and gains ▲DMG II for 1 turn. After use, the skill switches to Fervent Headbutt for 2 turns.",
+      "note": "Instant Charges to a location within a 1-tile radius and gains ▲DMG II for 1 turn. After use, the skill switches to Fervent Headbutt for 2 t",
+      "priority": 3
+    },
+    {
+      "name": "Tristan's Base Skills Skill Range  Slash",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% Physical DMG.",
+      "note": "Deals 100% Physical DMG.",
+      "priority": 3
     }
   ],
   "build": {
-    "basicAttack": "Slash",
-    "reaction": "Assisting Cover",
+    "basicAttack": "Fatal Attack",
+    "reaction": "Street Style",
+    "ascension": "",
     "skills": [
-      "Explosive Luxite-Dust",
       "Furious Pursuit",
-      "Knockback Pursuit",
       "Fervent Lunge",
-      "Blazing Blood",
-      "Controlled Demolition"
+      "Blazing Blood"
     ],
-    "weapon": "",
+    "weapon": "Brutal Axe",
     "trinket": "Maverick's Cloak",
     "tarot": "Verdict of Justice"
   },
-  "summary": "is also possible to use [One-Punch Burial] again on a group of enemies already affected by Vulnerable II.",
-  "pros": [],
-  "howToUse": "",
+  "summary": "here! Table of Contents Tristan Tier & Basic Info Strength & How to Use",
+  "pros": [
+    "Blazing Blood: A powerful passive that adds up to 50% of Magic Attack to Physical Attack, with ",
+    "Street Style: A Reaction that reduces damage from [Strike Back], [Preempt] attacks, and melee ",
+    "Fatal Attack: While Tristan won't often use Basic Attacks, this attack pairs well with Tristan"
+  ],
+  "howToUse": "A powerful passive that adds up to 50% of Magic Attack to Physical Attack, with the full effect easily reached during the [Berserk State]. Since it plays a key  A Reaction that reduces damage from [Strike Back], [Preempt] attacks, and melee damage. Not only does it offer significant damage reduction, but it also counter While Tristan won't often use Basic Attacks, this attack pairs well with Tristan thanks to her Trait, which boosts Crit Damage and Crit Rate.",
   "starPriority": "",
-  "confidence": "medium",
-  "collectedAt": "2026-08-02T04:31:48.292Z",
-  "cleanedAt": "2026-08-02T04:32:57.418Z"
+  "confidence": "high",
+  "collectedAt": "2026-08-02T04:48:37.091Z"
 }

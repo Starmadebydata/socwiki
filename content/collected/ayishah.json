@@ -1,13 +1,12 @@
 {
   "slug": "ayishah",
   "name": "Ayishah",
-  "source": "public",
+  "source": "public-structured",
   "sources": [
     {
-      "type": "url",
-      "url": "https://gamewith.net/sword-of-convallaria/67888",
-      "fetchedAt": "2026-08-02T04:31:42.043Z",
-      "publisher": "gamewith"
+      "type": "gamewith-html-cache",
+      "id": "67888",
+      "parsedAt": "2026-08-02T04:48:37.080Z"
     }
   ],
   "role": "Defender",
@@ -19,16 +18,97 @@
   "stats": {
     "move": null,
     "highJump": null,
-    "lowJump": null
+    "lowJump": 3
   },
   "skills": [
     {
-      "name": "Slash",
+      "name": "Dawnmoon",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A powerful passive that when [Healthy], increases Damage Dealt by 30% and reduces the cooldown of non-Equipment Class Skills by 1 upon Active Attack. Great for boosting the uptime of [Dawnmoon - Moonrise] and [Moonlit Shadow]",
+      "note": "A powerful passive that when [Healthy], increases Damage Dealt by 30% and reduces the cooldown of non-Equipment Class Skills by 1 upon Active Attack. Great for ",
+      "priority": 5
+    },
+    {
+      "name": "Dawnmoon - Moonrise",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "Instant Charge Skill that inflicts a +20% Damage Taken debuff and disables Basic Attacks and Skills. Damage increases if you’re [On Duty] or facing a single enemy. Defeating an enemy recovers the NRG and removes the cooldown, so try to finish off foes with this.",
+      "note": "Instant Charge Skill that inflicts a +20% Damage Taken debuff and disables Basic Attacks and Skills. Damage increases if you’re [On Duty] or facing a single ene",
+      "priority": 5
+    },
+    {
+      "name": "Dawnmoon - Waxing",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "Charge Skill with high damage. When combined with the [On Duty] buff or the [Dawnmoon] passive, total damage becomes exceptional. With 0 CD and a mobility increase, it’s highly valuable every turn.",
+      "note": "Charge Skill with high damage. When combined with the [On Duty] buff or the [Dawnmoon] passive, total damage becomes exceptional. With 0 CD and a mobility incre",
+      "priority": 5
+    },
+    {
+      "name": "Dispelling Strike",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "Excellent for removing buffs. This Basic Attack is generally preferred over the alternative.",
+      "note": "Excellent for removing buffs. This Basic Attack is generally preferred over the alternative.",
+      "priority": 5
+    },
+    {
+      "name": "Lunar Shadow",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "Passive that boosts Counterattack range, power, and number of counters. Combine with [Moonlit Shadow] or [Counterattack] Reaction for interception builds. Useful when going for a counter-focused setup.",
+      "note": "Passive that boosts Counterattack range, power, and number of counters. Combine with [Moonlit Shadow] or [Counterattack] Reaction for interception builds. Usefu",
+      "priority": 5
+    },
+    {
+      "name": "Shape of Full Moon",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "An excellent Reaction the heals significantly up to 3 times per turn when damaged, and also reduces incoming damage via [Block] and -10% Damage Taken. Generally worth equipping.",
+      "note": "An excellent Reaction the heals significantly up to 3 times per turn when damaged, and also reduces incoming damage via [Block] and -10% Damage Taken. Generally",
+      "priority": 5
+    },
+    {
+      "name": "Moonlit Shadow",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "5",
+      "description": "(Support) Instant Teleports to the target. Both the target and the character gain DMG Reduction II and ▲Healing Received II , and the character gains ▲P.DEF II and ▲M.DEF II . All effects last for 3 turns. The character also gains Moonlit Shadow and Mighty Counterattack until the start of the neext 3 turns.",
+      "note": "Warps to target, gains defensive and counter-enhancing buffs, and auto-warps to your allied [Pledge] target every turn for 3 turns. Equip to close distances, ch",
+      "priority": 4
+    },
+    {
+      "name": "Ayishah's Base Skills Skill Range  Slash",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% Physical DMG.",
+      "note": "Deals 100% Physical DMG.",
+      "priority": 3
+    },
+    {
+      "name": "Base Skills Skill Range  Slash",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% Physical DMG. Leg Slam",
+      "note": "Deals 100% Physical DMG. Leg Slam",
+      "priority": 3
+    },
+    {
+      "name": "Feverish Attack",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% physical DMG and gains 20% Life Steal .",
+      "note": "Deals 100% physical DMG and gains 20% Life Steal .",
       "priority": 3
     },
     {
@@ -36,137 +116,123 @@
       "kind": "Active",
       "nrg": "2",
       "cd": "2",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Physical DMG) Deals 120% DMG, knocks the target back by 2 tiles, and inflicts ▽ Move I for 1 turn. Skills That Can Be",
+      "note": "Deals 120% DMG, knocks the target back by 2 tiles, and inflicts ▽ Move I for 1 turn. Skills That Can Be",
       "priority": 3
     },
     {
-      "name": "Pure Radiance",
+      "name": "Legacy of Comrades -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) When an ally in battle is defeated, recovers 30% HP for the character, and the character gains ▲ ATK II , ▲ P.DEF II , and ▲ M.DEF II for 3 turns.",
+      "note": "When an ally in battle is defeated, recovers 30% HP for the character, and the character gains ▲ ATK II , ▲ P.DEF II , and ▲ M.DEF II for 3 ",
+      "priority": 3
+    },
+    {
+      "name": "Moonlit Hills -",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Leader's Aura) For all allies in battle, increases ATK by 10% and DEF by 20%; when the target is Healthy , reduces DMG taken by 10%, and additionally increasese ATK and DEF by 8%.",
+      "note": "For all allies in battle, increases ATK by 10% and DEF by 20%; when the target is Healthy , reduces DMG taken by 10%, and additionally incre",
+      "priority": 3
+    },
+    {
+      "name": "RK1 Skill Range  Pure Radiance",
       "kind": "Active",
       "nrg": "2",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Physical DMG) Single-target attack. Deals 130% DMG, heals the character and Pledge targets, and dispels 1 debuff ; the healing equals to 60% P.ATK; gains ▲ATK II for 2 turns. Legacy of Comrades -",
+      "note": "Single-target attack. Deals 130% DMG, heals the character and Pledge targets, and dispels 1 debuff ; the healing equals to 60% P.ATK; gains ",
       "priority": 3
     },
     {
-      "name": "Legacy of Comrades",
+      "name": "RK11 Skill Range  Dawnmoon - Waxing",
       "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "3",
+      "cd": "0",
+      "description": "(Physical DMG) Selects 1 enemy within a cross-shaped range of the character and performs Charge , dealing 3 hits of 55% DMG. Wheen having On Duty , increases DMG by 30%.",
+      "note": "Selects 1 enemy within a cross-shaped range of the character and performs Charge , dealing 3 hits of 55% DMG. Wheen having On Duty , increas",
       "priority": 3
     },
     {
-      "name": "Dawnmoon - Moonrise",
+      "name": "RK3 Skill Range  Dawnmoon - Moonrise",
       "kind": "Active",
       "nrg": "1",
       "cd": "4",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Physical DMG) Instant Selects 1 location in the cross-shaped range of the character, changes to that location and deals 60% AoE DMG to all targets within a 1-tile radius, inflicting Vulnerable II and Disarm for 1 turn; when having On Duty , increases DMG by 30%. If the skill hits only 1 enemy, it deals 120% DMG. When defeating a target, refunds NRG cost and CD. Can be triggered up to 1 time per round.",
+      "note": "Instant Selects 1 location in the cross-shaped range of the character, changes to that location and deals 60% AoE DMG to all targets within ",
       "priority": 3
     },
     {
-      "name": "Moonlit Shadow",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "5",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Counterattack",
+      "name": "RK5 Skill Range  Counterattack -",
       "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) When hit by an active attack from the front or side , performs a basic attack to Strike Back if the attacker is within range, dealing 70% of basic attack's DMG. The effect can be activated up to 1 time per round.",
+      "note": "When hit by an active attack from the front or side , performs a basic attack to Strike Back if the attacker is within range, dealing 70% of",
       "priority": 3
     },
     {
-      "name": "Shape of Full Moon",
-      "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Dawnmoon",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Moonlit Hills",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Dispelling Strike",
+      "name": "RK9 Skill Range  Dispelling Strike",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 50% physical DMG 2 times and dispels 2 buffs on the target.",
+      "note": "Deals 50% physical DMG 2 times and dispels 2 buffs on the target.",
       "priority": 3
     },
     {
-      "name": "Feverish Attack",
-      "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Lunar Shadow",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Assisting Cover",
+      "name": "Shape of Full Moon -",
       "kind": "Reaction",
-      "note": "Name confirmed in page text",
-      "priority": 4,
-      "description": ""
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) When attacked, restores HP equal to 50% of P.DEF plus M.DEF. Can be triggered up to 3 times per round. Gains Block , can also block magical attacks and AoE attacks . When attacked from any direction, has 100% chance to trigger block , and block reduces DMG taken by an additional 10%. Skills That Can",
+      "note": "When attacked, restores HP equal to 50% of P.DEF plus M.DEF. Can be triggered up to 3 times per round. Gains Block , can also block magical ",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Dawnmoon -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) When actively attacking in Healthy state, increases DMG dealt by 30%, and after an active attack, reduces CD of all class skills by 1 turn; the CD reduction effect can be triggered up to 1 time per round.",
+      "note": "When actively attacking in Healthy state, increases DMG dealt by 30%, and after an active attack, reduces CD of all class skills by 1 turn; ",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Pure Radiance",
+      "kind": "Active",
+      "nrg": "2",
+      "cd": "0",
+      "description": "(Physical DMG) Single-target attack. Deals 130% DMG, heals the character and Pledge targets, and dispels 1 debuff ; the healing equals to 60% P.ATK; gains ▲ATK II for 2 turns.",
+      "note": "Single-target attack. Deals 130% DMG, heals the character and Pledge targets, and dispels 1 debuff ; the healing equals to 60% P.ATK; gains ",
+      "priority": 3
     }
   ],
   "build": {
-    "basicAttack": "Slash",
-    "reaction": "Assisting Cover",
+    "basicAttack": "Dispelling Strike",
+    "reaction": "Lunar Shadow",
+    "ascension": "",
     "skills": [
-      "Leg Slam",
-      "Pure Radiance",
-      "Legacy of Comrades",
+      "Dawnmoon - Waxing",
       "Dawnmoon - Moonrise",
-      "Moonlit Shadow",
       "Dawnmoon"
     ],
     "weapon": "",
     "trinket": "",
-    "tarot": "Judgement"
+    "tarot": ""
   },
-  "summary": "Provides 1 Ally with Permanent Buffs - Powerful Shared Buffs Between Self and 1 Ally - P.",
-  "pros": [],
-  "howToUse": "",
+  "summary": "here! Table of Contents Ayishah Tier & Basic Info Strength & How to Use",
+  "pros": [
+    "Dawnmoon - Moonrise: Instant Charge Skill that inflicts a +20% Damage Taken debuff and disables Basic",
+    "Shape of Full Moon: An excellent Reaction the heals significantly up to 3 times per turn when damage",
+    "Dawnmoon: A powerful passive that when [Healthy], increases Damage Dealt by 30% and reduce",
+    "Dispelling Strike: Excellent for removing buffs. This Basic Attack is generally preferred over the "
+  ],
+  "howToUse": "Instant Charge Skill that inflicts a +20% Damage Taken debuff and disables Basic Attacks and Skills. Damage increases if you’re [On Duty] or facing a single ene An excellent Reaction the heals significantly up to 3 times per turn when damaged, and also reduces incoming damage via [Block] and -10% Damage Taken. Generally A powerful passive that when [Healthy], increases Damage Dealt by 30% and reduces the cooldown of non-Equipment Class Skills by 1 upon Active Attack. Great for ",
   "starPriority": "",
-  "confidence": "medium",
-  "collectedAt": "2026-08-02T04:31:42.043Z",
-  "cleanedAt": "2026-08-02T04:32:57.410Z"
+  "confidence": "high",
+  "collectedAt": "2026-08-02T04:48:37.080Z"
 }

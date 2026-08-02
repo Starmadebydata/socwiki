@@ -1,19 +1,12 @@
 {
   "slug": "kvare",
   "name": "Kvare",
-  "source": "public",
+  "source": "public-structured",
   "sources": [
     {
-      "type": "url",
-      "url": "https://gamewith.net/sword-of-convallaria/55001",
-      "fetchedAt": "2026-08-02T04:31:05.423Z",
-      "publisher": "gamewith"
-    },
-    {
-      "type": "url",
-      "url": "https://dotgg.gg/sword-of-convallaria/kvare/",
-      "fetchedAt": "2026-08-02T04:31:53.998Z",
-      "publisher": "dotgg"
+      "type": "gamewith-html-cache",
+      "id": "55001",
+      "parsedAt": "2026-08-02T04:48:37.011Z"
     }
   ],
   "role": "Destroyer",
@@ -25,79 +18,88 @@
   "stats": {
     "move": null,
     "highJump": null,
-    "lowJump": null
+    "lowJump": 3
   },
   "skills": [
     {
-      "name": "Energy Wave",
+      "name": "Entrapping",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Reaction that reduces damage and steals Attribute Buffs. On stages without AoE attacks, slot this.",
+      "note": "A Reaction that reduces damage and steals Attribute Buffs. On stages without AoE attacks, slot this.",
+      "priority": 5
+    },
+    {
+      "name": "Infectious Attack",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "nrg": "—",
+      "cd": "—",
+      "description": "Although Basic Attacks are rarely used, this Basic Attack, which can deal continuous damage through [Infection], is recommended.",
+      "note": "Although Basic Attacks are rarely used, this Basic Attack, which can deal continuous damage through [Infection], is recommended.",
+      "priority": 5
+    },
+    {
+      "name": "Priority and Details  Conviction",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "With 0 CD, this Skill can be used every turn to inflict powerful debuffs and [Life Loss]. For enemies possessing the [Roster] debuff, some of its effects change, and it will deal 100% magic damage. Very powerful against single targets.",
+      "note": "With 0 CD, this Skill can be used every turn to inflict powerful debuffs and [Life Loss]. For enemies possessing the [Roster] debuff, some of its effects change",
+      "priority": 5
+    },
+    {
+      "name": "This Is the Moment for Rain",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "Deals Piercing DMG to a wide area, and if [Roster] is applied, it removes it to inflict additional damage and debuffs like Piercing + Vulnerable. When paired with [Wither], the effect changes and the damage increases significantly—so it’s generally best to equip them together.",
+      "note": "Deals Piercing DMG to a wide area, and if [Roster] is applied, it removes it to inflict additional damage and debuffs like Piercing + Vulnerable. When paired wi",
+      "priority": 5
+    },
+    {
+      "name": "Wither",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) The skill This Is the Moment for Rain no longer triggers and removes DoT effects, but increases DMG by 100%. When actively dealing DMG with a non- Instant skill, additionally inflicts 60% of M.ATK as Life Loss on the target for 1 turn.",
+      "note": "A powerful Skill that enhances [This Is the Moment for Rain], as well as allows you to inflict [Life Loss] when using an active Skill. It's powerful even iwitho",
+      "priority": 5
     },
     {
       "name": "Conviction",
       "kind": "Active",
       "nrg": "2",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Will of Victory",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Unforgettable Erosion",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Victory Before Battle",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Kvare's Gift",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "1",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "description": "(Piercing DMG) Deals 100% of M.ATK as Life Loss and inflicts ▽Move I and ▽SPD II on the target for 2 turns. If the target has Roster , dispels all their buffs before attacking, and additionally deals DMG equal to 100% of the character's M.ATK; the duration of Life Loss for this skill is reduced by 1 turn.",
+      "note": "Deals 100% of M.ATK as Life Loss and inflicts ▽Move I and ▽SPD II on the target for 2 turns. If the target has Roster , dispels all their bu",
+      "priority": 4
     },
     {
       "name": "Sanctuary Emblem",
       "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Reaction that, after taking AoE damage, grants a Shield of the same damage type to all surrounding allies. The effect is very powerful, but it's useless in stages without AoE attacks, so be careful. Also, the effect can only trigger once for physical and once for magical damage respectively.",
+      "note": "A Reaction that, after taking AoE damage, grants a Shield of the same damage type to all surrounding allies. The effect is very powerful, but it's useless in st",
+      "priority": 4
     },
     {
-      "name": "Arcane Toxins",
-      "kind": "Active",
-      "nrg": "2",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "name": "Unforgettable Erosion",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A passive that inflicts Attribute Debuffs and [Life Loss] to surrounding enemies every turn. Combined with the Trait [Roster], Kvare can significantly weaken enemies alone while also dealing continuous damage, making it very powerful.",
+      "note": "A passive that inflicts Attribute Debuffs and [Life Loss] to surrounding enemies every turn. Combined with the Trait [Roster], Kvare can significantly weaken en",
+      "priority": 4
+    },
+    {
+      "name": "Base Skills Skill Range  Energy Wave",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deal 80% Magical DMG.",
+      "note": "Deal 80% Magical DMG.",
       "priority": 3
     },
     {
@@ -105,65 +107,150 @@
       "kind": "Active",
       "nrg": "1",
       "cd": "5",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Magical DMG) Inflicts Life Loss equal to 50% of M.ATK to all enemies within a 2-tile radius of the target and inflicts ▽ Healing Received , lasting for 2 turns.",
+      "note": "Inflicts Life Loss equal to 50% of M.ATK to all enemies within a 2-tile radius of the target and inflicts ▽ Healing Received , lasting for 2",
       "priority": 3
     },
     {
-      "name": "Infectious Attack",
+      "name": "K3 Skill Range  Victory Before Battle -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) Each time 1 enemy with Roster is defeated in battle, recovers 20% HP and 1 NRG, and gains 2 random Level 2 Buffs for 2 turns. Kvare's Gift",
+      "note": "Each time 1 enemy with Roster is defeated in battle, recovers 20% HP and 1 NRG, and gains 2 random Level 2 Buffs for 2 turns. Kvare's Gift",
+      "priority": 3
+    },
+    {
+      "name": "Range  This Is the Moment for Rain",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "3",
+      "description": "(Piercing DMG) Deals 40% of M.ATK as Piercing DMG to all enemies within 6 tiles of the character, triggering and removing all DoT effects on the targets; if the target has Roster , additionally inflicts Piercing Vulnerable II , ×Reaction Skill , ×Passive Skill , and Isolate for 2 turns before attacking, and trigge",
+      "note": "Deals 40% of M.ATK as Piercing DMG to all enemies within 6 tiles of the character, triggering and removing all DoT effects on the targets; i",
+      "priority": 3
+    },
+    {
+      "name": "RK1 Skill Range  Will of Victory",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Support) Instant Grants Potential Burst to the target for 2 turns. After casting, the skill switches to Flaming Winds . Type: Kvare's Collection .",
+      "note": "Instant Grants Potential Burst to the target for 2 turns. After casting, the skill switches to Flaming Winds . Type: Kvare's Collection .",
+      "priority": 3
+    },
+    {
+      "name": "RK3 Skill Range  Victory Before Battle -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) Each time 1 enemy with Roster is defeated in battle, recovers 20% HP and 1 NRG, and gains 2 random Level 2 Buffs for 2 turns.",
+      "note": "Each time 1 enemy with Roster is defeated in battle, recovers 20% HP and 1 NRG, and gains 2 random Level 2 Buffs for 2 turns.",
+      "priority": 3
+    },
+    {
+      "name": "RK5 Skill Range  Entrapping -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) When hit by active attack, the DMG taken is decreased by 8%. Steal 2 random Attribute Buffs from the target. Sanctuary Emblem -",
+      "note": "When hit by active attack, the DMG taken is decreased by 8%. Steal 2 random Attribute Buffs from the target. Sanctuary Emblem -",
+      "priority": 3
+    },
+    {
+      "name": "RK7 Skill Range  Arcane Toxins",
+      "kind": "Active",
+      "nrg": "2",
+      "cd": "0",
+      "description": "(Magical DMG) Single-target attack. Deals 100% DMG. Before attacking, inflicts 3 random Level 2 Attribute Debuffs on the target for 2 turns. Dark Withering",
+      "note": "Single-target attack. Deals 100% DMG. Before attacking, inflicts 3 random Level 2 Attribute Debuffs on the target for 2 turns. Dark Witherin",
+      "priority": 3
+    },
+    {
+      "name": "RK9 Skill Range  Infectious Attack",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Fires a Curved Shot which deals 85% physical DMG and inflicts 1 stack of Infection on the target.",
+      "note": "Fires a Curved Shot which deals 85% physical DMG and inflicts 1 stack of Infection on the target.",
+      "priority": 3
+    },
+    {
+      "name": "Sanctuary Emblem -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) After being hit by an AoE attack, grants all allies within 2 tiles of the character a Shield corresponding to the DMG type, the shield value equal to 30% of the caster's HP, lasting for 2 turns. The shield of each type can be triggered up to 1 time per battle. When the character has a shield , DMG taken is reduced by 10%. Skills That Can Be",
+      "note": "After being hit by an AoE attack, grants all allies within 2 tiles of the character a Shield corresponding to the DMG type, the shield value",
       "priority": 3
     },
     {
       "name": "Silencing Attack",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% physical DMG and inflicts × Active Skills on Injured targets before attacking, lasting for 2 turns.",
+      "note": "Deals 100% physical DMG and inflicts × Active Skills on Injured targets before attacking, lasting for 2 turns.",
       "priority": 3
     },
     {
-      "name": "Wither",
+      "name": "Skill Range  Arcane Toxins",
       "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "2",
+      "cd": "0",
+      "description": "(Magical DMG) Single-target attack. Deals 100% DMG. Before attacking, inflicts 3 random Level 2 Attribute Debuffs on the target for 2 turns.",
+      "note": "Single-target attack. Deals 100% DMG. Before attacking, inflicts 3 random Level 2 Attribute Debuffs on the target for 2 turns.",
       "priority": 3
     },
     {
-      "name": "Assisting Cover",
+      "name": "Skill Range  Entrapping -",
       "kind": "Reaction",
-      "note": "Name confirmed in page text",
-      "priority": 4,
-      "description": ""
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) When hit by active attack, the DMG taken is decreased by 8%. Steal 2 random Attribute Buffs from the target.",
+      "note": "When hit by active attack, the DMG taken is decreased by 8%. Steal 2 random Attribute Buffs from the target.",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  This Is the Moment for Rain",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "3",
+      "description": "(Piercing DMG) Deals 40% of M.ATK as Piercing DMG to all enemies within 6 tiles of the character, triggering and removing all DoT effects on the targets; if the target has Roster , additionally inflicts Piercing Vulnerable II , ×Reaction Skill , ×Passive Skill , and Isolate for 2 turns before attacking, and triggers and removes Roster on the target after attacking.",
+      "note": "Deals 40% of M.ATK as Piercing DMG to all enemies within 6 tiles of the character, triggering and removing all DoT effects on the targets; i",
+      "priority": 3
+    },
+    {
+      "name": "Unforgettable Erosion -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) At the end of the turn, locks onto 1 random enemy within 3 tiles of the character, inflicting 2 random Level 1 Attribute Debuffs and Life Loss equal to 40% of M.ATK for 2 turns.",
+      "note": "At the end of the turn, locks onto 1 random enemy within 3 tiles of the character, inflicting 2 random Level 1 Attribute Debuffs and Life Lo",
+      "priority": 3
     }
   ],
   "build": {
-    "basicAttack": "Energy Wave",
-    "reaction": "Assisting Cover",
+    "basicAttack": "Infectious Attack",
+    "reaction": "Entrapping",
+    "ascension": "",
     "skills": [
+      "This Is the Moment for Rain",
       "Conviction",
-      "Will of Victory",
-      "Unforgettable Erosion",
-      "Victory Before Battle",
-      "Kvare's Gift",
-      "Arcane Toxins"
+      "Wither"
     ],
     "weapon": "",
-    "trinket": "Life Fondness",
-    "tarot": "Death"
+    "trinket": "",
+    "tarot": ""
   },
-  "summary": "is a character that excels in dealing continuous damage with [Life Loss], as well as Piercing DMG with his other skills.",
-  "pros": [],
-  "howToUse": "",
+  "summary": "here! Table of Contents Kvare Tier & Basic Info Strength & How to Use",
+  "pros": [
+    "Priority and Details  Conviction: With 0 CD, this Skill can be used every turn to inflict powerful debuffs and [Li",
+    "Infectious Attack: Although Basic Attacks are rarely used, this Basic Attack, which can deal contin",
+    "This Is the Moment for Rain: Deals Piercing DMG to a wide area, and if [Roster] is applied, it removes it to ",
+    "Wither: A powerful Skill that enhances [This Is the Moment for Rain], as well as allows "
+  ],
+  "howToUse": "With 0 CD, this Skill can be used every turn to inflict powerful debuffs and [Life Loss]. For enemies possessing the [Roster] debuff, some of its effects change Although Basic Attacks are rarely used, this Basic Attack, which can deal continuous damage through [Infection], is recommended. Deals Piercing DMG to a wide area, and if [Roster] is applied, it removes it to inflict additional damage and debuffs like Piercing + Vulnerable. When paired wi",
   "starPriority": "",
-  "confidence": "medium",
-  "collectedAt": "2026-08-02T04:31:54.004Z",
-  "cleanedAt": "2026-08-02T04:32:57.414Z"
+  "confidence": "high",
+  "collectedAt": "2026-08-02T04:48:37.011Z"
 }

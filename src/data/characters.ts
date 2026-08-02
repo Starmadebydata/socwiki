@@ -1,5 +1,6 @@
 import type { Character, Role, Tier } from "@/types/character";
 import { getTop20Map } from "@/data/top20";
+import { getAutoRefinedMap } from "@/data/auto-refined";
 
 /** Auto-maintained character DB — visual + skill table ready. */
 const rawCharacters: Character[] = [
@@ -5417,11 +5418,50 @@ const rawCharacters: Character[] = [
 ];
 
 const TOP20 = getTop20Map();
+const AUTO = getAutoRefinedMap();
 
-/** Top 20 hand-refined entries override generated stubs. */
-export const characters: Character[] = rawCharacters.map(
-  (c) => TOP20[c.slug] ?? c,
-);
+function applyAuto(c: Character): Character {
+  const a = AUTO[c.slug];
+  if (!a) return c;
+  return {
+    ...c,
+    role: (a.role as Character["role"]) || c.role,
+    factions: a.factions?.length ? a.factions : c.factions,
+    move: a.move ?? c.move,
+    highJump: a.highJump ?? c.highJump,
+    lowJump: a.lowJump ?? c.lowJump,
+    summary: a.summary || c.summary,
+    pros: a.pros?.length ? a.pros : c.pros,
+    howToUse: a.howToUse || c.howToUse,
+    build: a.build
+      ? {
+          basicAttack: a.build.basicAttack || c.build.basicAttack,
+          reaction: a.build.reaction || c.build.reaction,
+          skills: a.build.skills?.length ? a.build.skills : c.build.skills,
+          weaponSlug: a.build.weaponSlug || c.build.weaponSlug,
+          trinketSlug: a.build.trinketSlug || c.build.trinketSlug,
+          tarotSlug: a.build.tarotSlug || c.build.tarotSlug,
+        }
+      : c.build,
+    skillPriority:
+      a.skillPriority && a.skillPriority.length >= 3
+        ? a.skillPriority
+        : c.skillPriority,
+    starPriority: a.starPriority || c.starPriority,
+    lastUpdated: a.lastUpdated || c.lastUpdated,
+  };
+}
+
+/**
+ * Merge order:
+ * 1) rawCharacters (seed roster)
+ * 2) AUTO_REFINED structured scrape (skills/NRG/CD/build)
+ * 3) TOP20 hand-refined full override (wins for meta cores)
+ */
+export const characters: Character[] = rawCharacters.map((c) => {
+  const withAuto = applyAuto(c);
+  return TOP20[c.slug] ?? withAuto;
+});
 
 export function getAllCharacters(): Character[] {
   return characters;

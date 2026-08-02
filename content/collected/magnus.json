@@ -1,13 +1,12 @@
 {
   "slug": "magnus",
   "name": "Magnus",
-  "source": "public",
+  "source": "public-structured",
   "sources": [
     {
-      "type": "url",
-      "url": "https://gamewith.net/sword-of-convallaria/48249",
-      "fetchedAt": "2026-08-02T04:31:20.536Z",
-      "publisher": "gamewith"
+      "type": "gamewith-html-cache",
+      "id": "48249",
+      "parsedAt": "2026-08-02T04:48:37.041Z"
     }
   ],
   "role": "Defender",
@@ -19,120 +18,211 @@
   "stats": {
     "move": null,
     "highJump": null,
-    "lowJump": null
+    "lowJump": 3
   },
   "skills": [
     {
-      "name": "Slash",
+      "name": "Bloodthirsty Axe",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Reaction that allows Strike Back with Basic Attack. Therefore, with [Mighty Swing], it becomes an AoE attack, and with [Feverish Attack], Life Steal occurs. Since Magnus often positions himself in the front, use this Reaction in your build.",
+      "note": "A Reaction that allows Strike Back with Basic Attack. Therefore, with [Mighty Swing], it becomes an AoE attack, and with [Feverish Attack], Life Steal occurs. S",
+      "priority": 5
+    },
+    {
+      "name": "Cry of Victory",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A powerful conditional Skill that increases damage dealt by allies in a wide area and applies powerful debuffs that lower enemy attack all at once. Prioritize it for slots unless other allies can apply similar buffs/debuffs.",
+      "note": "A powerful conditional Skill that increases damage dealt by allies in a wide area and applies powerful debuffs that lower enemy attack all at once. Prioritize i",
+      "priority": 5
+    },
+    {
+      "name": "Feverish Attack",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Basic Attack with a Life Steal effect. Since it also enables Life Steal when Striking Back with [Bloodthirsty Axe], slot it when prioritizing durability.",
+      "note": "A Basic Attack with a Life Steal effect. Since it also enables Life Steal when Striking Back with [Bloodthirsty Axe], slot it when prioritizing durability.",
+      "priority": 5
+    },
+    {
+      "name": "Mighty Swing",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Basic Attack that can deal damage over a wide area. Slot when focusing on multi-target battles.",
+      "note": "A Basic Attack that can deal damage over a wide area. Slot when focusing on multi-target battles.",
+      "priority": 5
     },
     {
       "name": "Mountain Breaker",
       "kind": "Active",
       "nrg": "3",
       "cd": "2",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "description": "(Physical DMG) Single-target attack. Magnus deals 150% DMG. When the target is Injured , he also inflicts Isolate before attacking. Magnus restores 2 NRG when he defeats the target.",
+      "note": "A single-target attack Skill that also triggers [Cry of Victory]. Since this Skill supports Magnus's strength, prioritize it for builds when utilizing [Cry of V",
+      "priority": 5
     },
     {
-      "name": "Resolve",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "name": "Steel",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Leader's Aura that greatly strengthens allies. Since includes powerful characters like Cocoa and Gloria , include it if they are present in the party.",
+      "note": "A Leader's Aura that greatly strengthens allies. Since includes powerful characters like Cocoa and Gloria , include it if they are present in the party.",
+      "priority": 5
     },
     {
       "name": "Foreceful Cast",
       "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A unique Skill that allows throwing enemies or some objects to distant places. It can neutralize troublesome enemies by throwing them off cliffs or into low ground, or deal massive AoE damage by throwing gunpowder barrels. Often useful, especially in multi-target battles. Blood &",
+      "note": "A unique Skill that allows throwing enemies or some objects to distant places. It can neutralize troublesome enemies by throwing them off cliffs or into low gro",
+      "priority": 4
+    },
+    {
+      "name": "Cry of Victory -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) When an enemy is slain within 2 tiles around you, inflicts ▽ Attack 2 on all enemies within 5 tiles around you and grants all allies within 5 tiles around you ▲ DMG 2 . The effects last 2 rounds and will be triggered immediately before you use Mountain Breaker and can be triggered up to 1 time per round.",
+      "note": "When an enemy is slain within 2 tiles around you, inflicts ▽ Attack 2 on all enemies within 5 tiles around you and grants all allies within ",
+      "priority": 3
+    },
+    {
+      "name": "Hardening -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) When hit by an active attack, the DMG taken is decreased by 8%. After being attacked, the character gains DMG Reduction II for 2 turns. Skills That Can Be",
+      "note": "When hit by an active attack, the DMG taken is decreased by 8%. After being attacked, the character gains DMG Reduction II for 2 turns. Skil",
+      "priority": 3
+    },
+    {
+      "name": "Magnus's Base Skills Skill Range  Slash",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% Physical DMG.",
+      "note": "Deals 100% Physical DMG.",
+      "priority": 3
+    },
+    {
+      "name": "Resolve -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) Immediately recovers 5% HP when the character is defeated. Can be activated up to 1 time per battle.",
+      "note": "Immediately recovers 5% HP when the character is defeated. Can be activated up to 1 time per battle.",
+      "priority": 3
+    },
+    {
+      "name": "RK1 Skill Range  Offensive Stance",
+      "kind": "Active",
+      "nrg": "1",
+      "cd": "1",
+      "description": "(Support) Instant . Adds 40% of the character's P.DEF to P.ATK and takes 8% more DMG for 2 turns.",
+      "note": "Instant . Adds 40% of the character's P.DEF to P.ATK and takes 8% more DMG for 2 turns.",
+      "priority": 3
+    },
+    {
+      "name": "RK11 Skill Range  Sharpened Blade -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) When performing an active attack, DMG increases by 10%. When the character strikes back, DMG increases by 30%.",
+      "note": "When performing an active attack, DMG increases by 10%. When the character strikes back, DMG increases by 30%.",
+      "priority": 3
+    },
+    {
+      "name": "RK3 Skill Range  Foreceful Cast",
+      "kind": "Active",
       "nrg": "1",
       "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Physical DMG) Magnus throws the enemy to an Empty Tile 3 or 4 tiles away from himself, dealing 70% DMG to all enemies within 1 tile of the target tile and inflicting ▽ Move I . The effect lasts for 2 turns.",
+      "note": "Magnus throws the enemy to an Empty Tile 3 or 4 tiles away from himself, dealing 70% DMG to all enemies within 1 tile of the target tile and",
       "priority": 3
     },
     {
-      "name": "Cry of Victory",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Hardening",
+      "name": "RK5 Skill Range  Bloodthirsty Axe -",
       "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) Performs a Strike Back with basic attack when hit by an active attack from the front or side . The effect can be activated up to 1 time per round.",
+      "note": "Performs a Strike Back with basic attack when hit by an active attack from the front or side . The effect can be activated up to 1 time per ",
       "priority": 3
     },
     {
-      "name": "Crushing Bash",
+      "name": "RK7 Skill Range  Crushing Bash",
       "kind": "Active",
       "nrg": "0",
       "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Physical DMG) Single-target attack. Deals 120% DMG and inflicts Vulnerable II for 3 turns. Blood & Steel -",
+      "note": "Single-target attack. Deals 120% DMG and inflicts Vulnerable II for 3 turns. Blood & Steel -",
       "priority": 3
     },
     {
-      "name": "Steel",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Feverish Attack",
+      "name": "RK9 Skill Range  Mighty Swing",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 70% AoE DMG to all enemies within a 3x2 area in the target direction. Feverish Attack",
+      "note": "Deals 70% AoE DMG to all enemies within a 3x2 area in the target direction. Feverish Attack",
       "priority": 3
     },
     {
-      "name": "Iron Chariot",
+      "name": "Skill Range  Crushing Bash",
       "kind": "Active",
-      "nrg": "4",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "0",
+      "cd": "3",
+      "description": "(Physical DMG) Single-target attack. Deals 120% DMG and inflicts Vulnerable II for 3 turns. Blood &",
+      "note": "Single-target attack. Deals 120% DMG and inflicts Vulnerable II for 3 turns. Blood &",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Mighty Swing",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 70% AoE DMG to all enemies within a 3x2 area in the target direction.",
+      "note": "Deals 70% AoE DMG to all enemies within a 3x2 area in the target direction.",
+      "priority": 3
+    },
+    {
+      "name": "Steel -",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Leader's Aura) For all Fortitude allies in battle, increases ATK by 10% and DEF by by 20%. Decreases the DMG taken by 10% if (Healthy). Becomes immune to the negative effect of the Injured state. Skills That Can Be",
+      "note": "For all Fortitude allies in battle, increases ATK by 10% and DEF by by 20%. Decreases the DMG taken by 10% if (Healthy). Becomes immune to t",
       "priority": 3
     }
   ],
   "build": {
-    "basicAttack": "Slash",
-    "reaction": "Hardening",
+    "basicAttack": "Feverish Attack",
+    "reaction": "Steel",
+    "ascension": "",
     "skills": [
       "Mountain Breaker",
-      "Resolve",
-      "Foreceful Cast",
-      "Cry of Victory",
-      "Crushing Bash",
-      "Steel"
+      "Cry of Victory"
     ],
     "weapon": "",
-    "trinket": "Great Company on the Journey",
+    "trinket": "",
     "tarot": ""
   },
-  "summary": "is attack performance, allowing him to have both high durability and damage.",
-  "pros": [],
-  "howToUse": "",
+  "summary": "here! Table of Contents Magnus Tier & Basic Info Strength & How to Use",
+  "pros": [
+    "Mountain Breaker: A single-target attack Skill that also triggers [Cry of Victory]. Since this Ski",
+    "Cry of Victory: A powerful conditional Skill that increases damage dealt by allies in a wide are",
+    "Bloodthirsty Axe: A Reaction that allows Strike Back with Basic Attack. Therefore, with [Mighty Sw",
+    "Mighty Swing: A Basic Attack that can deal damage over a wide area. Slot when focusing on mult"
+  ],
+  "howToUse": "A single-target attack Skill that also triggers [Cry of Victory]. Since this Skill supports Magnus's strength, prioritize it for builds when utilizing [Cry of V A powerful conditional Skill that increases damage dealt by allies in a wide area and applies powerful debuffs that lower enemy attack all at once. Prioritize i A Reaction that allows Strike Back with Basic Attack. Therefore, with [Mighty Swing], it becomes an AoE attack, and with [Feverish Attack], Life Steal occurs. S",
   "starPriority": "",
-  "confidence": "medium",
-  "collectedAt": "2026-08-02T04:31:20.536Z",
-  "cleanedAt": "2026-08-02T04:32:57.415Z"
+  "confidence": "high",
+  "collectedAt": "2026-08-02T04:48:37.041Z"
 }

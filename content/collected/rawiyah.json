@@ -1,13 +1,12 @@
 {
   "slug": "rawiyah",
   "name": "Rawiyah",
-  "source": "public",
+  "source": "public-structured",
   "sources": [
     {
-      "type": "url",
-      "url": "https://gamewith.net/sword-of-convallaria/48260",
-      "fetchedAt": "2026-08-02T04:31:13.146Z",
-      "publisher": "gamewith"
+      "type": "gamewith-html-cache",
+      "id": "48260",
+      "parsedAt": "2026-08-02T04:48:37.027Z"
     }
   ],
   "role": "Breaker",
@@ -20,147 +19,187 @@
   "stats": {
     "move": null,
     "highJump": null,
-    "lowJump": null
+    "lowJump": 3
   },
   "skills": [
     {
-      "name": "Gash",
+      "name": "Gash Screw",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "nrg": "0",
+      "cd": "—",
+      "description": "Recommended Basic from Best Build table.",
+      "note": "Best Build Basic",
+      "priority": 5
+    },
+    {
+      "name": "Raging Winds",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "Recommended Reaction from Best Build table.",
+      "note": "Best Build Reaction",
+      "priority": 5
     },
     {
       "name": "Gale Breach",
       "kind": "Active",
       "nrg": "1",
       "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Gale - Void Slash",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Co-Attack",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Toughness",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Piercing Bash",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "description": "(Physical DMG) Instant Rawiyah charges at 1 enemy within a cross-shaped range around her, dealing 30% DMG. Afterward, the skill switches to Tropical Cyclone for 2 turns. When she has Tipsy , she inflicts × Reaction Skills on the target after the attack. This effect lasts for 2 turns.",
+      "note": "Instant Rawiyah charges at 1 enemy within a cross-shaped range around her, dealing 30% DMG. Afterward, the skill switches to Tropical Cyclon",
+      "priority": 4
     },
     {
       "name": "Another Pint",
       "kind": "Active",
       "nrg": "1",
       "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Guardian's Heart",
-      "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Mania Smash",
-      "kind": "Active",
-      "nrg": "3",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Sword of Convallaria",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Healing) Instant . Rawiyah recovers 60% of lost HP and gains Tipsy for 2 turns.",
+      "note": "Instant . Rawiyah recovers 60% of lost HP and gains Tipsy for 2 turns.",
       "priority": 3
     },
     {
       "name": "Dispelling Strike",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 50% physical DMG 2 times and dispels 2 buffs on the target.",
+      "note": "Deals 50% physical DMG 2 times and dispels 2 buffs on the target.",
       "priority": 3
     },
     {
-      "name": "Gale Spin Attack",
+      "name": "Guardian's Heart -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) Takes P.ATK for all other allies within 1 tile of the character and performs a Strike Back on the attacker, dealing 70% physical DMG and knocking them back by 1 tile. This effect can be triggered up to 1 time per round. Skills That Can Be",
+      "note": "Takes P.ATK for all other allies within 1 tile of the character and performs a Strike Back on the attacker, dealing 70% physical DMG and kno",
+      "priority": 3
+    },
+    {
+      "name": "Legacy of Comrades -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) When an ally in battle is defeated, recovers 30% HP for the character, and the character gains ▲ ATK II , ▲ P.DEF II , and ▲ M.DEF II for 3 turns.",
+      "note": "When an ally in battle is defeated, recovers 30% HP for the character, and the character gains ▲ ATK II , ▲ P.DEF II , and ▲ M.DEF II for 3 ",
+      "priority": 3
+    },
+    {
+      "name": "Rawiyah's Base Skills Skill Range  Gash",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Single-target attack. Deals 85% physical DMG and knocks the target back by 2 tiles.",
+      "note": "Single-target attack. Deals 85% physical DMG and knocks the target back by 2 tiles.",
+      "priority": 3
+    },
+    {
+      "name": "RK11 Skill Range  Gale Spin Attack",
       "kind": "Active",
       "nrg": "4",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Physical DMG) Rawiyah deals 50% AoE DMG too all enemies within a 2-tile radius around her. After dealing DMG, inflicts ▽ P.DEF II on the target for 2 turns. Subsequent attacks deal additional 50% AoE DMG .",
+      "note": "Rawiyah deals 50% AoE DMG too all enemies within a 2-tile radius around her. After dealing DMG, inflicts ▽ P.DEF II on the target for 2 turn",
       "priority": 3
     },
     {
-      "name": "Legacy of Comrades",
+      "name": "RK3 Skill Range  Piercing Bash",
       "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "0",
+      "cd": "3",
+      "description": "(Physical DMG) Single-target attack. Deals 130% DMG. Before attacking, the character gains Armor Piercing . Another Pint",
+      "note": "Single-target attack. Deals 130% DMG. Before attacking, the character gains Armor Piercing . Another Pint",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Co-Attack -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) For each ally within a 2-tile radius of the character, ATK increases by 5%, up to 15%.",
+      "note": "For each ally within a 2-tile radius of the character, ATK increases by 5%, up to 15%.",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Fatal Attack",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Fires a Curved Shot which deals 85% physical DMG and increases Crit DMG by 15%.",
+      "note": "Fires a Curved Shot which deals 85% physical DMG and increases Crit DMG by 15%.",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Mania Smash",
+      "kind": "Active",
+      "nrg": "3",
+      "cd": "0",
+      "description": "(Physical DMG) Single-target attack. Deals 120% DMG. After attacking, gains 40% Life Steal .",
+      "note": "Single-target attack. Deals 120% DMG. After attacking, gains 40% Life Steal .",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Piercing Bash",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "3",
+      "description": "(Physical DMG) Single-target attack. Deals 130% DMG. Before attacking, the character gains Armor Piercing .",
+      "note": "Single-target attack. Deals 130% DMG. Before attacking, the character gains Armor Piercing .",
+      "priority": 3
+    },
+    {
+      "name": "Skill Skill Range  Gale - Void Slash -",
+      "kind": "Passive",
+      "nrg": "0",
+      "cd": "0",
+      "description": "(Passive) After actively dealing Physical DMG, deals 15% physical DMG to all enemies within 2 tiles of the character, inflicting 1 random Level 2 Attribute Debuff for 2 turns. Can be triggered up to 3 times per round. The SP Skill is unlocked by enhancing Rawiyah (Original) to 3-stars and having SP Rawiyah",
+      "note": "After actively dealing Physical DMG, deals 15% physical DMG to all enemies within 2 tiles of the character, inflicting 1 random Level 2 Attr",
+      "priority": 3
+    },
+    {
+      "name": "SP Skill Skill Range  Gale - Void Slash -",
+      "kind": "Passive",
+      "nrg": "0",
+      "cd": "0",
+      "description": "(Passive) After actively dealing Physical DMG, deals 15% physical DMG to all enemies within 2 tiles of the character, inflicting 1 random Level 2 Attribute Debuff for 2 turns. Can be triggered up to 3 times per round. The SP Skill is unlocked by enhancing Rawiyah (Original) to 3-stars and having SP Rawiyah learn RK1 [Gale - Void Slash]. Skills That Can Be",
+      "note": "After actively dealing Physical DMG, deals 15% physical DMG to all enemies within 2 tiles of the character, inflicting 1 random Level 2 Attr",
+      "priority": 3
+    },
+    {
+      "name": "Sword of Convallaria -",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Leader's Aura) For all Sword of Convallaria allies in battle, increases ATK by 10%, DEF by 20%, and DMG dealt by 8%, and decreases their DMG taken by 8%. Skills That Can Be",
+      "note": "For all Sword of Convallaria allies in battle, increases ATK by 10%, DEF by 20%, and DMG dealt by 8%, and decreases their DMG taken by 8%. S",
+      "priority": 3
+    },
+    {
+      "name": "Toughness -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) Gains immunity to the effect of Injured and Dying . Skills That Can Be",
+      "note": "Gains immunity to the effect of Injured and Dying . Skills That Can Be",
       "priority": 3
     }
   ],
   "build": {
-    "basicAttack": "Gale - Void Slash",
-    "reaction": "Guardian's Heart",
+    "basicAttack": "Gash Screw",
+    "reaction": "Raging Winds",
+    "ascension": "",
     "skills": [
-      "Gash",
-      "Gale Breach",
-      "Co-Attack",
-      "Toughness",
-      "Another Pint",
-      "Piercing Bash"
+      "Gale Breach"
     ],
-    "weapon": "",
-    "trinket": "Great Company on the Journey",
-    "tarot": "Verdict of Justice"
+    "weapon": "Verdict of Justice",
+    "trinket": "",
+    "tarot": ""
   },
-  "summary": "excels at both offense and defense, and the [Denial Hammer], which is especially useful if knockback is effective on the stage.",
+  "summary": "here! Table of Contents Rawiyah Tier & Basic Info Strength & How to Use",
   "pros": [],
   "howToUse": "",
   "starPriority": "",
   "confidence": "medium",
-  "collectedAt": "2026-08-02T04:31:13.146Z",
-  "cleanedAt": "2026-08-02T04:32:57.415Z"
+  "collectedAt": "2026-08-02T04:48:37.027Z"
 }

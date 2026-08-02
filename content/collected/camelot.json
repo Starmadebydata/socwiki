@@ -1,19 +1,12 @@
 {
   "slug": "camelot",
   "name": "Camelot",
-  "source": "public",
+  "source": "public-structured",
   "sources": [
     {
-      "type": "url",
-      "url": "https://gamewith.net/sword-of-convallaria/71130",
-      "fetchedAt": "2026-08-02T04:31:03.812Z",
-      "publisher": "gamewith"
-    },
-    {
-      "type": "url",
-      "url": "https://dotgg.gg/sword-of-convallaria/camelot/",
-      "fetchedAt": "2026-08-02T04:31:52.715Z",
-      "publisher": "dotgg"
+      "type": "gamewith-html-cache",
+      "id": "71130",
+      "parsedAt": "2026-08-02T04:48:37.008Z"
     }
   ],
   "role": "Breaker",
@@ -25,16 +18,178 @@
   "stats": {
     "move": null,
     "highJump": null,
-    "lowJump": null
+    "lowJump": 3
   },
   "skills": [
     {
-      "name": "Slash",
+      "name": "Crushing",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 120% AoE physical DMG to all enemies in a 3 x 2 area in the target direction, knocking the first enemy in each column back by 1 tile. Decreases Skill Multiplier by 15% for each 1 additional enemy hit, to a minimum of 90%; Skill Multiplier is fixed at 120% to targets with 6 stacks of Coercion .",
+      "note": "A powerful Basic Attack that deals damage in a wide area and Knocks back enemies in the front row. You should generally equip this Basic Attack.",
+      "priority": 5
+    },
+    {
+      "name": "King's Fighting Spirit",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Reaction that reduces Physical DMG taken and grants SPD Up & Extra Action or Act Again upon being attacked. Although it has a long CD of 5 turns, it allows for many attack opportunities when combined with its Trait's Act Again effect, so prioritize including it in your build.",
+      "note": "A Reaction that reduces Physical DMG taken and grants SPD Up & Extra Action or Act Again upon being attacked. Although it has a long CD of 5 turns, it allows fo",
+      "priority": 5
+    },
+    {
+      "name": "Verdict - Solo Carry",
+      "kind": "Active",
+      "nrg": "1",
+      "cd": "3",
+      "description": "A Skill that changes with each use: \"Instant Move & AoE Attack\" → Wide-Range Attack → High-Damage Move & AoE Attack Skill. If you can get the Act Again effect from Camelot's Trait, you can use the whole combo in one turn, making it a main skill that deals overwhelming total damage.",
+      "note": "A Skill that changes with each use: \"Instant Move & AoE Attack\" → Wide-Range Attack → High-Damage Move & AoE Attack Skill. If you can get the Act Again effect f",
+      "priority": 5
+    },
+    {
+      "name": "Proud Lion Heart",
+      "kind": "Aura",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Leader's Aura that greatly strengthens characters of The Union Faction. It also has good synergy with Camelot, who can gain many Physical Shields, so prioritize equipping it if you want to increase attack power.",
+      "note": "A Leader's Aura that greatly strengthens characters of The Union Faction. It also has good synergy with Camelot, who can gain many Physical Shields, so prioriti",
+      "priority": 4
+    },
+    {
+      "name": "Scorn the Masses",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Passive that increases HP and restores HP every turn. When attacked by an enemy with lower HP than Camelot, it nullifies some debuffs, Knockback, and Shield Break effects, so prioritize equipping it on stages with enemies that have such effects.",
+      "note": "A Passive that increases HP and restores HP every turn. When attacked by an enemy with lower HP than Camelot, it nullifies some debuffs, Knockback, and Shield B",
+      "priority": 4
+    },
+    {
+      "name": "Throne of Ashes",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A powerful Skill that damages enemies in a wide area while also having the effects of Steal Buffs, Apply 2 stacks of [Coercion], and gains a Physical Shield equal to 10% of Max HP for each enemy hit. Although the damage is low, it can greatly strengthen Camelot, so prioritize equipping it in battles against multiple enemies.",
+      "note": "A powerful Skill that damages enemies in a wide area while also having the effects of Steal Buffs, Apply 2 stacks of [Coercion], and gains a Physical Shield equ",
+      "priority": 4
+    },
+    {
+      "name": "Base Skills Skill Range  Slash",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% Physical DMG. Unstoppable Force",
+      "note": "Deals 100% Physical DMG. Unstoppable Force",
+      "priority": 3
+    },
+    {
+      "name": "Camelot's Base Skills Skill Range  Slash",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% Physical DMG.",
+      "note": "Deals 100% Physical DMG.",
+      "priority": 3
+    },
+    {
+      "name": "K1 Skill Range  Will to Survive - Extra -",
+      "kind": "Passive",
+      "nrg": "0",
+      "cd": "2",
+      "description": "(Passive) Increases max HP by 15%. After being attacked, if in Dying state, recovers 50% HP and 2 NRG. Effect CD: 2 turns.",
+      "note": "Increases max HP by 15%. After being attacked, if in Dying state, recovers 50% HP and 2 NRG. Effect CD: 2 turns.",
+      "priority": 3
+    },
+    {
+      "name": "K11 Skill Range  Knight's Glory - Extra",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "4",
+      "description": "(Support) Instant Grants ▲ATK II to all allies within 2 tiles of the target for 2 turns. For the Union allies, additionally grants a Physical Shield equal to 30% HP for 2 turns. Blazing Scourge",
+      "note": "Instant Grants ▲ATK II to all allies within 2 tiles of the target for 2 turns. For the Union allies, additionally grants a Physical Shield e",
+      "priority": 3
+    },
+    {
+      "name": "King's Fighting Spirit -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "5",
+      "description": "(Reaction) Decreases physical DMG taken by 15%. When hit, Acts Instantly , recovers 30% HP, and dispels all debuffs from the character. CD after trigger: 5 turns.",
+      "note": "Decreases physical DMG taken by 15%. When hit, Acts Instantly , recovers 30% HP, and dispels all debuffs from the character. CD after trigge",
+      "priority": 3
+    },
+    {
+      "name": "Range  Strength Activation - Extra -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) Healing received increases by 30%; when healed, gains ▲DMG III for 1 turn.",
+      "note": "Healing received increases by 30%; when healed, gains ▲DMG III for 1 turn.",
+      "priority": 3
+    },
+    {
+      "name": "RK11 Skill Range  Knight's Glory - Extra",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "4",
+      "description": "(Support) Instant Grants ▲ATK II to all allies within 2 tiles of the target for 2 turns. For the Union allies, additionally grants a Physical Shield equal to 30% HP for 2 turns.",
+      "note": "Instant Grants ▲ATK II to all allies within 2 tiles of the target for 2 turns. For the Union allies, additionally grants a Physical Shield e",
+      "priority": 3
+    },
+    {
+      "name": "RK3 Skill Range  Throne of Ashes",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "3",
+      "description": "(Physical DMG) Deals 50% AoE DMG to all enemies within 3 tiles of the character, and steals 1 buff from the targets. Before attacking, inflicts 2 stacks of Coercion on the target for 2 turns; after attacking, gains a Physical Shield equal to 10% HP; for each 1 enemy hit, additionally gains Physical Shield equal to 10% HP.",
+      "note": "Deals 50% AoE DMG to all enemies within 3 tiles of the character, and steals 1 buff from the targets. Before attacking, inflicts 2 stacks of",
+      "priority": 3
+    },
+    {
+      "name": "RK7 Skill Range  Proud Lion Heart -",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "0",
+      "description": "(Leader's Aura) For all the Union allies in battle, increases ATK by 10%, DEF by 20%; if they are Healthy , increases DMG by 10%; if their Physical Shield Value is greater than 30% of HP, additionally increases ATK by 10%.",
+      "note": "For all the Union allies in battle, increases ATK by 10%, DEF by 20%; if they are Healthy , increases DMG by 10%; if their Physical Shield V",
+      "priority": 3
+    },
+    {
+      "name": "RK9 Skill Range  Invigorating Strike",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% physical DMG and additionally recovers 1 NRG.",
+      "note": "Deals 100% physical DMG and additionally recovers 1 NRG.",
+      "priority": 3
+    },
+    {
+      "name": "Scorn the Masses -",
+      "kind": "Passive",
+      "nrg": "0",
+      "cd": "0",
+      "description": "(Passive) Increases max HP by 15%. At the start of the turn, restores 15% HP. When attacked by enemies with current HP lower than the character's, becomes immune to Bound , Disruption , and Knock Back . Before being targeted by single-target attacks, dispels all Shield Break effects from the attacker.",
+      "note": "Increases max HP by 15%. At the start of the turn, restores 15% HP. When attacked by enemies with current HP lower than the character's, bec",
+      "priority": 3
+    },
+    {
+      "name": "Shield -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) At the start of the battle, gains a Physical Shield with value equal to 15% of HP. This effect cannot be dispelled.",
+      "note": "At the start of the battle, gains a Physical Shield with value equal to 15% of HP. This effect cannot be dispelled.",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Will to Survive - Extra -",
+      "kind": "Passive",
+      "nrg": "0",
+      "cd": "2",
+      "description": "(Passive) Increases max HP by 15%. After being attacked, if in Dying state, recovers 50% HP and 2 NRG. Effect CD: 2 turns. Shield -",
+      "note": "Increases max HP by 15%. After being attacked, if in Dying state, recovers 50% HP and 2 NRG. Effect CD: 2 turns. Shield -",
       "priority": 3
     },
     {
@@ -42,135 +197,32 @@
       "kind": "Active",
       "nrg": "0",
       "cd": "2",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Physical DMG) Performs Charge , dealing 120% AoE DMG to all enemies within 1 tile of the target; before attacking, inflicts ×Resolve for 2 turns.",
+      "note": "Performs Charge , dealing 120% AoE DMG to all enemies within 1 tile of the target; before attacking, inflicts ×Resolve for 2 turns.",
       "priority": 3
-    },
-    {
-      "name": "Will to Survive",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "2",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Shield",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Throne of Ashes",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Scorn the Masses",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "King's Fighting Spirit",
-      "kind": "Reaction",
-      "nrg": "-",
-      "cd": "5",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Verdict - Solo Carry",
-      "kind": "Active",
-      "nrg": "1",
-      "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Invigorating Strike",
-      "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Crushing",
-      "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Knight's Glory",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "4",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Blazing Scourge",
-      "kind": "Active",
-      "nrg": "2",
-      "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Verdict",
-      "kind": "Active",
-      "note": "Priority section extract",
-      "priority": 4,
-      "description": ""
-    },
-    {
-      "name": "Declaration of Conquest",
-      "kind": "Active",
-      "note": "Name confirmed in page text",
-      "priority": 4,
-      "description": ""
     }
   ],
   "build": {
-    "basicAttack": "Slash",
+    "basicAttack": "Crushing",
     "reaction": "King's Fighting Spirit",
+    "ascension": "",
     "skills": [
-      "Unstoppable Force",
-      "Will to Survive",
-      "Shield",
+      "Verdict - Solo Carry",
       "Throne of Ashes",
-      "Scorn the Masses",
-      "Verdict - Solo Carry"
+      "Proud Lion Heart"
     ],
     "weapon": "",
-    "trinket": "Maverick's Cloak",
+    "trinket": "",
     "tarot": ""
   },
-  "summary": "is an effective attacker, but his weakness is that there are large gaps between his damage windows .",
-  "pros": [],
-  "howToUse": "",
+  "summary": "here! Table of Contents Camelot Tier & Basic Info Strength & How to Use",
+  "pros": [
+    "King's Fighting Spirit: A Reaction that reduces Physical DMG taken and grants SPD Up & Extra Action or A",
+    "Verdict - Solo Carry: A Skill that changes with each use: \"Instant Move & AoE Attack\" → Wide-Range Att",
+    "Crushing: A powerful Basic Attack that deals damage in a wide area and Knocks back enemies"
+  ],
+  "howToUse": "A Reaction that reduces Physical DMG taken and grants SPD Up & Extra Action or Act Again upon being attacked. Although it has a long CD of 5 turns, it allows fo A Skill that changes with each use: \"Instant Move & AoE Attack\" → Wide-Range Attack → High-Damage Move & AoE Attack Skill. If you can get the Act Again effect f A powerful Basic Attack that deals damage in a wide area and Knocks back enemies in the front row. You should generally equip this Basic Attack.",
   "starPriority": "",
-  "confidence": "medium",
-  "collectedAt": "2026-08-02T04:31:52.719Z",
-  "cleanedAt": "2026-08-02T04:32:57.411Z"
+  "confidence": "high",
+  "collectedAt": "2026-08-02T04:48:37.008Z"
 }

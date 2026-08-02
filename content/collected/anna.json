@@ -1,149 +1,166 @@
 {
   "slug": "anna",
   "name": "Anna",
-  "source": "public",
+  "source": "public-structured",
   "sources": [
     {
-      "type": "url",
-      "url": "https://gamewith.net/sword-of-convallaria/77281",
-      "fetchedAt": "2026-08-02T04:31:22.148Z",
-      "publisher": "gamewith"
+      "type": "gamewith-html-cache",
+      "id": "77281",
+      "parsedAt": "2026-08-02T04:48:37.044Z"
     }
   ],
   "role": "Breaker",
   "factions": [
     "Iria",
-    "SoC",
     "Luccia",
-    "Drifter"
+    "Drifter",
+    "SoC"
   ],
   "rarity": "Legendary",
   "stats": {
     "move": null,
     "highJump": null,
-    "lowJump": null
+    "lowJump": 3
   },
   "skills": [
     {
-      "name": "Straight Shot",
-      "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Repelling Volley",
-      "kind": "Active",
-      "nrg": "1",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Freezing Slash",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "1",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Resourceful Tactics",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Hunter's Arsenal",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Preemptive Intercept",
-      "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Survival Master",
-      "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Unyielding North",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Powerful Attack",
-      "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "name": "Focused Mark",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "- Focuses on 1 enemy. - Excellent for stacking Burst Charge via Auxiliary Passive. - Can be equipped just for the Auxiliary Passive without ever using the skill.",
+      "note": "- Focuses on 1 enemy. - Excellent for stacking Burst Charge via Auxiliary Passive. - Can be equipped just for the Auxiliary Passive without ever using the skill",
+      "priority": 5
     },
     {
       "name": "Invigorating Strike",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% physical DMG and additionally recovers 1 NRG.",
+      "note": "- A Basic Attack that restores NRG.",
+      "priority": 5
+    },
+    {
+      "name": "Preemptive Intercept",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "- Excellent Preempt + Interrupt. - More effective if [For the Forsaken!] is active.",
+      "note": "- Excellent Preempt + Interrupt. - More effective if [For the Forsaken!] is active.",
+      "priority": 5
+    },
+    {
+      "name": "Hunter's Arsenal",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "- 3 Skills in One. - [Lacerating Shot] grants access to Ward Broken and P.DEF reduction. - [Burst Shot] deals high DMG vs. single targets.",
+      "note": "- 3 Skills in One. - [Lacerating Shot] grants access to Ward Broken and P.DEF reduction. - [Burst Shot] deals high DMG vs. single targets.",
+      "priority": 4
+    },
+    {
+      "name": "Resourceful Tactics",
+      "kind": "Passive",
+      "nrg": "0",
+      "cd": "3",
+      "description": "(Decision) Selects to use Exploit Obect , Seize and Activate , Place Frost Shard , or Throw Frostbite Vial . ✦ Auxiliary Passive , effect: when the character triggers an Interactive Object or Trigger Object , gains 2 stacks of Burst Charge . Can be triggered up to 2 times per round. Skills That Can Be Learne",
+      "note": "- Lets you choose from 4 skills. - Stacks Burst Charge with its Auxiliary Passive. - Equip when you want more Burst Charges. For the Forsaken! ★★★★ - Damage + A",
+      "priority": 4
+    },
+    {
+      "name": "Unyielding North",
+      "kind": "Aura",
+      "nrg": "—",
+      "cd": "—",
+      "description": "- A Leader's Aura that greatly enhances Alerts. - Increases damage against enemies with [Primal Ward] or [Ward Broken].",
+      "note": "- A Leader's Aura that greatly enhances Alerts. - Increases damage against enemies with [Primal Ward] or [Ward Broken].",
+      "priority": 4
+    },
+    {
+      "name": "Base Skills Skill Range  Straight Shot",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% Physical DMG.",
+      "note": "Deals 100% Physical DMG.",
       "priority": 3
     },
     {
-      "name": "Heart of the North",
+      "name": "Repelling Volley -",
       "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "1",
+      "cd": "0",
+      "description": "(Physical DMG) Deals 120% DMG to 1 enemy within a cross-shaped range of the character and knocks them back by 2 tiles; if 2 stacks of Burst Charge are active, consumes 2 stacks and repeats the attack on the target once.",
+      "note": "Deals 120% DMG to 1 enemy within a cross-shaped range of the character and knocks them back by 2 tiles; if 2 stacks of Burst Charge are acti",
+      "priority": 3
+    },
+    {
+      "name": "RK1 Skill Range  Freezing Slash",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "1",
+      "description": "(Physical DMG) Instant Selects any tile within a cross-shaped range of 3 tiles of the character to Charge ; if there is an enemy on the target tile, charges to their side and deals 30% DMG; immune to Preempt . ✦ Before charging, places 1 Frost Shard behind the character and gains ▲ATK I , ▲DMG II , and ▲Move II for 2 turns. ✦ Tiles passed through become Frosty for 2 turns.",
+      "note": "Instant Selects any tile within a cross-shaped range of 3 tiles of the character to Charge ; if there is an enemy on the target tile, charge",
+      "priority": 3
+    },
+    {
+      "name": "RK11 Skill Range  Tundra Raider -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) Increases ATK by 10%. After attacking, can move 2 additional tiles. ✦ Does not consume Movement when passing through Frosty tiles, up to 2 tiles per round.",
+      "note": "Increases ATK by 10%. After attacking, can move 2 additional tiles. ✦ Does not consume Movement when passing through Frosty tiles, up to 2 t",
+      "priority": 3
+    },
+    {
+      "name": "RK9 Skill Range  Powerful Attack",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 110% Physical DMG.",
+      "note": "Deals 110% Physical DMG.",
+      "priority": 3
+    },
+    {
+      "name": "Survival Master -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) When hit an active attack, the DMG taken is decreased by 8%, and Environmental DMG taken is decreased by 70%. Skills That Can Be",
+      "note": "When hit an active attack, the DMG taken is decreased by 8%, and Environmental DMG taken is decreased by 70%. Skills That Can Be",
+      "priority": 3
+    },
+    {
+      "name": "Unyielding North -",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Leader's Aura) All Luccia allies in battle gain 10% increased ATK and 20% increased DEF. Against targets with Primal Ward , increases DMG and piercing DMG by 10%; if the target is suffering Ward Broken , the DMG effects are additionally increased by 10%. ✦ Additionally gains an aura, effect: all allies in battle g",
+      "note": "All Luccia allies in battle gain 10% increased ATK and 20% increased DEF. Against targets with Primal Ward , increases DMG and piercing DMG ",
       "priority": 3
     }
   ],
   "build": {
-    "basicAttack": "Freezing Slash",
+    "basicAttack": "Invigorating Strike",
     "reaction": "Preemptive Intercept",
+    "ascension": "",
     "skills": [
-      "Repelling Volley",
-      "Resourceful Tactics",
-      "Hunter's Arsenal",
-      "Survival Master",
-      "Unyielding North",
-      "Heart of the North"
+      "Focused Mark",
+      "Unyielding North"
     ],
     "weapon": "",
     "trinket": "",
-    "tarot": "Verdict of Justice"
+    "tarot": ""
   },
-  "summary": "Excels at Alerts and Debuffs Anna's Trait triggers a [Forced Alert] at the end of an action.",
-  "pros": [],
-  "howToUse": "",
+  "summary": "here! Table of Contents Anna Tier & Basic Info Strength & How to Use",
+  "pros": [
+    "Preemptive Intercept: - Excellent Preempt + Interrupt. - More effective if [For the Forsaken!] is acti",
+    "Focused Mark: - Focuses on 1 enemy. - Excellent for stacking Burst Charge via Auxiliary Passiv",
+    "Invigorating Strike: - A Basic Attack that restores NRG."
+  ],
+  "howToUse": "- Excellent Preempt + Interrupt. - More effective if [For the Forsaken!] is active. - Focuses on 1 enemy. - Excellent for stacking Burst Charge via Auxiliary Passive. - Can be equipped just for the Auxiliary Passive without ever using the skill - A Basic Attack that restores NRG.",
   "starPriority": "",
-  "confidence": "medium",
-  "collectedAt": "2026-08-02T04:31:22.148Z",
-  "cleanedAt": "2026-08-02T04:32:57.409Z"
+  "confidence": "high",
+  "collectedAt": "2026-08-02T04:48:37.044Z"
 }

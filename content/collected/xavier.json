@@ -1,19 +1,12 @@
 {
   "slug": "xavier",
   "name": "Xavier",
-  "source": "public",
+  "source": "public-structured",
   "sources": [
     {
-      "type": "url",
-      "url": "https://gamewith.net/sword-of-convallaria/48265",
-      "fetchedAt": "2026-08-02T04:31:11.552Z",
-      "publisher": "gamewith"
-    },
-    {
-      "type": "url",
-      "url": "https://dotgg.gg/sword-of-convallaria/xavier/",
-      "fetchedAt": "2026-08-02T04:31:56.168Z",
-      "publisher": "dotgg"
+      "type": "gamewith-html-cache",
+      "id": "48265",
+      "parsedAt": "2026-08-02T04:48:37.025Z"
     }
   ],
   "role": "Breaker",
@@ -25,52 +18,52 @@
   "stats": {
     "move": null,
     "highJump": null,
-    "lowJump": null
+    "lowJump": 3
   },
   "skills": [
     {
-      "name": "Slash",
+      "name": "Charged Attack Indomitable Spirit Daring",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "nrg": "0",
+      "cd": "—",
+      "description": "Recommended Basic from Best Build table.",
+      "note": "Best Build Basic",
+      "priority": 5
     },
     {
-      "name": "Sweeping Bash",
+      "name": "Falling Comet Dash Combat Frenzy Spear",
       "kind": "Active",
-      "nrg": "2",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "nrg": "—",
+      "cd": "—",
+      "description": "Listed in GameWith Best Build table.",
+      "note": "Best Build skill slot",
+      "priority": 5
     },
     {
-      "name": "Combat Frenzy",
+      "name": "Iria",
       "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "nrg": "—",
+      "cd": "—",
+      "description": "Listed in GameWith Best Build table.",
+      "note": "Best Build skill slot",
+      "priority": 5
     },
     {
-      "name": "Risky Move",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "name": "Vanguard",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "Recommended Reaction from Best Build table.",
+      "note": "Best Build Reaction",
+      "priority": 5
     },
     {
-      "name": "Legacy of Comrades",
+      "name": "Battle Flag of Iria -",
       "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Leader's Aura) For all Iria allies in battle, increases ATK by 10% and DEF by 20%.",
+      "note": "For all Iria allies in battle, increases ATK by 10% and DEF by 20%.",
       "priority": 3
     },
     {
@@ -78,103 +71,126 @@
       "kind": "Active",
       "nrg": "2",
       "cd": "2",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Indomitable Spirit",
-      "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Strength Activation",
-      "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Spear of Iria",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "5",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Battle Flag of Iria",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Charged Attack",
-      "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Physical DMG) Xavier deals 70% DMG to all enemies within 2 tiles around him, generating 40% Life Steal and inflicting ▽ Healing Received for 2 turns.",
+      "note": "Xavier deals 70% DMG to all enemies within 2 tiles around him, generating 40% Life Steal and inflicting ▽ Healing Received for 2 turns.",
       "priority": 3
     },
     {
       "name": "Feverish Attack",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% physical DMG and gains 20% Life Steal .",
+      "note": "Deals 100% physical DMG and gains 20% Life Steal .",
       "priority": 3
     },
     {
-      "name": "Falling Comet Dash",
+      "name": "Risky Move -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) P.ATK increases by 20% but P.DEF and M.DEF are decreased by 15%.",
+      "note": "P.ATK increases by 20% but P.DEF and M.DEF are decreased by 15%.",
+      "priority": 3
+    },
+    {
+      "name": "RK1 Skill Range  Combat Frenzy -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) After dealing DMG on the character's turn, grants 20% Life Steal .",
+      "note": "After dealing DMG on the character's turn, grants 20% Life Steal .",
+      "priority": 3
+    },
+    {
+      "name": "RK11 Skill Range  Falling Comet Dash",
       "kind": "Active",
       "nrg": "5",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Physical DMG) Xavier selects 1 spot within a cross-shaped range around him, charges to the location, and deals 90% DMG to enemies within a 3x4 area in the target direction. Inflicts ▽ SPD II for 2 turns.",
+      "note": "Xavier selects 1 spot within a cross-shaped range around him, charges to the location, and deals 90% DMG to enemies within a 3x4 area in the",
       "priority": 3
     },
     {
-      "name": "Musou",
+      "name": "RK3 Skill Range  Legacy of Comrades -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) When an ally in battle is defeated, recovers 30% HP for the character, and the character gains ▲ ATK II , ▲ P.DEF II , and ▲ M.DEF II for 3 turns.",
+      "note": "When an ally in battle is defeated, recovers 30% HP for the character, and the character gains ▲ ATK II , ▲ P.DEF II , and ▲ M.DEF II for 3 ",
+      "priority": 3
+    },
+    {
+      "name": "RK5 Skill Range  Indomitable Spirit -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) For each enemy within 2 tile before being attacked, decreases the incoming DMG by 10%, up to 40%.",
+      "note": "For each enemy within 2 tile before being attacked, decreases the incoming DMG by 10%, up to 40%.",
+      "priority": 3
+    },
+    {
+      "name": "RK7 Skill Range  Spear of Iria -",
+      "kind": "Passive",
+      "nrg": "0",
+      "cd": "5",
+      "description": "(Passive) At the start of the round, fully recovers NRG and gains ▲ SPD III for 2 turns. All effects have a CD of 5 turns.",
+      "note": "At the start of the round, fully recovers NRG and gains ▲ SPD III for 2 turns. All effects have a CD of 5 turns.",
+      "priority": 3
+    },
+    {
+      "name": "RK9 Skill Range  Charged Attack",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% physical DMG and increases the DMG of the next skill by 15%.",
+      "note": "Deals 100% physical DMG and increases the DMG of the next skill by 15%.",
+      "priority": 3
+    },
+    {
+      "name": "Strength Activation -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) Increases the healing received by 10%. When receiving healing, gains ▲ DMG II for 1 turn.",
+      "note": "Increases the healing received by 10%. When receiving healing, gains ▲ DMG II for 1 turn.",
+      "priority": 3
+    },
+    {
+      "name": "Sweeping Bash",
       "kind": "Active",
-      "nrg": "1",
-      "cd": "4",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "2",
+      "cd": "0",
+      "description": "(Physical DMG) Deals s80% DMG to all enemies within a 3x2 area in the target direction and inflicts ▽ P.DEF I , lasting for 2 turns.",
+      "note": "Deals s80% DMG to all enemies within a 3x2 area in the target direction and inflicts ▽ P.DEF I , lasting for 2 turns.",
+      "priority": 3
+    },
+    {
+      "name": "Xavier's Base Skills Skill Range  Slash",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% Physical DMG.",
+      "note": "Deals 100% Physical DMG.",
       "priority": 3
     }
   ],
   "build": {
-    "basicAttack": "Slash",
-    "reaction": "Indomitable Spirit",
+    "basicAttack": "Charged Attack Indomitable Spirit Daring",
+    "reaction": "Vanguard",
+    "ascension": "",
     "skills": [
-      "Combat Frenzy",
-      "Risky Move",
-      "Legacy of Comrades",
-      "Chaotic Battle",
-      "Sweeping Bash",
-      "Spear of Iria"
+      "Falling Comet Dash Combat Frenzy Spear",
+      "Iria"
     ],
-    "weapon": "",
-    "trinket": "Maverick's Cloak",
+    "weapon": "Maverick's Cloak",
+    "trinket": "",
     "tarot": ""
   },
-  "summary": "is attack power when enemies are nearby.",
+  "summary": "here! Table of Contents Xavier Tier & Basic Info Strength & How to Use",
   "pros": [],
   "howToUse": "",
   "starPriority": "",
-  "confidence": "medium",
-  "collectedAt": "2026-08-02T04:31:56.169Z",
-  "cleanedAt": "2026-08-02T04:32:57.419Z"
+  "confidence": "high",
+  "collectedAt": "2026-08-02T04:48:37.025Z"
 }

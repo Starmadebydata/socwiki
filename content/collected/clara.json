@@ -1,144 +1,145 @@
 {
   "slug": "clara",
   "name": "Clara",
-  "source": "public",
+  "source": "public-structured",
   "sources": [
     {
-      "type": "url",
-      "url": "https://gamewith.net/sword-of-convallaria/75005",
-      "fetchedAt": "2026-08-02T04:31:34.157Z",
-      "publisher": "gamewith"
+      "type": "gamewith-html-cache",
+      "id": "75005",
+      "parsedAt": "2026-08-02T04:48:37.064Z"
     }
   ],
   "role": "Defender",
   "factions": [
     "Union",
-    "SoC",
-    "Drifter"
+    "Drifter",
+    "SoC"
   ],
   "rarity": "Legendary",
   "stats": {
     "move": null,
     "highJump": null,
-    "lowJump": null
+    "lowJump": 3
   },
   "skills": [
     {
-      "name": "Slash",
+      "name": "Absolute Steadfast Heavy Armor",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "An excellent Reaction that grants Block, Preempt, and Shield when attacked. Prioritize including this in your build. Knight - Lead the Charge! ★★★★ An essential Skill for the Attacker build. It grants a buff that increases DMG output while also dealing bonus damage based on the Physical Shields, so try to maximize your Physical Shield before attacking.",
+      "note": "An excellent Reaction that grants Block, Preempt, and Shield when attacked. Prioritize including this in your build. Knight - Lead the Charge! ★★★★ An essential",
+      "priority": 5
+    },
+    {
+      "name": "Shield Bash",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Basic Attack that deals bonus damage based on Physical Shields. Since it tends to deal high damage, generally use this Basic Attack.",
+      "note": "A Basic Attack that deals bonus damage based on Physical Shields. Since it tends to deal high damage, generally use this Basic Attack.",
+      "priority": 5
     },
     {
       "name": "Shield Up - Steadfast Defense",
       "kind": "Active",
       "nrg": "2",
       "cd": "1",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "description": "A Skill that instantly grants a Shield, making it the top priority for your build. If using Clara as an Attacker, it consumes all NRG but also grants Critical Enhancement in addition to the Shield. I'll Protect You All! ★★★★★ A Skill that gathers nearby allies to Clara's position and grants them a Shield. Prioritize this skill when using the Assisting Cover build. Knight - Fearless Forward! ★★★★★ ",
+      "note": "A Skill that instantly grants a Shield, making it the top priority for your build. If using Clara as an Attacker, it consumes all NRG but also grants Critical E",
+      "priority": 5
     },
     {
-      "name": "Attack Command",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "ll Range Absolute Steadfast Heavy Armor",
-      "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "NRG Recovery",
-      "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Dispelling Strike",
+      "name": "Clara's Base Skills Skill Range  Slash",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% Physical DMG.",
+      "note": "Deals 100% Physical DMG.",
       "priority": 3
     },
     {
-      "name": "Shield Bash",
-      "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Knight's Faith",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Knockback Combo",
-      "kind": "Active",
-      "nrg": "3",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Knight",
-      "kind": "Active",
-      "note": "Priority section extract",
-      "priority": 4,
-      "description": ""
-    },
-    {
-      "name": "Assisting Cover",
+      "name": "NRG Recovery -",
       "kind": "Reaction",
-      "note": "Name confirmed in page text",
-      "priority": 4,
-      "description": ""
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) When hit by an active attack, the DMG taken is decreased by 8%. Upon receiving an active attack, additionally recovers 1 NRG.",
+      "note": "When hit by an active attack, the DMG taken is decreased by 8%. Upon receiving an active attack, additionally recovers 1 NRG.",
+      "priority": 3
+    },
+    {
+      "name": "Range  Absolute Steadfast Heavy Armor -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) Gains Block and can block physical AoE attacks. When attacked from any direction, has a 100% chance to trigger Block . Before being attacked, performs Preempt and gains 3 stacks of Reassuring Shield for 2 turns. Can be triggered up to 2 times per round.",
+      "note": "Gains Block and can block physical AoE attacks. When attacked from any direction, has a 100% chance to trigger Block . Before being attacked",
+      "priority": 3
+    },
+    {
+      "name": "RK1 Skill Range  Co-Defense -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) For each ally within a 2-tile radius of the character, DEF increases by 10%, up to 40%. Attack Command -",
+      "note": "For each ally within a 2-tile radius of the character, DEF increases by 10%, up to 40%. Attack Command -",
+      "priority": 3
+    },
+    {
+      "name": "RK11 Skill Range  Knight's Faith -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) Gains Toughness . At the end of the turn, additionally recovers 1 NRG; when defeating the target, additionally recovers 1 NRG. Can be triggered up to 1 time per round.",
+      "note": "Gains Toughness . At the end of the turn, additionally recovers 1 NRG; when defeating the target, additionally recovers 1 NRG. Can be trigge",
+      "priority": 3
+    },
+    {
+      "name": "RK7 Skill Range  United Courage -",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Leader's Aura) For all Drifter allies in battle, increases ATK by 15% and DEF by 30%; when having shield , increases DMG by 10% and reduces DMG taken by 10%. Knight - Lead the Charge!",
+      "note": "For all Drifter allies in battle, increases ATK by 15% and DEF by 30%; when having shield , increases DMG by 10% and reduces DMG taken by 10",
+      "priority": 3
+    },
+    {
+      "name": "RK9 Skill Range  Dispelling Strike",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 50% physical DMG 2 times and dispels 2 buffs on the target.",
+      "note": "Deals 50% physical DMG 2 times and dispels 2 buffs on the target.",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Co-Defense -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) For each ally within a 2-tile radius of the character, DEF increases by 10%, up to 40%.",
+      "note": "For each ally within a 2-tile radius of the character, DEF increases by 10%, up to 40%.",
+      "priority": 3
     }
   ],
   "build": {
-    "basicAttack": "Slash",
-    "reaction": "Assisting Cover",
+    "basicAttack": "Shield Bash",
+    "reaction": "Absolute Steadfast Heavy Armor",
+    "ascension": "",
     "skills": [
-      "Shield Up - Steadfast Defense",
-      "Attack Command",
-      "ll Range Absolute Steadfast Heavy Armor",
-      "NRG Recovery",
-      "Knight's Faith",
-      "Knockback Combo"
+      "Shield Up - Steadfast Defense"
     ],
     "weapon": "",
     "trinket": "",
     "tarot": ""
   },
-  "summary": "Specializes in Shields - Tanks both P.",
-  "pros": [],
-  "howToUse": "",
+  "summary": "here! Table of Contents Clara Tier & Basic Info Strength & How to Use",
+  "pros": [
+    "Shield Up - Steadfast Defense: A Skill that instantly grants a Shield, making it the top priority for your buil",
+    "Absolute Steadfast Heavy Armor: An excellent Reaction that grants Block, Preempt, and Shield when attacked. Prio"
+  ],
+  "howToUse": "A Skill that instantly grants a Shield, making it the top priority for your build. If using Clara as an Attacker, it consumes all NRG but also grants Critical E An excellent Reaction that grants Block, Preempt, and Shield when attacked. Prioritize including this in your build. Knight - Lead the Charge! ★★★★ An essential A Basic Attack that deals bonus damage based on Physical Shields. Since it tends to deal high damage, generally use this Basic Attack.",
   "starPriority": "",
   "confidence": "medium",
-  "collectedAt": "2026-08-02T04:31:34.157Z",
-  "cleanedAt": "2026-08-02T04:32:57.412Z"
+  "collectedAt": "2026-08-02T04:48:37.064Z"
 }

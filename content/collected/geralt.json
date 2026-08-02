@@ -1,40 +1,78 @@
 {
   "slug": "geralt",
   "name": "Geralt",
-  "source": "public",
+  "source": "public-structured",
   "sources": [
     {
-      "type": "url",
-      "url": "https://gamewith.net/sword-of-convallaria/71746",
-      "fetchedAt": "2026-08-02T04:31:29.369Z",
-      "publisher": "gamewith"
-    },
-    {
-      "type": "url",
-      "url": "https://dotgg.gg/sword-of-convallaria/geralt/",
-      "fetchedAt": "2026-08-02T04:31:58.199Z",
-      "publisher": "dotgg"
+      "type": "gamewith-html-cache",
+      "id": "71746",
+      "parsedAt": "2026-08-02T04:48:37.056Z"
     }
   ],
   "role": "Watcher",
   "factions": [
-    "SoC",
-    "Drifter"
+    "Drifter",
+    "SoC"
   ],
   "rarity": "Legendary",
   "stats": {
     "move": null,
     "highJump": null,
-    "lowJump": null
+    "lowJump": 3
   },
   "skills": [
     {
-      "name": "Slash",
+      "name": "Powerful Attack",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 110% Physical DMG.",
+      "note": "Deals 110% Physical DMG.",
+      "priority": 5
+    },
+    {
+      "name": "Whirl",
+      "kind": "Active",
+      "nrg": "3",
+      "cd": "0",
+      "description": "(Physical DMG) Deals 3 hits of 50% AoE DMG to all enemies within 3 tiles of the character. Skills That Can",
+      "note": "Deals 3 hits of 50% AoE DMG to all enemies within 3 tiles of the character. Skills That Can",
+      "priority": 4
+    },
+    {
+      "name": "Execution",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "0",
+      "description": "(Physical DMG) Sign Skill Instant Single-target attack. Before attacking, inflicts Stagger , ×Passive Skills , and Reaction Skills on the target for 2 turns, then deals 70% DMG.",
+      "note": "Sign Skill Instant Single-target attack. Before attacking, inflicts Stagger , ×Passive Skills , and Reaction Skills on the target for 2 turn",
+      "priority": 3
+    },
+    {
+      "name": "Fleet Footed -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) Reduces DMG taken by 20% and ranged DMG taken by an additional 20%. When targeted by single-target attacks, performs Dodge . Can be triggered up to 1 time per round. ✦ Performs Assisting Cover for Dimension Traveler allies within 3 tiles of the character when they take physical attacks .",
+      "note": "Reduces DMG taken by 20% and ranged DMG taken by an additional 20%. When targeted by single-target attacks, performs Dodge . Can be triggere",
+      "priority": 3
+    },
+    {
+      "name": "Geralt's Base Skills Skill Range  Slash",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% Physical DMG.",
+      "note": "Deals 100% Physical DMG.",
+      "priority": 3
+    },
+    {
+      "name": "Geralt's Composure -",
+      "kind": "Passive",
+      "nrg": "0",
+      "cd": "0",
+      "description": "(Passive) Reduces DMG taken by 20%; when attacking targets with Bound , DMG increases by 20%.",
+      "note": "Reduces DMG taken by 20%; when attacking targets with Bound , DMG increases by 20%.",
       "priority": 3
     },
     {
@@ -42,35 +80,8 @@
       "kind": "Active",
       "nrg": "0",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Igni Sign",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Whirl",
-      "kind": "Active",
-      "nrg": "3",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Aard Sign",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Decision) Sign Skill Selects to activate the Quen: Swiftguard or Quen: Fortified . Skills That Can",
+      "note": "Sign Skill Selects to activate the Quen: Swiftguard or Quen: Fortified . Skills That Can",
       "priority": 3
     },
     {
@@ -78,26 +89,44 @@
       "kind": "Active",
       "nrg": "3",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Physical DMG) Deals 180% AoE DMG to all targets within 4 tiles in front; before attacking, ATK increases by 40%. Skills That Can Be",
+      "note": "Deals 180% AoE DMG to all targets within 4 tiles in front; before attacking, ATK increases by 40%. Skills That Can Be",
       "priority": 3
     },
     {
-      "name": "Hardening",
-      "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "name": "RK9 Skill Range  Sealing Attack",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% physical DMG and inflicts × Passive Skills on Injured targets before attacking, lasting for 2 turns.",
+      "note": "Deals 100% physical DMG and inflicts × Passive Skills on Injured targets before attacking, lasting for 2 turns.",
       "priority": 3
     },
     {
-      "name": "Fleet Footed",
+      "name": "Skill Range  Aard Sign",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "0",
+      "description": "(Decision) Sign Skill Selects to activate Aard: Blast or Aard: Storm . Finisher:",
+      "note": "Sign Skill Selects to activate Aard: Blast or Aard: Storm . Finisher:",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Hardening -",
       "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) When hit by an active attack, the DMG taken is decreased by 8%. After being attacked, the character gains DMG Reduction II for 2 turns.",
+      "note": "When hit by an active attack, the DMG taken is decreased by 8%. After being attacked, the character gains DMG Reduction II for 2 turns.",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Igni Sign",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "0",
+      "description": "(Decision) Sign Skill Selects to activate the Igni: Rotation or Igni: Firestream . ✦ Before activating any Igni Sign , the character gains Armor Piercing for 1 turn. Finisher:",
+      "note": "Sign Skill Selects to activate the Igni: Rotation or Igni: Firestream . ✦ Before activating any Igni Sign , the character gains Armor Pierci",
       "priority": 3
     },
     {
@@ -105,83 +134,26 @@
       "kind": "Active",
       "nrg": "0",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Physical DMG) Sign Skill Instant For all enemies within 3 tiles of of the character, inflicts ▽Move II , ▽SPD II , and Vulnerable II on them before they attack for 2 turns, then deals 2 hits of 30% AoE DMG.",
+      "note": "Sign Skill Instant For all enemies within 3 tiles of of the character, inflicts ▽Move II , ▽SPD II , and Vulnerable II on them before they a",
       "priority": 3
-    },
-    {
-      "name": "Geralt's Composure",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Sealing Attack",
-      "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Powerful Attack",
-      "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Execution",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Bonds of Kaer Morhen",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Assisting Cover",
-      "kind": "Reaction",
-      "note": "Name confirmed in page text",
-      "priority": 4,
-      "description": ""
     }
   ],
   "build": {
-    "basicAttack": "Slash",
-    "reaction": "Assisting Cover",
+    "basicAttack": "Powerful Attack",
+    "reaction": "",
+    "ascension": "",
     "skills": [
-      "Quen Sign",
-      "Igni Sign",
-      "Whirl",
-      "Aard Sign",
-      "Rend",
-      "Spin Attack"
+      "Whirl"
     ],
-    "weapon": "",
-    "trinket": "Maverick's Cloak",
-    "tarot": "Verdict of Justice"
+    "weapon": "Verdict of Justice",
+    "trinket": "",
+    "tarot": ""
   },
-  "summary": "is a well-rounded Attacker who has both offense and defense while also possessing a Skill capable of inflicting Knockbacks and various debuffs.",
+  "summary": "here! Table of Contents Geralt Tier & Basic Info Strength & How to Use",
   "pros": [],
   "howToUse": "",
   "starPriority": "",
   "confidence": "medium",
-  "collectedAt": "2026-08-02T04:31:58.205Z",
-  "cleanedAt": "2026-08-02T04:32:57.413Z"
+  "collectedAt": "2026-08-02T04:48:37.056Z"
 }

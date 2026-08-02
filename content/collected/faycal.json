@@ -1,13 +1,12 @@
 {
   "slug": "faycal",
   "name": "Faycal",
-  "source": "public",
+  "source": "public-structured",
   "sources": [
     {
-      "type": "url",
-      "url": "https://gamewith.net/sword-of-convallaria/48264",
-      "fetchedAt": "2026-08-02T04:31:15.713Z",
-      "publisher": "gamewith"
+      "type": "gamewith-html-cache",
+      "id": "48264",
+      "parsedAt": "2026-08-02T04:48:37.031Z"
     }
   ],
   "role": "Watcher",
@@ -20,129 +19,142 @@
   "stats": {
     "move": null,
     "highJump": null,
-    "lowJump": null
+    "lowJump": 3
   },
   "skills": [
     {
-      "name": "Curved Shot",
+      "name": "Fatal Attack",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Foot Sniping",
-      "kind": "Active",
-      "nrg": "2",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Slugger Stance",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Dharana",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Fires a Curved Shot which deals 85% physical DMG and increases Crit DMG by 15%.",
+      "note": "Fires a Curved Shot which deals 85% physical DMG and increases Crit DMG by 15%.",
+      "priority": 5
     },
     {
       "name": "Rock Climbing",
       "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Support) Instant Gains ▲ Move I , Climb , and Jump for 2 turns. Skills That Can Be",
+      "note": "Instant Gains ▲ Move I , Climb , and Jump for 2 turns. Skills That Can Be",
+      "priority": 4
     },
     {
       "name": "Arrow of Guardian Convallaria",
       "kind": "Active",
       "nrg": "1",
       "cd": "4",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Physical DMG) Performs Alert within a 3x4 area in the target direction. Deals 120% DMG and interrupts actions once an enemy enter this area.",
+      "note": "Performs Alert within a 3x4 area in the target direction. Deals 120% DMG and interrupts actions once an enemy enter this area.",
       "priority": 3
     },
     {
-      "name": "Fleeing Hare",
+      "name": "Base Skills Skill Range  Curved Shot",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Fires a Curved Shot which deals 85% Physical DMG.",
+      "note": "Fires a Curved Shot which deals 85% Physical DMG.",
+      "priority": 3
+    },
+    {
+      "name": "Fleeing Hare -",
       "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) When hit by an active attack, the DMG taken is decreased by 8%. After being attacked, the character gains ▲ Move II for 2 turns. #N/A Skills That Can",
+      "note": "When hit by an active attack, the DMG taken is decreased by 8%. After being attacked, the character gains ▲ Move II for 2 turns. #N/A Skills",
       "priority": 3
     },
     {
-      "name": "Rapid Fire",
-      "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "name": "Foot Sniping",
+      "kind": "Active",
+      "nrg": "2",
+      "cd": "—",
+      "description": "(Physical DMG) Single-target attack. Deals 110% DMG and inflicts ▽ Move II for 2 turns.",
+      "note": "Single-target attack. Deals 110% DMG and inflicts ▽ Move II for 2 turns.",
       "priority": 3
     },
     {
-      "name": "Fatal Attack",
-      "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "name": "Heart of Alert -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) when it is not the character's turn, Increases Crit by 45% additionally and Crit DMG by 30%.",
+      "note": "when it is not the character's turn, Increases Crit by 45% additionally and Crit DMG by 30%.",
       "priority": 3
     },
     {
-      "name": "Gale-Billow Volley",
+      "name": "RK11 Skill Range  Gale-Billow Volley",
       "kind": "Active",
       "nrg": "4",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Physical DMG) Faycal deals 5 instances of 60% AoE DMG to random enemies within 2 tiles. DMG he deals to the same target repeatedly will be decreased by 50%.",
+      "note": "Faycal deals 5 instances of 60% AoE DMG to random enemies within 2 tiles. DMG he deals to the same target repeatedly will be decreased by 50",
       "priority": 3
     },
     {
-      "name": "Heart of Alert",
+      "name": "RK5 Skill Range  Eye for an Eye -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) When Faycal is being attacked from the front or side by enemies who are not on adjacent tiles, he initiates a Strike Back , dealing 100% DMG.",
+      "note": "When Faycal is being attacked from the front or side by enemies who are not on adjacent tiles, he initiates a Strike Back , dealing 100% DMG",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Dharana -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) At the start of the turn, if there are no enemies within a 2-tile radius of the character, gains ▲ Crit II for 1 turn.",
+      "note": "At the start of the turn, if there are no enemies within a 2-tile radius of the character, gains ▲ Crit II for 1 turn.",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Precise Shot",
       "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "0",
+      "cd": "3",
+      "description": "(Physical DMG) Single-target attack. Deals 130% DMG. Before attacking, inflicts × Dodge on the target, lasting for 1 turn.",
+      "note": "Single-target attack. Deals 130% DMG. Before attacking, inflicts × Dodge on the target, lasting for 1 turn.",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Rapid Fire",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Single-target attack. Performs 2 consecutive attacks, each dealing 55% Physical DMG.",
+      "note": "Single-target attack. Performs 2 consecutive attacks, each dealing 55% Physical DMG.",
+      "priority": 3
+    },
+    {
+      "name": "SP Skill Skill Range  Slugger Stance",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "3",
+      "description": "(Support) Instant The character gains Slugger Stance . The skill switches to Maneuver Stance . Once SP Faycal learns RK7 Slugger Stance, and Faycal (Original) reaches 3★, the SP skill is unlocked. Skills That Can",
+      "note": "Instant The character gains Slugger Stance . The skill switches to Maneuver Stance . Once SP Faycal learns RK7 Slugger Stance, and Faycal (O",
       "priority": 3
     }
   ],
   "build": {
-    "basicAttack": "Curved Shot",
-    "reaction": "Arrow of Guardian Convallaria",
+    "basicAttack": "Fatal Attack",
+    "reaction": "",
+    "ascension": "",
     "skills": [
-      "Foot Sniping",
-      "Slugger Stance",
-      "Dharana",
-      "Rock Climbing",
-      "Gale-Billow Volley",
-      "Heart of Alert"
+      "Rock Climbing"
     ],
     "weapon": "",
     "trinket": "",
     "tarot": ""
   },
-  "summary": "is also worth considering.",
+  "summary": "here! Table of Contents Faycal Tier & Basic Info Strength & How to Use",
   "pros": [],
   "howToUse": "",
   "starPriority": "",
   "confidence": "medium",
-  "collectedAt": "2026-08-02T04:31:15.713Z",
-  "cleanedAt": "2026-08-02T04:32:57.413Z"
+  "collectedAt": "2026-08-02T04:48:37.031Z"
 }

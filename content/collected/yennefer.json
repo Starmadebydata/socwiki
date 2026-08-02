@@ -1,40 +1,69 @@
 {
   "slug": "yennefer",
   "name": "Yennefer",
-  "source": "public",
+  "source": "public-structured",
   "sources": [
     {
-      "type": "url",
-      "url": "https://gamewith.net/sword-of-convallaria/71745",
-      "fetchedAt": "2026-08-02T04:31:27.811Z",
-      "publisher": "gamewith"
-    },
-    {
-      "type": "url",
-      "url": "https://dotgg.gg/sword-of-convallaria/yennefer/",
-      "fetchedAt": "2026-08-02T04:31:57.445Z",
-      "publisher": "dotgg"
+      "type": "gamewith-html-cache",
+      "id": "71745",
+      "parsedAt": "2026-08-02T04:48:37.054Z"
     }
   ],
   "role": "Destroyer",
   "factions": [
-    "SoC",
-    "Drifter"
+    "Drifter",
+    "SoC"
   ],
   "rarity": "Legendary",
   "stats": {
     "move": null,
     "highJump": null,
-    "lowJump": null
+    "lowJump": 3
   },
   "skills": [
     {
-      "name": "Energy Wave",
+      "name": "Charged Attack",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% physical DMG and increases the DMG of the next skill by 15%.",
+      "note": "Deals 100% physical DMG and increases the DMG of the next skill by 15%.",
+      "priority": 5
+    },
+    {
+      "name": "Elemental Control",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "0",
+      "description": "(Decision) Selects to use Ball Lightning , Pyrokinesis , or Hail . ✦ When having Magic Boost , the skill switches to Elemental Storm .",
+      "note": "Selects to use Ball Lightning , Pyrokinesis , or Hail . ✦ When having Magic Boost , the skill switches to Elemental Storm .",
+      "priority": 4
+    },
+    {
+      "name": "Portal",
+      "kind": "Active",
+      "nrg": "1",
+      "cd": "4",
+      "description": "(Support) Selects the target and teleports to any empty tile within 6 tiles of the target. ✦ When cast on allies, grants them ▲DMG III , and ▲SPD II for 2 turns; when cast on enemies, deals 100% DMG and inflicts Stunned for 1 turn. ✦ After teleportation, performs Pursuit on all enemies within 2 tiles of the target, dealing AoE DMG equal to 50% of M.ATK and inflicting Vulnerable III for 2 turns.✦ When having Magic Boost , the skill switches to Instant Portal .",
+      "note": "Selects the target and teleports to any empty tile within 6 tiles of the target. ✦ When cast on allies, grants them ▲DMG III , and ▲SPD II f",
+      "priority": 4
+    },
+    {
+      "name": "Base Skills Skill Range  Energy Wave",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deal 80% Magical DMG.",
+      "note": "Deal 80% Magical DMG.",
+      "priority": 3
+    },
+    {
+      "name": "Corruption -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) At the end of the turn, inflicts 2 random Level 1 Attribute Debuffs on 1 random enemy within a 3-tile radius of the character, lasting for 2 turns.",
+      "note": "At the end of the turn, inflicts 2 random Level 1 Attribute Debuffs on 1 random enemy within a 3-tile radius of the character, lasting for 2",
       "priority": 3
     },
     {
@@ -42,130 +71,90 @@
       "kind": "Active",
       "nrg": "1",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Magical DMG) Single-target attack. Deals 85% DMG and inflicts 2 random Level 2 Attribute Debuffs on the target for 2 turns.",
+      "note": "Single-target attack. Deals 85% DMG and inflicts 2 random Level 2 Attribute Debuffs on the target for 2 turns.",
       "priority": 3
     },
     {
-      "name": "Yennefer's Heal",
-      "kind": "Active",
-      "nrg": "1",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Corruption",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Elemental Control",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Protection of Darkness",
-      "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Evasive Shift",
+      "name": "Evasive Shift -",
       "kind": "Reaction",
       "nrg": "0",
       "cd": "2",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Reaction) Reduces DMG taken by 10% and magical DMG taken by an additional 30%. ✦ Before taking enemies' active single-target attacks from front or side , performs Preempt , interrupts the target's action, deals 50% magical DMG, and inflicts 2 random Level 2 Debuffs , then teleports to the closest ally within 2-6 tiles; after the effect triggers, enters a 2-turn CD.",
+      "note": "Reduces DMG taken by 10% and magical DMG taken by an additional 30%. ✦ Before taking enemies' active single-target attacks from front or sid",
       "priority": 3
     },
     {
-      "name": "Charming Illusion",
+      "name": "RK1 Skill Range  Yennefer's Heal",
+      "kind": "Active",
+      "nrg": "1",
+      "cd": "0",
+      "description": "(Healing) Heals the target by 100% of M.ATK and dispels 1 debuff from the target. Auxiliary Passive . Effect: at the end of the turn, if this skill was not used, heals the ally with the lowest HP percentage within 3 tiles of the character by 40% of M.ATK.",
+      "note": "Heals the target by 100% of M.ATK and dispels 1 debuff from the target. Auxiliary Passive . Effect: at the end of the turn, if this skill wa",
+      "priority": 3
+    },
+    {
+      "name": "RK11 Skill Range  Tissaia's Teaching -",
+      "kind": "Passive",
+      "nrg": "0",
+      "cd": "0",
+      "description": "(Passive) After casting non- Magic Empowerment skills, reduces all class skill CDs by 1 turn and restores 1 NRG. Can be triggered up to 1 time per round.",
+      "note": "After casting non- Magic Empowerment skills, reduces all class skill CDs by 1 turn and restores 1 NRG. Can be triggered up to 1 time per rou",
+      "priority": 3
+    },
+    {
+      "name": "RK3 Skill Range  Embrace of Shadows",
+      "kind": "Active",
+      "nrg": "3",
+      "cd": "0",
+      "description": "(Magical DMG) Selects the target tile to deal 40% AoE DMG to all enemies within 2 tiles and inflicts 1 random Level 2 Debuff for 2 turns; ✦ Heals allies within range by 60% of M.ATK and grants them ▲DMG III and Frosty and Burning Tile Immunity for 2 turns. ✦ When having Magic Boost , the skill switches to Shadow: Veil of Fate .",
+      "note": "Selects the target tile to deal 40% AoE DMG to all enemies within 2 tiles and inflicts 1 random Level 2 Debuff for 2 turns; ✦ Heals allies w",
+      "priority": 3
+    },
+    {
+      "name": "RK5 Skill Range  Protection of Darkness -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) When hit by an active attack, the DMG taken is decreased by 8%. Before being hit by an active attack, for every Debuff on the attacker, decreases DMG taken by an additional 10%, up to 30%.",
+      "note": "When hit by an active attack, the DMG taken is decreased by 8%. Before being hit by an active attack, for every Debuff on the attacker, decr",
+      "priority": 3
+    },
+    {
+      "name": "RK7 Skill Range  Charming Illusion",
       "kind": "Active",
       "nrg": "2",
       "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Magical DMG) Summons Illusion on the target tile for 2 turns and makes Illusion inflict Bewitch on enemies within 2 tiles for 1 turn; then deals 80% magical DMG to all enemies within range and inflicts Vulnerable III for 2 turns. ✦ When having Magic Boost , the skill switches to Instant Charming Illusion .",
+      "note": "Summons Illusion on the target tile for 2 turns and makes Illusion inflict Bewitch on enemies within 2 tiles for 1 turn; then deals 80% magi",
       "priority": 3
     },
     {
-      "name": "Portal",
-      "kind": "Active",
-      "nrg": "1",
-      "cd": "4",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Dispelling Strike",
+      "name": "RK9 Skill Range  Dispelling Strike",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Charged Attack",
-      "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Tissaia's Teaching",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Yennefer's Mockery",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 50% physical DMG 2 times and dispels 2 buffs on the target.",
+      "note": "Deals 50% physical DMG 2 times and dispels 2 buffs on the target.",
       "priority": 3
     }
   ],
   "build": {
-    "basicAttack": "Energy Wave",
-    "reaction": "Protection of Darkness",
+    "basicAttack": "Charged Attack",
+    "reaction": "",
+    "ascension": "",
     "skills": [
-      "Erosion",
-      "Yennefer's Heal",
-      "Corruption",
       "Elemental Control",
-      "Charming Illusion",
       "Portal"
     ],
     "weapon": "",
-    "trinket": "Life Fondness",
-    "tarot": "Judgement"
+    "trinket": "",
+    "tarot": ""
   },
-  "summary": "Excels at AoE Attacks and Support Yennefer excels at AoE attacks and support.",
+  "summary": "here! Table of Contents Yennefer Tier & Basic Info Strength & How to Use",
   "pros": [],
   "howToUse": "",
   "starPriority": "",
   "confidence": "medium",
-  "collectedAt": "2026-08-02T04:31:57.452Z",
-  "cleanedAt": "2026-08-02T04:32:57.419Z"
+  "collectedAt": "2026-08-02T04:48:37.054Z"
 }

@@ -1,13 +1,12 @@
 {
   "slug": "simona",
   "name": "Simona",
-  "source": "public",
+  "source": "public-structured",
   "sources": [
     {
-      "type": "url",
-      "url": "https://gamewith.net/sword-of-convallaria/48201",
-      "fetchedAt": "2026-08-02T04:31:49.667Z",
-      "publisher": "gamewith"
+      "type": "gamewith-html-cache",
+      "id": "48201",
+      "parsedAt": "2026-08-02T04:48:37.093Z"
     }
   ],
   "role": "Watcher",
@@ -20,34 +19,88 @@
   "stats": {
     "move": null,
     "highJump": null,
-    "lowJump": null
+    "lowJump": 3
   },
   "skills": [
     {
-      "name": "Energy Wave",
+      "name": "Ice Attack",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "nrg": "—",
+      "cd": "—",
+      "description": "A long Range Basic Attack. For general purposes, this is better, however, if you are going to use [Ice Lance] swap it with [Ice-made Sword ].",
+      "note": "A long Range Basic Attack. For general purposes, this is better, however, if you are going to use [Ice Lance] swap it with [Ice-made Sword ].",
+      "priority": 5
+    },
+    {
+      "name": "Ice-made Sword",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "Short Range, but an excellent damage-dealing Basic Attack. Highly recommended as an effective pairing with [Ice Lance].",
+      "note": "Short Range, but an excellent damage-dealing Basic Attack. Highly recommended as an effective pairing with [Ice Lance].",
+      "priority": 5
+    },
+    {
+      "name": "Priority and Details  Iceshards",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Reaction that deals damage in an area and applies a Movement Down debuff. Equip this Reaction if you want to lean towards offense.",
+      "note": "A Reaction that deals damage in an area and applies a Movement Down debuff. Equip this Reaction if you want to lean towards offense.",
+      "priority": 5
+    },
+    {
+      "name": "Winter Doomsday",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Skill that deals damage in a wide area and summons an [Ice Wall] in the central 3 tiles. The [Ice Wall] can sometimes be preferentially targeted by enemies and is very powerful as a decoy or obstruction. It's useful in high-difficulty multi-enemy battles, so prioritize slotting this skill.",
+      "note": "A Skill that deals damage in a wide area and summons an [Ice Wall] in the central 3 tiles. The [Ice Wall] can sometimes be preferentially targeted by enemies an",
+      "priority": 5
     },
     {
       "name": "Ice Lance",
       "kind": "Active",
       "nrg": "1",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "Low NRG cost of 1 and no CD makes it a very easy-to-use Ranged attack Skill. Amongst Simona's Skills, its damage multiplier is also high.",
+      "note": "Low NRG cost of 1 and no CD makes it a very easy-to-use Ranged attack Skill. Amongst Simona's Skills, its damage multiplier is also high.",
+      "priority": 4
+    },
+    {
+      "name": "Ice-made Armor",
+      "kind": "Active",
+      "nrg": "2",
+      "cd": "4",
+      "description": "(Support) Simona selects a target direction and all allies within a 3x4 area in the direction and allies within the 3 tiles to the left and right of the tile occupied by Simona again Armor of Ice and Regeneration I for 2 turns. If she already has Armor of Ice , decreased NRG consumption by 1 point. Skills That Can Be",
+      "note": "An excellent Skill that can grant Physical Shield + Regeneration I to allies in a wide area. It can significantly increase the party's survivability, so equip i",
+      "priority": 4
+    },
+    {
+      "name": "Protection of Ice",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Reaction that greatly reduces damage taken from enemies affected by the Movement Down debuff. Equip this Reaction when you need to prioritize survivability.",
+      "note": "A Reaction that greatly reduces damage taken from enemies affected by the Movement Down debuff. Equip this Reaction when you need to prioritize survivability.",
+      "priority": 4
+    },
+    {
+      "name": "Base Skills Skill Range  Energy Wave",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deal 80% Magical DMG.",
+      "note": "Deal 80% Magical DMG.",
       "priority": 3
     },
     {
-      "name": "Icy Blast",
+      "name": "Battle Flag of the Union -",
       "kind": "Active",
-      "nrg": "2",
-      "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Leader's Aura) For all The Union allies in battle, increases ATK by 10% and DEF by 20%.",
+      "note": "For all The Union allies in battle, increases ATK by 10% and DEF by 20%.",
       "priority": 3
     },
     {
@@ -55,112 +108,95 @@
       "kind": "Active",
       "nrg": "2",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Magical DMG) Selects a location and deals 80% ice AoE DMG to all enemies within a 1-tile radius of the target location. Skills That Can Be",
+      "note": "Selects a location and deals 80% ice AoE DMG to all enemies within a 1-tile radius of the target location. Skills That Can Be",
       "priority": 3
     },
     {
-      "name": "Ice Assault",
-      "kind": "Active",
-      "nrg": "1",
-      "cd": "4",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Ice-made Armor",
-      "kind": "Active",
-      "nrg": "2",
-      "cd": "4",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Iceshards",
+      "name": "Protection of Ice -",
       "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) When hit by an active attack from an enemy with ▽Move , the DMG taken is decreased by 30%.",
+      "note": "When hit by an active attack from an enemy with ▽Move , the DMG taken is decreased by 30%.",
       "priority": 3
     },
     {
-      "name": "Protection of Ice",
-      "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "name": "RK11 Skill Range  Winter Doomsday",
+      "kind": "Active",
+      "nrg": "3",
+      "cd": "5",
+      "description": "(Magical DMG) Simona selects 1 tile within a cross-shaped range around her, and deals 70% Ice DMG to all enemies within a 5x3 area in the target direction. Simona summons an Ice Wall in the 3 center tiles. If a tile is occupied, she inflicts Frozen on the target for 1 turn. Pre-cooldown: 1 turn.",
+      "note": "Simona selects 1 tile within a cross-shaped range around her, and deals 70% Ice DMG to all enemies within a 5x3 area in the target direction",
       "priority": 3
     },
     {
-      "name": "Flash Freezing",
+      "name": "RK7 Skill Range  Flash Freezing",
       "kind": "Active",
       "nrg": "2",
       "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Magical DMG) Single Target attack. Deals 80% DMG and inflicts ▲Move III for 2 turns. If the targets have ▽Move , additional inflicts Frozen for 2 turns.",
+      "note": "Single Target attack. Deals 80% DMG and inflicts ▲Move III for 2 turns. If the targets have ▽Move , additional inflicts Frozen for 2 turns.",
       "priority": 3
     },
     {
-      "name": "Battle Flag of the Union",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Ice-made Sword",
+      "name": "RK9 Skill Range  Ice-made Sword",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Magical DMG) Single-target attack. Simona deals 110% DMG. If she is attacking enemies with ▽Move , or who are currently on Frosty tiles, the DMG she deals is increased by 30%.",
+      "note": "Single-target attack. Simona deals 110% DMG. If she is attacking enemies with ▽Move , or who are currently on Frosty tiles, the DMG she deal",
       "priority": 3
     },
     {
-      "name": "Ice Attack",
-      "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Will to Survive",
+      "name": "Skill Range  Ice Assault",
       "kind": "Active",
-      "nrg": "0",
-      "cd": "2",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "1",
+      "cd": "4",
+      "description": "(Magical DMG) Instant Simona selects 1 tile within a cross-shaped range around her and charges to the location, attacking all enemies along the line. She deals Ice DMG equal to 100% of the Physical Shield value. Simona gains Warrior of Frost for 2 turns.",
+      "note": "Instant Simona selects 1 tile within a cross-shaped range around her and charges to the location, attacking all enemies along the line. She ",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Iceshards -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) After her Armor of Ice is destroyed, Simona deals 50% Magical DMG to all enemies within 2 tiles of her and inflicts ▽Move III on the target for 1 turn.",
+      "note": "After her Armor of Ice is destroyed, Simona deals 50% Magical DMG to all enemies within 2 tiles of her and inflicts ▽Move III on the target ",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Icy Blast",
+      "kind": "Active",
+      "nrg": "2",
+      "cd": "3",
+      "description": "(Magical DMG) Deals 75% AoE DMG to the first enemy in each line within a 2x3 area, inflicting ▽ SPD I and ▽ Move I for 2 turns. Knocks the targets back by 2 tiles.",
+      "note": "Deals 75% AoE DMG to the first enemy in each line within a 2x3 area, inflicting ▽ SPD I and ▽ Move I for 2 turns. Knocks the targets back by",
       "priority": 3
     }
   ],
   "build": {
-    "basicAttack": "Energy Wave",
-    "reaction": "Iceshards",
+    "basicAttack": "Ice-made Sword",
+    "reaction": "",
+    "ascension": "",
     "skills": [
+      "Winter Doomsday",
       "Ice Lance",
-      "Icy Blast",
-      "Ice Cone",
-      "Ice Assault",
-      "Ice-made Armor",
-      "Flash Freezing"
+      "Ice-made Armor"
     ],
     "weapon": "",
-    "trinket": "Life Fondness",
-    "tarot": "Judgement"
+    "trinket": "",
+    "tarot": ""
   },
-  "summary": "Excels at hindering enemies Counters physical attackers High Physical Durability There are many ways to obtain Ice Armor (Physical Shield) through Traits and Skills.",
-  "pros": [],
-  "howToUse": "",
+  "summary": "here! Table of Contents Simona Tier & Basic Info Strength & How to Use",
+  "pros": [
+    "Priority and Details  Iceshards: A Reaction that deals damage in an area and applies a Movement Down debuff. Equi",
+    "Ice Attack: A long Range Basic Attack. For general purposes, this is better, however, if you",
+    "Winter Doomsday: A Skill that deals damage in a wide area and summons an [Ice Wall] in the centra"
+  ],
+  "howToUse": "A Reaction that deals damage in an area and applies a Movement Down debuff. Equip this Reaction if you want to lean towards offense. A long Range Basic Attack. For general purposes, this is better, however, if you are going to use [Ice Lance] swap it with [Ice-made Sword ]. A Skill that deals damage in a wide area and summons an [Ice Wall] in the central 3 tiles. The [Ice Wall] can sometimes be preferentially targeted by enemies an",
   "starPriority": "",
   "confidence": "medium",
-  "collectedAt": "2026-08-02T04:31:49.667Z",
-  "cleanedAt": "2026-08-02T04:32:57.416Z"
+  "collectedAt": "2026-08-02T04:48:37.093Z"
 }

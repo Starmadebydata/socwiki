@@ -1,133 +1,78 @@
 {
   "slug": "shahnaz",
   "name": "Shahnaz",
-  "source": "public",
+  "source": "public-structured",
   "sources": [
     {
-      "type": "url",
-      "url": "https://gamewith.net/sword-of-convallaria/76477",
-      "fetchedAt": "2026-08-02T04:31:39.060Z",
-      "publisher": "gamewith"
+      "type": "gamewith-html-cache",
+      "id": "76477",
+      "parsedAt": "2026-08-02T04:48:37.075Z"
     }
   ],
   "role": "Destroyer",
   "factions": [
-    "SoC",
-    "Elaman"
+    "Elaman",
+    "SoC"
   ],
   "rarity": "Legendary",
   "stats": {
     "move": null,
     "highJump": null,
-    "lowJump": null
+    "lowJump": 3
   },
   "skills": [
     {
-      "name": "Energy Wave",
-      "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Luxite Starburst",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Origin - Harmonic Cosmos",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Fate - Gaze",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Luxite Burst Resonance",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
       "name": "Fate - Endless Singularity",
       "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "NRG Recovery",
-      "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Desert Steps",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Sigil Wielder",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Invigorating Strike",
-      "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "nrg": "—",
+      "cd": "—",
+      "description": "Consumes 10 pts of Artificial Prime Sigil. While Power of Origin is active, this extremely powerful skill applies Luxite Gravity and Shattered Shackles, and groups enemies together. If you can hit multiple enemies, the combination of AoE damage, Collision damage, and Luxite Gravity results in massive total damage, making it a key skill.",
+      "note": "Consumes 10 pts of Artificial Prime Sigil. While Power of Origin is active, this extremely powerful skill applies Luxite Gravity and Shattered Shackles, and gro",
+      "priority": 5
     },
     {
       "name": "Luxite Pulse",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Inflicts Luxite Gravity on any other character, then deals 80% magical DMG and draws all other characters within a 1-tile radius of them in by 1 tile toward them.",
+      "note": "A Basic Attack that applies Luxite Gravity and has a pulling effect, allowing it to deal high AoE damage under the right conditions.",
+      "priority": 5
     },
     {
-      "name": "Desert Warrior",
+      "name": "Origin - Transcendent Form",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Reaction that greatly reduces damage taken from non-Countered enemies by 30% and activates Unyielding by consuming Artificial Prime Sigils when defeated. Despite getting debuffed you don't have 10 pts or on the second activation, this is a high-priority Reaction.",
+      "note": "A Reaction that greatly reduces damage taken from non-Countered enemies by 30% and activates Unyielding by consuming Artificial Prime Sigils when defeated. Desp",
+      "priority": 5
+    },
+    {
+      "name": "Origin - Harmonic Cosmos",
       "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "Especially powerful because it allows you to gain many permanent buffs. You can also grant buffs to allies by attacking them. If you have a high star level or can grant NRG/Liberation, you should prioritize equipping this to boost your damage.",
+      "note": "Especially powerful because it allows you to gain many permanent buffs. You can also grant buffs to allies by attacking them. If you have a high star level or c",
+      "priority": 4
+    },
+    {
+      "name": "Sigil Wielder",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A skill that grants 10 pts of Artificial Prime Sigil when Luxite Gravity is activated. Prioritize equipping this if Shahnaz isn't 5-stars, or if you're lacking characters that grant NRG/Liberation. Otherwise, you'll quickly run out of points.",
+      "note": "A skill that grants 10 pts of Artificial Prime Sigil when Luxite Gravity is activated. Prioritize equipping this if Shahnaz isn't 5-stars, or if you're lacking ",
+      "priority": 4
+    },
+    {
+      "name": "Base Skills Skill Range  Energy Wave",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deal 80% Magical DMG.",
+      "note": "Deal 80% Magical DMG.",
       "priority": 3
     },
     {
@@ -135,38 +80,130 @@
       "kind": "Active",
       "nrg": "3",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Magical DMG) Deals 70% AoE DMG to all enemies within a 2-tile radius of the target and inflicts × Passive Skills and × Reaction Skills , lasting for 2 turns.",
+      "note": "Deals 70% AoE DMG to all enemies within a 2-tile radius of the target and inflicts × Passive Skills and × Reaction Skills , lasting for 2 tu",
       "priority": 3
     },
     {
-      "name": "Origin",
+      "name": "Fate - Gaze",
       "kind": "Active",
-      "note": "Priority section extract",
-      "priority": 4,
-      "description": ""
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Support) Instant Inflicts Fate Gaze on any character, then the skill switches to Fate - Turning . ✦ After the character with Fate - Gaze is defeated, the skill reverts to this effect.",
+      "note": "Instant Inflicts Fate Gaze on any character, then the skill switches to Fate - Turning . ✦ After the character with Fate - Gaze is defeated,",
+      "priority": 3
+    },
+    {
+      "name": "Luxite Starburst",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "0",
+      "description": "(Magical DMG) Deals 80% AoE DMG to all other characters within 2 tiles of the target location and inflicts Luxite Gravity]. ✦ Before actively using this skill, pulls all other characters affected by Luxite Gravity in battle to the target location.",
+      "note": "Deals 80% AoE DMG to all other characters within 2 tiles of the target location and inflicts Luxite Gravity]. ✦ Before actively using this s",
+      "priority": 3
+    },
+    {
+      "name": "NRG Recovery -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) When hit by an active attack, the DMG taken is decreased by 8%. Upon receiving an active attack, additionally recovers 1 NRG.",
+      "note": "When hit by an active attack, the DMG taken is decreased by 8%. Upon receiving an active attack, additionally recovers 1 NRG.",
+      "priority": 3
+    },
+    {
+      "name": "Range  Origin - Transcendent Form -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) When defeated during Power of Origin , consumes 10 Artificial Prime Sigil points and triggers Unyielding ; if points are insufficient or this is triggered again in battle, exits Power of Origin and receives Amnesia for 1 turn. ✦ When exiting Power of Origin , resets the Unyielding trigger count for",
+      "note": "When defeated during Power of Origin , consumes 10 Artificial Prime Sigil points and triggers Unyielding ; if points are insufficient or thi",
+      "priority": 3
+    },
+    {
+      "name": "RK11 Skill Range  Desert Warrior -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) Immune to Blind . After actively attacking, if t he target is on Soil , Sandbed , Wasteland , or Quicksand tiles, deals additional Sand Piercing DMG equal to 10% of ATK.",
+      "note": "Immune to Blind . After actively attacking, if t he target is on Soil , Sandbed , Wasteland , or Quicksand tiles, deals additional Sand Pier",
+      "priority": 3
+    },
+    {
+      "name": "RK3 Skill Range  Luxite Burst Resonance",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Support) Triggers the effect of Luxite Gravity 1 time. This trigger does not count toward usage limits and does not remove Luxite Gravity . ✦ Auxiliary Passive . During Power of Origin , has the following effects: ✦ When triggereing Luxite Gravity to deal DMG, increases ATK by 50%. ✦ When attacking enemies immune to Knockback or Teleportation, increases ATK by 50%.",
+      "note": "Triggers the effect of Luxite Gravity 1 time. This trigger does not count toward usage limits and does not remove Luxite Gravity . ✦ Auxilia",
+      "priority": 3
+    },
+    {
+      "name": "RK7 Skill Range  Desert Steps - Extra",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "3",
+      "description": "(Support) Unshackle Instant Teleports to any Empty Tile within 3 tiles of the character; if the target is a Dust tile, clears the tile effect and gains 3 Artificial Prime Sigil points. If having the following points, triggers additional effects after casting the skill: ✦ If the character has 5 points, after casting the skill, gains Dodge for 2 turns. ✦ If the character has 10 points, grants the 5-point effect and, after casting the skill, gains ▲Crit II for 2 turns.",
+      "note": "Unshackle Instant Teleports to any Empty Tile within 3 tiles of the character; if the target is a Dust tile, clears the tile effect and gain",
+      "priority": 3
+    },
+    {
+      "name": "RK9 Skill Range  Invigorating Strike",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% physical DMG and additionally recovers 1 NRG.",
+      "note": "Deals 100% physical DMG and additionally recovers 1 NRG.",
+      "priority": 3
+    },
+    {
+      "name": "Sigil Wielder -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) When triggering Luxite Gravity , gains 10 Artificial Prime Sigil points. At the end of the turn, if Shahnaz has not triggered Luxite Gravity and there are targets affected by Luxite Gravity in battle, triggers its effect.",
+      "note": "When triggering Luxite Gravity , gains 10 Artificial Prime Sigil points. At the end of the turn, if Shahnaz has not triggered Luxite Gravity",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Origin - Harmonic Cosmos -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) When attacking, is unaffected by role counters. Reduces DMG dealt to other allies to 1. Before a skill hits other ally, grants them ▲DMG III , ▲ATK II , ▲Max Range I , and Stability for 2 turns. ✦ At the start of the character's turn, the character gains the above Buffs, lasting until the end of the battle.",
+      "note": "When attacking, is unaffected by role counters. Reduces DMG dealt to other allies to 1. Before a skill hits other ally, grants them ▲DMG III",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Origin - Transcendent Form -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) When defeated during Power of Origin , consumes 10 Artificial Prime Sigil points and triggers Unyielding ; if points are insufficient or this is triggered again in battle, exits Power of Origin and receives Amnesia for 1 turn. ✦ When exiting Power of Origin , resets the Unyielding trigger count for this skill. ✦ When attacked by enemies that do not counter the character, reduces DMG taken by 30%.",
+      "note": "When defeated during Power of Origin , consumes 10 Artificial Prime Sigil points and triggers Unyielding ; if points are insufficient or thi",
+      "priority": 3
     }
   ],
   "build": {
-    "basicAttack": "Energy Wave",
-    "reaction": "NRG Recovery",
+    "basicAttack": "Luxite Pulse",
+    "reaction": "Origin - Transcendent Form",
+    "ascension": "",
     "skills": [
-      "Luxite Starburst",
-      "Origin - Harmonic Cosmos",
-      "Fate - Gaze",
-      "Luxite Burst Resonance",
       "Fate - Endless Singularity",
-      "Desert Steps"
+      "Origin - Harmonic Cosmos"
     ],
     "weapon": "",
-    "trinket": "Life Fondness",
-    "tarot": "Verdict of Justice"
+    "trinket": "",
+    "tarot": ""
   },
-  "summary": "Excels at AoE and Knockback/Pull Shahnaz excels at using AoE attacks, Knockbacks, and dispositioning enemies.",
-  "pros": [],
-  "howToUse": "",
+  "summary": "here! Table of Contents Shahnaz Tier & Basic Info Strength & How to Use",
+  "pros": [
+    "Fate - Endless Singularity: Consumes 10 pts of Artificial Prime Sigil. While Power of Origin is active, this",
+    "Origin - Transcendent Form: A Reaction that greatly reduces damage taken from non-Countered enemies by 30% a",
+    "Luxite Pulse: A Basic Attack that applies Luxite Gravity and has a pulling effect, allowing it"
+  ],
+  "howToUse": "Consumes 10 pts of Artificial Prime Sigil. While Power of Origin is active, this extremely powerful skill applies Luxite Gravity and Shattered Shackles, and gro A Reaction that greatly reduces damage taken from non-Countered enemies by 30% and activates Unyielding by consuming Artificial Prime Sigils when defeated. Desp A Basic Attack that applies Luxite Gravity and has a pulling effect, allowing it to deal high AoE damage under the right conditions.",
   "starPriority": "",
-  "confidence": "medium",
-  "collectedAt": "2026-08-02T04:31:39.060Z",
-  "cleanedAt": "2026-08-02T04:32:57.416Z"
+  "confidence": "high",
+  "collectedAt": "2026-08-02T04:48:37.075Z"
 }

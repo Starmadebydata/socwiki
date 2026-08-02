@@ -1,52 +1,69 @@
 {
   "slug": "triss",
   "name": "Triss",
-  "source": "public",
+  "source": "public-structured",
   "sources": [
     {
-      "type": "url",
-      "url": "https://gamewith.net/sword-of-convallaria/71744",
-      "fetchedAt": "2026-08-02T04:31:30.969Z",
-      "publisher": "gamewith"
+      "type": "gamewith-html-cache",
+      "id": "71744",
+      "parsedAt": "2026-08-02T04:48:37.059Z"
     }
   ],
   "role": "Breaker",
   "factions": [
-    "SoC",
-    "Drifter"
+    "Drifter",
+    "SoC"
   ],
   "rarity": "Legendary",
   "stats": {
     "move": null,
     "highJump": null,
-    "lowJump": null
+    "lowJump": 3
   },
   "skills": [
     {
-      "name": "Energy Wave",
+      "name": "Fearless",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "Recommended Reaction from Best Build table.",
+      "note": "Best Build Reaction",
+      "priority": 5
+    },
+    {
+      "name": "Scorching Attack Magic Barrier The",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Teleport",
-      "kind": "Active",
       "nrg": "0",
-      "cd": "4",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "cd": "—",
+      "description": "Recommended Basic from Best Build table.",
+      "note": "Best Build Basic",
+      "priority": 5
+    },
+    {
+      "name": "Firestorm",
+      "kind": "Active",
+      "nrg": "3",
+      "cd": "2",
+      "description": "(Magical DMG) Selects a target tile and deals 140% Fire AoE DMG to all enemies within 2 tiles of the target, inflicts 1 stack of Ignition , and turns the tiles into Burning for 2 turns ✦ Before attacking, increases ATK by 20%.",
+      "note": "Selects a target tile and deals 140% Fire AoE DMG to all enemies within 2 tiles of the target, inflicts 1 stack of Ignition , and turns the ",
+      "priority": 4
+    },
+    {
+      "name": "Base Skills Skill Range  Energy Wave",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deal 80% Magical DMG.",
+      "note": "Deal 80% Magical DMG.",
       "priority": 3
     },
     {
-      "name": "Pocket Elixir",
-      "kind": "Active",
+      "name": "Fire Arrow",
+      "kind": "Basic",
       "nrg": "0",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Basic Attack) Deals 100% Fire magical DMG, inflicts Scorch on the target for 2 turns, and turns the tile into Burning.",
+      "note": "Deals 100% Fire magical DMG, inflicts Scorch on the target for 2 turns, and turns the tile into Burning.",
       "priority": 3
     },
     {
@@ -54,112 +71,107 @@
       "kind": "Active",
       "nrg": "1",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Magical DMG) Single-target attack. Deals 125% DMG and inflicts Scorch for 2 turns. Skills That Can",
+      "note": "Single-target attack. Deals 125% DMG and inflicts Scorch for 2 turns. Skills That Can",
       "priority": 3
     },
     {
-      "name": "Hailstorm",
-      "kind": "Active",
-      "nrg": "1",
-      "cd": "4",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Firestorm",
-      "kind": "Active",
-      "nrg": "3",
-      "cd": "2",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "NRG Recovery",
-      "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Magic Barrier",
+      "name": "Magic Barrier -",
       "kind": "Reaction",
       "nrg": "0",
       "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Reaction) Before receiving a single-target physical or single-target magical attack, performs Preempt , gaining a Shield of the corresponding DMG type equal to 60% of the character's M.ATK for 2 turns.",
+      "note": "Before receiving a single-target physical or single-target magical attack, performs Preempt , gaining a Shield of the corresponding DMG type",
       "priority": 3
     },
     {
-      "name": "Frost Control",
-      "kind": "Active",
+      "name": "RK1 Skill Range  Pocket Elixir -",
+      "kind": "Passive",
       "nrg": "0",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Passive) At the end of the turn, heals the ally with the lowest HP percentage within 3 tiles of the character by 50% of M.ATK; if the target is a Dimension Traveler , grants them ▲ATK II , ▲P.DEF II , and ▲M.DEF II for 2 turns after healing.",
+      "note": "At the end of the turn, heals the ally with the lowest HP percentage within 3 tiles of the character by 50% of M.ATK; if the target is a Dim",
       "priority": 3
     },
     {
-      "name": "Triss's Wrath",
+      "name": "RK11 Skill Range  Ice Shock - Extra",
       "kind": "Active",
-      "nrg": "0",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "2",
+      "cd": "3",
+      "description": "(Magical DMG) Deals 60% Ice AoE DMG to all enemies in a straight line of 5 tiles in the target directionl; inflicts ▽Move III on the first target for 2 turns; if the target has any ▽Move , additionally inflicts Frozen for 2 turns.",
+      "note": "Deals 60% Ice AoE DMG to all enemies in a straight line of 5 tiles in the target directionl; inflicts ▽Move III on the first target for 2 tu",
       "priority": 3
     },
     {
-      "name": "Ice Bolt",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "name": "RK5 Skill Range  NRG Recovery -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) When hit by an active attack, the DMG taken is decreased by 8%. Upon receiving an active attack, additionally recovers 1 NRG.",
+      "note": "When hit by an active attack, the DMG taken is decreased by 8%. Upon receiving an active attack, additionally recovers 1 NRG.",
       "priority": 3
     },
     {
-      "name": "Fire Arrow",
-      "kind": "Active",
+      "name": "RK7 Skill Range  Frost Control -",
+      "kind": "Passive",
       "nrg": "0",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Passive) When casting Ice skills, if the target is on a Frosty tile, inflicts ▽Move I and ▽Bound Vision I for 1 turn after attacking and reduces the CD of skill Hailstorm by 1 turn.",
+      "note": "When casting Ice skills, if the target is on a Frosty tile, inflicts ▽Move I and ▽Bound Vision I for 1 turn after attacking and reduces the ",
       "priority": 3
     },
     {
-      "name": "Elemental Harmony",
+      "name": "Skill Range  Hailstorm",
       "kind": "Active",
+      "nrg": "1",
+      "cd": "4",
+      "description": "(Magical DMG) Selects the target tile and deals 55% Ice AoE DMG to all enemies within 3 tiles, inflicts 2 stacks of Minor Frostbite , and turns tiles into Frosty for 2 turns. ✦ Before attacking, increases ATK by 20%. ✦ After attacking, prepares for 1 turn, then triggers the skill effect 1 more time.",
+      "note": "Selects the target tile and deals 55% Ice AoE DMG to all enemies within 3 tiles, inflicts 2 stacks of Minor Frostbite , and turns tiles into",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Ice Bolt",
+      "kind": "Basic",
       "nrg": "0",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Basic Attack) Deals 100% Ice magical DMG; against Healthy enemies, inflicts ▽Move I for 1 turn.",
+      "note": "Deals 100% Ice magical DMG; against Healthy enemies, inflicts ▽Move I for 1 turn.",
+      "priority": 3
+    },
+    {
+      "name": "Teleport",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "4",
+      "description": "(Support) Instant The character teleports to the target location, gains Physical Shield and Magical Shield equal to 50% of M.ATK, and restores 2 NRG. Axuliary Passive . Effect: gains Resolve ; when triggered, immediately triggers the above effect. Teleportation changes to the closest ally with 2-6 tiles. Can be triggered up to 1 time per battle.",
+      "note": "Instant The character teleports to the target location, gains Physical Shield and Magical Shield equal to 50% of M.ATK, and restores 2 NRG. ",
+      "priority": 3
+    },
+    {
+      "name": "Triss's Wrath -",
+      "kind": "Passive",
+      "nrg": "0",
+      "cd": "0",
+      "description": "(Passive) Increases Crit by 30%; against targets with Bound , additionally increases Crit by 20% and M.ATK by 30%. Skills That Can",
+      "note": "Increases Crit by 30%; against targets with Bound , additionally increases Crit by 20% and M.ATK by 30%. Skills That Can",
       "priority": 3
     }
   ],
   "build": {
-    "basicAttack": "Energy Wave",
-    "reaction": "NRG Recovery",
+    "basicAttack": "Scorching Attack Magic Barrier The",
+    "reaction": "Fearless",
+    "ascension": "",
     "skills": [
-      "Teleport",
-      "Pocket Elixir",
-      "Fireball",
-      "Hailstorm",
-      "Firestorm",
-      "Frost Control"
+      "Firestorm"
     ],
-    "weapon": "",
-    "trinket": "Life Fondness",
-    "tarot": "Verdict of Justice"
+    "weapon": "Verdict of Justice",
+    "trinket": "",
+    "tarot": ""
   },
-  "summary": "is an Attacker who excels at AoE M.",
+  "summary": "here! Table of Contents Triss Tier & Basic Info Strength & How to Use",
   "pros": [],
   "howToUse": "",
   "starPriority": "",
   "confidence": "medium",
-  "collectedAt": "2026-08-02T04:31:30.969Z",
-  "cleanedAt": "2026-08-02T04:32:57.418Z"
+  "collectedAt": "2026-08-02T04:48:37.059Z"
 }

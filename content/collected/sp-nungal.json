@@ -1,13 +1,12 @@
 {
   "slug": "sp-nungal",
   "name": "SP Nungal",
-  "source": "public",
+  "source": "public-structured",
   "sources": [
     {
-      "type": "url",
-      "url": "https://gamewith.net/sword-of-convallaria/72916",
-      "fetchedAt": "2026-08-02T04:31:43.649Z",
-      "publisher": "gamewith"
+      "type": "gamewith-html-cache",
+      "id": "72916",
+      "parsedAt": "2026-08-02T04:48:37.083Z"
     }
   ],
   "role": "Breaker",
@@ -20,16 +19,151 @@
   "stats": {
     "move": null,
     "highJump": null,
-    "lowJump": null
+    "lowJump": 3
   },
   "skills": [
     {
-      "name": "Slash",
+      "name": "Mobile Skirmisher",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A powerful Passive that has a Move Again effect and allows you to gain buffs via Rally Response, while also generating a \"Phantom Spear\" every turn. It has an effect that is a key part of SP Nungal's playstyle, so it should be prioritized for your build.",
+      "note": "A powerful Passive that has a Move Again effect and allows you to gain buffs via Rally Response, while also generating a \"Phantom Spear\" every turn. It has an e",
+      "priority": 5
+    },
+    {
+      "name": "Onslaught - Piercing Will",
+      "kind": "Active",
+      "nrg": "3",
+      "cd": "2",
+      "description": "(Physical DMG) Rally Command . Teleports to the target location, then deals 100% AoE DMG to all enemies within 3 tiles of the character and inflicts ▽DMG II and Disarm for 1 turn; if the skill only hits 1 enemy, the skill multiplier increases to 160%. ✦ When teleporting, additionally absorbs 1 Phantom Spear within 3 tiles outside the target point, triggering the pickup effect; ✦ After attacking, the character gains Onslaught for 2 turns.",
+      "note": "A powerful Skill that lets you move and deal wide-area damage, inflicting debuffs on enemies, granting buffs like Resolve to yourself, and also has a Rally Comm",
+      "priority": 5
+    },
+    {
+      "name": "Poised Elegance",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Reaction with a 2-CD Dodge that also has the major effect of reducing AoE damage by 50%. It's easy to use and especially powerful on stages where enemies use AoE attacks. Use this if you're concerned about the movement drawbacks of the other Reaction.",
+      "note": "A Reaction with a 2-CD Dodge that also has the major effect of reducing AoE damage by 50%. It's easy to use and especially powerful on stages where enemies use ",
+      "priority": 5
+    },
+    {
+      "name": "Sealing Attack",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% physical DMG and inflicts × Passive Skills on Injured targets before attacking, lasting for 2 turns.",
+      "note": "Deals 100% physical DMG and inflicts × Passive Skills on Injured targets before attacking, lasting for 2 turns.",
+      "priority": 5
+    },
+    {
+      "name": "Break - Swift Assault",
+      "kind": "Active",
+      "nrg": "2",
+      "cd": "0",
+      "description": "(Physical DMG) Deals 100% AoE DMG to all enemies within 1 tile of the target, inflicts ▽DMG II and ▽M.DEF II for 2 turns. ✦ Gains Rally Response . Effect: locks onto the closest enemy within 3 tiles of the character; triggers this skill once without consuming NRG. Can be triggered up to 2 times per round.",
+      "note": "An easy-to-use Ranged attack. It has Rally Response and automatically activates up to twice per turn in response to an ally's Rally Command. It's extremely powe",
+      "priority": 4
+    },
+    {
+      "name": "Flare of Steel",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Reaction that reduces damage taken by 10% and has many useful effects like Preempt and movement. However, Preempt only triggers on attacks from the front or sides, and the drawback of moving to an unexpected location is significant. Best used when you have a clear objective, such as on stages where you need to disengage from enemies.",
+      "note": "A Reaction that reduces damage taken by 10% and has many useful effects like Preempt and movement. However, Preempt only triggers on attacks from the front or s",
+      "priority": 4
+    },
+    {
+      "name": "Insight -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) P.ATK increases by 8%. Before attacking, dispels 1 Defense Attribute Buff from the target.",
+      "note": "P.ATK increases by 8%. Before attacking, dispels 1 Defense Attribute Buff from the target.",
+      "priority": 3
+    },
+    {
+      "name": "Nungal's Base Skills Skill Range  Slash",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% Physical DMG. Sealing Bash",
+      "note": "Deals 100% Physical DMG. Sealing Bash",
+      "priority": 3
+    },
+    {
+      "name": "P Nungal's Base Skills Skill Range  Slash",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% Physical DMG.",
+      "note": "Deals 100% Physical DMG.",
+      "priority": 3
+    },
+    {
+      "name": "Poised Elegance -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) Reduces AoE DMG taken by 50%. Gains 1 instance of Dodge , with a 2-turn CD after triggering.",
+      "note": "Reduces AoE DMG taken by 50%. Gains 1 instance of Dodge , with a 2-turn CD after triggering.",
+      "priority": 3
+    },
+    {
+      "name": "RK1 Skill Range  Break - Fierce Lunge",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "3",
+      "description": "(Physical DMG) Instant Deals 40% AoE DMG to all enemies in a 1 x 5 area in the target direction; before attacking, the character gains Shield Break IV for 1 turn; if the target is Dying , ignores 80% DEF and inflicts ×Resolve . Then generates 1 Phantom Spear on an empty tile around the first attacked enemy.",
+      "note": "Instant Deals 40% AoE DMG to all enemies in a 1 x 5 area in the target direction; before attacking, the character gains Shield Break IV for ",
+      "priority": 3
+    },
+    {
+      "name": "RK11 Skill Range  Frontline Action -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) SPD is increased by 50 points. When Healthy , DMG taken is decreased by 20%.",
+      "note": "SPD is increased by 50 points. When Healthy , DMG taken is decreased by 20%.",
+      "priority": 3
+    },
+    {
+      "name": "RK3 Skill Range  Battle Fever -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) After initiating an Active Attack, the character takes 15% less DMG. Dealing a Crit DMG additionally decreases DMG taken by 25% for 1 turn.",
+      "note": "After initiating an Active Attack, the character takes 15% less DMG. Dealing a Crit DMG additionally decreases DMG taken by 25% for 1 turn.",
+      "priority": 3
+    },
+    {
+      "name": "RK5 Skill Range  Flare of Steel -",
+      "kind": "Reaction",
+      "nrg": "0",
+      "cd": "2",
+      "description": "(Reaction) Reduces DMG taken by 10%. When attacked by enemies within 1 tile and positioned at the front or side , triggers Preempt ; can interrupt their turn, deals 50% physical DMG, teleports to the closest Phantom Spear and picks it up. If no Phantom Spear exists, teleports around the closest ally within 2 to 6 tiles of the character.",
+      "note": "Reduces DMG taken by 10%. When attacked by enemies within 1 tile and positioned at the front or side , triggers Preempt ; can interrupt thei",
+      "priority": 3
+    },
+    {
+      "name": "RK7 Skill Range  Mobile Skirmisher -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) After actively attacking, can Move Again , inheriting remaining Movement. At the end of the current turn, can use Guerilla . Can be triggered up to 1 time per round. ✦ At the start of the turn, if there are fewer than 4 Phantom Spears in battle, generates 1 Phantom Spear on a random empty tile within 2 tiles of the character. ✦ Gains Rally Response . Effect: the character gains ▲SPD III , ▲Move I , and ▲ATK II for 1 turn. Can be triggered up to 1 time per round.",
+      "note": "After actively attacking, can Move Again , inheriting remaining Movement. At the end of the current turn, can use Guerilla . Can be triggere",
+      "priority": 3
+    },
+    {
+      "name": "RK9 Skill Range  Silencing Attack",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% physical DMG and inflicts × Active Skills on Injured targets before attacking, lasting for 2 turns.",
+      "note": "Deals 100% physical DMG and inflicts × Active Skills on Injured targets before attacking, lasting for 2 turns.",
       "priority": 3
     },
     {
@@ -37,137 +171,49 @@
       "kind": "Active",
       "nrg": "3",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Physical DMG) Single-target attack. Deals 145% DMG. Before attacking, inflicts × Passive Skills and × Reaction Skills on the target for 1 turn.",
+      "note": "Single-target attack. Deals 145% DMG. Before attacking, inflicts × Passive Skills and × Reaction Skills on the target for 1 turn.",
       "priority": 3
     },
     {
-      "name": "Sense of Honor",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "name": "SP Skill Skill Range  Sense of Honor -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) While Healthy, increases Crit Rate and Crit DMG. Restores NRG on Critical Hits. When Nungal (Original) learns RK7 [Sense of Purpose] , and SP Nungal is enhanced to 3-stars, the SP Skill is unlocked.",
+      "note": "While Healthy, increases Crit Rate and Crit DMG. Restores NRG on Critical Hits. When Nungal (Original) learns RK7 [Sense of Purpose] , and S",
       "priority": 3
     },
     {
-      "name": "Break - Fierce Lunge",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Break - Swift Assault",
+      "name": "Swift Assault",
       "kind": "Active",
       "nrg": "2",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Physical DMG) Deals 100% AoE DMG to all enemies within 1 tile of the target, inflicts ▽DMG II and ▽M.DEF II for 2 turns. ✦ Gains Rally Response . Effect: locks onto the closest enemy within 3 tiles of the character; triggers this skill once without consuming NRG. Can be triggered up to 2 times per round. Skills",
+      "note": "Deals 100% AoE DMG to all enemies within 1 tile of the target, inflicts ▽DMG II and ▽M.DEF II for 2 turns. ✦ Gains Rally Response . Effect: ",
       "priority": 3
-    },
-    {
-      "name": "Battle Fever",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Insight",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Poised Elegance",
-      "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Mobile Skirmisher",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Onslaught - Piercing Will",
-      "kind": "Active",
-      "nrg": "3",
-      "cd": "2",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Sealing Attack",
-      "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Frontline Action",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Parry",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Onslaught",
-      "kind": "Active",
-      "note": "Priority section extract",
-      "priority": 4,
-      "description": ""
     }
   ],
   "build": {
-    "basicAttack": "Slash",
-    "reaction": "Insight",
+    "basicAttack": "Sealing Attack",
+    "reaction": "Poised Elegance",
+    "ascension": "",
     "skills": [
-      "Sense of Honor",
-      "Break - Fierce Lunge",
       "Break - Swift Assault",
-      "Battle Fever",
-      "Sealing Bash",
+      "Onslaught - Piercing Will",
       "Mobile Skirmisher"
     ],
-    "weapon": "and Justice",
-    "trinket": "Maverick's Cloak",
-    "tarot": "Verdict of Justice"
+    "weapon": "Verdict of Justice",
+    "trinket": "",
+    "tarot": ""
   },
-  "summary": "is a Skill that deals 100% AoE damage and is quite unremarkable on its own, but it can trigger up to twice per turn due to Rally Response .",
-  "pros": [],
-  "howToUse": "",
+  "summary": "here! Table of Contents SP Nungal Tier & Basic Info Strength & How to Use",
+  "pros": [
+    "Mobile Skirmisher: A powerful Passive that has a Move Again effect and allows you to gain buffs via",
+    "Onslaught - Piercing Will: A powerful Skill that lets you move and deal wide-area damage, inflicting debuff"
+  ],
+  "howToUse": "A powerful Passive that has a Move Again effect and allows you to gain buffs via Rally Response, while also generating a \"Phantom Spear\" every turn. It has an e A powerful Skill that lets you move and deal wide-area damage, inflicting debuffs on enemies, granting buffs like Resolve to yourself, and also has a Rally Comm An easy-to-use Ranged attack. It has Rally Response and automatically activates up to twice per turn in response to an ally's Rally Command. It's extremely powe",
   "starPriority": "",
-  "confidence": "medium",
-  "collectedAt": "2026-08-02T04:31:43.649Z",
-  "cleanedAt": "2026-08-02T04:32:57.417Z"
+  "confidence": "high",
+  "collectedAt": "2026-08-02T04:48:37.083Z"
 }

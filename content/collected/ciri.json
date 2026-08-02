@@ -1,62 +1,106 @@
 {
   "slug": "ciri",
   "name": "Ciri",
-  "source": "public",
+  "source": "public-structured",
   "sources": [
     {
-      "type": "url",
-      "url": "https://gamewith.net/sword-of-convallaria/71743",
-      "fetchedAt": "2026-08-02T04:31:32.593Z",
-      "publisher": "gamewith"
+      "type": "gamewith-html-cache",
+      "id": "71743",
+      "parsedAt": "2026-08-02T04:48:37.061Z"
     }
   ],
   "role": "Seeker",
   "factions": [
     "Alacrity",
-    "SoC",
-    "Drifter"
+    "Drifter",
+    "SoC"
   ],
   "rarity": "Legendary",
   "stats": {
     "move": null,
     "highJump": null,
-    "lowJump": null
+    "lowJump": 5
   },
   "skills": [
     {
-      "name": "Slash",
+      "name": "Cintra The Lady",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "Recommended Reaction from Best Build table.",
+      "note": "Best Build Reaction",
+      "priority": 5
+    },
+    {
+      "name": "Fatal Attack The Lion Cub",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "nrg": "0",
+      "cd": "—",
+      "description": "Recommended Basic from Best Build table.",
+      "note": "Best Build Basic",
+      "priority": 5
+    },
+    {
+      "name": "Night Ciri's Candor",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "Listed in GameWith Best Build table.",
+      "note": "Best Build skill slot",
+      "priority": 5
+    },
+    {
+      "name": "Nova Light That Breaks",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "Listed in GameWith Best Build table.",
+      "note": "Best Build skill slot",
+      "priority": 5
     },
     {
       "name": "Charge",
       "kind": "Active",
       "nrg": "3",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Physical DMG) Selects 1 location within a cross-shaped range of the character, charges to that location and deals 170% DMG to the enemy closest to the endpoint on the path, inflicting Stagger for 1 turn. ✦ Auxiliary Passive . Effect: after casting basic attack , additionally inflicts Stagger on the target for 1 turn.",
+      "note": "Selects 1 location within a cross-shaped range of the character, charges to that location and deals 170% DMG to the enemy closest to the end",
       "priority": 3
     },
     {
-      "name": "Ciri's Candor",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "name": "Ciri's Base Skills Skill Range  Slash",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% Physical DMG.",
+      "note": "Deals 100% Physical DMG.",
       "priority": 3
     },
     {
-      "name": "Nova",
+      "name": "Ciri's Candor -",
+      "kind": "Passive",
+      "nrg": "0",
+      "cd": "0",
+      "description": "(Passive) Increases Crit by 40%. Always lands critical hits against enemies with Bound and increases DMG dealt by 20%. Skills That",
+      "note": "Increases Crit by 40%. Always lands critical hits against enemies with Bound and increases DMG dealt by 20%. Skills That",
+      "priority": 3
+    },
+    {
+      "name": "Dimension Traveler -",
       "kind": "Active",
       "nrg": "0",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Leader's Aura) For all Dimension Traveler allies in battle, increases ATK by 10%, and DEF by 20%.",
+      "note": "For all Dimension Traveler allies in battle, increases ATK by 10%, and DEF by 20%.",
+      "priority": 3
+    },
+    {
+      "name": "Feverish Attack",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% physical DMG and gains 20% Life Steal . Skills That Can",
+      "note": "Deals 100% physical DMG and gains 20% Life Steal . Skills That Can",
       "priority": 3
     },
     {
@@ -64,76 +108,117 @@
       "kind": "Active",
       "nrg": "4",
       "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Physical DMG) Deals AoE DMG to the closest 3 enemies within 4 tiles of the character; when hitting 1 enemy, DMG multiplier is 120%; for each additional enemy hit, Skill Multiplier decreases by 20%, minimum 40%. ✦ When attacking targets with Bound , ATK increases by 80%.",
+      "note": "Deals AoE DMG to the closest 3 enemies within 4 tiles of the character; when hitting 1 enemy, DMG multiplier is 120%; for each additional en",
       "priority": 3
     },
     {
-      "name": "Fleeing Hare",
+      "name": "Fleeing Hare -",
       "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) When hit by an active attack, the DMG taken is decreased by 8%. After being attacked, the character gains ▲ Move II for 2 turns. The Lion Cub of Cintra -",
+      "note": "When hit by an active attack, the DMG taken is decreased by 8%. After being attacked, the character gains ▲ Move II for 2 turns. The Lion Cu",
       "priority": 3
     },
     {
-      "name": "Temporal Shift",
+      "name": "Homecoming Swallow",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "1",
+      "description": "(Support) Instant The character gains Nest's Call and the skill switches to Departing Swallow . Skills That Can Be",
+      "note": "Instant The character gains Nest's Call and the skill switches to Departing Swallow . Skills That Can Be",
+      "priority": 3
+    },
+    {
+      "name": "Range  Light That Breaks the Night",
+      "kind": "Active",
+      "nrg": "3",
+      "cd": "3",
+      "description": "(Physical DMG) Deals 30% AoE DMG to all enemies within 3 tiles of the character and inflicts Stagger for 1 turn. Ciri's Candor -",
+      "note": "Deals 30% AoE DMG to all enemies within 3 tiles of the character and inflicts Stagger for 1 turn. Ciri's Candor -",
+      "priority": 3
+    },
+    {
+      "name": "RK5 Skill Range  Fleeing Hare -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) When hit by an active attack, the DMG taken is decreased by 8%. After being attacked, the character gains ▲ Move II for 2 turns.",
+      "note": "When hit by an active attack, the DMG taken is decreased by 8%. After being attacked, the character gains ▲ Move II for 2 turns.",
+      "priority": 3
+    },
+    {
+      "name": "RK7 Skill Range  Temporal Shift",
       "kind": "Active",
       "nrg": "0",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Support) After using this skill, at the end of the turn, restores 1 NRG, reduces all skill CDs by 1 turn, and reduces Winged Repose duration by 1 turn. If Blink was used this turn, the Winged Repose duration reduction effect will not activate. ✦ Auxiliary Passive . Effect: after casting basic attack , triggers the above effects.",
+      "note": "After using this skill, at the end of the turn, restores 1 NRG, reduces all skill CDs by 1 turn, and reduces Winged Repose duration by 1 tur",
       "priority": 3
     },
     {
-      "name": "Feverish Attack",
-      "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Assault",
+      "name": "Skill Range  Assault",
       "kind": "Active",
       "nrg": "1",
       "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Support) Instant Gains ▲ Crit I , ▲ Crit DMG I , and ▲ Move II for 1 turn.",
+      "note": "Instant Gains ▲ Crit I , ▲ Crit DMG I , and ▲ Move II for 1 turn.",
       "priority": 3
     },
     {
-      "name": "Dimension Traveler",
+      "name": "Skill Range  Fatal Attack",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Fires a Curved Shot which deals 85% physical DMG and increases Crit DMG by 15%.",
+      "note": "Fires a Curved Shot which deals 85% physical DMG and increases Crit DMG by 15%.",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Light That Breaks the Night",
+      "kind": "Active",
+      "nrg": "3",
+      "cd": "3",
+      "description": "(Physical DMG) Deals 30% AoE DMG to all enemies within 3 tiles of the character and inflicts Stagger for 1 turn.",
+      "note": "Deals 30% AoE DMG to all enemies within 3 tiles of the character and inflicts Stagger for 1 turn.",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Nova",
       "kind": "Active",
       "nrg": "0",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Physical DMG) Deals 70% AoE DMG to all enemies within 3 tiles of the character and knocks the adjacent targets back by 2 tiles. ✦ When attacking targets with Bound , this skill deals 2 times DMG and knock back effects. ✦ If the character is in Winged Repose at the start of the turn, attacks with this skill this turn treat targets as being affected by Bound .",
+      "note": "Deals 70% AoE DMG to all enemies within 3 tiles of the character and knocks the adjacent targets back by 2 tiles. ✦ When attacking targets w",
+      "priority": 3
+    },
+    {
+      "name": "The Lion Cub of Cintra -",
+      "kind": "Reaction",
+      "nrg": "0",
+      "cd": "0",
+      "description": "(Reaction) After using skill Blink , gains 3 stacks of DMG Lock equal to 50% of max HP. After being attacked or using skills with Teleportation or Charge effects, restores 40% of lost HP. Can be triggered up to 2 times per round.",
+      "note": "After using skill Blink , gains 3 stacks of DMG Lock equal to 50% of max HP. After being attacked or using skills with Teleportation or Char",
       "priority": 3
     }
   ],
   "build": {
-    "basicAttack": "Slash",
-    "reaction": "Fleeing Hare",
+    "basicAttack": "Fatal Attack The Lion Cub",
+    "reaction": "Cintra The Lady",
+    "ascension": "Space",
     "skills": [
-      "Charge",
-      "Ciri's Candor",
-      "Nova",
-      "Temporal Shift",
-      "Flash That Cuts through Darkness",
-      "Assault"
+      "Nova Light That Breaks",
+      "Night Ciri's Candor"
     ],
-    "weapon": "",
-    "trinket": "Maverick's Cloak",
-    "tarot": "Verdict of Justice"
+    "weapon": "Maverick's Cloak",
+    "trinket": "Verdict of Justice",
+    "tarot": ""
   },
-  "summary": "Highly Mobile AoE Attacker - Can Teleport & Act Again - Enhanced Skills vs.",
+  "summary": "here! Table of Contents Ciri Tier & Basic Info Strength & How to Use",
   "pros": [],
   "howToUse": "",
   "starPriority": "",
-  "confidence": "medium",
-  "collectedAt": "2026-08-02T04:31:32.593Z",
-  "cleanedAt": "2026-08-02T04:32:57.411Z"
+  "confidence": "high",
+  "collectedAt": "2026-08-02T04:48:37.061Z"
 }

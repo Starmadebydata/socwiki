@@ -1,19 +1,12 @@
 {
   "slug": "sp-inanna",
   "name": "SP Inanna",
-  "source": "public",
+  "source": "public-structured",
   "sources": [
     {
-      "type": "url",
-      "url": "https://gamewith.net/sword-of-convallaria/69479",
-      "fetchedAt": "2026-08-02T04:30:57.038Z",
-      "publisher": "gamewith"
-    },
-    {
-      "type": "url",
-      "url": "https://dotgg.gg/sword-of-convallaria/sp-inanna/",
-      "fetchedAt": "2026-08-02T04:31:50.682Z",
-      "publisher": "dotgg"
+      "type": "gamewith-html-cache",
+      "id": "69479",
+      "parsedAt": "2026-08-02T04:48:36.991Z"
     }
   ],
   "role": "Watcher",
@@ -25,124 +18,61 @@
   "stats": {
     "move": null,
     "highJump": null,
-    "lowJump": null
+    "lowJump": 3
   },
   "skills": [
     {
-      "name": "Light of Convallaria",
+      "name": "Battle Flag of Convallaria Stands",
       "kind": "Active",
-      "nrg": "2",
-      "cd": "2",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Skill that provides very powerful support instantly, and switches to a powerful AoE attack after use. This is one of the best skills in the entire game, and it also stacks with the Flag of Convallaria tactical skill , so make it a top priority for your build. The more characters from the and Factions you have, the stronger the buffs you'll receive, so keep that in mind when forming your party.",
+      "note": "A Skill that provides very powerful support instantly, and switches to a powerful AoE attack after use. This is one of the best skills in the entire game, and i",
+      "priority": 5
     },
     {
-      "name": "Brilliant Light",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Helping Hand",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Natural Sword Intent",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Battlefield Healing",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Guarding the Sword of Convallaria",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Let's Advance Together",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "name": "Experienced Fighter",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A very powerful Reaction that grants the \"Battlefield Trial\" buff, which increases ATK under simple conditions, and \"Free Will\". When Battlefield Trial reaches MAX, you will also always gain the \"Attack Command\" buff. If you have Inanna (Original) , make it a top priority for your build.",
+      "note": "A very powerful Reaction that grants the \"Battlefield Trial\" buff, which increases ATK under simple conditions, and \"Free Will\". When Battlefield Trial reaches ",
+      "priority": 5
     },
     {
       "name": "Sword - Dawnlight",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Sword - Dusk",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Battle Flag of Convallaria Stands",
-      "kind": "Active",
-      "nrg": "3",
-      "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Under the Flag of Convallaria",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "United Strength",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Slash",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "An excellent Basic Attack that deals \"Magical AoE Damage\" to a \"single\" Ranged target. It can benefit from the \"Magical AoE DMG increase\" effect of some Gear, so if you have such Gear equipped, the damage dealt will be higher.",
+      "note": "An excellent Basic Attack that deals \"Magical AoE Damage\" to a \"single\" Ranged target. It can benefit from the \"Magical AoE DMG increase\" effect of some Gear, s",
+      "priority": 5
+    },
+    {
+      "name": "Convallaria Swordplay",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Decision Skill with Magical AoE DMG and AoE Knockback. Basically, use [Convallaria - Blooming Horizon], but when you can aim for a fall kill or collision, use [Convallaria - Windswept Blossom]. Be aware that [Convallaria - Windswept Blossom] deals Physical DMG, so the \"Magical AoE DMG increase\" from Gear will have no effect.",
+      "note": "A Decision Skill with Magical AoE DMG and AoE Knockback. Basically, use [Convallaria - Blooming Horizon], but when you can aim for a fall kill or collision, use",
+      "priority": 4
+    },
+    {
+      "name": "Guarding the Sword of Convallaria",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A passive with excellent effects, especially the base ATK increase. It's also appealing that the effect of increasing knockback distance makes it easier to aim for a fall kill. However, be aware that SP Inanna only has a few ways to deal Physical DMG.",
+      "note": "A passive with excellent effects, especially the base ATK increase. It's also appealing that the effect of increasing knockback distance makes it easier to aim ",
+      "priority": 4
+    },
+    {
+      "name": "Battlefield Healing -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) When hit by an active attack, the DMG taken is decreased by 8%. Upon receiving an active attack, heals the ally with the lowest HP percentage within a 2-tile radius of the character by 100% of M.DEF.",
+      "note": "When hit by an active attack, the DMG taken is decreased by 8%. Upon receiving an active attack, heals the ally with the lowest HP percentag",
       "priority": 3
     },
     {
@@ -150,56 +80,158 @@
       "kind": "Active",
       "nrg": "2",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Physical DMG) Single-target attack. Deals 100% DMG and heals all allies within a 3-tile radius around the character by 40% of P.ATK. SP Skill",
+      "note": "Single-target attack. Deals 100% DMG and heals all allies within a 3-tile radius around the character by 40% of P.ATK. SP Skill",
       "priority": 3
     },
     {
-      "name": "Battle-hardened Warrior",
-      "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "name": "Guarding the Sword of Convallaria -",
+      "kind": "Passive",
+      "nrg": "0",
+      "cd": "0",
+      "description": "(Passive) If there are 2 or more allies within 2 tiles of the character, reduces DMG taken by 20%; after dealing physical DMG, converts 2 buffs from the target into random Level 2 Attribute Debuffs for 2 turns. When knocking the targets back, increases the knockback distance by 1 tile.",
+      "note": "If there are 2 or more allies within 2 tiles of the character, reduces DMG taken by 20%; after dealing physical DMG, converts 2 buffs from t",
       "priority": 3
     },
     {
-      "name": "Convallaria Swordplay",
+      "name": "Helping Hand -",
+      "kind": "Passive",
+      "nrg": "0",
+      "cd": "0",
+      "description": "(Passive) After performing an active attack, heals 1 ally in battle with the lowest HP for 40% of P.ATK plus M.ATK.",
+      "note": "After performing an active attack, heals 1 ally in battle with the lowest HP for 40% of P.ATK plus M.ATK.",
+      "priority": 3
+    },
+    {
+      "name": "Inanna's Base Skills Skill Range  Slash",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% Physical DMG. Cure Blow",
+      "note": "Deals 100% Physical DMG. Cure Blow",
+      "priority": 3
+    },
+    {
+      "name": "Let's Advance Together -",
+      "kind": "Passive",
+      "nrg": "0",
+      "cd": "0",
+      "description": "(Passive) At the start of the turn, if there are 2 or more allies within 2 tiles of the character, all allies in range gain Co-Attack and Co-Defense for 2 turns.",
+      "note": "At the start of the turn, if there are 2 or more allies within 2 tiles of the character, all allies in range gain Co-Attack and Co-Defense f",
+      "priority": 3
+    },
+    {
+      "name": "Light of Convallaria",
+      "kind": "Active",
+      "nrg": "2",
+      "cd": "2",
+      "description": "(Support) The character gains 2 stacks of Free Will ; all allies within 3 tiles gain ▲[ATK II and ▲Move I for 2 turns and recover 1 NRG.",
+      "note": "The character gains 2 stacks of Free Will ; all allies within 3 tiles gain ▲[ATK II and ▲Move I for 2 turns and recover 1 NRG.",
+      "priority": 3
+    },
+    {
+      "name": "P Inanna's Base Skills Skill Range  Slash",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% Physical DMG.",
+      "note": "Deals 100% Physical DMG.",
+      "priority": 3
+    },
+    {
+      "name": "Range  Battle Flag of Convallaria Stands",
+      "kind": "Active",
+      "nrg": "3",
+      "cd": "3",
+      "description": "(Support) Instant Summons Battle Flag of Convallaria on the target tile and grants Co-Attack and Co-Defense to all allies within 5 tiles for 2 turns. After casting, the skill switches to For This World of Peace .",
+      "note": "Instant Summons Battle Flag of Convallaria on the target tile and grants Co-Attack and Co-Defense to all allies within 5 tiles for 2 turns. ",
+      "priority": 3
+    },
+    {
+      "name": "RK1 Skill Range  Convallaria Swordplay",
       "kind": "Active",
       "nrg": "0",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Decision) Selects to cast Convallaria - Blooming Horizon or Convallaria - Windswept Blossom .",
+      "note": "Selects to cast Convallaria - Blooming Horizon or Convallaria - Windswept Blossom .",
       "priority": 3
     },
     {
-      "name": "Battle Flag of Convallaria",
-      "kind": "Aura",
-      "note": "Name confirmed in page text",
-      "priority": 4,
-      "description": ""
+      "name": "RK3 Skill Range  Brilliant Light -",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "0",
+      "description": "(Aura) Reduces ATK and DEF of all enemies within 3 tiles of the character by 10%.",
+      "note": "Reduces ATK and DEF of all enemies within 3 tiles of the character by 10%.",
+      "priority": 3
+    },
+    {
+      "name": "RK5 Skill Range  Natural Sword Intent -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) Before receiving an active single-target attack, performs a Preempt , dealing magical DMG equal to 100% P.ATK. Can be triggered up to 1 time per round. When defeated, if the character has 6 or more stacks of Free Will , consumes 6 stacks to trigger Unyielding and gains DMG Reduction IX for 1 turn. Can be triggered up to 1 time per battle.",
+      "note": "Before receiving an active single-target attack, performs a Preempt , dealing magical DMG equal to 100% P.ATK. Can be triggered up to 1 time",
+      "priority": 3
+    },
+    {
+      "name": "RK9 Skill Range  Sword - Dawnlight",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Attacks the designated target, dealing magical AoE DMG equal to 100% P.ATK.",
+      "note": "Attacks the designated target, dealing magical AoE DMG equal to 100% P.ATK.",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Battle-hardened Warrior -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) Everytime a character within 5 tiles casts a non Instant skill, you gain a stack of Battlefield Experience : When the number of stacks reaches the upper limit, you will get an additional Attack Command , and after casting a non- Instant skill, you gain 1 stack of Free Will . The SP Skill is unlocked when Inanna (Original) learns RK5 Battlefield Trial and SP Inanna is enhanced to 3-stars.",
+      "note": "Everytime a character within 5 tiles casts a non Instant skill, you gain a stack of Battlefield Experience : When the number of stacks reach",
+      "priority": 3
+    },
+    {
+      "name": "Sword - Dusk",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Attacks the designated target, dealing 110% physical AoE DMG and knocking back by 1 tile.",
+      "note": "Attacks the designated target, dealing 110% physical AoE DMG and knocking back by 1 tile.",
+      "priority": 3
+    },
+    {
+      "name": "Under the Flag of Convallaria -",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "0",
+      "description": "(Leader's Aura) For all allies from Iria or Sword of Convallaria: Increases ATK by 10% and DEF by 20%; for each 1 ally from Iria or Sword of Convallaria in battle, increases DMG dealt by 3% and reduces DMG taken by 3%, up to 15%.",
+      "note": "For all allies from Iria or Sword of Convallaria: Increases ATK by 10% and DEF by 20%; for each 1 ally from Iria or Sword of Convallaria in ",
+      "priority": 3
     }
   ],
   "build": {
     "basicAttack": "Sword - Dawnlight",
-    "reaction": "Guarding the Sword of Convallaria",
+    "reaction": "Experienced Fighter",
+    "ascension": "",
     "skills": [
-      "Light of Convallaria",
-      "Brilliant Light",
-      "Helping Hand",
-      "Natural Sword Intent",
-      "Battlefield Healing",
-      "Let's Advance Together"
+      "Battle Flag of Convallaria Stands",
+      "Convallaria Swordplay",
+      "Guarding the Sword of Convallaria"
     ],
-    "weapon": "",
+    "weapon": "Dawnlight",
     "trinket": "",
-    "tarot": "Judgement"
+    "tarot": ""
   },
-  "summary": "is arguably the strongest character in game, excelling in ally support, AoE M.",
-  "pros": [],
-  "howToUse": "",
+  "summary": "here! Table of Contents SP Inanna Tier & Basic Info Strength & How to Use",
+  "pros": [
+    "Sword - Dawnlight: An excellent Basic Attack that deals \"Magical AoE Damage\" to a \"single\" Ranged t",
+    "Battle Flag of Convallaria Stands: A Skill that provides very powerful support instantly, and switches to a powerfu",
+    "Experienced Fighter: A very powerful Reaction that grants the \"Battlefield Trial\" buff, which increas"
+  ],
+  "howToUse": "An excellent Basic Attack that deals \"Magical AoE Damage\" to a \"single\" Ranged target. It can benefit from the \"Magical AoE DMG increase\" effect of some Gear, s A Skill that provides very powerful support instantly, and switches to a powerful AoE attack after use. This is one of the best skills in the entire game, and i A very powerful Reaction that grants the \"Battlefield Trial\" buff, which increases ATK under simple conditions, and \"Free Will\". When Battlefield Trial reaches ",
   "starPriority": "",
-  "confidence": "medium",
-  "collectedAt": "2026-08-02T04:31:50.688Z",
-  "cleanedAt": "2026-08-02T04:32:57.417Z"
+  "confidence": "high",
+  "collectedAt": "2026-08-02T04:48:36.992Z"
 }

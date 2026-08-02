@@ -1,35 +1,115 @@
 {
   "slug": "sp-faycal",
   "name": "SP Faycal",
-  "source": "public",
+  "source": "public-structured",
   "sources": [
     {
-      "type": "url",
-      "url": "https://gamewith.net/sword-of-convallaria/73024",
-      "fetchedAt": "2026-08-02T04:31:46.658Z",
-      "publisher": "gamewith"
+      "type": "gamewith-html-cache",
+      "id": "73024",
+      "parsedAt": "2026-08-02T04:48:37.088Z"
     }
   ],
   "role": "Defender",
   "factions": [
     "Iria",
-    "SoC",
-    "Elaman"
+    "Elaman",
+    "SoC"
   ],
   "rarity": "Legendary",
   "stats": {
     "move": null,
     "highJump": null,
-    "lowJump": null
+    "lowJump": 3
   },
   "skills": [
     {
-      "name": "Curved Shot",
+      "name": "Charged Attack",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "This increases skill damage, so you should generally equip this as your Basic Attack.",
+      "note": "This increases skill damage, so you should generally equip this as your Basic Attack.",
+      "priority": 5
+    },
+    {
+      "name": "Priority and Details  Arrowstorm",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "SP Faycal's main skill and a top priority for battles with multiple enemies. Since it has the [Rally Command] effect, it becomes even more powerful when used with characters that have [Rally Response].",
+      "note": "SP Faycal's main skill and a top priority for battles with multiple enemies. Since it has the [Rally Command] effect, it becomes even more powerful when used wi",
+      "priority": 5
+    },
+    {
+      "name": "Slugger Stance",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "3",
+      "description": "A skill that boosts DMG and prevents Alert from being interrupted when attacked, but at the cost of being unable to move. If movement is necessary for the stage, equip [Swift Leap] as well.",
+      "note": "A skill that boosts DMG and prevents Alert from being interrupted when attacked, but at the cost of being unable to move. If movement is necessary for the stage",
+      "priority": 5
+    },
+    {
+      "name": "Strength Activation",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "Increases DMG dealt upon being healed. Try to maintain this buff by having a source of healing.",
+      "note": "Increases DMG dealt upon being healed. Try to maintain this buff by having a source of healing.",
+      "priority": 5
+    },
+    {
+      "name": "Arrowstorm",
+      "kind": "Active",
+      "nrg": "4",
+      "cd": "0",
+      "description": "(Support) Rally Command Performs Alert on an area of 4 tiles around the target (the alert center moves with the target); can deal 70% physical DMG. Can be activated up to 3 times per round. ✦ During Alert , the character's Rally Response will be triggered with the target as the center.",
+      "note": "Rally Command Performs Alert on an area of 4 tiles around the target (the alert center moves with the target); can deal 70% physical DMG. Ca",
+      "priority": 4
+    },
+    {
+      "name": "Steady Aim",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "When attacking, it lowers the enemy's attack performance and recovers NRG up to 2 times per turn. NRG consumption is high for Alert builds, so prioritize this skill if you can't supplement NRG Recovery with other characters or the Trait's Rally Response.",
+      "note": "When attacking, it lowers the enemy's attack performance and recovers NRG up to 2 times per turn. NRG consumption is high for Alert builds, so prioritize this s",
+      "priority": 4
+    },
+    {
+      "name": "Swift Leap",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A skill that counters the immobility from [Slugger Stance] by allowing you to move instantly. It's also excellent as it provides NRG and a Crit buff.",
+      "note": "A skill that counters the immobility from [Slugger Stance] by allowing you to move instantly. It's also excellent as it provides NRG and a Crit buff.",
+      "priority": 4
+    },
+    {
+      "name": "Base Skills Skill Range  Curved Shot",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Fires a Curved Shot which deals 85% Physical DMG.",
+      "note": "Fires a Curved Shot which deals 85% Physical DMG.",
+      "priority": 3
+    },
+    {
+      "name": "Fatal Attack",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Fires a Curved Shot which deals 85% physical DMG and increases Crit DMG by 15%.",
+      "note": "Fires a Curved Shot which deals 85% physical DMG and increases Crit DMG by 15%.",
+      "priority": 3
+    },
+    {
+      "name": "Penetrating Arrow -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) After attacking, inflicts ▽ P.DEF II on the target for 3 turns.",
+      "note": "After attacking, inflicts ▽ P.DEF II on the target for 3 turns.",
       "priority": 3
     },
     {
@@ -37,8 +117,35 @@
       "kind": "Active",
       "nrg": "0",
       "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Physical DMG) Single-target attack. Deals 130% DMG. Before attacking, inflicts × Dodge on the target, lasting for 1 turn. SP Skill Skill",
+      "note": "Single-target attack. Deals 130% DMG. Before attacking, inflicts × Dodge on the target, lasting for 1 turn. SP Skill Skill",
+      "priority": 3
+    },
+    {
+      "name": "Range  Arrow of Guardian Convallaria",
+      "kind": "Active",
+      "nrg": "1",
+      "cd": "4",
+      "description": "(Physical DMG) Performs Alert within a 3x4 area in the target direction. Deals 120% DMG and interrupts actions once an enemy enter this area. When Faycal (Original) learns RK 3 Arrow Guardian of Convallaria, and SP Faycal is enhanced to 3★, the SP skill is unlocked. Skills That Can",
+      "note": "Performs Alert within a 3x4 area in the target direction. Deals 120% DMG and interrupts actions once an enemy enter this area. When Faycal (",
+      "priority": 3
+    },
+    {
+      "name": "RK3 Skill Range  Sundering Arrow",
+      "kind": "Active",
+      "nrg": "3",
+      "cd": "0",
+      "description": "(Physical DMG) Rally Command Single-target attack. Prepares for 1 turn, and deals 180% DMG. ✦ If the target is within 4 tiles of the character (For Large Target s, measure from the closest tile) during preparation, they will be targeted by the Rally Response effect of Faycal - Arrow of the Homeland 's trait, and take doubled DMG.",
+      "note": "Rally Command Single-target attack. Prepares for 1 turn, and deals 180% DMG. ✦ If the target is within 4 tiles of the character (For Large T",
+      "priority": 3
+    },
+    {
+      "name": "RK9 Skill Range  Critical Strike",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% physical DMG and increases Crit by 15% before attacking.",
+      "note": "Deals 100% physical DMG and increases Crit by 15% before attacking.",
       "priority": 3
     },
     {
@@ -46,121 +153,76 @@
       "kind": "Active",
       "nrg": "2",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Physical DMG) Deals 70% AoE DMG to all enemies within a 3x3 area in the target direction and inflicts ▽ Move I , lasting for 2 turns. Penetrating Arrow -",
+      "note": "Deals 70% AoE DMG to all enemies within a 3x3 area in the target direction and inflicts ▽ Move I , lasting for 2 turns. Penetrating Arrow -",
       "priority": 3
     },
     {
-      "name": "Penetrating Arrow",
+      "name": "Skill Range  Scatter",
       "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Sundering Arrow",
-      "kind": "Active",
-      "nrg": "3",
+      "nrg": "2",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Physical DMG) Deals 70% AoE DMG to all enemies within a 3x3 area in the target direction and inflicts ▽ Move I , lasting for 2 turns.",
+      "note": "Deals 70% AoE DMG to all enemies within a 3x3 area in the target direction and inflicts ▽ Move I , lasting for 2 turns.",
       "priority": 3
     },
     {
-      "name": "Arrowstorm",
+      "name": "Skill Range  Shield Break - Enhanced -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) Increases ATK by 30% and ignores 40% of the target's DEF when attacking enemies with a Shield .",
+      "note": "Increases ATK by 30% and ignores 40% of the target's DEF when attacking enemies with a Shield .",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Swift Leap",
       "kind": "Active",
-      "nrg": "4",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "0",
+      "cd": "3",
+      "description": "(Support) Instant Jumps to the target location, recovers 1 NRG and gains ▲Crit II and ▲Crit DMG I for 2 turns. ✦ Auxiliary Passive . Effect: When in Slugger Stance , increases the max range of this skill by 2 tiles.",
+      "note": "Instant Jumps to the target location, recovers 1 NRG and gains ▲Crit II and ▲Crit DMG I for 2 turns. ✦ Auxiliary Passive . Effect: When in S",
       "priority": 3
     },
     {
-      "name": "Strength Activation",
+      "name": "Steady Aim -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) After performing physical attacks, inflicts ▽ATK II , ▽DMG II and ×Passive Skills on the target for 2 turns. When dealing DMG outside the character's turn, recovers 1 NRG. Can be triggered up to 2 times per round.",
+      "note": "After performing physical attacks, inflicts ▽ATK II , ▽DMG II and ×Passive Skills on the target for 2 turns. When dealing DMG outside the ch",
+      "priority": 3
+    },
+    {
+      "name": "Strength Activation -",
       "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Swift Leap",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Slugger Stance",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Critical Strike",
-      "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Fatal Attack",
-      "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Shield Break - Enhanced",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Steady Aim",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) Increases the healing received by 10%. When receiving healing, gains ▲ DMG II for 1 turn. Skills That Can",
+      "note": "Increases the healing received by 10%. When receiving healing, gains ▲ DMG II for 1 turn. Skills That Can",
       "priority": 3
     }
   ],
   "build": {
-    "basicAttack": "Curved Shot",
+    "basicAttack": "Charged Attack",
     "reaction": "Strength Activation",
+    "ascension": "",
     "skills": [
-      "Scatter",
-      "Penetrating Arrow",
-      "Sundering Arrow",
       "Arrowstorm",
-      "Precise Shot",
-      "Swift Leap"
+      "Slugger Stance",
+      "Steady Aim"
     ],
     "weapon": "",
-    "trinket": "Maverick's Cloak",
-    "tarot": "Verdict of Justice"
+    "trinket": "",
+    "tarot": ""
   },
-  "summary": "is ability to interrupt enemy actions by applying [Alert] to allies.",
-  "pros": [],
-  "howToUse": "",
+  "summary": "here! Table of Contents SP Faycal Tier & Basic Info Strength & How to Use",
+  "pros": [
+    "Priority and Details  Arrowstorm: SP Faycal's main skill and a top priority for battles with multiple enemies. Sin",
+    "Slugger Stance: A skill that boosts DMG and prevents Alert from being interrupted when attacked,"
+  ],
+  "howToUse": "SP Faycal's main skill and a top priority for battles with multiple enemies. Since it has the [Rally Command] effect, it becomes even more powerful when used wi A skill that boosts DMG and prevents Alert from being interrupted when attacked, but at the cost of being unable to move. If movement is necessary for the stage Increases DMG dealt upon being healed. Try to maintain this buff by having a source of healing.",
   "starPriority": "",
-  "confidence": "medium",
-  "collectedAt": "2026-08-02T04:31:46.658Z",
-  "cleanedAt": "2026-08-02T04:32:57.417Z"
+  "confidence": "high",
+  "collectedAt": "2026-08-02T04:48:37.088Z"
 }

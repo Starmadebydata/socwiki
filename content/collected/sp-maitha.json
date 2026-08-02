@@ -1,13 +1,12 @@
 {
   "slug": "sp-maitha",
   "name": "SP Maitha",
-  "source": "public",
+  "source": "public-structured",
   "sources": [
     {
-      "type": "url",
-      "url": "https://gamewith.net/sword-of-convallaria/72572",
-      "fetchedAt": "2026-08-02T04:31:07.796Z",
-      "publisher": "gamewith"
+      "type": "gamewith-html-cache",
+      "id": "72572",
+      "parsedAt": "2026-08-02T04:48:37.017Z"
     }
   ],
   "role": "Watcher",
@@ -19,147 +18,170 @@
   "stats": {
     "move": null,
     "highJump": null,
-    "lowJump": null
+    "lowJump": 3
   },
   "skills": [
     {
-      "name": "Slash",
+      "name": "Arm Slam",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Basic Attack that activates a Rally Command. This is generally the recommended Basic Attack for most builds.",
+      "note": "A Basic Attack that activates a Rally Command. This is generally the recommended Basic Attack for most builds.",
+      "priority": 5
+    },
+    {
+      "name": "Reinforced Joints",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Reaction that grants Regeneration and increases the conversion effect of the DMG Buffer Module. This is generally the preferred Reaction for most builds.",
+      "note": "A Reaction that grants Regeneration and increases the conversion effect of the DMG Buffer Module. This is generally the preferred Reaction for most builds.",
+      "priority": 5
+    },
+    {
+      "name": "Peak Performance",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Passive Skill with an NRG Recovery effect that can also be triggered by Rally Response. It is especially useful for supporting the high NRG Cost of [Full-Armored Attack!], particularly at 4-stars or below, making it a high-priority choice.",
+      "note": "A Passive Skill with an NRG Recovery effect that can also be triggered by Rally Response. It is especially useful for supporting the high NRG Cost of [Full-Armo",
+      "priority": 4
     },
     {
       "name": "Whirling Hammer",
       "kind": "Active",
       "nrg": "1",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Maitha's Combo",
-      "kind": "Active",
-      "nrg": "2",
-      "cd": "4",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Bulwark Charge",
-      "kind": "Active",
-      "nrg": "1",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "description": "(Piercing DMG) Deals Piercing DMG equal to 50% of P.ATK to all enemies within 3 tiles of the character, and knocks adjacent enemies back by 1 tile. ✦ Gains Rally Response . Effect: When enemies exist within 3 tiles of the character, the character can consume 1 NRG and trigger this skill.",
+      "note": "Because it has Rally Response, this Skill is very powerful, as it can automatically activate after a Rally Command if you have enough NRG. Include it in your bu",
+      "priority": 4
     },
     {
       "name": "Crystal Burst Twin-Shot",
       "kind": "Active",
       "nrg": "2",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Piercing DMG) Rally Command Single-target attack. Deals Piercing DMG equal to 100% of P.ATK; if the character is in the same line as the target, additionally knocks the target back by 2 tiles. After attacking, removes 50% of the current buffer value. Then, deals piercing DMG equal to 50% of P.ATK to all enemies within a 1-tile radius of the target and knocks enemies adjacent to the target back by 1 tile.",
+      "note": "Rally Command Single-target attack. Deals Piercing DMG equal to 100% of P.ATK; if the character is in the same line as the target, additiona",
       "priority": 3
     },
     {
-      "name": "Emergency Toolbox",
+      "name": "Maitha's Base Skills Skill Range  Slash",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% Physical DMG. Whirling Hammer",
+      "note": "Deals 100% Physical DMG. Whirling Hammer",
+      "priority": 3
+    },
+    {
+      "name": "P Maitha's Base Skills Skill Range  Slash",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% Physical DMG.",
+      "note": "Deals 100% Physical DMG.",
+      "priority": 3
+    },
+    {
+      "name": "Peak Performance -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) At the end of the turn, additionally recovers 1 NRG; when NRG is 0, additionally recovers 1 NRG. ✦ Gains Rally Response . Effect: Triggers 1 instance of this skill's passive effect.",
+      "note": "At the end of the turn, additionally recovers 1 NRG; when NRG is 0, additionally recovers 1 NRG. ✦ Gains Rally Response . Effect: Triggers 1",
+      "priority": 3
+    },
+    {
+      "name": "RK1 Skill Range  Bulwark Charge",
+      "kind": "Active",
+      "nrg": "1",
+      "cd": "0",
+      "description": "(Piercing DMG) Rally Command Selects target to perform Charge ; if the target is an enemy, charges to their side and deals Piercing DMG equal to 80% of P.ATK. ✦ Auxiliary Passive . Effect: Increases Movement by 1 tile. After an active attack, the character can Move Again for a distance equal to the remaining Movement.",
+      "note": "Rally Command Selects target to perform Charge ; if the target is an enemy, charges to their side and deals Piercing DMG equal to 80% of P.A",
+      "priority": 3
+    },
+    {
+      "name": "RK3 Skill Range  Emergency Toolbox",
       "kind": "Active",
       "nrg": "0",
       "cd": "2",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Decision) Selects to use Field Repair Unit or Enhanced Charging Unit .",
+      "note": "Selects to use Field Repair Unit or Enhanced Charging Unit .",
       "priority": 3
     },
     {
-      "name": "Peak Performance",
+      "name": "RK5 Skill Range  Reinforced Joints -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) When having Regeneration , makes DMG Buffer Module additionally transfer DMG, converting every 10% regeneration effect to 5% buffer ratio. At the start of the turn, the character gains Regenration I for 2 turns.",
+      "note": "When having Regeneration , makes DMG Buffer Module additionally transfer DMG, converting every 10% regeneration effect to 5% buffer ratio. A",
+      "priority": 3
+    },
+    {
+      "name": "RK9 Skill Range  Feverish Attack",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% physical DMG and gains 20% Life Steal .",
+      "note": "Deals 100% physical DMG and gains 20% Life Steal .",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Field -",
       "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Aura) Decreases AoE DMG taken by all allies within 3 tiles around the character by 25%. Full-Armored Maitha, Attack! -",
+      "note": "Decreases AoE DMG taken by all allies within 3 tiles around the character by 25%. Full-Armored Maitha, Attack! -",
       "priority": 3
     },
     {
-      "name": "Reinforced Joints",
-      "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Spiky Shield",
-      "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Field Medic",
+      "name": "Skill Range  Field Medic",
       "kind": "Active",
       "nrg": "3",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Healing) Rally Command Removes all buffer value, heals all allies within 3 tiles of the character for 20% HP, and grants ▲ATK II , ▲P.DEF II , ▲M.DEF II , and Regenration II for 2 turns. ✦ Auxiliary Passive . Effect: Takes 50% DMG for allies within 3 tiles. Full-Armored Attack!",
+      "note": "Rally Command Removes all buffer value, heals all allies within 3 tiles of the character for 20% HP, and grants ▲ATK II , ▲P.DEF II , ▲M.DEF",
       "priority": 3
     },
     {
-      "name": "Feverish Attack",
-      "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Arm Slam",
-      "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Field",
+      "name": "SP Skill Skill Range  Maitha's Combo",
       "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "2",
+      "cd": "4",
+      "description": "(Physical DMG) Maitha deals 20% DMG 1 time, 50% DMG 3 times, and she knocks the target back by 2 tiles. When Maitha (Original) learns RK11 [Maitha's Combo] and SP Maitha is enhanced to 3-star, the SP Skill is unlocked.",
+      "note": "Maitha deals 20% DMG 1 time, 50% DMG 3 times, and she knocks the target back by 2 tiles. When Maitha (Original) learns RK11 [Maitha's Combo]",
+      "priority": 3
+    },
+    {
+      "name": "Spiky Shield -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) When hit by an active attack, the DMG taken is decreased by 10%. When receiving an Active Melee Attack, deals Piercing DMG to the attacker equal to 50% of the character's P.DEF. Skills That Can Be",
+      "note": "When hit by an active attack, the DMG taken is decreased by 10%. When receiving an Active Melee Attack, deals Piercing DMG to the attacker e",
       "priority": 3
     }
   ],
   "build": {
-    "basicAttack": "Slash",
+    "basicAttack": "Arm Slam",
     "reaction": "Reinforced Joints",
+    "ascension": "",
     "skills": [
       "Whirling Hammer",
-      "Maitha's Combo",
-      "Bulwark Charge",
-      "Emergency Toolbox",
-      "Peak Performance",
-      "Crystal Burst Twin-Shot"
+      "Peak Performance"
     ],
-    "weapon": "",
-    "trinket": "Great Company on the Journey",
-    "tarot": "Death"
+    "weapon": "Death",
+    "trinket": "",
+    "tarot": ""
   },
-  "summary": "excels at using AoE attacks that deal Piercing DMG , allowing her to deal consistent amounts of damage even against enemies with high DEF or Shields.",
+  "summary": "here! Table of Contents SP Maitha Tier & Basic Info Strength & How to Use",
   "pros": [],
-  "howToUse": "",
+  "howToUse": "Because it has Rally Response, this Skill is very powerful, as it can automatically activate after a Rally Command if you have enough NRG. Include it in your bu A Passive Skill with an NRG Recovery effect that can also be triggered by Rally Response. It is especially useful for supporting the high NRG Cost of [Full-Armo A Reaction that grants Regeneration and increases the conversion effect of the DMG Buffer Module. This is generally the preferred Reaction for most builds.",
   "starPriority": "",
-  "confidence": "medium",
-  "collectedAt": "2026-08-02T04:31:07.796Z",
-  "cleanedAt": "2026-08-02T04:32:57.417Z"
+  "confidence": "high",
+  "collectedAt": "2026-08-02T04:48:37.017Z"
 }

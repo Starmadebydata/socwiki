@@ -1,19 +1,12 @@
 {
   "slug": "yserinde",
   "name": "Yserinde",
-  "source": "public",
+  "source": "public-structured",
   "sources": [
     {
-      "type": "url",
-      "url": "https://gamewith.net/sword-of-convallaria/71495",
-      "fetchedAt": "2026-08-02T04:31:26.214Z",
-      "publisher": "gamewith"
-    },
-    {
-      "type": "url",
-      "url": "https://dotgg.gg/sword-of-convallaria/yserinde/",
-      "fetchedAt": "2026-08-02T04:31:56.920Z",
-      "publisher": "dotgg"
+      "type": "gamewith-html-cache",
+      "id": "71495",
+      "parsedAt": "2026-08-02T04:48:37.052Z"
     }
   ],
   "role": "Seeker",
@@ -25,16 +18,79 @@
   "stats": {
     "move": null,
     "highJump": null,
-    "lowJump": null
+    "lowJump": 4
   },
   "skills": [
     {
-      "name": "Straight Shot",
+      "name": "Endless Web",
+      "kind": "Aura",
+      "nrg": "—",
+      "cd": "—",
+      "description": "Generates a large number of \"Blood Plume Blades\" at once and grants an Aura that strengthens allies. Although it cannot be used again while the Aura is active, it's a main skill that should be equipped with the highest priority.",
+      "note": "Generates a large number of \"Blood Plume Blades\" at once and grants an Aura that strengthens allies. Although it cannot be used again while the Aura is active, ",
+      "priority": 5
+    },
+    {
+      "name": "Plume Rend",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Passive to prioritize when focusing on offense. Be mindful of activating it when you've placed a large number of Blood Plume Blades at once with [Endless Web], as it can deal significant damage to groups of enemies.",
+      "note": "A Passive to prioritize when focusing on offense. Be mindful of activating it when you've placed a large number of Blood Plume Blades at once with [Endless Web]",
+      "priority": 5
+    },
+    {
+      "name": "Royal Guard Escort",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "An excellent Passive that increases durability with Ice Armor and Deflection, while also allowing you to disengage or attack with its Move Again effect. The basic strategy is to generate many Blood Plume Blades and activate them with this skill.",
+      "note": "An excellent Passive that increases durability with Ice Armor and Deflection, while also allowing you to disengage or attack with its Move Again effect. The bas",
+      "priority": 5
+    },
+    {
+      "name": "Silent Wing",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Reaction that can significantly increase your durability with debuff removal and Armor of Ice - Extra. You should generally equip this.",
+      "note": "A Reaction that can significantly increase your durability with debuff removal and Armor of Ice - Extra. You should generally equip this.",
+      "priority": 5
+    },
+    {
+      "name": "Surefire Attack",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "The [×Dodge] debuff is useful in situations against enemy Seekers and more, so you should generally equip this Basic Attack.",
+      "note": "The [×Dodge] debuff is useful in situations against enemy Seekers and more, so you should generally equip this Basic Attack.",
+      "priority": 5
+    },
+    {
+      "name": "Plume Array",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "An excellent skill that can instantly grant a damage mitigation buff to allies. If you can also apply Deflection, it will greatly increase allies' durability, so equip it when focusing on defense in high-difficulty stages.",
+      "note": "An excellent skill that can instantly grant a damage mitigation buff to allies. If you can also apply Deflection, it will greatly increase allies' durability, s",
+      "priority": 4
+    },
+    {
+      "name": "Base Skills Skill Range  Straight Shot",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% Physical DMG.",
+      "note": "Deals 100% Physical DMG.",
+      "priority": 3
+    },
+    {
+      "name": "Counterattack -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) When hit by an active attack from the front or side , performs a basic attack to Strike Back if the attacker is within range, dealing 70% of basic attack's DMG. The effect can be activated up to 1 time per round. Skills That Can Be",
+      "note": "When hit by an active attack from the front or side , performs a basic attack to Strike Back if the attacker is within range, dealing 70% of",
       "priority": 3
     },
     {
@@ -42,17 +98,17 @@
       "kind": "Active",
       "nrg": "0",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Piercing DMG) Selects 1 location, deals Piercing DMG equal to 50% of P.ATK to all enemies within 1 tile of the target. ✦ This effect is considered as triggering Blood Plume Blade .",
+      "note": "Selects 1 location, deals Piercing DMG equal to 50% of P.ATK to all enemies within 1 tile of the target. ✦ This effect is considered as trig",
       "priority": 3
     },
     {
-      "name": "Royal Guard Escort",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "name": "Perfect Shield -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) When Unharmed , increases ATK and DEF by 10%. Skills That Can Be",
+      "note": "When Unharmed , increases ATK and DEF by 10%. Skills That Can Be",
       "priority": 3
     },
     {
@@ -60,110 +116,123 @@
       "kind": "Active",
       "nrg": "0",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Decision) Selects to use Phantom - Falling Feather or Phantom - Swift Feather . ✦ After using either skill, makes the next use of Plume Stratagem become Instant and costs no NRG.",
+      "note": "Selects to use Phantom - Falling Feather or Phantom - Swift Feather . ✦ After using either skill, makes the next use of Plume Stratagem beco",
       "priority": 3
     },
     {
-      "name": "Black Feather Field",
+      "name": "Plume Rend -",
+      "kind": "Passive",
+      "nrg": "0",
+      "cd": "0",
+      "description": "(Passive) After placing or triggering 4 Blood Plume Blades , deals Piercing DMG equal to 50% P.ATK to all enemies within 2 tiles of Blood Plume Blade or having Black Feather . ✦ This effect is considered as triggering Blood Plume Blade , but does not count towards this skill's trigger count.",
+      "note": "After placing or triggering 4 Blood Plume Blades , deals Piercing DMG equal to 50% P.ATK to all enemies within 2 tiles of Blood Plume Blade ",
+      "priority": 3
+    },
+    {
+      "name": "RK1 Skill Range  Royal Guard Escort -",
+      "kind": "Passive",
+      "nrg": "0",
+      "cd": "0",
+      "description": "(Passive) After any ally triggers Blood Plume Blade , Yserinde grants them Armor of Ice - Extra for 2 turns, and grants them Deflection and Move Again . ✦ When casting Plume Array or triggering Plume Rend , allies with Deflection are considered as having Blood Plume Blade .",
+      "note": "After any ally triggers Blood Plume Blade , Yserinde grants them Armor of Ice - Extra for 2 turns, and grants them Deflection and Move Again",
+      "priority": 3
+    },
+    {
+      "name": "RK11 Skill Range  Plume Array",
+      "kind": "Active",
+      "nrg": "1",
+      "cd": "2",
+      "description": "(Support) Instant Grants all allies in battle DMG Reduction II for 2 turns. If Blood Plume Blade exists within 2 tiles of the target or there are enemies with Black Feather , additionally grants them Deflection . Endless Web",
+      "note": "Instant Grants all allies in battle DMG Reduction II for 2 turns. If Blood Plume Blade exists within 2 tiles of the target or there are enem",
+      "priority": 3
+    },
+    {
+      "name": "RK3 Skill Range  Black Feather Field -",
       "kind": "Active",
       "nrg": "0",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Aura) All allies within 3 tiles of the character take 15% reduced DMG and Piercing DMG when having Deflection .",
+      "note": "All allies within 3 tiles of the character take 15% reduced DMG and Piercing DMG when having Deflection .",
       "priority": 3
     },
     {
-      "name": "Perfect Shield",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Silent Wing",
+      "name": "RK5 Skill Range  Silent Wing -",
       "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) After the character's Deflection triggers, dispells 1 debuff from the character and gains Armor of Ice - Extra for 2 turns. Counterattack -",
+      "note": "After the character's Deflection triggers, dispells 1 debuff from the character and gains Armor of Ice - Extra for 2 turns. Counterattack -",
       "priority": 3
     },
     {
-      "name": "Counterattack",
+      "name": "RK7 Skill Range  Invulnerable",
+      "kind": "Active",
+      "nrg": "1",
+      "cd": "5",
+      "description": "(Support) Gains DMG Reduction IV , Mind's Eye , and Immunity to Disrupt for 3 turns. Plume Rend -",
+      "note": "Gains DMG Reduction IV , Mind's Eye , and Immunity to Disrupt for 3 turns. Plume Rend -",
+      "priority": 3
+    },
+    {
+      "name": "RK9 Skill Range  Hypnotic Attack",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 80% magical DMG and grants a 30% chance to inflict Sleep on the target for 1 turn.",
+      "note": "Deals 80% magical DMG and grants a 30% chance to inflict Sleep on the target for 1 turn.",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Invulnerable",
+      "kind": "Active",
+      "nrg": "1",
+      "cd": "5",
+      "description": "(Support) Gains DMG Reduction IV , Mind's Eye , and Immunity to Disrupt for 3 turns.",
+      "note": "Gains DMG Reduction IV , Mind's Eye , and Immunity to Disrupt for 3 turns.",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Plume Array",
+      "kind": "Active",
+      "nrg": "1",
+      "cd": "2",
+      "description": "(Support) Instant Grants all allies in battle DMG Reduction II for 2 turns. If Blood Plume Blade exists within 2 tiles of the target or there are enemies with Black Feather , additionally grants them Deflection .",
+      "note": "Instant Grants all allies in battle DMG Reduction II for 2 turns. If Blood Plume Blade exists within 2 tiles of the target or there are enem",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Silent Wing -",
       "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) After the character's Deflection triggers, dispells 1 debuff from the character and gains Armor of Ice - Extra for 2 turns.",
+      "note": "After the character's Deflection triggers, dispells 1 debuff from the character and gains Armor of Ice - Extra for 2 turns.",
       "priority": 3
-    },
-    {
-      "name": "Plume Rend",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Hypnotic Attack",
-      "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Surefire Attack",
-      "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Endless Web",
-      "kind": "Active",
-      "nrg": "4",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Armor of Ice",
-      "kind": "Active",
-      "note": "Priority section extract",
-      "priority": 4,
-      "description": ""
     }
   ],
   "build": {
-    "basicAttack": "Straight Shot",
-    "reaction": "Royal Guard Escort",
+    "basicAttack": "Surefire Attack",
+    "reaction": "Silent Wing",
+    "ascension": "",
     "skills": [
-      "Feather Storm",
-      "Phantom Shift",
-      "Black Feather Field",
-      "Perfect Shield",
-      "Silent Wing",
-      "Plume Rend"
+      "Endless Web",
+      "Plume Rend",
+      "Royal Guard Escort"
     ],
-    "weapon": "",
+    "weapon": "Newborn Blade",
     "trinket": "",
-    "tarot": "Death"
+    "tarot": ""
   },
-  "summary": "is a character who not only excels in Piercing DMG and DoTs, but is also capable of significantly increasing her own and her allies' durability, which is rare for a Seeker .",
-  "pros": [],
-  "howToUse": "",
+  "summary": "here! Table of Contents Yserinde Tier & Basic Info Strength & How to Use",
+  "pros": [
+    "Royal Guard Escort: An excellent Passive that increases durability with Ice Armor and Deflection, wh",
+    "Silent Wing: A Reaction that can significantly increase your durability with debuff removal a",
+    "Plume Rend: A Passive to prioritize when focusing on offense. Be mindful of activating it wh",
+    "Surefire Attack: The [×Dodge] debuff is useful in situations against enemy Seekers and more, so y"
+  ],
+  "howToUse": "An excellent Passive that increases durability with Ice Armor and Deflection, while also allowing you to disengage or attack with its Move Again effect. The bas A Reaction that can significantly increase your durability with debuff removal and Armor of Ice - Extra. You should generally equip this. A Passive to prioritize when focusing on offense. Be mindful of activating it when you've placed a large number of Blood Plume Blades at once with [Endless Web]",
   "starPriority": "",
-  "confidence": "medium",
-  "collectedAt": "2026-08-02T04:31:56.925Z",
-  "cleanedAt": "2026-08-02T04:32:57.419Z"
+  "confidence": "high",
+  "collectedAt": "2026-08-02T04:48:37.052Z"
 }

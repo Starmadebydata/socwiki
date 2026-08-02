@@ -13,10 +13,12 @@
     "cf-typegen": "wrangler types --env-interface CloudflareEnv ./cloudflare-env.d.ts",
     "collect:public": "node scripts/collect/scrape-public.mjs",
     "collect:clean": "node scripts/collect/clean-collected.mjs",
+    "collect:reparse": "node scripts/collect/reparse-and-apply.mjs",
     "collect:ocr": "node scripts/collect/ocr-screenshots.mjs",
     "collect:validate": "node scripts/collect/validate.mjs",
     "collect:merge": "node scripts/collect/merge-to-site.mjs",
-    "collect": "npm run collect:public && npm run collect:clean && npm run collect:validate"
+    "collect": "npm run collect:public && npm run collect:reparse && npm run collect:validate",
+    "collect:auto": "npm run collect && npm run build"
   },
   "dependencies": {
     "@opennextjs/cloudflare": "^1.19.9",

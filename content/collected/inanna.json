@@ -1,19 +1,12 @@
 {
   "slug": "inanna",
   "name": "Inanna",
-  "source": "public",
+  "source": "public-structured",
   "sources": [
     {
-      "type": "url",
-      "url": "https://gamewith.net/sword-of-convallaria/48251",
-      "fetchedAt": "2026-08-02T04:30:59.216Z",
-      "publisher": "gamewith"
-    },
-    {
-      "type": "url",
-      "url": "https://dotgg.gg/sword-of-convallaria/inanna/",
-      "fetchedAt": "2026-08-02T04:31:55.267Z",
-      "publisher": "dotgg"
+      "type": "gamewith-html-cache",
+      "id": "48251",
+      "parsedAt": "2026-08-02T04:48:36.999Z"
     }
   ],
   "role": "Watcher",
@@ -25,43 +18,79 @@
   "stats": {
     "move": null,
     "highJump": null,
-    "lowJump": null
+    "lowJump": 3
   },
   "skills": [
     {
-      "name": "Energy Wave",
+      "name": "Armor Piercing Strike",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "nrg": "—",
+      "cd": "—",
+      "description": "If other characters cannot apply P.DEF or M.DEF DOWN debuffs, including this Basic Attack is a viable support option.",
+      "note": "If other characters cannot apply P.DEF or M.DEF DOWN debuffs, including this Basic Attack is a viable support option.",
+      "priority": 5
     },
     {
-      "name": "Healing Spell",
-      "kind": "Active",
-      "nrg": "1",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "name": "Battlefield Trial",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Reaction that reduces damage taken and increases M.ATK. Since increasing M.ATK also increases healing amount, this Reaction is recommended.",
+      "note": "A Reaction that reduces damage taken and increases M.ATK. Since increasing M.ATK also increases healing amount, this Reaction is recommended.",
+      "priority": 5
     },
     {
-      "name": "kill Range Convallaria - Blooming Horizon",
-      "kind": "Active",
-      "nrg": "2",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "name": "Merciful Strike",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 80% magical DMG and increases the effect of the next healing skill by 15%, lasting for 2 turns.",
+      "note": "Since it can enhance the effect of Inanna's healing Skills this Basic Attack is recommended.",
+      "priority": 5
     },
     {
       "name": "Princess's Prayer",
       "kind": "Active",
-      "nrg": "2",
-      "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "Easily considered Inanna's best skill, its unique Act Again effect allows for various uses like reusing Attackers, stacking Support, or Healing. It's an extremely powerful Skill so prioritize including it in your build.",
+      "note": "Easily considered Inanna's best skill, its unique Act Again effect allows for various uses like reusing Attackers, stacking Support, or Healing. It's an extreme",
+      "priority": 5
+    },
+    {
+      "name": "Flight of the Princess",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "The Trait targets all surrounding allies, and it's a powerful Skill that increases healing amount by 50%. Due to [Invisibility], Inanna cannot be targeted by single-target attacks, allowing her to obstruct the enemy's path. Prioritize including it in your build if Inanna is focused on healing.",
+      "note": "The Trait targets all surrounding allies, and it's a powerful Skill that increases healing amount by 50%. Due to [Invisibility], Inanna cannot be targeted by si",
+      "priority": 4
+    },
+    {
+      "name": "Princess's Comfort",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "Although it's slightly difficult to use because it is self-centered, it's a valuable AoE healing + debuff removal Skill.",
+      "note": "Although it's slightly difficult to use because it is self-centered, it's a valuable AoE healing + debuff removal Skill.",
+      "priority": 4
+    },
+    {
+      "name": "Base Skills Skill Range  Energy Wave",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deal 80% Magical DMG.",
+      "note": "Deal 80% Magical DMG.",
+      "priority": 3
+    },
+    {
+      "name": "DEF Command -",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Aura) Increases M.DEF by 30% for other allies within 2 tiles around the character.",
+      "note": "Increases M.DEF by 30% for other allies within 2 tiles around the character.",
       "priority": 3
     },
     {
@@ -69,35 +98,17 @@
       "kind": "Active",
       "nrg": "1",
       "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Support) Grants ▲ P.DEF to all allies within the target location and grants immunity to Defense Attribute Debuffs , lasting for 2 turns.",
+      "note": "Grants ▲ P.DEF to all allies within the target location and grants immunity to Defense Attribute Debuffs , lasting for 2 turns.",
       "priority": 3
     },
     {
-      "name": "Battlefield Trial",
-      "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Protection of Light",
-      "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Soul Mate",
+      "name": "Healing Spell",
       "kind": "Active",
-      "nrg": "2",
-      "cd": "2",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "1",
+      "cd": "0",
+      "description": "(Healing) Heals the target by 100% of M.ATK and dispels 1 debuff on the target. SP Skill Skill",
+      "note": "Heals the target by 100% of M.ATK and dispels 1 debuff on the target. SP Skill Skill",
       "priority": 3
     },
     {
@@ -105,74 +116,94 @@
       "kind": "Active",
       "nrg": "2",
       "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Magical DMG) Deals 70% AoE DMG to all enemies within a 2-tile radius of the target and dispel 2 buffs .",
+      "note": "Deals 70% AoE DMG to all enemies within a 2-tile radius of the target and dispel 2 buffs .",
       "priority": 3
     },
     {
-      "name": "Armor Piercing Strike",
+      "name": "Protection of Light -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) When hit by an active single-target attack, the DMG taken is decreased by 30%. This effect can be activated 1 time per round. Skills That Can",
+      "note": "When hit by an active single-target attack, the DMG taken is decreased by 30%. This effect can be activated 1 time per round. Skills That Ca",
+      "priority": 3
+    },
+    {
+      "name": "Range  Convallaria - Blooming Horizon",
+      "kind": "Active",
+      "nrg": "2",
+      "cd": "0",
+      "description": "(Magical DMG) Deals magical DMG equal to 100% P.ATK to all enemies in a 3x3 area in front; after attacking, the character gains DMG Reduction II for 2 turns. When hitting only 1 enemy, the skill multiplier is increased to 150%. The SP Skill is unlocked when SP Inanna learns RK1 Convallaria Swordplay and Inanna (Original) is upgraded to 3-stars.",
+      "note": "Deals magical DMG equal to 100% P.ATK to all enemies in a 3x3 area in front; after attacking, the character gains DMG Reduction II for 2 tur",
+      "priority": 3
+    },
+    {
+      "name": "RK1 Skill Range  Princess's Prayer",
+      "kind": "Active",
+      "nrg": "2",
+      "cd": "3",
+      "description": "(Support) Allows 1 ally that has already acted to Act Again , and grants this ally ▲ ATK II and ▲ M.DEF II for 2 turns. If the target is the Guard of the Princess , additionally heals the Guard for 60% M.ATK.",
+      "note": "Allows 1 ally that has already acted to Act Again , and grants this ally ▲ ATK II and ▲ M.DEF II for 2 turns. If the target is the Guard of ",
+      "priority": 3
+    },
+    {
+      "name": "RK3 Skill Range  Princess's Comfort",
+      "kind": "Active",
+      "nrg": "2",
+      "cd": "0",
+      "description": "(Healing) Inanna heals all allies within a 2-tile radius for 60% of her M.ATK and dispels 2 of their debuffs. Guard! [Skill] Cost: 0 / CD: 3 (Support) Instant Teleports the Guard of the Princess in front of Inanna and grants sthe Guard Potential Burst for 2 turns. When the Guard is defeated, the skill summons a new Guard of the Princess .",
+      "note": "Inanna heals all allies within a 2-tile radius for 60% of her M.ATK and dispels 2 of their debuffs. Guard! [Skill] Cost: 0 / CD: 3 (Support)",
+      "priority": 3
+    },
+    {
+      "name": "RK5 Skill Range  Battlefield Trial -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) Decreases DMG taken by 8%. For each character defeated within 5 tiles around the character, increases M.ATK by 6%, up to 30%.",
+      "note": "Decreases DMG taken by 8%. For each character defeated within 5 tiles around the character, increases M.ATK by 6%, up to 30%.",
+      "priority": 3
+    },
+    {
+      "name": "RK9 Skill Range  Armor Piercing Strike",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 80% magical DMG and inflicts ▽ P.DEF I and ▽ M.DEF I on the target for 2 turns.",
+      "note": "Deals 80% magical DMG and inflicts ▽ P.DEF I and ▽ M.DEF I on the target for 2 turns.",
       "priority": 3
     },
     {
-      "name": "Merciful Strike",
-      "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "DEF Command",
+      "name": "Skill Range  Soul Mate",
       "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "2",
+      "cd": "2",
+      "description": "(Support) Grants all allies within 3 tiles around the character Co-Attack and Co-Defense for 3 turns. For Iria allies, the target count for Co-Attack and Co-Defense is additionally increased by 1.",
+      "note": "Grants all allies within 3 tiles around the character Co-Attack and Co-Defense for 3 turns. For Iria allies, the target count for Co-Attack ",
       "priority": 3
-    },
-    {
-      "name": "Flight of the Princess",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "5",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Convallaria Swordplay",
-      "kind": "Active",
-      "note": "Name confirmed in page text",
-      "priority": 4,
-      "description": ""
     }
   ],
   "build": {
-    "basicAttack": "Energy Wave",
+    "basicAttack": "Armor Piercing Strike",
     "reaction": "Battlefield Trial",
+    "ascension": "",
     "skills": [
-      "Healing Spell",
-      "kill Range Convallaria - Blooming Horizon",
       "Princess's Prayer",
-      "Defense Boost",
-      "Soul Mate",
-      "Light of Sanction"
+      "Flight of the Princess"
     ],
     "weapon": "",
-    "trinket": "Life Fondness",
-    "tarot": "The Empress"
+    "trinket": "",
+    "tarot": ""
   },
-  "summary": "is already strong even without star upgrades, but she gets even better at each key star level.",
-  "pros": [],
-  "howToUse": "",
+  "summary": "here! Table of Contents Inanna Tier & Basic Info Strength & How to Use",
+  "pros": [
+    "Princess's Prayer: Easily considered Inanna's best skill, its unique Act Again effect allows for va",
+    "Battlefield Trial: A Reaction that reduces damage taken and increases M.ATK. Since increasing M.ATK",
+    "Merciful Strike: Since it can enhance the effect of Inanna's healing Skills this Basic Attack is "
+  ],
+  "howToUse": "Easily considered Inanna's best skill, its unique Act Again effect allows for various uses like reusing Attackers, stacking Support, or Healing. It's an extreme A Reaction that reduces damage taken and increases M.ATK. Since increasing M.ATK also increases healing amount, this Reaction is recommended. Since it can enhance the effect of Inanna's healing Skills this Basic Attack is recommended.",
   "starPriority": "",
-  "confidence": "medium",
-  "collectedAt": "2026-08-02T04:31:55.269Z",
-  "cleanedAt": "2026-08-02T04:32:57.414Z"
+  "confidence": "high",
+  "collectedAt": "2026-08-02T04:48:36.999Z"
 }

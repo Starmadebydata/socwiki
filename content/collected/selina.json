@@ -1,156 +1,222 @@
 {
   "slug": "selina",
   "name": "Selina",
-  "source": "public",
+  "source": "public-structured",
   "sources": [
     {
-      "type": "url",
-      "url": "https://gamewith.net/sword-of-convallaria/75813",
-      "fetchedAt": "2026-08-02T04:31:34.957Z",
-      "publisher": "gamewith"
+      "type": "gamewith-html-cache",
+      "id": "75813",
+      "parsedAt": "2026-08-02T04:48:37.066Z"
     }
   ],
   "role": "Seeker",
   "factions": [
     "Papal States",
     "Union",
-    "SoC",
-    "Drifter"
+    "Drifter",
+    "SoC"
   ],
   "rarity": "Legendary",
   "stats": {
     "move": null,
     "highJump": null,
-    "lowJump": null
+    "lowJump": 4
   },
   "skills": [
     {
-      "name": "Slash",
+      "name": "Divine Verdict",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "nrg": "—",
+      "cd": "—",
+      "description": "A powerful Basic Attack that is both ranged and area-of-effect. As a Holy Swordplay attack, it strikes twice, including once after the Prepared phase. Generally, this should always be included in your build.",
+      "note": "A powerful Basic Attack that is both ranged and area-of-effect. As a Holy Swordplay attack, it strikes twice, including once after the Prepared phase. Generally",
+      "priority": 5
     },
     {
       "name": "Holy Sword - Full Moon",
-      "kind": "Active",
+      "kind": "Passive",
       "nrg": "3",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Will to Survive",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "2",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "description": "(Physical DMG) Holy Swordplay : Deals 60% AoE DMG to all enemies within 3 tiles of the character. Before attacking, gains ▲ATK II , ▲Crit II , and Shield Regeneration II for 2 turns. ✦ Auxiliary Passive : The caster can jump over allies, enemies, neutral characters, and items. When having Shield , reduces DMG taken by 30%. For each enemy within 3 tiles of the character, reduces DMG taken by 10%, up to 40%.",
+      "note": "Although the damage dealt per hit is relatively low, this is a powerful Skill that balances offense and defense through its Auxiliary Passive and the Buffs it p",
+      "priority": 5
     },
     {
       "name": "Knight's Oath",
       "kind": "Active",
-      "nrg": "0",
-      "cd": "4",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "nrg": "—",
+      "cd": "—",
+      "description": "An extremely powerful Skill that grants a Physical Shield equal to 100% of HP to all allies within a wide area. Union Characters can gain additional effects from it, making them highly recommended to use together. Note that the Shield duration for allies other than yourself is only 1 turn, and the CD is also very long at 4.",
+      "note": "An extremely powerful Skill that grants a Physical Shield equal to 100% of HP to all allies within a wide area. Union Characters can gain additional effects fro",
+      "priority": 5
     },
     {
-      "name": "Holy Sword - Starfall Wrath",
-      "kind": "Active",
-      "nrg": "4",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Hardening",
+      "name": "Luminous Edges",
       "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Rallying Banner",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Reaction Skill that grants a Physical Shield. Generally, this should always be included in your build.",
+      "note": "A Reaction Skill that grants a Physical Shield. Generally, this should always be included in your build.",
+      "priority": 5
     },
     {
       "name": "Sword Inscription",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Skill that grants three Passive effects. Generally, use Luxite Swordmark for HP/NRG Recovery, while Echo Swordmark increases the number of attacks in a Combo Accumulation by 1–2 when conditions are met. Choose between them depending on the situation.",
+      "note": "A Skill that grants three Passive effects. Generally, use Luxite Swordmark for HP/NRG Recovery, while Echo Swordmark increases the number of attacks in a Combo ",
+      "priority": 5
     },
     {
-      "name": "Divine Verdict",
-      "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "name": "Holy Sword - Starfall Wrath",
+      "kind": "Passive",
+      "nrg": "4",
+      "cd": "0",
+      "description": "(Physical DMG) Holy Swordplaay : Deals 130% AoE DMG to all enemies in a 3 x 5 area in the target's direction; for each additional enemy hit, reduces the skill multiplier by 10%, down to a minimum of 90%. ✦ Before attacking, dispels 2 Attribute Buffs from the target and inflicts ×Attribute Buff and ▽Move I for 2 turns. ✦ Then knocks back the first enemy in each column within a 3x4 area by 1 tile.",
+      "note": "A Holy Swordplay Skill with high damage output. It is powerful thanks to its Knockback and Attribute Buff removal effects, but compared to [Holy Sword - Full Mo",
+      "priority": 4
     },
     {
       "name": "Critical Strike",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% physical DMG and increases Crit by 15% before attacking. Skills That Can Be",
+      "note": "Deals 100% physical DMG and increases Crit by 15% before attacking. Skills That Can Be",
       "priority": 3
     },
     {
-      "name": "All Preparations Complete",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "name": "Hardening -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) When hit by an active attack, the DMG taken is decreased by 8%. After being attacked, the character gains DMG Reduction II for 2 turns.",
+      "note": "When hit by an active attack, the DMG taken is decreased by 8%. After being attacked, the character gains DMG Reduction II for 2 turns.",
       "priority": 3
     },
     {
-      "name": "Holy Sword",
+      "name": "RK1 Skill Range  Attack Command -",
       "kind": "Active",
-      "note": "Priority section extract",
-      "priority": 4,
-      "description": ""
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Aura) Increases ATK by 12% for other allies within 2 tiles around the character.",
+      "note": "Increases ATK by 12% for other allies within 2 tiles around the character.",
+      "priority": 3
+    },
+    {
+      "name": "RK11 Skill Range  Solemnity -",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Aura) Decreases ATK of all enemies within the character's 2-tile radius by 10%. All Preparations Complete -",
+      "note": "Decreases ATK of all enemies within the character's 2-tile radius by 10%. All Preparations Complete -",
+      "priority": 3
+    },
+    {
+      "name": "RK3 Skill Range  Knight's Oath",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "4",
+      "description": "(Support) Instant Grants all allies within 3 tiles of the target a Physical Shield equal to 100% of HP for 1 turn. ✦ If the above allies are from the Union : gains ▲Move I , ▲SPD II , and ▲ATK II for 2 turns; if they are allies, additionally reduces the CD of all their skills by 1 turn. Holy Sword - Starfall",
+      "note": "Instant Grants all allies within 3 tiles of the target a Physical Shield equal to 100% of HP for 1 turn. ✦ If the above allies are from the ",
+      "priority": 3
+    },
+    {
+      "name": "RK5 Skill Range  Luminous Edges -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) After being actively attacked, gains a Physical Shield equal to 25% of HP. Can be triggered up to 2 times per round.",
+      "note": "After being actively attacked, gains a Physical Shield equal to 25% of HP. Can be triggered up to 2 times per round.",
+      "priority": 3
+    },
+    {
+      "name": "RK7 Skill Range  Rallying Banner",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "3",
+      "description": "(Support) Instant Places Knight's Banner on the target empty tile . ✦ Auxiliary Passive : When the character is in any Common Aura that increases ATK or DEF, increases Crit by 15%.",
+      "note": "Instant Places Knight's Banner on the target empty tile . ✦ Auxiliary Passive : When the character is in any Common Aura that increases ATK ",
+      "priority": 3
+    },
+    {
+      "name": "RK9 Skill Range  Divine Verdict",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Holy Swordplay : Deals 45% physical DMG to all enemies within a 1-tile radius of the target location, and increases DMG against the central target by an additional 30%.",
+      "note": "Holy Swordplay : Deals 45% physical DMG to all enemies within a 1-tile radius of the target location, and increases DMG against the central ",
+      "priority": 3
+    },
+    {
+      "name": "Selina's Base Skills Skill Range  Slash",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% Physical DMG.",
+      "note": "Deals 100% Physical DMG.",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Knight's Oath",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "4",
+      "description": "(Support) Instant Grants all allies within 3 tiles of the target a Physical Shield equal to 100% of HP for 1 turn. ✦ If the above allies are from the Union : gains ▲Move I , ▲SPD II , and ▲ATK II for 2 turns; if they are allies, additionally reduces the CD of all their skills by 1 turn.",
+      "note": "Instant Grants all allies within 3 tiles of the target a Physical Shield equal to 100% of HP for 1 turn. ✦ If the above allies are from the ",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Solemnity -",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Aura) Decreases ATK of all enemies within the character's 2-tile radius by 10%.",
+      "note": "Decreases ATK of all enemies within the character's 2-tile radius by 10%.",
+      "priority": 3
+    },
+    {
+      "name": "Will to Survive -",
+      "kind": "Passive",
+      "nrg": "0",
+      "cd": "2",
+      "description": "(Passive) If the character is Dying at the start of the turn, recovers 50% HP and 2 NRG. Effect CD: 2 turns. Skills That Can Be",
+      "note": "If the character is Dying at the start of the turn, recovers 50% HP and 2 NRG. Effect CD: 2 turns. Skills That Can Be",
+      "priority": 3
+    },
+    {
+      "name": "Wrath",
+      "kind": "Active",
+      "nrg": "4",
+      "cd": "0",
+      "description": "(Physical DMG) Holy Swordplaay : Deals 130% AoE DMG to all enemies in a 3 x 5 area in the target's direction; for each additional enemy hit, reduces the skill multiplier by 10%, down to a minimum of 90%. ✦ Before attacking, dispels 2 Attribute Buffs from the target and inflicts ×Attribute Buff and ▽Move I for 2 tu",
+      "note": "Holy Swordplaay : Deals 130% AoE DMG to all enemies in a 3 x 5 area in the target's direction; for each additional enemy hit, reduces the sk",
+      "priority": 3
     }
   ],
   "build": {
-    "basicAttack": "Slash",
-    "reaction": "Hardening",
+    "basicAttack": "Divine Verdict",
+    "reaction": "Luminous Edges",
+    "ascension": "",
     "skills": [
       "Holy Sword - Full Moon",
-      "Will to Survive",
       "Knight's Oath",
-      "Holy Sword - Starfall Wrath",
-      "Rallying Banner",
       "Sword Inscription"
     ],
-    "weapon": "",
-    "trinket": "Maverick's Cloak",
-    "tarot": "Verdict of Justice"
+    "weapon": "Verdict of Justice",
+    "trinket": "",
+    "tarot": ""
   },
-  "summary": "Durable AoE Magic Attacker - Can Attack Consecutively - Grants Shields to Self and Allies - Can Adapt with Swordmarks How to Get - Obtain from Gacha (Summon) Selina Pros and Strength Selina's Character Overview AoE M.",
-  "pros": [],
-  "howToUse": "",
+  "summary": "here! Table of Contents Selina Tier & Basic Info Strength & How to Use",
+  "pros": [
+    "Holy Sword - Full Moon: Although the damage dealt per hit is relatively low, this is a powerful Skill th",
+    "Knight's Oath: An extremely powerful Skill that grants a Physical Shield equal to 100% of HP to",
+    "Luminous Edges: A Reaction Skill that grants a Physical Shield. Generally, this should always be",
+    "Sword Inscription: A Skill that grants three Passive effects. Generally, use Luxite Swordmark for H"
+  ],
+  "howToUse": "Although the damage dealt per hit is relatively low, this is a powerful Skill that balances offense and defense through its Auxiliary Passive and the Buffs it p An extremely powerful Skill that grants a Physical Shield equal to 100% of HP to all allies within a wide area. Union Characters can gain additional effects fro A Reaction Skill that grants a Physical Shield. Generally, this should always be included in your build.",
   "starPriority": "",
-  "confidence": "medium",
-  "collectedAt": "2026-08-02T04:31:34.957Z",
-  "cleanedAt": "2026-08-02T04:32:57.416Z"
+  "confidence": "high",
+  "collectedAt": "2026-08-02T04:48:37.066Z"
 }

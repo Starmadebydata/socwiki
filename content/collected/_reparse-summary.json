@@ -1,0 +1,320 @@
+{
+  "at": "2026-08-02T04:48:37.096Z",
+  "results": [
+    {
+      "slug": "sp-inanna",
+      "status": "ok",
+      "skills": 21,
+      "confidence": "high",
+      "ba": "Sword - Dawnlight",
+      "re": "Experienced Fighter"
+    },
+    {
+      "slug": "col",
+      "status": "ok",
+      "skills": 19,
+      "confidence": "high",
+      "ba": "Hidden Thorn",
+      "re": "Eerie Footwork"
+    },
+    {
+      "slug": "inanna",
+      "status": "ok",
+      "skills": 18,
+      "confidence": "high",
+      "ba": "Armor Piercing Strike",
+      "re": "Battlefield Trial"
+    },
+    {
+      "slug": "taair",
+      "status": "ok",
+      "skills": 17,
+      "confidence": "high",
+      "ba": "Dispelling Strike",
+      "re": "Pacifism"
+    },
+    {
+      "slug": "estra",
+      "status": "ok",
+      "skills": 17,
+      "confidence": "medium",
+      "ba": "Spine Pierce",
+      "re": ""
+    },
+    {
+      "slug": "camelot",
+      "status": "ok",
+      "skills": 20,
+      "confidence": "high",
+      "ba": "Crushing",
+      "re": "King's Fighting Spirit"
+    },
+    {
+      "slug": "kvare",
+      "status": "ok",
+      "skills": 23,
+      "confidence": "high",
+      "ba": "Infectious Attack",
+      "re": "Entrapping"
+    },
+    {
+      "slug": "cocoa",
+      "status": "ok",
+      "skills": 11,
+      "confidence": "medium",
+      "ba": "Armor-Piercing Strike",
+      "re": ""
+    },
+    {
+      "slug": "sp-maitha",
+      "status": "ok",
+      "skills": 16,
+      "confidence": "high",
+      "ba": "Arm Slam",
+      "re": "Reinforced Joints"
+    },
+    {
+      "slug": "sp-samantha",
+      "status": "ok",
+      "skills": 21,
+      "confidence": "high",
+      "ba": "Light of Sanction",
+      "re": "Indestructible Faith"
+    },
+    {
+      "slug": "maitha",
+      "status": "ok",
+      "skills": 16,
+      "confidence": "medium",
+      "ba": "Armor-Piercing Strike Block Counter Leave",
+      "re": "It"
+    },
+    {
+      "slug": "xavier",
+      "status": "ok",
+      "skills": 17,
+      "confidence": "high",
+      "ba": "Charged Attack Indomitable Spirit Daring",
+      "re": "Vanguard"
+    },
+    {
+      "slug": "rawiyah",
+      "status": "ok",
+      "skills": 18,
+      "confidence": "medium",
+      "ba": "Gash Screw",
+      "re": "Raging Winds"
+    },
+    {
+      "slug": "gloria",
+      "status": "ok",
+      "skills": 17,
+      "confidence": "high",
+      "ba": "Lance of Justice",
+      "re": "Front Defense"
+    },
+    {
+      "slug": "faycal",
+      "status": "ok",
+      "skills": 13,
+      "confidence": "medium",
+      "ba": "Fatal Attack",
+      "re": ""
+    },
+    {
+      "slug": "beryl",
+      "status": "ok",
+      "skills": 17,
+      "confidence": "medium",
+      "ba": "Scorching Attack",
+      "re": "Cutie"
+    },
+    {
+      "slug": "samantha",
+      "status": "ok",
+      "skills": 17,
+      "confidence": "medium",
+      "ba": "Merciful Strike",
+      "re": ""
+    },
+    {
+      "slug": "dantalion",
+      "status": "ok",
+      "skills": 14,
+      "confidence": "medium",
+      "ba": "White Sword Air",
+      "re": "Royalty Untamed Spirit"
+    },
+    {
+      "slug": "magnus",
+      "status": "ok",
+      "skills": 20,
+      "confidence": "high",
+      "ba": "Feverish Attack",
+      "re": "Steel"
+    },
+    {
+      "slug": "anna",
+      "status": "ok",
+      "skills": 13,
+      "confidence": "high",
+      "ba": "Invigorating Strike",
+      "re": "Preemptive Intercept"
+    },
+    {
+      "slug": "credenza",
+      "status": "ok",
+      "skills": 21,
+      "confidence": "high",
+      "ba": "Merciful Strike",
+      "re": "Radiant Barrier"
+    },
+    {
+      "slug": "lutfi",
+      "status": "ok",
+      "skills": 17,
+      "confidence": "high",
+      "ba": "Hidden Piece",
+      "re": "Disturbance"
+    },
+    {
+      "slug": "yserinde",
+      "status": "ok",
+      "skills": 21,
+      "confidence": "high",
+      "ba": "Surefire Attack",
+      "re": "Silent Wing"
+    },
+    {
+      "slug": "yennefer",
+      "status": "ok",
+      "skills": 13,
+      "confidence": "medium",
+      "ba": "Charged Attack",
+      "re": ""
+    },
+    {
+      "slug": "geralt",
+      "status": "ok",
+      "skills": 13,
+      "confidence": "medium",
+      "ba": "Powerful Attack",
+      "re": ""
+    },
+    {
+      "slug": "triss",
+      "status": "ok",
+      "skills": 15,
+      "confidence": "medium",
+      "ba": "Scorching Attack Magic Barrier The",
+      "re": "Fearless"
+    },
+    {
+      "slug": "ciri",
+      "status": "ok",
+      "skills": 20,
+      "confidence": "high",
+      "ba": "Fatal Attack The Lion Cub",
+      "re": "Cintra The Lady"
+    },
+    {
+      "slug": "clara",
+      "status": "ok",
+      "skills": 11,
+      "confidence": "medium",
+      "ba": "Shield Bash",
+      "re": "Absolute Steadfast Heavy Armor"
+    },
+    {
+      "slug": "selina",
+      "status": "ok",
+      "skills": 19,
+      "confidence": "high",
+      "ba": "Divine Verdict",
+      "re": "Luminous Edges"
+    },
+    {
+      "slug": "heshan",
+      "status": "ok",
+      "skills": 18,
+      "confidence": "high",
+      "ba": "Chaos March",
+      "re": "Echo in the Mountains"
+    },
+    {
+      "slug": "shams",
+      "status": "ok",
+      "skills": 18,
+      "confidence": "high",
+      "ba": "Sandfall Breach",
+      "re": "Sigil's Protection"
+    },
+    {
+      "slug": "shahnaz",
+      "status": "ok",
+      "skills": 18,
+      "confidence": "high",
+      "ba": "Luxite Pulse",
+      "re": "Origin - Transcendent Form"
+    },
+    {
+      "slug": "lukamar",
+      "status": "ok",
+      "skills": 18,
+      "confidence": "high",
+      "ba": "Sealing Attack",
+      "re": "Evil-crusher"
+    },
+    {
+      "slug": "ayishah",
+      "status": "ok",
+      "skills": 21,
+      "confidence": "high",
+      "ba": "Dispelling Strike",
+      "re": "Lunar Shadow"
+    },
+    {
+      "slug": "sp-nungal",
+      "status": "ok",
+      "skills": 19,
+      "confidence": "high",
+      "ba": "Sealing Attack",
+      "re": "Poised Elegance"
+    },
+    {
+      "slug": "sp-rawiyah",
+      "status": "ok",
+      "skills": 17,
+      "confidence": "high",
+      "ba": "Powerful Attack",
+      "re": "I'm"
+    },
+    {
+      "slug": "sp-faycal",
+      "status": "ok",
+      "skills": 20,
+      "confidence": "high",
+      "ba": "Charged Attack",
+      "re": "Strength Activation"
+    },
+    {
+      "slug": "tristan",
+      "status": "ok",
+      "skills": 20,
+      "confidence": "high",
+      "ba": "Fatal Attack",
+      "re": "Street Style"
+    },
+    {
+      "slug": "simona",
+      "status": "ok",
+      "skills": 17,
+      "confidence": "medium",
+      "ba": "Ice-made Sword",
+      "re": ""
+    }
+  ],
+  "eligible": 39,
+  "high": 26,
+  "medium": 13
+}

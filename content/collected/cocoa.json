@@ -1,19 +1,12 @@
 {
   "slug": "cocoa",
   "name": "Cocoa",
-  "source": "public",
+  "source": "public-structured",
   "sources": [
     {
-      "type": "url",
-      "url": "https://gamewith.net/sword-of-convallaria/48200",
-      "fetchedAt": "2026-08-02T04:31:07.000Z",
-      "publisher": "gamewith"
-    },
-    {
-      "type": "url",
-      "url": "https://dotgg.gg/sword-of-convallaria/cocoa/",
-      "fetchedAt": "2026-08-02T04:31:54.750Z",
-      "publisher": "dotgg"
+      "type": "gamewith-html-cache",
+      "id": "48200",
+      "parsedAt": "2026-08-02T04:48:37.014Z"
     }
   ],
   "role": "Defender",
@@ -25,25 +18,70 @@
   "stats": {
     "move": null,
     "highJump": null,
-    "lowJump": null
+    "lowJump": 3
   },
   "skills": [
     {
-      "name": "Slash",
+      "name": "Armor-Piercing Strike",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% physical DMG and inflicts ▽ P.DEF I and ▽ M.DEF I on the target, lasting for 2 turns. Skills That Can Be",
+      "note": "Although Cocoa rarely uses Basic Attacks, this one is recommended because its debuff increases the damage allies deal.",
+      "priority": 5
+    },
+    {
+      "name": "Cocoa's Treasure Chest",
+      "kind": "Reaction",
+      "nrg": "0",
+      "cd": "0",
+      "description": "An extremely powerful skill that lets you choose between healing, removing debuffs and buffing allies, or dealing piercing damage while applying debuffs. Its versatility makes it a top-priority skill to equip. However, use it carefully since it has a limited number of uses. Stay Strong! ★★★★★ A powerful Reaction skill that triggers healing after a single-target attack. When paired with [Potluck Pr",
+      "note": "An extremely powerful skill that lets you choose between healing, removing debuffs and buffing allies, or dealing piercing damage while applying debuffs. Its ve",
+      "priority": 5
+    },
+    {
+      "name": "Iron Pot Stew",
+      "kind": "Active",
+      "nrg": "3",
+      "cd": "3",
+      "description": "Grants allies within 3 tiles a large HP heal, Critical Support, and a Bento buff. At 5-stars, the Bento is guaranteed to include a Skill Cost or Cooldown Reduction buff (Happiness). This is an extremely powerful skill and well worth prioritizing.",
+      "note": "Grants allies within 3 tiles a large HP heal, Critical Support, and a Bento buff. At 5-stars, the Bento is guaranteed to include a Skill Cost or Cooldown Reduct",
+      "priority": 5
+    },
+    {
+      "name": "Priority and Skills  Potluck Protector",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "An extremely powerful skill that grants Assisting Cover to allies within 2 tiles—with no usage limit. With increased durability, the user can absorb many single-target attacks, making this a top-priority skill to equip—except in stages that focus heavily on area-of-effect attacks.",
+      "note": "An extremely powerful skill that grants Assisting Cover to allies within 2 tiles—with no usage limit. With increased durability, the user can absorb many single",
+      "priority": 5
+    },
+    {
+      "name": "Invulnerable",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A skill with multiple effects that significantly boost durability, starting with a 40% damage taken reduction. It's especially powerful when combined with [Potluck Protector], making it a great choice for stages with hard-hitting opponents.",
+      "note": "A skill with multiple effects that significantly boost durability, starting with a 40% damage taken reduction. It's especially powerful when combined with [Potl",
+      "priority": 4
+    },
+    {
+      "name": "Battle Flag of Vlder -",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Leader's Aura) For all Vlder allies in battle, increases ATK by 10% and DEF by 20%.",
+      "note": "For all Vlder allies in battle, increases ATK by 10% and DEF by 20%.",
       "priority": 3
     },
     {
-      "name": "Mountain Tribes",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "name": "Cocoa's Base Skills Skill Range  Slash",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% Physical DMG. Try the Pan! [Skill] Cost: 3 / CD: 0 (Physical DMG) Single-target attack. Cocoa deals 120% DMG and knocks the target back byb 3 tiles. Inflicts ▽ P.DEF II and ▽ SPD II for 2 turns.",
+      "note": "Deals 100% Physical DMG. Try the Pan! [Skill] Cost: 3 / CD: 0 (Physical DMG) Single-target attack. Cocoa deals 120% DMG and knocks the targe",
       "priority": 3
     },
     {
@@ -51,92 +89,58 @@
       "kind": "Active",
       "nrg": "0",
       "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Physical DMG) Single-target attack. Deals 120% DMG and inflicts Vulnerable II for 3 turns.",
+      "note": "Single-target attack. Deals 120% DMG and inflicts Vulnerable II for 3 turns.",
       "priority": 3
     },
     {
-      "name": "Cocoa's Treasure Chest",
-      "kind": "Active",
+      "name": "RK1 Skill Range  Mountain Tribes -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) When the character is Unharmed , increases Movement by 1 tile. If the character attacks from Highland or moves from one tile to another with a height difference of more than 2 tiles, increases the DMG by 20%.",
+      "note": "When the character is Unharmed , increases Movement by 1 tile. If the character attacks from Highland or moves from one tile to another with",
+      "priority": 3
+    },
+    {
+      "name": "RK7 Skill Range  Block Enhancement -",
+      "kind": "Passive",
       "nrg": "0",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Passive) When receiving Ranged Physical Attacks from front or side enemies, there is a 100% chance to trigger Block . Block decreases DMG taken by 10%.",
+      "note": "When receiving Ranged Physical Attacks from front or side enemies, there is a 100% chance to trigger Block . Block decreases DMG taken by 10",
       "priority": 3
     },
     {
-      "name": "Block Enhancement",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Battle Flag of Vlder",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Armor-Piercing Strike",
-      "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Invulnerable",
+      "name": "Skill Range  Invulnerable",
       "kind": "Active",
       "nrg": "1",
       "cd": "5",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Support) Gains DMG Reduction IV , Mind's Eye , and Immunity to Disrupt for 3 turns.",
+      "note": "Gains DMG Reduction IV , Mind's Eye , and Immunity to Disrupt for 3 turns.",
       "priority": 3
-    },
-    {
-      "name": "Iron Pot Stew",
-      "kind": "Active",
-      "nrg": "3",
-      "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Assisting Cover",
-      "kind": "Reaction",
-      "note": "Name confirmed in page text",
-      "priority": 4,
-      "description": ""
     }
   ],
   "build": {
-    "basicAttack": "Slash",
-    "reaction": "Assisting Cover",
+    "basicAttack": "Armor-Piercing Strike",
+    "reaction": "",
+    "ascension": "",
     "skills": [
-      "Mountain Tribes",
       "Cocoa's Treasure Chest",
-      "Block Enhancement",
-      "Battle Flag of Vlder",
-      "Invulnerable",
-      "Crushing Bash"
+      "Iron Pot Stew"
     ],
-    "weapon": "",
-    "trinket": "Great Company on the Journey",
+    "weapon": "Great Company on the Journey",
+    "trinket": "",
     "tarot": ""
   },
-  "summary": "is a very powerful buff, making Cocoa a top priority for 5-stars.",
-  "pros": [],
-  "howToUse": "",
+  "summary": "here! Table of Contents Cocoa Tier & Basic Info Strength & How to Use",
+  "pros": [
+    "Priority and Skills  Potluck Protector: An extremely powerful skill that grants Assisting Cover to allies within 2 tiles",
+    "Cocoa's Treasure Chest: An extremely powerful skill that lets you choose between healing, removing debuf",
+    "Iron Pot Stew: Grants allies within 3 tiles a large HP heal, Critical Support, and a Bento buff"
+  ],
+  "howToUse": "An extremely powerful skill that grants Assisting Cover to allies within 2 tiles—with no usage limit. With increased durability, the user can absorb many single An extremely powerful skill that lets you choose between healing, removing debuffs and buffing allies, or dealing piercing damage while applying debuffs. Its ve Grants allies within 3 tiles a large HP heal, Critical Support, and a Bento buff. At 5-stars, the Bento is guaranteed to include a Skill Cost or Cooldown Reduct",
   "starPriority": "",
   "confidence": "medium",
-  "collectedAt": "2026-08-02T04:31:54.751Z",
-  "cleanedAt": "2026-08-02T04:32:57.412Z"
+  "collectedAt": "2026-08-02T04:48:37.014Z"
 }

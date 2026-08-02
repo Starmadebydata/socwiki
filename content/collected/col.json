@@ -1,51 +1,143 @@
 {
   "slug": "col",
   "name": "Col",
-  "source": "public",
+  "source": "public-structured",
   "sources": [
     {
-      "type": "url",
-      "url": "https://gamewith.net/sword-of-convallaria/48262",
-      "fetchedAt": "2026-08-02T04:30:57.833Z",
-      "publisher": "gamewith"
-    },
-    {
-      "type": "url",
-      "url": "https://dotgg.gg/sword-of-convallaria/col/",
-      "fetchedAt": "2026-08-02T04:31:51.440Z",
-      "publisher": "dotgg"
+      "type": "gamewith-html-cache",
+      "id": "48262",
+      "parsedAt": "2026-08-02T04:48:36.996Z"
     }
   ],
   "role": "Seeker",
   "factions": [
     "Papal States",
     "Alacrity",
-    "SoC",
-    "Drifter"
+    "Drifter",
+    "SoC"
   ],
   "rarity": "Legendary",
   "stats": {
     "move": null,
     "highJump": null,
-    "lowJump": null
+    "lowJump": 5
   },
   "skills": [
+    {
+      "name": "Eerie Footwork",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "While it occasionally overextends Col, gaining Dodge is very important for Col. This is generally recommended as Col's best Reaction.",
+      "note": "While it occasionally overextends Col, gaining Dodge is very important for Col. This is generally recommended as Col's best Reaction.",
+      "priority": 5
+    },
+    {
+      "name": "Hidden Thorn",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Basic Attack with the valuable effect of ignoring [Assisting Cover], which is Col's weakness.",
+      "note": "A Basic Attack with the valuable effect of ignoring [Assisting Cover], which is Col's weakness.",
+      "priority": 5
+    },
+    {
+      "name": "Omen of Death",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A passive that grants powerful buffs when any character, ally or foe, is defeated. This is the most important Skill for supporting Col's strength, so make sure to slot this skill.",
+      "note": "A passive that grants powerful buffs when any character, ally or foe, is defeated. This is the most important Skill for supporting Col's strength, so make sure ",
+      "priority": 5
+    },
+    {
+      "name": "Wipe Out",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A powerful Skill that deals high damage + [Ignore Assist], and also grants [Dodge] if an enemy is defeated. Since Col wants to finish off enemies to Act Again, you generally want to equip this high-damage Skill.",
+      "note": "A powerful Skill that deals high damage + [Ignore Assist], and also grants [Dodge] if an enemy is defeated. Since Col wants to finish off enemies to Act Again, ",
+      "priority": 5
+    },
+    {
+      "name": "Assault",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "An easy-to-use self-buff Skill that increases Mov and Crit. It's a generally useful in various situations, especially when you need more movement.",
+      "note": "An easy-to-use self-buff Skill that increases Mov and Crit. It's a generally useful in various situations, especially when you need more movement.",
+      "priority": 4
+    },
+    {
+      "name": "Mask",
+      "kind": "Active",
+      "nrg": "1",
+      "cd": "3",
+      "description": "Allows you to gain significant Critical UP and Invisibility. Invisibility allows Col to reach backline targets safely, so equip it as needed.",
+      "note": "Allows you to gain significant Critical UP and Invisibility. Invisibility allows Col to reach backline targets safely, so equip it as needed.",
+      "priority": 4
+    },
+    {
+      "name": "Perfect Assassin",
+      "kind": "Aura",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Leader's Aura that greatly enhances the [Alacrity] Faction. Col is also significantly buffed, and especially the crit dmg and crit chance matches their kit, so equip it with priority.",
+      "note": "A Leader's Aura that greatly enhances the [Alacrity] Faction. Col is also significantly buffed, and especially the crit dmg and crit chance matches their kit, s",
+      "priority": 4
+    },
+    {
+      "name": "Counterattack -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) When hit by an active attack from the front or side , performs a basic attack to Strike Back if the attacker is within range, dealing 70% of basic attack's DMG. The effect can be activated up to 1 time per round.",
+      "note": "When hit by an active attack from the front or side , performs a basic attack to Strike Back if the attacker is within range, dealing 70% of",
+      "priority": 3
+    },
     {
       "name": "Flurry of Stabs",
       "kind": "Active",
       "nrg": "2",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Physical DMG) Deals 45% DMG 3 times. When attacking, Crit increases by 20%. Skills That Can",
+      "note": "Deals 45% DMG 3 times. When attacking, Crit increases by 20%. Skills That Can",
       "priority": 3
     },
     {
-      "name": "Ambush",
+      "name": "Omen of Death -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) Gains Feverish Beast when a character is defeated in battle, lasting for 3 turns. Recovers 2 NRG when the character defeats an enemy. Skills That Can Be",
+      "note": "Gains Feverish Beast when a character is defeated in battle, lasting for 3 turns. Recovers 2 NRG when the character defeats an enemy. Skills",
+      "priority": 3
+    },
+    {
+      "name": "RK5 Skill Range  Eerie Footwork -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) When Healthy , after receiving a single-target attack, teleports behind the attackers, initiates a strike back , which deals 70% DMG. Gains Dodge for 1 turn. When Injured , triggers Dodge . CD: 3 turns.",
+      "note": "When Healthy , after receiving a single-target attack, teleports behind the attackers, initiates a strike back , which deals 70% DMG. Gains ",
+      "priority": 3
+    },
+    {
+      "name": "RK7 Skill Range  Perfect Assassin -",
       "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Leader's Aura) For all Alacrity allies in battle, increases ATK by 10%, DEF by 20%, Crit by 15%, and Crit DMG by 15%.",
+      "note": "For all Alacrity allies in battle, increases ATK by 10%, DEF by 20%, Crit by 15%, and Crit DMG by 15%.",
+      "priority": 3
+    },
+    {
+      "name": "RK9 Skill Range  Hidden Thorn",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Col deals 100% DMG and she gains Ignore Assist if launching a back attack . 会心の一撃(近距離2回)",
+      "note": "Col deals 100% DMG and she gains Ignore Assist if launching a back attack . 会心の一撃(近距離2回)",
       "priority": 3
     },
     {
@@ -53,99 +145,78 @@
       "kind": "Active",
       "nrg": "1",
       "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Support) Instant Teleports behind the enemy and steals 1 random Attribute Buff from the target. Skills That Can",
+      "note": "Instant Teleports behind the enemy and steals 1 random Attribute Buff from the target. Skills That Can",
       "priority": 3
     },
     {
-      "name": "Assault",
+      "name": "Skill Range  Ambush -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) When performing an active attack, if the target is Unharmed , deals 20% Physical DMG. When performing a back attack on unharmed targets, additionally inflicts × Passive Skills for 1 turn.",
+      "note": "When performing an active attack, if the target is Unharmed , deals 20% Physical DMG. When performing a back attack on unharmed targets, add",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Assault",
       "kind": "Active",
       "nrg": "1",
       "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Support) Instant Gains ▲ Crit I , ▲ Crit DMG I , and ▲ Move II for 1 turn.",
+      "note": "Instant Gains ▲ Crit I , ▲ Crit DMG I , and ▲ Move II for 1 turn.",
       "priority": 3
     },
     {
-      "name": "Mask",
-      "kind": "Active",
-      "nrg": "1",
-      "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "name": "Skill Range  Hidden Thorn",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Col deals 100% DMG and she gains Ignore Assist if launching a back attack . 会心の一撃(近距離2回) [Basic Attack] Cost: - / CD: - (Basic Attack) Deals 50% physical DMG 2 times and increases Crit by 15% before attacking. Skills That Can",
+      "note": "Col deals 100% DMG and she gains Ignore Assist if launching a back attack . 会心の一撃(近距離2回) [Basic Attack] Cost: - / CD: - (Basic Attack) Deals",
       "priority": 3
     },
     {
-      "name": "Counterattack",
-      "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Omen of Death",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Wipe Out",
+      "name": "Skill Range  Wipe Out",
       "kind": "Active",
       "nrg": "4",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Physical DMG) Col deals 60% DMG 3 times. Before attacking, when there are no allies within a 2-tile radius, Col gains Ignore Assist . When defeating a target, she gains Dodge , lasting for 1 turn.",
+      "note": "Col deals 60% DMG 3 times. Before attacking, when there are no allies within a 2-tile radius, Col gains Ignore Assist . When defeating a tar",
       "priority": 3
     },
     {
-      "name": "Traceless Shadow",
-      "kind": "Active",
-      "nrg": "2",
-      "cd": "5",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Hidden Thorn",
+      "name": "Skills Skill Range  Dual Blade Strike",
       "kind": "Basic",
-      "note": "Name confirmed in page text",
-      "priority": 4,
-      "description": ""
-    },
-    {
-      "name": "Eerie Footwork",
-      "kind": "Reaction",
-      "note": "Name confirmed in page text",
-      "priority": 4,
-      "description": ""
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 50% physical DMG 2 times.",
+      "note": "Deals 50% physical DMG 2 times.",
+      "priority": 3
     }
   ],
   "build": {
     "basicAttack": "Hidden Thorn",
-    "reaction": "Counterattack",
+    "reaction": "Eerie Footwork",
+    "ascension": "",
     "skills": [
-      "Flurry of Stabs",
-      "Ambush",
-      "Shadow Gait",
-      "Assault",
-      "Mask",
-      "Omen of Death"
+      "Omen of Death",
+      "Wipe Out",
+      "Perfect Assassin"
     ],
-    "weapon": "",
+    "weapon": "Void Stab",
     "trinket": "Maverick's Cloak",
-    "tarot": "Death"
+    "tarot": "Verdict of Justice"
   },
-  "summary": "Able to Act Again with back or side kills.",
-  "pros": [],
-  "howToUse": "",
+  "summary": "here! Table of Contents Col Tier & Basic Info Strength & How to Use",
+  "pros": [
+    "Eerie Footwork: While it occasionally overextends Col, gaining Dodge is very important for Col. ",
+    "Omen of Death: A passive that grants powerful buffs when any character, ally or foe, is defeate",
+    "Hidden Thorn: A Basic Attack with the valuable effect of ignoring [Assisting Cover], which is ",
+    "Wipe Out: A powerful Skill that deals high damage + [Ignore Assist], and also grants [Dodg"
+  ],
+  "howToUse": "While it occasionally overextends Col, gaining Dodge is very important for Col. This is generally recommended as Col's best Reaction. A passive that grants powerful buffs when any character, ally or foe, is defeated. This is the most important Skill for supporting Col's strength, so make sure  A Basic Attack with the valuable effect of ignoring [Assisting Cover], which is Col's weakness.",
   "starPriority": "",
-  "confidence": "medium",
-  "collectedAt": "2026-08-02T04:31:51.441Z",
-  "cleanedAt": "2026-08-02T04:32:57.412Z"
+  "confidence": "high",
+  "collectedAt": "2026-08-02T04:48:36.996Z"
 }

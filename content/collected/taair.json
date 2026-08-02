@@ -1,19 +1,12 @@
 {
   "slug": "taair",
   "name": "Taair",
-  "source": "public",
+  "source": "public-structured",
   "sources": [
     {
-      "type": "url",
-      "url": "https://gamewith.net/sword-of-convallaria/52064",
-      "fetchedAt": "2026-08-02T04:31:00.608Z",
-      "publisher": "gamewith"
-    },
-    {
-      "type": "url",
-      "url": "https://dotgg.gg/sword-of-convallaria/taair/",
-      "fetchedAt": "2026-08-02T04:31:52.185Z",
-      "publisher": "dotgg"
+      "type": "gamewith-html-cache",
+      "id": "52064",
+      "parsedAt": "2026-08-02T04:48:37.002Z"
     }
   ],
   "role": "Watcher",
@@ -26,16 +19,79 @@
   "stats": {
     "move": null,
     "highJump": null,
-    "lowJump": null
+    "lowJump": 3
   },
   "skills": [
     {
-      "name": "Energy Wave",
+      "name": "Dispelling Strike",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Basic Attack that dispels buffs. Since Taair has access to sufficient heals, equip this Basic Attack.",
+      "note": "A Basic Attack that dispels buffs. Since Taair has access to sufficient heals, equip this Basic Attack.",
+      "priority": 5
+    },
+    {
+      "name": "Pacifism",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Reaction that dispels enemy buffs and reduces their damage dealt. Generally regarded as the better Reaction.",
+      "note": "A Reaction that dispels enemy buffs and reduces their damage dealt. Generally regarded as the better Reaction.",
+      "priority": 5
+    },
+    {
+      "name": "Seed of Wisdom",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A powerful Skill that grants allies within range SPD +100 and 1 NRG each turn. Additionally, it provides AoE healing due to Taair's Trait. Prioritize equipping this skill.",
+      "note": "A powerful Skill that grants allies within range SPD +100 and 1 NRG each turn. Additionally, it provides AoE healing due to Taair's Trait. Prioritize equipping ",
+      "priority": 5
+    },
+    {
+      "name": "Caged Reverie",
+      "kind": "Aura",
+      "nrg": "—",
+      "cd": "—",
+      "description": "Although it has a very long CD of 7 turns, it generates a very powerful aura that shares damage taken within an area, increases damage dealt, and recovers HP. Equip this for high-difficulty content where damage taken is high.",
+      "note": "Although it has a very long CD of 7 turns, it generates a very powerful aura that shares damage taken within an area, increases damage dealt, and recovers HP. E",
+      "priority": 4
+    },
+    {
+      "name": "Inner Light",
+      "kind": "Active",
+      "nrg": "1",
+      "cd": "3",
+      "description": "An excellent Skill that provides Instant AoE NRG Recovery and AoE healing due from Taair's Trait. When prioritizing NRG recovery, slot this skill.",
+      "note": "An excellent Skill that provides Instant AoE NRG Recovery and AoE healing due from Taair's Trait. When prioritizing NRG recovery, slot this skill.",
+      "priority": 4
+    },
+    {
+      "name": "Thousand-Mile Echo",
+      "kind": "Active",
+      "nrg": "2",
+      "cd": "3",
+      "description": "A powerful skill that greatly buffs a single target and grants +4 NRG. Since many characters have powerful skills with high NRG costs and 0 CD, this allows such characters to use their Skills consecutively.",
+      "note": "A powerful skill that greatly buffs a single target and grants +4 NRG. Since many characters have powerful skills with high NRG costs and 0 CD, this allows such",
+      "priority": 4
+    },
+    {
+      "name": "Base Skills Skill Range  Energy Wave",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deal 80% Magical DMG.",
+      "note": "Deal 80% Magical DMG.",
+      "priority": 3
+    },
+    {
+      "name": "Flagellant -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) Gains 1 stack of Penance after taking DMG. Each stack decreases DMG taken by 8%. This effect cannot be dispelled. Additionally recovers 1 NRG if the character has Penance stacks at the end of each turn.",
+      "note": "Gains 1 stack of Penance after taking DMG. Each stack decreases DMG taken by 8%. This effect cannot be dispelled. Additionally recovers 1 NR",
       "priority": 3
     },
     {
@@ -43,130 +99,104 @@
       "kind": "Active",
       "nrg": "1",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Healing) Heals the target by 100% of M.ATK and dispels 1 debuff on the target.",
+      "note": "Heals the target by 100% of M.ATK and dispels 1 debuff on the target.",
       "priority": 3
     },
     {
-      "name": "Seed of Wisdom",
+      "name": "Heart of Forebearance -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) DoT taken is reduced by 50%. At the end of the turn, if the character is affected by control effects, removes all control effects and gains Bound Immunity for 2 turns.",
+      "note": "DoT taken is reduced by 50%. At the end of the turn, if the character is affected by control effects, removes all control effects and gains ",
+      "priority": 3
+    },
+    {
+      "name": "RK1 Skill Range  Seed of Wisdom",
       "kind": "Active",
       "nrg": "2",
       "cd": "2",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Support) Taair dispels 1 Debuff from all alies within 2 tiles around the target, granting them ▲SPD II and Meditation for 2 turns.",
+      "note": "Taair dispels 1 Debuff from all alies within 2 tiles around the target, granting them ▲SPD II and Meditation for 2 turns.",
       "priority": 3
     },
     {
-      "name": "Thousand-Mile Echo",
-      "kind": "Active",
-      "nrg": "2",
-      "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Inner Light",
-      "kind": "Active",
-      "nrg": "1",
-      "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Pacifism",
-      "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Heart of Forebearance",
-      "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Campfire Night Talks",
-      "kind": "Active",
-      "nrg": "1",
-      "cd": "4",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Flagellant",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Merciful Strike",
-      "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Dispelling Strike",
-      "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Divine Healing",
+      "name": "RK11 Skill Range  Divine Healing -",
       "kind": "Active",
       "nrg": "3",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Healing) Single-target healing. Heals the target for 60% of M.ATK and additionally heals all allies within 3 tiles around the target for 30% of the character's M.ATK.",
+      "note": "Single-target healing. Heals the target for 60% of M.ATK and additionally heals all allies within 3 tiles around the target for 30% of the c",
       "priority": 3
     },
     {
-      "name": "Caged Reverie",
+      "name": "RK3 Skill Range  Regenerate -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) At the end of the turn, heals the ally with the lowest HP percentage within a 3-tile radius around the character by 20% of M.ATK. Inner Light",
+      "note": "At the end of the turn, heals the ally with the lowest HP percentage within a 3-tile radius around the character by 20% of M.ATK. Inner Ligh",
+      "priority": 3
+    },
+    {
+      "name": "RK7 Skill Range  Campfire Night Talks",
       "kind": "Active",
-      "nrg": "2",
-      "cd": "7",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "1",
+      "cd": "4",
+      "description": "(Healing) Inflicts Sleep and Tipsy on Taair and all characters within 2 tiles for 1 turn. Recovers 60% HP, and dispels 3 Debuffs from Taair.",
+      "note": "Inflicts Sleep and Tipsy on Taair and all characters within 2 tiles for 1 turn. Recovers 60% HP, and dispels 3 Debuffs from Taair.",
+      "priority": 3
+    },
+    {
+      "name": "RK9 Skill Range  Merciful Strike",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 80% magical DMG and increases the effect of the next healing skill by 15%, lasting for 2 turns.",
+      "note": "Deals 80% magical DMG and increases the effect of the next healing skill by 15%, lasting for 2 turns.",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Pacifism -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) Before being attacked, dispels 2 buffs from the attacker and decrease the DMG dealt by 20%.",
+      "note": "Before being attacked, dispels 2 buffs from the attacker and decrease the DMG dealt by 20%.",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Regenerate -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) At the end of the turn, heals the ally with the lowest HP percentage within a 3-tile radius around the character by 20% of M.ATK.",
+      "note": "At the end of the turn, heals the ally with the lowest HP percentage within a 3-tile radius around the character by 20% of M.ATK.",
       "priority": 3
     }
   ],
   "build": {
-    "basicAttack": "Energy Wave",
-    "reaction": "Caged Reverie",
+    "basicAttack": "Dispelling Strike",
+    "reaction": "Pacifism",
+    "ascension": "",
     "skills": [
-      "Healing Spell",
       "Seed of Wisdom",
       "Thousand-Mile Echo",
-      "Inner Light",
-      "Campfire Night Talks",
-      "Flagellant"
+      "Inner Light"
     ],
     "weapon": "",
-    "trinket": "Life Fondness",
-    "tarot": "Judgement"
+    "trinket": "",
+    "tarot": ""
   },
-  "summary": "Specializing in Support Taair is a character that does not have a single attack skill and specializes in supporting allies.",
-  "pros": [],
-  "howToUse": "",
+  "summary": "here! Table of Contents Taair Tier & Basic Info Strength & How to Use",
+  "pros": [
+    "Seed of Wisdom: A powerful Skill that grants allies within range SPD +100 and 1 NRG each turn. A",
+    "Pacifism: A Reaction that dispels enemy buffs and reduces their damage dealt. Generally re",
+    "Dispelling Strike: A Basic Attack that dispels buffs. Since Taair has access to sufficient heals, e"
+  ],
+  "howToUse": "A powerful Skill that grants allies within range SPD +100 and 1 NRG each turn. Additionally, it provides AoE healing due to Taair's Trait. Prioritize equipping  A Reaction that dispels enemy buffs and reduces their damage dealt. Generally regarded as the better Reaction. A Basic Attack that dispels buffs. Since Taair has access to sufficient heals, equip this Basic Attack.",
   "starPriority": "",
-  "confidence": "medium",
-  "collectedAt": "2026-08-02T04:31:52.190Z",
-  "cleanedAt": "2026-08-02T04:32:57.418Z"
+  "confidence": "high",
+  "collectedAt": "2026-08-02T04:48:37.002Z"
 }

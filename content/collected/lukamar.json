@@ -1,148 +1,211 @@
 {
   "slug": "lukamar",
   "name": "Lukamar",
-  "source": "public",
+  "source": "public-structured",
   "sources": [
     {
-      "type": "url",
-      "url": "https://gamewith.net/sword-of-convallaria/73450",
-      "fetchedAt": "2026-08-02T04:31:40.645Z",
-      "publisher": "gamewith"
+      "type": "gamewith-html-cache",
+      "id": "73450",
+      "parsedAt": "2026-08-02T04:48:37.078Z"
     }
   ],
   "role": "Seeker",
   "factions": [
     "Alacrity",
-    "SoC",
-    "Elaman"
+    "Elaman",
+    "SoC"
   ],
   "rarity": "Legendary",
   "stats": {
     "move": null,
     "highJump": null,
-    "lowJump": null
+    "lowJump": 5
   },
   "skills": [
-    {
-      "name": "Blood and Wind",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Desert Warrior",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Blade of Conviction",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
     {
       "name": "Chapter of the Final Dance",
       "kind": "Active",
       "nrg": "0",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Liberation - Toughness",
-      "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "description": "(Physical DMG) Unshackle . Single-target attack. Deals 160% DMG. If having the following Liberation stacks, consumes corresponding stacks and triggers effects: ✦ When having 5 stacks, before attacking, increases P.ATK by 50%. ✦ When having 10 stacks, grants the 5-stack effect and additionally attacks all enemies within 3 tiles of the target range, dealing 80% AoE DMG .",
+      "note": "Consumes 10 Liberation stacks to deal high single-target damage and perform an AoE attack, making it a powerful main Skill. Since your basic strategy will be to",
+      "priority": 5
     },
     {
       "name": "Evil-crusher",
       "kind": "Reaction",
-      "nrg": "-",
-      "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Song of Wind",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "nrg": "—",
+      "cd": "—",
+      "description": "An excellent Reaction that grants the Deflection buff, which provides Dodge and a 50% DMG Reduction. It has a 3-turn CD, but using [Wind Dance Slash] resets it, so take advantage of that. It also has an effect where enemies will ignore Lukamar if another ally is within their attack range, making it very powerful when used skillfully.",
+      "note": "An excellent Reaction that grants the Deflection buff, which provides Dodge and a 50% DMG Reduction. It has a 3-turn CD, but using [Wind Dance Slash] resets it,",
+      "priority": 5
     },
     {
       "name": "Sealing Attack",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "Lukamar has no NRG consumption and rarely uses Basic Attacks for damage, so we recommend using this basic attack for its utility.",
+      "note": "Lukamar has no NRG consumption and rarely uses Basic Attacks for damage, so we recommend using this basic attack for its utility.",
+      "priority": 5
+    },
+    {
+      "name": "Song of Wind",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "Greatly increases P.ATK and boosts the DMG of Unshackle Skills based on the number of Liberation stacks. Equip it with priority to boost the DMG of your main Skill, [Chapter of the Final Dance].",
+      "note": "Greatly increases P.ATK and boosts the DMG of Unshackle Skills based on the number of Liberation stacks. Equip it with priority to boost the DMG of your main Sk",
+      "priority": 5
+    },
+    {
+      "name": "Blood and Wind",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "0",
+      "description": "(Physical DMG) Selects an enemy within 3 tiles of the character, teleports behind them, and deals 160% DMG. After attacking, returns to the position at the start of the turn, can Move Again 3 tiles, and gains 5 stacks of Liberation . Skills That Can Be",
+      "note": "An easy-to-use attack Skill that allows for hit-and-run tactics. It also has the valuable effect of granting 5 stacks of Liberation , so its inclusion priority ",
+      "priority": 4
+    },
+    {
+      "name": "Desert Warrior -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) Immune to Blind . After actively attacking, if t he target is on Soil , Sandbed , Wasteland , or Quicksand tiles, deals additional Sand Piercing DMG equal to 10% of ATK.",
+      "note": "Immune to Blind . After actively attacking, if t he target is on Soil , Sandbed , Wasteland , or Quicksand tiles, deals additional Sand Pier",
+      "priority": 3
+    },
+    {
+      "name": "Evil-crusher -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "3",
+      "description": "(Reaction) Gains Unfocused . At the start of battle and at the end of the turn, gains 1 instance of Dodge and Deflection . CD: 3 turns. Effect does not activate when already having Dodge and Deflection .",
+      "note": "Gains Unfocused . At the start of battle and at the end of the turn, gains 1 instance of Dodge and Deflection . CD: 3 turns. Effect does not",
       "priority": 3
     },
     {
       "name": "Powerful Attack",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 110% Physical DMG.",
+      "note": "Deals 110% Physical DMG.",
       "priority": 3
     },
     {
-      "name": "Sand Erosion Bottle",
+      "name": "RK1 Skill Range  Desert Steps",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "3",
+      "description": "(Support) Unshackle Instant Teleports to any empty tile within 3 tiles of the character; if the target is a Dust tile, clears the tile effect and gains 3 stacks of Liberation . Upon having certain amounts of stacks, triggers additional effects: ✦ At 5 stacks, after casting the skill, gains Dodge for 2 turns.",
+      "note": "Unshackle Instant Teleports to any empty tile within 3 tiles of the character; if the target is a Dust tile, clears the tile effect and gain",
+      "priority": 3
+    },
+    {
+      "name": "RK11 Skill Range  Sand Erosion Bottle",
       "kind": "Active",
       "nrg": "1",
       "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Piercing DMG) Deals Sand DMG equal to 10% of HP to all enemies within 1 tile of the target tile and inflicts Blind for 1 turn.",
+      "note": "Deals Sand DMG equal to 10% of HP to all enemies within 1 tile of the target tile and inflicts Blind for 1 turn.",
       "priority": 3
     },
     {
-      "name": "Traceless Shadow",
+      "name": "RK3 Skill Range  Blade of Conviction",
       "kind": "Active",
-      "nrg": "4",
+      "nrg": "0",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Physical DMG) Selects 1 target and teleports behind them. ✦ When the target is an ally, triggers Wind Dance Slash effect before teleporting. ✦ When the target is an enemy, triggers Wind Dance Slash effect after teleporting. ✦ Auxilliary Passive . Effect: all Wind Dance Slash attacks inflict Blind for 1 turn and deal double DMG.",
+      "note": "Selects 1 target and teleports behind them. ✦ When the target is an ally, triggers Wind Dance Slash effect before teleporting. ✦ When the ta",
+      "priority": 3
+    },
+    {
+      "name": "RK5 Skill Range  Liberation - Toughness -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) When Injured , for each stack of Liberation the character has, DEF increases by 3%.",
+      "note": "When Injured , for each stack of Liberation the character has, DEF increases by 3%.",
+      "priority": 3
+    },
+    {
+      "name": "RK7 Skill Range  Rite of Wind Dance",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Support) Gains Ritual Dance Aura. The effect lasts until the start of the next turn. ✦ Auxiliary Passive . Effect: At the start of the battle, gains Soul-reliever skill effect and consumes corresponding Emperor's Blood stacks. The first Blade of Conviction in each battle becomes Instant .",
+      "note": "Gains Ritual Dance Aura. The effect lasts until the start of the next turn. ✦ Auxiliary Passive . Effect: At the start of the battle, gains ",
+      "priority": 3
+    },
+    {
+      "name": "RK9 Skill Range  Sealing Attack",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% physical DMG and inflicts × Passive Skills on Injured targets before attacking, lasting for 2 turns.",
+      "note": "Deals 100% physical DMG and inflicts × Passive Skills on Injured targets before attacking, lasting for 2 turns.",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Desert Steps",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "3",
+      "description": "(Support) Unshackle Instant Teleports to any empty tile within 3 tiles of the character; if the target is a Dust tile, clears the tile effect and gains 3 stacks of Liberation . Upon having certain amounts of stacks, triggers additional effects: ✦ At 5 stacks, after casting the skill, gains Dodge for 2 turns. ✦ At 10 stacks, also gains ▲Crit II for 2 turns.",
+      "note": "Unshackle Instant Teleports to any empty tile within 3 tiles of the character; if the target is a Dust tile, clears the tile effect and gain",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Liberation - Toughness -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) When Injured , for each stack of Liberation the character has, DEF increases by 3%. Evil-crusher -",
+      "note": "When Injured , for each stack of Liberation the character has, DEF increases by 3%. Evil-crusher -",
+      "priority": 3
+    },
+    {
+      "name": "Skills Skill Range  Dual Blade Strike",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 50% physical DMG 2 times.",
+      "note": "Deals 50% physical DMG 2 times.",
+      "priority": 3
+    },
+    {
+      "name": "Song of Wind -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) Increases P.ATK by 20%. When attacking, for each stack of Liberation owned, additionally increases Unshackle skills' DMG by 2%, up to 20%.",
+      "note": "Increases P.ATK by 20%. When attacking, for each stack of Liberation owned, additionally increases Unshackle skills' DMG by 2%, up to 20%.",
       "priority": 3
     }
   ],
   "build": {
     "basicAttack": "Sealing Attack",
-    "reaction": "Liberation - Toughness",
+    "reaction": "Evil-crusher",
+    "ascension": "",
     "skills": [
-      "Blood and Wind",
-      "Desert Warrior",
-      "Blade of Conviction",
       "Chapter of the Final Dance",
-      "Song of Wind",
-      "Sand Erosion Bottle"
+      "Blood and Wind",
+      "Song of Wind"
     ],
-    "weapon": "",
-    "trinket": "Maverick's Cloak",
-    "tarot": "Judgement"
+    "weapon": "Judgement",
+    "trinket": "Verdict of Justice",
+    "tarot": ""
   },
-  "summary": "is a buff that enhances Skills with the Unshackle tag.",
-  "pros": [],
-  "howToUse": "",
+  "summary": "here! Table of Contents Lukamar Tier & Basic Info Strength & How to Use",
+  "pros": [
+    "Chapter of the Final Dance: Consumes 10 Liberation stacks to deal high single-target damage and perform an A",
+    "Evil-crusher: An excellent Reaction that grants the Deflection buff, which provides Dodge and ",
+    "Song of Wind: Greatly increases P.ATK and boosts the DMG of Unshackle Skills based on the numb"
+  ],
+  "howToUse": "Consumes 10 Liberation stacks to deal high single-target damage and perform an AoE attack, making it a powerful main Skill. Since your basic strategy will be to An excellent Reaction that grants the Deflection buff, which provides Dodge and a 50% DMG Reduction. It has a 3-turn CD, but using [Wind Dance Slash] resets it, Greatly increases P.ATK and boosts the DMG of Unshackle Skills based on the number of Liberation stacks. Equip it with priority to boost the DMG of your main Sk",
   "starPriority": "",
-  "confidence": "medium",
-  "collectedAt": "2026-08-02T04:31:40.645Z",
-  "cleanedAt": "2026-08-02T04:32:57.414Z"
+  "confidence": "high",
+  "collectedAt": "2026-08-02T04:48:37.078Z"
 }

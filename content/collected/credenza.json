@@ -1,13 +1,12 @@
 {
   "slug": "credenza",
   "name": "Credenza",
-  "source": "public",
+  "source": "public-structured",
   "sources": [
     {
-      "type": "url",
-      "url": "https://gamewith.net/sword-of-convallaria/70900",
-      "fetchedAt": "2026-08-02T04:31:22.942Z",
-      "publisher": "gamewith"
+      "type": "gamewith-html-cache",
+      "id": "70900",
+      "parsedAt": "2026-08-02T04:48:37.046Z"
     }
   ],
   "role": "Watcher",
@@ -19,16 +18,88 @@
   "stats": {
     "move": null,
     "highJump": null,
-    "lowJump": null
+    "lowJump": 3
   },
   "skills": [
     {
-      "name": "Energy Wave",
+      "name": "Benevolent Light",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "This is a powerful support Skill that reduces CDs, which is one of Credenza's signature features, so it should be a top priority for your team. It also has an NRG Recovery effect, so use it in combination with characters that have high NRG consumption or characters whose main skills have a long CD.",
+      "note": "This is a powerful support Skill that reduces CDs, which is one of Credenza's signature features, so it should be a top priority for your team. It also has an N",
+      "priority": 5
+    },
+    {
+      "name": "Merciful Strike",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "Although you won't use Basic Attacks often, you should generally equip this Basic Attack because it provides a healing increase effect.",
+      "note": "Although you won't use Basic Attacks often, you should generally equip this Basic Attack because it provides a healing increase effect.",
+      "priority": 5
+    },
+    {
+      "name": "Radiant Barrier",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Reaction that reduces single-target damage taken by nearby allies. It consumes Credenza's HP, so if used effectively, you can reduce the time until you can use [Hierophany] and gain Divine Revelation.",
+      "note": "A Reaction that reduces single-target damage taken by nearby allies. It consumes Credenza's HP, so if used effectively, you can reduce the time until you can us",
+      "priority": 5
+    },
+    {
+      "name": "Graceful Salvation",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "An excellent Skill that heals nearby allies at the start of the turn and also grants an ATK & Damage Dealt UP buff if you have [Divine Revelation]. Be careful when equipping it with [Trial of Radiance] as it also heals Credenza's HP.",
+      "note": "An excellent Skill that heals nearby allies at the start of the turn and also grants an ATK & Damage Dealt UP buff if you have [Divine Revelation]. Be careful w",
+      "priority": 4
+    },
+    {
+      "name": "Hierophany's Return",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Passive that increases the number of uses of the Trait Skill [Hierophany] by 1. It allows you to use the extremely powerful Hierophany consecutively, but it takes a long time to activate unless you equip the Trinket Resonant Crystal, so this Skill is recommended if you have it.",
+      "note": "A Passive that increases the number of uses of the Trait Skill [Hierophany] by 1. It allows you to use the extremely powerful Hierophany consecutively, but it t",
+      "priority": 4
+    },
+    {
+      "name": "Hymn of Absolution",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Skill that heals nearby allies and provides buffs to increase their offensive capabilities. If you have Divine Revelation, it also grants Radiant Grace, which further increases offensive capabilities, so equip it when you want to boost your allies' damage.",
+      "note": "A Skill that heals nearby allies and provides buffs to increase their offensive capabilities. If you have Divine Revelation, it also grants Radiant Grace, which",
+      "priority": 4
+    },
+    {
+      "name": "Trial of Radiance",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Passive that allows you to gain Divine Revelation each turn by maintaining the Injured state. Use this as a way to gain Divine Revelation if your Star Level Up is low or you don't have the Trinket Resonant Crystal .",
+      "note": "A Passive that allows you to gain Divine Revelation each turn by maintaining the Injured state. Use this as a way to gain Divine Revelation if your Star Level U",
+      "priority": 4
+    },
+    {
+      "name": "Base Skills Skill Range  Energy Wave",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deal 80% Magical DMG.",
+      "note": "Deal 80% Magical DMG.",
+      "priority": 3
+    },
+    {
+      "name": "Battle Flag of Papal State -",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Leader's Aura) For all Papal States allies in battle, increases ATK by 10% and DEF by 20%.",
+      "note": "For all Papal States allies in battle, increases ATK by 10% and DEF by 20%.",
       "priority": 3
     },
     {
@@ -36,121 +107,131 @@
       "kind": "Active",
       "nrg": "1",
       "cd": "1",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Healing) Sacrifices 10% of the current HP. Single-target healing. Restores HP equal to 100% of M.ATK and dispels 1 debuff from the target. ✦ When having Divine Revelation , the skill changes with the enhancement: Instant . ✦ (The skill changes to Divine Revelation - Blazing Benediction )",
+      "note": "Sacrifices 10% of the current HP. Single-target healing. Restores HP equal to 100% of M.ATK and dispels 1 debuff from the target. ✦ When hav",
       "priority": 3
     },
     {
-      "name": "Quiet Prayer",
-      "kind": "Active",
+      "name": "Hierophany's Return -",
+      "kind": "Passive",
       "nrg": "0",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Graceful Salvation",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Hierophany's Return",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Radiant Barrier",
-      "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Protection of Light",
-      "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Battle Flag of Papal State",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Merciful Strike",
-      "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Passive) Increases the number of times the skill Hierophany can be used by 1.",
+      "note": "Increases the number of times the skill Hierophany can be used by 1.",
       "priority": 3
     },
     {
       "name": "Hypnotic Attack",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 80% magical DMG and grants a 30% chance to inflict Sleep on the target for 1 turn.",
+      "note": "Deals 80% magical DMG and grants a 30% chance to inflict Sleep on the target for 1 turn.",
       "priority": 3
     },
     {
-      "name": "Hymn of Absolution",
+      "name": "Protection of Light -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) When hit by an active single-target attack, the DMG taken is decreased by 30%. This effect can be activated 1 time per round. Skills That Can Be",
+      "note": "When hit by an active single-target attack, the DMG taken is decreased by 30%. This effect can be activated 1 time per round. Skills That Ca",
+      "priority": 3
+    },
+    {
+      "name": "Quiet Prayer -",
+      "kind": "Passive",
+      "nrg": "0",
+      "cd": "0",
+      "description": "(Passive) When performing Standby , heals all allies within 3 tiles of the character for 30% of M.ATK and increases the duration of Pray for Divine Revelation by 1 turn.",
+      "note": "When performing Standby , heals all allies within 3 tiles of the character for 30% of M.ATK and increases the duration of Pray for Divine Re",
+      "priority": 3
+    },
+    {
+      "name": "RK1 Skill Range  Radiant Blessing",
       "kind": "Active",
       "nrg": "3",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Support) Sacrifices 30% of the current HP to restore 2 NRG to the target ally; grants 2 random Level 2 Buffs to all allies within 2 tiles of the target for 2 turns. ✦ When having Divine Revelation , the skill changes with the enhancement: Restores 2 NRG to the center target and reduces all skill CDs by 2 turns. ✦ (The skill changes to Divine Revelation - Radiant Blessing )",
+      "note": "Sacrifices 30% of the current HP to restore 2 NRG to the target ally; grants 2 random Level 2 Buffs to all allies within 2 tiles of the targ",
       "priority": 3
     },
     {
-      "name": "Trial of Radiance",
+      "name": "RK11 Skill Range  Hymn of Absolution",
       "kind": "Active",
+      "nrg": "3",
+      "cd": "0",
+      "description": "(Healing) Sacrifices 30% of the current HP. Heals all allies within 3 tiles of the target 60% of M.ATK and grants them ▲ATK II and ▲DMG II for 2 turns. After casting the skill, the character gains Pray for Divine Revelation until the start of the next turn.",
+      "note": "Sacrifices 30% of the current HP. Heals all allies within 3 tiles of the target 60% of M.ATK and grants them ▲ATK II and ▲DMG II for 2 turns",
+      "priority": 3
+    },
+    {
+      "name": "RK3 Skill Range  Graceful Salvation -",
+      "kind": "Passive",
       "nrg": "0",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Passive) At the start of the turn, heals all allies within 4 tiles of the character for 20% of M.ATK. ✦ When having Divine Revelation , the skill changes with the enhancement: Additionally grants ▲ATK II and ▲DMG II to the target for 1 turn. ✦ (The skill changes to Divine Revelation - Graceful Salvation )",
+      "note": "At the start of the turn, heals all allies within 4 tiles of the character for 20% of M.ATK. ✦ When having Divine Revelation , the skill cha",
+      "priority": 3
+    },
+    {
+      "name": "RK5 Skill Range  Radiant Barrier -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) When an ally within 4 tiles of the character receives a single-target attack, reduces DMG taken by 15%, then the character sacrifices 10% of the current HP. Can be triggered up to 2 times per round. When the character is Injured , DMG taken is reduced by 30%.",
+      "note": "When an ally within 4 tiles of the character receives a single-target attack, reduces DMG taken by 15%, then the character sacrifices 10% of",
+      "priority": 3
+    },
+    {
+      "name": "RK9 Skill Range  Merciful Strike",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 80% magical DMG and increases the effect of the next healing skill by 15%, lasting for 2 turns.",
+      "note": "Deals 80% magical DMG and increases the effect of the next healing skill by 15%, lasting for 2 turns.",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Flagellant -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) Gains 1 stack of Penance after taking DMG. Each stack decreases DMG taken by 8%. This effect cannot be dispelled. Additionally recovers 1 NRG if the character has Penance stacks at the end of each turn.",
+      "note": "Gains 1 stack of Penance after taking DMG. Each stack decreases DMG taken by 8%. This effect cannot be dispelled. Additionally recovers 1 NR",
+      "priority": 3
+    },
+    {
+      "name": "Trial of Radiance -",
+      "kind": "Passive",
+      "nrg": "0",
+      "cd": "0",
+      "description": "(Passive) Gains Toughness . At the start of the turn, gains Divine Revelation for 1 turn. At the end of the turn, if the character doesn't have Pray for Divine Revelation or Divine Revelation , sacrifices 20% of the current HP to gain Pray for Divine Revelation until the start of the next turn. Skills That",
+      "note": "Gains Toughness . At the start of the turn, gains Divine Revelation for 1 turn. At the end of the turn, if the character doesn't have Pray f",
       "priority": 3
     }
   ],
   "build": {
-    "basicAttack": "Energy Wave",
+    "basicAttack": "Merciful Strike",
     "reaction": "Radiant Barrier",
+    "ascension": "",
     "skills": [
-      "Blazing Benediction",
-      "Quiet Prayer",
-      "Graceful Salvation",
-      "Hierophany's Return",
-      "Battle Flag of Papal State",
-      "Hymn of Absolution"
+      "Benevolent Light",
+      "Hymn of Absolution",
+      "Hierophany's Return"
     ],
     "weapon": "",
-    "trinket": "Life Fondness",
-    "tarot": "Judgement"
+    "trinket": "",
+    "tarot": ""
   },
-  "summary": "is a character that specializes in supporting allies.",
-  "pros": [],
-  "howToUse": "",
+  "summary": "here! Table of Contents Credenza Tier & Basic Info Strength & How to Use",
+  "pros": [
+    "Benevolent Light: This is a powerful support Skill that reduces CDs, which is one of Credenza's si",
+    "Radiant Barrier: A Reaction that reduces single-target damage taken by nearby allies. It consumes",
+    "Merciful Strike: Although you won't use Basic Attacks often, you should generally equip this Basi"
+  ],
+  "howToUse": "This is a powerful support Skill that reduces CDs, which is one of Credenza's signature features, so it should be a top priority for your team. It also has an N A Reaction that reduces single-target damage taken by nearby allies. It consumes Credenza's HP, so if used effectively, you can reduce the time until you can us Although you won't use Basic Attacks often, you should generally equip this Basic Attack because it provides a healing increase effect.",
   "starPriority": "",
-  "confidence": "medium",
-  "collectedAt": "2026-08-02T04:31:22.942Z",
-  "cleanedAt": "2026-08-02T04:32:57.412Z"
+  "confidence": "high",
+  "collectedAt": "2026-08-02T04:48:37.046Z"
 }

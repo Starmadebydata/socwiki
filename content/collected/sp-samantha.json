@@ -1,13 +1,12 @@
 {
   "slug": "sp-samantha",
   "name": "SP Samantha",
-  "source": "public",
+  "source": "public-structured",
   "sources": [
     {
-      "type": "url",
-      "url": "https://gamewith.net/sword-of-convallaria/70706",
-      "fetchedAt": "2026-08-02T04:31:09.376Z",
-      "publisher": "gamewith"
+      "type": "gamewith-html-cache",
+      "id": "70706",
+      "parsedAt": "2026-08-02T04:48:37.020Z"
     }
   ],
   "role": "Watcher",
@@ -19,43 +18,79 @@
   "stats": {
     "move": null,
     "highJump": null,
-    "lowJump": null
+    "lowJump": 3
   },
   "skills": [
     {
-      "name": "Energy Wave",
+      "name": "Indestructible Faith",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Reaction that activates [Resolve] by consuming 3 NRG. Although the NRG cost is high, [Resolve] is often useful, especially in high-difficulty stages, so prioritize equipping it.",
+      "note": "A Reaction that activates [Resolve] by consuming 3 NRG. Although the NRG cost is high, [Resolve] is often useful, especially in high-difficulty stages, so prior",
+      "priority": 5
+    },
+    {
+      "name": "Judgement Sanctum",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Skill that can perform a very powerful [Alert] that interrupts enemy actions up to 3 times in one turn. Since its CD is long, be aware that it becomes even more powerful by having a means to reduce its CD.",
+      "note": "A Skill that can perform a very powerful [Alert] that interrupts enemy actions up to 3 times in one turn. Since its CD is long, be aware that it becomes even mo",
+      "priority": 5
+    },
+    {
+      "name": "Light of Sanction",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "For a Basic Attack, it has a long Range and also deals damage within 1 tile of the target area. Note that it cannot be used on enemies within 1-2 tiles.",
+      "note": "For a Basic Attack, it has a long Range and also deals damage within 1 tile of the target area. Note that it cannot be used on enemies within 1-2 tiles.",
+      "priority": 5
+    },
+    {
+      "name": "Oath to End All Evil",
+      "kind": "Active",
+      "nrg": "3",
+      "cd": "3",
+      "description": "A Skill that attacks enemies in a wide 5-tile radius around the user. Thanks to SP Samantha's Trait, it can also apply [Judgement Brand], making it an extremely powerful Skill that can annihilate enemies when combined with the Trait's follow-up attacks and the [Alert] from [Judgement Sanctum]. Equip this with the highest priority.",
+      "note": "A Skill that attacks enemies in a wide 5-tile radius around the user. Thanks to SP Samantha's Trait, it can also apply [Judgement Brand], making it an extremely",
+      "priority": 5
+    },
+    {
+      "name": "Will to Cleanse All Foul",
+      "kind": "Aura",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Leader's Aura that greatly increases the damage dealt by Aggression Faction characters, including SP Samantha herself. Be aware that it has particularly good synergy with characters who primarily use AoE attacks.",
+      "note": "A Leader's Aura that greatly increases the damage dealt by Aggression Faction characters, including SP Samantha herself. Be aware that it has particularly good ",
+      "priority": 5
+    },
+    {
+      "name": "Protection of Light",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Reaction that greatly reduces damage taken from single-target attacks. Equip it when you want to increase durability.",
+      "note": "A Reaction that greatly reduces damage taken from single-target attacks. Equip it when you want to increase durability.",
+      "priority": 4
+    },
+    {
+      "name": "Base Skills Skill Range  Energy Wave",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deal 80% Magical DMG.",
+      "note": "Deal 80% Magical DMG.",
       "priority": 3
     },
     {
-      "name": "Light of Judgement for All Sins",
-      "kind": "Active",
-      "nrg": "2",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Chain of Regeneration",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "NRG Restoration",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "name": "Chain of Regeneration -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) At the end of the turn, heals the character and the ally with the lowest HP percentage within 3 tiles by 50% of M.ATK. NRG Restoration -",
+      "note": "At the end of the turn, heals the character and the ally with the lowest HP percentage within 3 tiles by 50% of M.ATK. NRG Restoration -",
       "priority": 3
     },
     {
@@ -63,101 +98,140 @@
       "kind": "Active",
       "nrg": "3",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Magical DMG) Deals 150% AoE DMG to all enemies within 1 tile of the target, inflicts ▽Bound Vision I and ▽Move I for 2 turns, and transforms tiles within range into Burning for 2 turns.",
+      "note": "Deals 150% AoE DMG to all enemies within 1 tile of the target, inflicts ▽Bound Vision I and ▽Move I for 2 turns, and transforms tiles within",
       "priority": 3
     },
     {
-      "name": "Protection of Light",
+      "name": "Light of Judgement for All Sins",
+      "kind": "Active",
+      "nrg": "2",
+      "cd": "0",
+      "description": "(Magical DMG) Deals 70% AoE DMG to all enemies within a 3x6 area in the target direction and increases DMG Multiplier to 100% for enemies in the 1x6 area in the middle. SP",
+      "note": "Deals 70% AoE DMG to all enemies within a 3x6 area in the target direction and increases DMG Multiplier to 100% for enemies in the 1x6 area ",
+      "priority": 3
+    },
+    {
+      "name": "NRG Recovery -",
       "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) When hit by an active attack, the DMG taken is decreased by 8%. Upon receiving an active attack, additionally recovers 1 NRG.",
+      "note": "When hit by an active attack, the DMG taken is decreased by 8%. Upon receiving an active attack, additionally recovers 1 NRG.",
       "priority": 3
     },
     {
-      "name": "NRG Recovery",
-      "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "name": "NRG Restoration -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) At the end of the turn, recovers an additional 1 NRG. If NRG is less than 1, recovers another 1 NRG.",
+      "note": "At the end of the turn, recovers an additional 1 NRG. If NRG is less than 1, recovers another 1 NRG.",
       "priority": 3
     },
     {
-      "name": "Judgement Sanctum",
+      "name": "RK1 Skill Range  Chain of Regeneration -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) At the end of the turn, heals the character and the ally with the lowest HP percentage within 3 tiles by 50% of M.ATK.",
+      "note": "At the end of the turn, heals the character and the ally with the lowest HP percentage within 3 tiles by 50% of M.ATK.",
+      "priority": 3
+    },
+    {
+      "name": "RK3 Skill Range  Prayer of Devotion",
       "kind": "Active",
       "nrg": "1",
       "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Healing) Instant Heals all allies within 3 tiles of the character for 30% of M.ATK, and grants them 1 stack of Radiant Blessing , Anti Heal Immunity , and Bound Resistance for 2 turns; and grants the character Radiant Watch until the start of the next 2 turns.",
+      "note": "Instant Heals all allies within 3 tiles of the character for 30% of M.ATK, and grants them 1 stack of Radiant Blessing , Anti Heal Immunity ",
       "priority": 3
     },
     {
-      "name": "Will to Cleanse All Foul",
+      "name": "RK5 Skill Range  Protection of Light -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) When hit by an active single-target attack, the DMG taken is decreased by 30%. This effect can be activated 1 time per round.",
+      "note": "When hit by an active single-target attack, the DMG taken is decreased by 30%. This effect can be activated 1 time per round.",
+      "priority": 3
+    },
+    {
+      "name": "RK7 Skill Range  Judgement Sanctum",
       "kind": "Active",
-      "nrg": "0",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "1",
+      "cd": "3",
+      "description": "(Support) Instant Dispels 2 buffs from all enemies within 5 tiles of the character; and grants the character Radiant Watch until the start of the next 2 turns. Then performs Forced Alert (cannot be interrupted) in the area, dealing 50% magical AoE DMG to enemies within a 1-tile radius of the target and interrupting their turn. Can be triggered up to 3 times per round.",
+      "note": "Instant Dispels 2 buffs from all enemies within 5 tiles of the character; and grants the character Radiant Watch until the start of the next",
       "priority": 3
     },
     {
       "name": "Scorching Attack",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 80% magical DMG and inflicts Scorch on the target for 2 turns.",
+      "note": "Deals 80% magical DMG and inflicts Scorch on the target for 2 turns.",
       "priority": 3
     },
     {
-      "name": "Crystal Implosion",
+      "name": "Skill Range  Crystal Implosion - Extra",
       "kind": "Active",
       "nrg": "2",
       "cd": "2",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Magical DMG) Deals 60% AoE DMG to all enemies within 3 tiles of the target and inflicts ▽M.DEF III for 2 turns.",
+      "note": "Deals 60% AoE DMG to all enemies within 3 tiles of the target and inflicts ▽M.DEF III for 2 turns.",
       "priority": 3
     },
     {
-      "name": "Oath to End All Evil",
-      "kind": "Active",
-      "nrg": "3",
-      "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "name": "Skill Range  Indestructible Faith -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) When having 3 NRG, triggers Resolve upon defeat. When triggered, consumes 3 NRG to recover 100% HP. Can be triggered up to 2 times per battle. The SP Skill is unlocked when Samantha (Original) learns RK5 Devout Faith and SP Samantha is enhanced to 3-stars.",
+      "note": "When having 3 NRG, triggers Resolve upon defeat. When triggered, consumes 3 NRG to recover 100% HP. Can be triggered up to 2 times per battl",
       "priority": 3
     },
     {
-      "name": "Iron Pot Stew",
+      "name": "Skill Skill Range  Indestructible Faith -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) When having 3 NRG, triggers Resolve upon defeat. When triggered, consumes 3 NRG to recover 100% HP. Can be triggered up to 2 times per battle. The SP Skill is unlocked when Samantha (Original) learns RK5 Devout Faith and SP Samantha is enhanced to 3-stars.",
+      "note": "When having 3 NRG, triggers Resolve upon defeat. When triggered, consumes 3 NRG to recover 100% HP. Can be triggered up to 2 times per battl",
+      "priority": 3
+    },
+    {
+      "name": "Will to Cleanse All Foul -",
       "kind": "Active",
-      "note": "Name confirmed in page text",
-      "priority": 4,
-      "description": ""
+      "nrg": "0",
+      "cd": "0",
+      "description": "(Leader's Aura) For all allies in battle, increase ATK by 10%, DEF by 20%, skill DMG by 10%, and AoE DMG by 20%.",
+      "note": "For all allies in battle, increase ATK by 10%, DEF by 20%, skill DMG by 10%, and AoE DMG by 20%.",
+      "priority": 3
     }
   ],
   "build": {
-    "basicAttack": "Energy Wave",
-    "reaction": "NRG Recovery",
+    "basicAttack": "Light of Sanction",
+    "reaction": "Indestructible Faith",
+    "ascension": "",
     "skills": [
-      "Light of Judgement for All Sins",
-      "Chain of Regeneration",
-      "NRG Restoration",
-      "Fire Purification",
+      "Oath to End All Evil",
       "Judgement Sanctum",
       "Will to Cleanse All Foul"
     ],
-    "weapon": "",
-    "trinket": "Life Fondness",
-    "tarot": "Judgement"
+    "weapon": "Verdict of Justice",
+    "trinket": "",
+    "tarot": ""
   },
-  "summary": "is an especially strong character in most stages.",
-  "pros": [],
-  "howToUse": "",
+  "summary": "here! Table of Contents SP Samantha Tier & Basic Info Strength & How to Use",
+  "pros": [
+    "Judgement Sanctum: A Skill that can perform a very powerful [Alert] that interrupts enemy actions u",
+    "Will to Cleanse All Foul: A Leader's Aura that greatly increases the damage dealt by Aggression Faction ch",
+    "Oath to End All Evil: A Skill that attacks enemies in a wide 5-tile radius around the user. Thanks to "
+  ],
+  "howToUse": "A Skill that can perform a very powerful [Alert] that interrupts enemy actions up to 3 times in one turn. Since its CD is long, be aware that it becomes even mo A Leader's Aura that greatly increases the damage dealt by Aggression Faction characters, including SP Samantha herself. Be aware that it has particularly good  A Skill that attacks enemies in a wide 5-tile radius around the user. Thanks to SP Samantha's Trait, it can also apply [Judgement Brand], making it an extremely",
   "starPriority": "",
-  "confidence": "medium",
-  "collectedAt": "2026-08-02T04:31:09.376Z",
-  "cleanedAt": "2026-08-02T04:32:57.418Z"
+  "confidence": "high",
+  "collectedAt": "2026-08-02T04:48:37.020Z"
 }

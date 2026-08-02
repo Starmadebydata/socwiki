@@ -4,14 +4,19 @@
 
 把**公开攻略**与**客户端截图**变成可校验的 `content/collected/{slug}.json`，再择优并入站点数据。
 
-## 已跑通（本机）
+## 一键全自动（推荐）
 
 ```bash
-npm run collect          # public scrape → clean → validate
-# 结果：
-#   content/raw/public/*.txt     公开页纯文本缓存
-#   content/collected/*.json     39 个角色规范化数据
-#   src/data/collected-overrides.ts  合并产物（技能清单）
+npm run collect:auto
+# = scrape 公开源 → 结构化 reparse → validate → build
+#
+# 产出：
+#   content/raw/public/*           缓存 HTML/TXT
+#   content/collected/*.json       规范化角色数据（含 NRG/CD）
+#   src/data/auto-refined.ts       自动精修层（进站）
+#
+# 合并优先级（characters.ts）：
+#   raw seed → AUTO_REFINED（自动） → TOP20 手写（最高优先级）
 ```
 
 当前公开源抓取：**GameWith 39 页 + DotGG 12 页**，清洗后技能名示例：

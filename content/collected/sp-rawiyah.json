@@ -1,13 +1,12 @@
 {
   "slug": "sp-rawiyah",
   "name": "SP Rawiyah",
-  "source": "public",
+  "source": "public-structured",
   "sources": [
     {
-      "type": "url",
-      "url": "https://gamewith.net/sword-of-convallaria/51911",
-      "fetchedAt": "2026-08-02T04:31:45.258Z",
-      "publisher": "gamewith"
+      "type": "gamewith-html-cache",
+      "id": "51911",
+      "parsedAt": "2026-08-02T04:48:37.086Z"
     }
   ],
   "role": "Seeker",
@@ -19,79 +18,88 @@
   "stats": {
     "move": null,
     "highJump": null,
-    "lowJump": null
+    "lowJump": 5
   },
   "skills": [
     {
+      "name": "Gale - Piercing Clouds",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "An excellent skill with numerous benefits such as triggering the Trait's [Act Again], as a means of movement, activating [Gale - Void Slash], and increasing damage dealt by [Gale Sword - Chaotic Flurry]. Useful in all situations and should always be equipped.",
+      "note": "An excellent skill with numerous benefits such as triggering the Trait's [Act Again], as a means of movement, activating [Gale - Void Slash], and increasing dam",
+      "priority": 5
+    },
+    {
       "name": "Gale - Void Slash",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A skill that triggers an additional AoE attack after attacking, dealing minor damage + applying a [Lv2 Attribute Debuff]. If equipped, it activates even after a single-target attacks and can trigger the Trait's [Act Again] effect. Note that it does not trigger from using Trinket Skills. I'm! Mad! Now! ★★★★★ A Reaction that grants [Resolve] and pairs well with SP Rawiyah, who is a Seeker with a low",
+      "note": "A skill that triggers an additional AoE attack after attacking, dealing minor damage + applying a [Lv2 Attribute Debuff]. If equipped, it activates even after a",
+      "priority": 5
+    },
+    {
+      "name": "I'm",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "Recommended Reaction from Best Build table.",
+      "note": "Best Build Reaction",
+      "priority": 5
+    },
+    {
+      "name": "Powerful Attack",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "Since it deals high damage, this Basic Attack is recommended against enemies immune to knockback.",
+      "note": "Since it deals high damage, this Basic Attack is recommended against enemies immune to knockback.",
+      "priority": 5
+    },
+    {
+      "name": "Gale Dance - Sincerity",
       "kind": "Active",
-      "nrg": "0",
+      "nrg": "2",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Mobile Crew",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Police Lasso",
-      "kind": "Active",
-      "nrg": "3",
-      "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Vital Guard",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "description": "(Physical DMG) Deals 65% AoE DMG to all enemies within 3 tiles of the character. After attacking, the skill switches to Gale Dance - Resolution , lasting for 1 turn. SP Skill Skill Range Another Pint (SP Skill) [Skill] Cost: 0 / CD: 4 The SP Skill is unlocked by enhancing SP Rawiyah to 3-stars and having Rawiyah (Original) learn RK3 [Another Pint].",
+      "note": "Although the damage per hit is lower than [Gale Sword - Chaotic Flurry], its ability to perform consecutive AoE attacks and its low cost are nice. Since it's a ",
+      "priority": 4
     },
     {
       "name": "Gale Sword - Chaotic Flurry",
       "kind": "Active",
-      "nrg": "4",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A Skill that deals damage in a wide area in front. If you cast any skills twice before use, it will deal more damage even against single targets, but be careful as activating it directly results in low damage for its NRG cost. Powerful when considering height and rage even in single-target battles.",
+      "note": "A Skill that deals damage in a wide area in front. If you cast any skills twice before use, it will deal more damage even against single targets, but be careful",
+      "priority": 4
+    },
+    {
+      "name": "Base Skills Skill Range  Slash",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% Physical DMG. Gale Dance - Sincerity",
+      "note": "Deals 100% Physical DMG. Gale Dance - Sincerity",
       "priority": 3
     },
     {
-      "name": "Gale - Draw Blade",
-      "kind": "Active",
+      "name": "Gale - Draw Blade -",
+      "kind": "Passive",
       "nrg": "0",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Passive) When Movement plus Charge distance is no less than 4 tiles, recovers 1 NRG after attacking; if the target is defeated, additionally recovers 1 NRG. Each effect can be triggered up to 1 time per round.",
+      "note": "When Movement plus Charge distance is no less than 4 tiles, recovers 1 NRG after attacking; if the target is defeated, additionally recovers",
       "priority": 3
     },
     {
-      "name": "Powerful Attack",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Fancy Footwork",
-      "kind": "Active",
-      "nrg": "2",
+      "name": "Gale - Void Slash -",
+      "kind": "Passive",
+      "nrg": "0",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Passive) After actively dealing Physical DMG, deals 15% physical DMG to all enemies within 2 tiles of the character, inflicting 1 random Level 2 Attribute Debuff for 2 turns. Can be triggered up to 3 times per round. Skills That Can Be",
+      "note": "After actively dealing Physical DMG, deals 15% physical DMG to all enemies within 2 tiles of the character, inflicting 1 random Level 2 Attr",
       "priority": 3
     },
     {
@@ -99,67 +107,94 @@
       "kind": "Active",
       "nrg": "3",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Physical DMG) Single-target attack. Deals 130% DMG. Before attacking, Crit increases by 15%. If the target is defeated, recovers 3 NRG.",
+      "note": "Single-target attack. Deals 130% DMG. Before attacking, Crit increases by 15%. If the target is defeated, recovers 3 NRG.",
       "priority": 3
     },
     {
-      "name": "Valiant Vanguard",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Slash",
+      "name": "Rawiyah's Base Skills Skill Range  Slash",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% Physical DMG.",
+      "note": "Deals 100% Physical DMG.",
       "priority": 3
     },
     {
-      "name": "Gale Dance - Sincerity",
-      "kind": "Active",
-      "nrg": "2",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Gale - Piercing Clouds",
+      "name": "RK1 Skill Range  Gale - Piercing Clouds",
       "kind": "Active",
       "nrg": "0",
       "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Physical DMG) Instant Selects a location within a cross-shaped range of 3 tiles around the character and performs Charge , dealing 15% DMG to enemies passed through and stealing 1 buff . Upon hit, reduces the CD of this skill by 1 turn, and increases the DMG of the next Active Skill by 15%.",
+      "note": "Instant Selects a location within a cross-shaped range of 3 tiles around the character and performs Charge , dealing 15% DMG to enemies pass",
+      "priority": 3
+    },
+    {
+      "name": "RK11 Skill Range  Fancy Footwork",
+      "kind": "Active",
+      "nrg": "2",
+      "cd": "0",
+      "description": "(Support) Takes 50% less AoE DMG and gains 2 Dodge attempts for 2 turns.",
+      "note": "Takes 50% less AoE DMG and gains 2 Dodge attempts for 2 turns.",
+      "priority": 3
+    },
+    {
+      "name": "RK3 Skill Range  Mobile Crew -",
+      "kind": "Passive",
+      "nrg": "0",
+      "cd": "0",
+      "description": "(Passive) Increases SPD by 100. Before attacking, if the target's SPD is lower than the character's, increases the DMG dealt by 10% and ignores the target's reaction skill . Police Lasso",
+      "note": "Increases SPD by 100. Before attacking, if the target's SPD is lower than the character's, increases the DMG dealt by 10% and ignores the ta",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Gale Sword - Chaotic Flurry",
+      "kind": "Active",
+      "nrg": "4",
+      "cd": "0",
+      "description": "(Physical DMG) Deals 3 hits of 25% DMG to all enemies within a 5×3 area in the target direction. After actively casting any skill 1 time, the DMG of this skill increases to 3 hits of 35% DMG; after actively casting any skill 2 times, the DMG of this skill increases to 3 hits of 50% DMG, lasting until the end of the turn.",
+      "note": "Deals 3 hits of 25% DMG to all enemies within a 5×3 area in the target direction. After actively casting any skill 1 time, the DMG of this s",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Mobile Crew -",
+      "kind": "Passive",
+      "nrg": "0",
+      "cd": "0",
+      "description": "(Passive) Increases SPD by 100. Before attacking, if the target's SPD is lower than the character's, increases the DMG dealt by 10% and ignores the target's reaction skill .",
+      "note": "Increases SPD by 100. Before attacking, if the target's SPD is lower than the character's, increases the DMG dealt by 10% and ignores the ta",
+      "priority": 3
+    },
+    {
+      "name": "Vital Guard -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) When hit by an active attack, the DMG taken is decreased by 8%. Upon receiving an active attack, if the character is Dying , gains Dodge for 1 turn. Can be activated up to 1 time per round.",
+      "note": "When hit by an active attack, the DMG taken is decreased by 8%. Upon receiving an active attack, if the character is Dying , gains Dodge for",
       "priority": 3
     }
   ],
   "build": {
-    "basicAttack": "Gale - Void Slash",
-    "reaction": "Vital Guard",
+    "basicAttack": "Powerful Attack",
+    "reaction": "I'm",
+    "ascension": "Mad",
     "skills": [
-      "Mobile Crew",
-      "Police Lasso",
-      "Gale Sword - Chaotic Flurry",
-      "Gale - Draw Blade",
-      "Powerful Attack",
-      "Fancy Footwork"
+      "Gale Dance - Sincerity",
+      "Gale - Void Slash",
+      "Gale - Piercing Clouds"
     ],
-    "weapon": "",
-    "trinket": "Maverick's Cloak",
-    "tarot": "Verdict of Justice"
+    "weapon": "Verdict of Justice",
+    "trinket": "",
+    "tarot": ""
   },
-  "summary": "is a physical attacker with excellent mobility and area attack capabilities.",
-  "pros": [],
-  "howToUse": "",
+  "summary": "here! Table of Contents SP Rawiyah Tier & Basic Info Strength & How to Use",
+  "pros": [
+    "Gale - Piercing Clouds: An excellent skill with numerous benefits such as triggering the Trait's [Act Ag",
+    "Gale - Void Slash: A skill that triggers an additional AoE attack after attacking, dealing minor da"
+  ],
+  "howToUse": "An excellent skill with numerous benefits such as triggering the Trait's [Act Again], as a means of movement, activating [Gale - Void Slash], and increasing dam A skill that triggers an additional AoE attack after attacking, dealing minor damage + applying a [Lv2 Attribute Debuff]. If equipped, it activates even after a Although the damage per hit is lower than [Gale Sword - Chaotic Flurry], its ability to perform consecutive AoE attacks and its low cost are nice. Since it's a ",
   "starPriority": "",
-  "confidence": "medium",
-  "collectedAt": "2026-08-02T04:31:45.258Z",
-  "cleanedAt": "2026-08-02T04:32:57.418Z"
+  "confidence": "high",
+  "collectedAt": "2026-08-02T04:48:37.086Z"
 }

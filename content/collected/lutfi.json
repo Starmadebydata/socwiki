@@ -1,13 +1,12 @@
 {
   "slug": "lutfi",
   "name": "Lutfi",
-  "source": "public",
+  "source": "public-structured",
   "sources": [
     {
-      "type": "url",
-      "url": "https://gamewith.net/sword-of-convallaria/69259",
-      "fetchedAt": "2026-08-02T04:31:24.598Z",
-      "publisher": "gamewith"
+      "type": "gamewith-html-cache",
+      "id": "69259",
+      "parsedAt": "2026-08-02T04:48:37.049Z"
     }
   ],
   "role": "Seeker",
@@ -21,16 +20,61 @@
   "stats": {
     "move": null,
     "highJump": null,
-    "lowJump": null
+    "lowJump": 5
   },
   "skills": [
     {
-      "name": "Slash",
+      "name": "Decoy",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "0",
+      "description": "A powerful skill that gathers enemies within 3 tiles around you, applies a debuff, and makes you untargetable by enemies. In battles against multiple enemies, combine this with DoT skills to defeat foes without letting them act. Be cautious, since Lutfi is still susceptible to AoE Attacks or forced-targeting attacks.",
+      "note": "A powerful skill that gathers enemies within 3 tiles around you, applies a debuff, and makes you untargetable by enemies. In battles against multiple enemies, c",
+      "priority": 5
+    },
+    {
+      "name": "Disturbance",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A powerful Reaction skill that applies a debuff and DoTs to surrounding enemies at the end of your turn. When using our debuff & DoT build, this effect will always trigger since it does not deal direct damage.",
+      "note": "A powerful Reaction skill that applies a debuff and DoTs to surrounding enemies at the end of your turn. When using our debuff & DoT build, this effect will alw",
+      "priority": 5
+    },
+    {
+      "name": "Game-Breaking Flame",
+      "kind": "Active",
+      "nrg": "3",
+      "cd": "0",
+      "description": "(Debuff) Inflicts 2 stacks of Ignition on all enemies within a 1-tile radius of the target location and turns the tile into Burning . All effects last for 2 turns.",
+      "note": "A skill that applies DoT and creates [Burning] tiles in an area. It can halt enemy movement while applying DoT, making it a top priority for your build.",
+      "priority": 5
+    },
+    {
+      "name": "Hidden Piece",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "An unusual Basic Attack that applies a debuff without dealing direct damage. It synergizes well with the Reaction [Alienation], allowing multiple debuffs and DoT effects to be applied simultaneously.",
+      "note": "An unusual Basic Attack that applies a debuff without dealing direct damage. It synergizes well with the Reaction [Alienation], allowing multiple debuffs and Do",
+      "priority": 5
+    },
+    {
+      "name": "Priority and Details  Alienation",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "A passive that applies a very powerful debuff to surrounding enemies at the end of your turn. In particular, [Vulnerable III] is a debuff previously exclusive to NonoWill , increasing damage taken by enemies by 30%. Prioritize this skill in your build.",
+      "note": "A passive that applies a very powerful debuff to surrounding enemies at the end of your turn. In particular, [Vulnerable III] is a debuff previously exclusive t",
+      "priority": 5
+    },
+    {
+      "name": "Alienation -",
+      "kind": "Passive",
+      "nrg": "0",
+      "cd": "0",
+      "description": "(Passive) At the end of the turn, locks onto 3 random enemies within 3 tiles of the character, inflicting ×Assist , ▽ATK II , and Vulnerable III for 2 turns.",
+      "note": "At the end of the turn, locks onto 3 random enemies within 3 tiles of the character, inflicting ×Assist , ▽ATK II , and Vulnerable III for 2",
       "priority": 3
     },
     {
@@ -38,8 +82,89 @@
       "kind": "Active",
       "nrg": "3",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Support) Gains All's Fair in War , lasting for 1 turn. Skills That Can Be",
+      "note": "Gains All's Fair in War , lasting for 1 turn. Skills That Can Be",
+      "priority": 3
+    },
+    {
+      "name": "Disturbance -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) At the end of the turn, if no DMG was dealt during this turn, inflicts 1 random Level 2 Attribute Debuff and Life Loss equal to 40% of P.ATK on 3 random enemies within 3 tiles of the character, lasting for 2 turns.",
+      "note": "At the end of the turn, if no DMG was dealt during this turn, inflicts 1 random Level 2 Attribute Debuff and Life Loss equal to 40% of P.ATK",
+      "priority": 3
+    },
+    {
+      "name": "Lutfi's Base Skills Skill Range  Slash",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% Physical DMG.",
+      "note": "Deals 100% Physical DMG.",
+      "priority": 3
+    },
+    {
+      "name": "RK1 Skill Range  Extreme Edge",
+      "kind": "Active",
+      "nrg": "3",
+      "cd": "0",
+      "description": "(Physical DMG) A single-target attack. Deals 150% DMG; if the target is in Injured state, Crit and Crit DMG are additionally increased by 30% when attacking, ignoring Assisting Cover . Summon Bodyguard",
+      "note": "A single-target attack. Deals 150% DMG; if the target is in Injured state, Crit and Crit DMG are additionally increased by 30% when attackin",
+      "priority": 3
+    },
+    {
+      "name": "RK3 Skill Range  Full Victory -",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "0",
+      "description": "(Aura) Increases Crit by 20% and Crit DMG by 10% for all allies within 3 tiles of the character.",
+      "note": "Increases Crit by 20% and Crit DMG by 10% for all allies within 3 tiles of the character.",
+      "priority": 3
+    },
+    {
+      "name": "RK5 Skill Range  NRG Recovery -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) When hit by an active attack, the DMG taken is decreased by 8%. Upon receiving an active attack, additionally recovers 1 NRG.",
+      "note": "When hit by an active attack, the DMG taken is decreased by 8%. Upon receiving an active attack, additionally recovers 1 NRG.",
+      "priority": 3
+    },
+    {
+      "name": "RK7 Skill Range  Moment of Crisis -",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "0",
+      "description": "(Leader's Aura) For all Alacrity allies in battle, increases ATK by 10%, and DEF by 20%. When actively attacking or casting support or debuff skills, if the enemy has 3 or more debuffs , the character's ATK is increased by 18% and gains Master Strategist , lasting for 1 turn.",
+      "note": "For all Alacrity allies in battle, increases ATK by 10%, and DEF by 20%. When actively attacking or casting support or debuff skills, if the",
+      "priority": 3
+    },
+    {
+      "name": "RK9 Skill Range  Discovered Check",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Single-target attack. Deals 100% physical DMG, and inflicts 2 random Level 2 Attribute Debuffs , lasting for 2 turns; if the opponent triggers attack during the skill, performs Dodge , and then pursuit, dealing 40% physical DMG and the character moves back by 1 tile.",
+      "note": "Single-target attack. Deals 100% physical DMG, and inflicts 2 random Level 2 Attribute Debuffs , lasting for 2 turns; if the opponent trigge",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Checkmate",
+      "kind": "Active",
+      "nrg": "4",
+      "cd": "0",
+      "description": "(Physical DMG) Teleports behind the enemy and deals 100% AoE DMG 4 times to random enemies within 2 tiles of the target; if attacking the same target repeatedly, DMG to that target is reduced by 50%. Before attacking, Crit and Crit DMG are additionally increased by 50%; after attacking, the character receives Planning , lasting for 3 turns.",
+      "note": "Teleports behind the enemy and deals 100% AoE DMG 4 times to random enemies within 2 tiles of the target; if attacking the same target repea",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Extreme Edge",
+      "kind": "Active",
+      "nrg": "3",
+      "cd": "0",
+      "description": "(Physical DMG) A single-target attack. Deals 150% DMG; if the target is in Injured state, Crit and Crit DMG are additionally increased by 30% when attacking, ignoring Assisting Cover .",
+      "note": "A single-target attack. Deals 150% DMG; if the target is in Injured state, Crit and Crit DMG are additionally increased by 30% when attackin",
       "priority": 3
     },
     {
@@ -47,110 +172,32 @@
       "kind": "Active",
       "nrg": "3",
       "cd": "2",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Support) Summons a Bodyguard . Only 1 can exist at a time. Can be used up to 2 times per battle.",
+      "note": "Summons a Bodyguard . Only 1 can exist at a time. Can be used up to 2 times per battle.",
       "priority": 3
-    },
-    {
-      "name": "Full Victory",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Alienation",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "NRG Recovery",
-      "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Disturbance",
-      "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Decoy",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Hidden Piece",
-      "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Checkmate",
-      "kind": "Active",
-      "nrg": "4",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Game-Breaking Flame",
-      "kind": "Active",
-      "nrg": "3",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Assisting Cover",
-      "kind": "Reaction",
-      "note": "Name confirmed in page text",
-      "priority": 4,
-      "description": ""
     }
   ],
   "build": {
-    "basicAttack": "Slash",
-    "reaction": "Summon Bodyguard",
+    "basicAttack": "Hidden Piece",
+    "reaction": "Disturbance",
+    "ascension": "",
     "skills": [
-      "All's Fair in War",
-      "Full Victory",
-      "Alienation",
-      "NRG Recovery",
       "Decoy",
-      "Checkmate"
+      "Game-Breaking Flame"
     ],
     "weapon": "",
-    "trinket": "Maverick's Cloak",
-    "tarot": "Verdict of Justice"
+    "trinket": "",
+    "tarot": ""
   },
-  "summary": "Excels at Applying Debuffs & DoT Lutfi is a Seeker who excels at applying powerful debuffs and DoTs.",
-  "pros": [],
-  "howToUse": "",
+  "summary": "here! Table of Contents Lutfi Tier & Basic Info Strength & How to Use",
+  "pros": [
+    "Priority and Details  Alienation: A passive that applies a very powerful debuff to surrounding enemies at the end ",
+    "Disturbance: A powerful Reaction skill that applies a debuff and DoTs to surrounding enemies ",
+    "Decoy: A powerful skill that gathers enemies within 3 tiles around you, applies a debuf",
+    "Hidden Piece: An unusual Basic Attack that applies a debuff without dealing direct damage. It "
+  ],
+  "howToUse": "A passive that applies a very powerful debuff to surrounding enemies at the end of your turn. In particular, [Vulnerable III] is a debuff previously exclusive t A powerful Reaction skill that applies a debuff and DoTs to surrounding enemies at the end of your turn. When using our debuff & DoT build, this effect will alw A powerful skill that gathers enemies within 3 tiles around you, applies a debuff, and makes you untargetable by enemies. In battles against multiple enemies, c",
   "starPriority": "",
-  "confidence": "medium",
-  "collectedAt": "2026-08-02T04:31:24.598Z",
-  "cleanedAt": "2026-08-02T04:32:57.415Z"
+  "confidence": "high",
+  "collectedAt": "2026-08-02T04:48:37.049Z"
 }

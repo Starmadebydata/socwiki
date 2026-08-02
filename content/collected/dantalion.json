@@ -1,13 +1,12 @@
 {
   "slug": "dantalion",
   "name": "Dantalion",
-  "source": "public",
+  "source": "public-structured",
   "sources": [
     {
-      "type": "url",
-      "url": "https://gamewith.net/sword-of-convallaria/48261",
-      "fetchedAt": "2026-08-02T04:31:19.690Z",
-      "publisher": "gamewith"
+      "type": "gamewith-html-cache",
+      "id": "48261",
+      "parsedAt": "2026-08-02T04:48:37.038Z"
     }
   ],
   "role": "Destroyer",
@@ -19,43 +18,43 @@
   "stats": {
     "move": null,
     "highJump": null,
-    "lowJump": null
+    "lowJump": 3
   },
   "skills": [
     {
-      "name": "Slash",
+      "name": "Royalty Untamed Spirit",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "Recommended Reaction from Best Build table.",
+      "note": "Best Build Reaction",
+      "priority": 5
+    },
+    {
+      "name": "White Sword Air",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "nrg": "0",
+      "cd": "—",
+      "description": "Recommended Basic from Best Build table.",
+      "note": "Best Build Basic",
+      "priority": 5
     },
     {
       "name": "Dawnlight",
       "kind": "Active",
       "nrg": "3",
       "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "description": "(Magical DMG) Single-target attack. Dantalion deals Magical DMG equal to 130% of his P.ATK. Before attacking, a random Buffs on the target become Level 1 Attribute Debuffs for 1 turn.",
+      "note": "Single-target attack. Dantalion deals Magical DMG equal to 130% of his P.ATK. Before attacking, a random Buffs on the target become Level 1 ",
+      "priority": 4
     },
     {
-      "name": "Unsheathe",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Daybreak",
-      "kind": "Active",
-      "nrg": "2",
-      "cd": "2",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "name": "Base Skills Skill Range  Slash",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% Physical DMG.",
+      "note": "Deals 100% Physical DMG.",
       "priority": 3
     },
     {
@@ -63,85 +62,107 @@
       "kind": "Active",
       "nrg": "1",
       "cd": "4",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Physical DMG) Single-target attack. Deals 130% DMG and depletes all of the target's NRG.",
+      "note": "Single-target attack. Deals 130% DMG and depletes all of the target's NRG.",
       "priority": 3
     },
     {
-      "name": "Tenacity",
+      "name": "RK1 Skill Range  Inspired Healing -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) After initiating an Active Attack, heals the ally with the lowest HP in battle by 20% of the character's P.ATK.",
+      "note": "After initiating an Active Attack, heals the ally with the lowest HP in battle by 20% of the character's P.ATK.",
+      "priority": 3
+    },
+    {
+      "name": "RK11 Skill Range  Legacy of Comrades -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) When an ally in battle is defeated, recovers 30% HP for the character, and the character gains ▲ ATK II , ▲ P.DEF II , and ▲ M.DEF II for 3 turns.",
+      "note": "When an ally in battle is defeated, recovers 30% HP for the character, and the character gains ▲ ATK II , ▲ P.DEF II , and ▲ M.DEF II for 3 ",
+      "priority": 3
+    },
+    {
+      "name": "RK5 Skill Range  Air of Royalty -",
       "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) DMG taken from Melee attacks decreases by 30%.",
+      "note": "DMG taken from Melee attacks decreases by 30%.",
       "priority": 3
     },
     {
-      "name": "Destructive Storm",
+      "name": "RK7 Skill Range  Destructive Storm",
       "kind": "Active",
       "nrg": "3",
       "cd": "2",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "White Sword",
-      "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Physical DMG) Deals 50% AoE DMG to all enemies within a 4-tile radius around the character and inflicts 2 random Level 2 Attribute Debuffs for 2 turns. For Iria! [Skill] Cost: - / CD: - (Leader's Aura) For all Iria allies in battle increases ATK by 20% and DEF by 20%. Allies' attacks deal 20% more DMG to the enemies affected by 3 or more debuffs . Skills That Can Be",
+      "note": "Deals 50% AoE DMG to all enemies within a 4-tile radius around the character and inflicts 2 random Level 2 Attribute Debuffs for 2 turns. Fo",
       "priority": 3
     },
     {
       "name": "Shield-Break Attack",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% physical DMG and gains Shield Break I before attacking.",
+      "note": "Deals 100% physical DMG and gains Shield Break I before attacking.",
       "priority": 3
     },
     {
-      "name": "Legacy of Comrades",
+      "name": "Skill Range  Daybreak",
       "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "2",
+      "cd": "2",
+      "description": "(Mixed DMG) Dantalion deals 40% physical DMG to all enemies in the target direction within a range of 3x2 tiles and inflicts × Healing Received for 2 turns. Another attack is then initiated which deals Magical DMG.",
+      "note": "Dantalion deals 40% physical DMG to all enemies in the target direction within a range of 3x2 tiles and inflicts × Healing Received for 2 tu",
       "priority": 3
     },
     {
-      "name": "Endless Dawn",
-      "kind": "Active",
-      "nrg": "4",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "name": "Skill Range  White Sword",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Single-target attack. Dantalion deals Magical DMG equal to 90% of his P.ATK.",
+      "note": "Single-target attack. Dantalion deals Magical DMG equal to 90% of his P.ATK.",
+      "priority": 3
+    },
+    {
+      "name": "Tenacity -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) When hit an active attack from a Counter Role character, the DMG taken is decreased by 25%.",
+      "note": "When hit an active attack from a Counter Role character, the DMG taken is decreased by 25%.",
+      "priority": 3
+    },
+    {
+      "name": "Unsheathe -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) Before initiating an active melee attack, deals magical DMG equal to 40% of P.ATK. If the target has a Shield , inflicts Vulnerable II that lasts for 2 turns before attacking. All the effects can be triggered up to 1 time per round. Skills That Can",
+      "note": "Before initiating an active melee attack, deals magical DMG equal to 40% of P.ATK. If the target has a Shield , inflicts Vulnerable II that ",
       "priority": 3
     }
   ],
   "build": {
-    "basicAttack": "Slash",
-    "reaction": "Tenacity",
+    "basicAttack": "White Sword Air",
+    "reaction": "Royalty Untamed Spirit",
+    "ascension": "",
     "skills": [
-      "Dawnlight",
-      "Unsheathe",
-      "Daybreak",
-      "NRG-Depleting Blow",
-      "Destructive Storm",
-      "Legacy of Comrades"
+      "Dawnlight"
     ],
-    "weapon": "",
+    "weapon": "Newborn Blade",
     "trinket": "",
-    "tarot": "Judgement"
+    "tarot": ""
   },
-  "summary": "is attacks scale off his Physical Attack stat.",
+  "summary": "here! Table of Contents Dantalion Tier & Basic Info Strength & How to Use",
   "pros": [],
   "howToUse": "",
   "starPriority": "",
   "confidence": "medium",
-  "collectedAt": "2026-08-02T04:31:19.690Z",
-  "cleanedAt": "2026-08-02T04:32:57.412Z"
+  "collectedAt": "2026-08-02T04:48:37.038Z"
 }

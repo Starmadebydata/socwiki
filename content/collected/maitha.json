@@ -1,13 +1,12 @@
 {
   "slug": "maitha",
   "name": "Maitha",
-  "source": "public",
+  "source": "public-structured",
   "sources": [
     {
-      "type": "url",
-      "url": "https://gamewith.net/sword-of-convallaria/48263",
-      "fetchedAt": "2026-08-02T04:31:10.172Z",
-      "publisher": "gamewith"
+      "type": "gamewith-html-cache",
+      "id": "48263",
+      "parsedAt": "2026-08-02T04:48:37.022Z"
     }
   ],
   "role": "Defender",
@@ -19,16 +18,61 @@
   "stats": {
     "move": null,
     "highJump": null,
-    "lowJump": null
+    "lowJump": 3
   },
   "skills": [
     {
-      "name": "Slash",
+      "name": "Armor-Piercing Strike Block Counter Leave",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "0",
+      "cd": "—",
+      "description": "Recommended Basic from Best Build table.",
+      "note": "Best Build Basic",
+      "priority": 5
+    },
+    {
+      "name": "It",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "Recommended Reaction from Best Build table.",
+      "note": "Best Build Reaction",
+      "priority": 5
+    },
+    {
+      "name": "Invulnerable",
+      "kind": "Active",
+      "nrg": "1",
+      "cd": "5",
+      "description": "(Support) Gains DMG Reduction IV , Mind's Eye , and Immunity to Disrupt for 3 turns.",
+      "note": "Gains DMG Reduction IV , Mind's Eye , and Immunity to Disrupt for 3 turns.",
+      "priority": 4
+    },
+    {
+      "name": "Bandage",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "3",
+      "description": "(Healing) Instant Single-target healing. Heals 30% HP.",
+      "note": "Instant Single-target healing. Heals 30% HP.",
+      "priority": 3
+    },
+    {
+      "name": "Block Counter -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) When receiving a melee attack from front or side , there is a 100% chance to trigger Block . This leads to a Strike Back with basic attack , dealing 70% physical DMG to the attacker. This effect can be activated 1 time per round.",
+      "note": "When receiving a melee attack from front or side , there is a 100% chance to trigger Block . This leads to a Strike Back with basic attack ,",
+      "priority": 3
+    },
+    {
+      "name": "Co-Defense -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) For each ally within a 2-tile radius of the character, DEF increases by 10%, up to 40%.",
+      "note": "For each ally within a 2-tile radius of the character, DEF increases by 10%, up to 40%.",
       "priority": 3
     },
     {
@@ -36,35 +80,17 @@
       "kind": "Active",
       "nrg": "2",
       "cd": "2",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Physical DMG) Deals 120% DMG, knocks the target back by 2 tiles, and inflicts ▽ Move I for 1 turn.",
+      "note": "Deals 120% DMG, knocks the target back by 2 tiles, and inflicts ▽ Move I for 1 turn.",
       "priority": 3
     },
     {
-      "name": "Bulwark Charge",
-      "kind": "Active",
-      "nrg": "1",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Guard",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Co-Defense",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "name": "Maitha's Base Skills Skill Range  Slash",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% Physical DMG.",
+      "note": "Deals 100% Physical DMG.",
       "priority": 3
     },
     {
@@ -72,108 +98,89 @@
       "kind": "Active",
       "nrg": "1",
       "cd": "5",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Endurance Activation",
-      "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Block Counter",
-      "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Bandage",
-      "kind": "Active",
-      "nrg": "0",
-      "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Armor-Piercing Strike",
-      "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Physical DMG) Maitha charges at 1 enemy within a cross-shaped range around her, dealing 130% DMG and knocking the target back by 2 tiles.",
+      "note": "Maitha charges at 1 enemy within a cross-shaped range around her, dealing 130% DMG and knocking the target back by 2 tiles.",
       "priority": 3
     },
     {
       "name": "Powerful Attack",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 110% Physical DMG.",
+      "note": "Deals 110% Physical DMG.",
       "priority": 3
     },
     {
-      "name": "Maitha's Combo",
+      "name": "RK11 Skill Range  Maitha's Combo",
       "kind": "Active",
       "nrg": "2",
       "cd": "4",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Physical DMG) Maitha deals 20% DMG 1 time, 50% DMG 3 times, and she knocks the target back by 2 tiles.",
+      "note": "Maitha deals 20% DMG 1 time, 50% DMG 3 times, and she knocks the target back by 2 tiles.",
       "priority": 3
     },
     {
-      "name": "Invulnerable",
+      "name": "RK5 Skill Range  Endurance Activation -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) When receiving healing, gains DMG Reduction II for 2 turns.",
+      "note": "When receiving healing, gains DMG Reduction II for 2 turns.",
+      "priority": 3
+    },
+    {
+      "name": "RK9 Skill Range  Armor-Piercing Strike",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% physical DMG and inflicts ▽ P.DEF I and ▽ M.DEF I on the target, lasting for 2 turns.",
+      "note": "Deals 100% physical DMG and inflicts ▽ P.DEF I and ▽ M.DEF I on the target, lasting for 2 turns.",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Battle Flag of Convallaria -",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Leader's Aura) For all Sword of Convallaria allies in battle, increases ATK by 10% and DEF by 20%.",
+      "note": "For all Sword of Convallaria allies in battle, increases ATK by 10% and DEF by 20%.",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Guard -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) Takes physical attacks for all other allies within a 2-tile radius of the character. When triggered, DEF is increased by 20%. Can be activated up to 1 time per round.",
+      "note": "Takes physical attacks for all other allies within a 2-tile radius of the character. When triggered, DEF is increased by 20%. Can be activat",
+      "priority": 3
+    },
+    {
+      "name": "SP Skill Skill Range  Bulwark Charge",
       "kind": "Active",
       "nrg": "1",
-      "cd": "5",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "cd": "0",
+      "description": "(Piercing DMG) Rally Command Selects target to perform Charge ; if the target is an enemy, charges to their side and deals Piercing DMG equal to 80% of P.ATK. ✦ Auxiliary Passive . Effect: Increases Movement by 1 tile. After an active attack, the character can Move Again for a distance equal to the remaining Movement. When SP Maitha learns RK1 Bulwark Charge , and Maitha (Original) is enhanced to 3-star, the SP Skill is unlocked. Skills That Can",
+      "note": "Rally Command Selects target to perform Charge ; if the target is an enemy, charges to their side and deals Piercing DMG equal to 80% of P.A",
       "priority": 3
-    },
-    {
-      "name": "Battle Flag of Convallaria",
-      "kind": "Aura",
-      "note": "Name confirmed in page text",
-      "priority": 4,
-      "description": ""
-    },
-    {
-      "name": "Assisting Cover",
-      "kind": "Reaction",
-      "note": "Name confirmed in page text",
-      "priority": 4,
-      "description": ""
     }
   ],
   "build": {
-    "basicAttack": "Slash",
-    "reaction": "Guard",
+    "basicAttack": "Armor-Piercing Strike Block Counter Leave",
+    "reaction": "It",
+    "ascension": "Me",
     "skills": [
-      "Leg Slam",
-      "Bulwark Charge",
-      "Co-Defense",
-      "Maitha's Charge",
-      "Endurance Activation",
-      "Bandage"
+      "Invulnerable"
     ],
     "weapon": "",
-    "trinket": "Great Company on the Journey",
-    "tarot": "Judgement"
+    "trinket": "",
+    "tarot": ""
   },
-  "summary": "is a bonus [Come On, Everybody!] is primarily used to grant allies buffs.",
+  "summary": "here! Table of Contents Maitha Tier & Basic Info Strength & How to Use",
   "pros": [],
   "howToUse": "",
   "starPriority": "",
   "confidence": "medium",
-  "collectedAt": "2026-08-02T04:31:10.172Z",
-  "cleanedAt": "2026-08-02T04:32:57.415Z"
+  "collectedAt": "2026-08-02T04:48:37.022Z"
 }

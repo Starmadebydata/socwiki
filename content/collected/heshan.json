@@ -1,71 +1,106 @@
 {
   "slug": "heshan",
   "name": "Heshan",
-  "source": "public",
+  "source": "public-structured",
   "sources": [
     {
-      "type": "url",
-      "url": "https://gamewith.net/sword-of-convallaria/76224",
-      "fetchedAt": "2026-08-02T04:31:36.625Z",
-      "publisher": "gamewith"
+      "type": "gamewith-html-cache",
+      "id": "76224",
+      "parsedAt": "2026-08-02T04:48:37.069Z"
     }
   ],
   "role": "Defender",
   "factions": [
     "Alacrity",
-    "SoC",
-    "Elaman"
+    "Elaman",
+    "SoC"
   ],
   "rarity": "Legendary",
   "stats": {
     "move": null,
     "highJump": null,
-    "lowJump": null
+    "lowJump": 3
   },
   "skills": [
     {
-      "name": "Energy Wave",
+      "name": "Chaos March",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "nrg": "—",
+      "cd": "—",
+      "description": "A powerful Basic Attack that deals Piercing DMG using Healing Received Reversal and healing, while also applying [Infection] and recovering NRG.",
+      "note": "A powerful Basic Attack that deals Piercing DMG using Healing Received Reversal and healing, while also applying [Infection] and recovering NRG.",
+      "priority": 5
+    },
+    {
+      "name": "Echo in the Mountains",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "An excellent Reaction that greatly reduces damage taken, which also triggers heals when damaged + Channel effects. In general, you want to have this in your build.",
+      "note": "An excellent Reaction that greatly reduces damage taken, which also triggers heals when damaged + Channel effects. In general, you want to have this in your bui",
+      "priority": 5
+    },
+    {
+      "name": "Priority and Details  Performance",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "This is the core [Channel] Skill for Heshan. Use [Verdant Melody] when there surrounded by DPS allies who need critical buffs or when healing is needed; otherwise, use Withered Dirge.",
+      "note": "This is the core [Channel] Skill for Heshan. Use [Verdant Melody] when there surrounded by DPS allies who need critical buffs or when healing is needed; otherwi",
+      "priority": 5
+    },
+    {
+      "name": "Tribal Anthem",
+      "kind": "Active",
+      "nrg": "3",
+      "cd": "0",
+      "description": "(Healing) Triggers corresponding effects based on the current Channeling state: ✦ If in Verdant Melody , heals all allies within 3 tiles of the character for 60% of M.ATK and recovers 1 NRG, grants 1 random Level 2 Buff and ▲Crit DMG II , lasting for 2 turns. ✦ If in Withered Dirge , inflicts Healing Received",
+      "note": "The effect changes depending on the Channeled melody, allowing either support or Piercing DMG & [Infection] application. It costs 3 NRG, but since there is no C",
+      "priority": 5
+    },
+    {
+      "name": "Horns of Home",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "Enhances the critical rate & Crit DMG of surrounding allies, with most Elaman characters receiving additional enhancements. Heshan also greatly reduces damage taken, making this a skill you'll want to prioritize.",
+      "note": "Enhances the critical rate & Crit DMG of surrounding allies, with most Elaman characters receiving additional enhancements. Heshan also greatly reduces damage t",
+      "priority": 4
     },
     {
       "name": "Performance",
       "kind": "Active",
       "nrg": "1",
       "cd": "1",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Decision) Selects to use Verdant Melody or Withered Dirge ; after casting any skill, this skill switches to the corresponding Channel cancel skill.",
+      "note": "Selects to use Verdant Melody or Withered Dirge ; after casting any skill, this skill switches to the corresponding Channel cancel skill.",
+      "priority": 4
+    },
+    {
+      "name": "Base Skills Skill Range  Energy Wave",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deal 80% Magical DMG.",
+      "note": "Deal 80% Magical DMG.",
       "priority": 3
     },
     {
-      "name": "NRG Restoration",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "name": "Echo in the Mountains -",
+      "kind": "Reaction",
+      "nrg": "0",
+      "cd": "2",
+      "description": "(Reaction) Reduces DMG taken by 20%. ✦ When attacked by enemies: heals the character for 50% of M.ATK; if in Channeling state, immediately triggers 1 instance of the Channeling effect. CD: 2 turns.",
+      "note": "Reduces DMG taken by 20%. ✦ When attacked by enemies: heals the character for 50% of M.ATK; if in Channeling state, immediately triggers 1 i",
       "priority": 3
     },
     {
-      "name": "Field",
+      "name": "Field -",
       "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Healing Lullaby",
-      "kind": "Active",
-      "nrg": "1",
-      "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Aura) Decreases AoE DMG taken by all allies within 3 tiles around the character by 25%.",
+      "note": "Decreases AoE DMG taken by all allies within 3 tiles around the character by 25%.",
       "priority": 3
     },
     {
@@ -73,103 +108,105 @@
       "kind": "Active",
       "nrg": "0",
       "cd": "4",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "NRG Recovery",
-      "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Echo in the Mountains",
-      "kind": "Reaction",
-      "nrg": "0",
-      "cd": "2",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Horns of Home",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Tribal Anthem",
-      "kind": "Active",
-      "nrg": "3",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Chaos March",
-      "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Support) Dispels 3 debuffs on all allies within 3 tiles around the target and gains Regeneration II for 2 turns.",
+      "note": "Dispels 3 debuffs on all allies within 3 tiles around the target and gains Regeneration II for 2 turns.",
       "priority": 3
     },
     {
       "name": "Merciful Strike",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 80% magical DMG and increases the effect of the next healing skill by 15%, lasting for 2 turns.",
+      "note": "Deals 80% magical DMG and increases the effect of the next healing skill by 15%, lasting for 2 turns.",
       "priority": 3
     },
     {
-      "name": "Woodland Suite",
+      "name": "Resolve -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) Immediately recovers 5% HP when the character is defeated. Can be activated up to 1 time per battle.",
+      "note": "Immediately recovers 5% HP when the character is defeated. Can be activated up to 1 time per battle.",
+      "priority": 3
+    },
+    {
+      "name": "RK1 Skill Range  NRG Restoration -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) At the end of the turn, recovers an additional 1 NRG. If NRG is less than 1, recovers another 1 NRG.",
+      "note": "At the end of the turn, recovers an additional 1 NRG. If NRG is less than 1, recovers another 1 NRG.",
+      "priority": 3
+    },
+    {
+      "name": "RK11 Skill Range  Woodland Suite",
       "kind": "Active",
       "nrg": "0",
       "cd": "2",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Healing) Selects a target enemy or ally to cast; after casting, the character recovers 1 NRG. ✦ If the target is an ally, heals for 100% of M.ATK; before healing, dispels all Healing Disability effects and 2 Debuffs from the target, then grants Cooling Powder , DMG Reduction II , P.DEF II , and M.DEF II last",
+      "note": "Selects a target enemy or ally to cast; after casting, the character recovers 1 NRG. ✦ If the target is an ally, heals for 100% of M.ATK; be",
       "priority": 3
     },
     {
-      "name": "Resolve",
+      "name": "RK3 Skill Range  Healing Lullaby",
       "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "nrg": "1",
+      "cd": "3",
+      "description": "(Healing) Instant Recovers 10% HP for the target ally and grants 2 random Level 2 Buffs ; if the target is from Elaman , additionally grants 5 stacks of Liberation ; for each stack of Liberation the target has, additionally recovers 5% HP.",
+      "note": "Instant Recovers 10% HP for the target ally and grants 2 random Level 2 Buffs ; if the target is from Elaman , additionally grants 5 stacks ",
+      "priority": 3
+    },
+    {
+      "name": "RK5 Skill Range  NRG Recovery -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) When hit by an active attack, the DMG taken is decreased by 8%. Upon receiving an active attack, additionally recovers 1 NRG.",
+      "note": "When hit by an active attack, the DMG taken is decreased by 8%. Upon receiving an active attack, additionally recovers 1 NRG.",
+      "priority": 3
+    },
+    {
+      "name": "RK7 Skill Range  Horns of Home -",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Aura) All allies within 4 tiles of the character increase Crit by 20% and Crit DMG by 5%; if Liberation is active on target, additionally increases Crit by 10% and Crit DMG by 5%. ✦ The character gains an additional effect: when attacked by enemies with Healing Received Reversal effects, reduces DMG taken by 25%.",
+      "note": "All allies within 4 tiles of the character increase Crit by 20% and Crit DMG by 5%; if Liberation is active on target, additionally increase",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Chaos March",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack/Healing) Inflicts Healing Received Reversal II on the target enemy, lasting for 2 turns, then heals the target for 60% of M.ATK if they are affected by Healing Received Reversal effects and inflicts 2 stacks of Infection . After casting the skill, the character recovers 1 NRG.",
+      "note": "Inflicts Healing Received Reversal II on the target enemy, lasting for 2 turns, then heals the target for 60% of M.ATK if they are affected ",
       "priority": 3
     }
   ],
   "build": {
-    "basicAttack": "Energy Wave",
-    "reaction": "NRG Recovery",
+    "basicAttack": "Chaos March",
+    "reaction": "Echo in the Mountains",
+    "ascension": "",
     "skills": [
       "Performance",
-      "NRG Restoration",
-      "Field",
-      "Healing Lullaby",
-      "Light of Purification",
+      "Tribal Anthem",
       "Horns of Home"
     ],
     "weapon": "",
-    "trinket": "Life Fondness",
-    "tarot": "Judgement"
+    "trinket": "",
+    "tarot": ""
   },
-  "summary": "is a unique support Character who excels in support through healing allies and Crit buffs, while also possessing high survivability thanks to damage reduction skills .",
-  "pros": [],
-  "howToUse": "",
+  "summary": "here! Table of Contents Heshan Tier & Basic Info Strength & How to Use",
+  "pros": [
+    "Priority and Details  Performance: This is the core [Channel] Skill for Heshan. Use [Verdant Melody] when there sur",
+    "Echo in the Mountains: An excellent Reaction that greatly reduces damage taken, which also triggers hea",
+    "Tribal Anthem: The effect changes depending on the Channeled melody, allowing either support or",
+    "Chaos March: A powerful Basic Attack that deals Piercing DMG using Healing Received Reversal "
+  ],
+  "howToUse": "This is the core [Channel] Skill for Heshan. Use [Verdant Melody] when there surrounded by DPS allies who need critical buffs or when healing is needed; otherwi An excellent Reaction that greatly reduces damage taken, which also triggers heals when damaged + Channel effects. In general, you want to have this in your bui The effect changes depending on the Channeled melody, allowing either support or Piercing DMG & [Infection] application. It costs 3 NRG, but since there is no C",
   "starPriority": "",
-  "confidence": "medium",
-  "collectedAt": "2026-08-02T04:31:36.625Z",
-  "cleanedAt": "2026-08-02T04:32:57.414Z"
+  "confidence": "high",
+  "collectedAt": "2026-08-02T04:48:37.069Z"
 }

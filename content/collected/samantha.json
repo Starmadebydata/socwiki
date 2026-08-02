@@ -1,13 +1,12 @@
 {
   "slug": "samantha",
   "name": "Samantha",
-  "source": "public",
+  "source": "public-structured",
   "sources": [
     {
-      "type": "url",
-      "url": "https://gamewith.net/sword-of-convallaria/48267",
-      "fetchedAt": "2026-08-02T04:31:18.105Z",
-      "publisher": "gamewith"
+      "type": "gamewith-html-cache",
+      "id": "48267",
+      "parsedAt": "2026-08-02T04:48:37.036Z"
     }
   ],
   "role": "Watcher",
@@ -20,61 +19,34 @@
   "stats": {
     "move": null,
     "highJump": null,
-    "lowJump": null
+    "lowJump": 3
   },
   "skills": [
     {
-      "name": "Energy Wave",
+      "name": "Merciful Strike",
       "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 80% magical DMG and increases the effect of the next healing skill by 15%, lasting for 2 turns.",
+      "note": "Deals 80% magical DMG and increases the effect of the next healing skill by 15%, lasting for 2 turns.",
+      "priority": 5
     },
     {
-      "name": "Soul Soothing",
+      "name": "Sacred Sanctuary Radiant Stamp NRG Restoration",
       "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
+      "nrg": "—",
+      "cd": "—",
+      "description": "Listed in GameWith Best Build table.",
+      "note": "Best Build skill slot",
+      "priority": 5
     },
     {
-      "name": "Domain of Devotion",
-      "kind": "Active",
-      "nrg": "1",
-      "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "NRG Restoration",
-      "kind": "Active",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Light of Judgement",
-      "kind": "Active",
-      "nrg": "3",
-      "cd": "0",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Radiant Stamp",
-      "kind": "Active",
-      "nrg": "1",
-      "cd": "2",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "name": "Base Skills Skill Range  Energy Wave",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deal 80% Magical DMG.",
+      "note": "Deal 80% Magical DMG.",
       "priority": 3
     },
     {
@@ -82,17 +54,8 @@
       "kind": "Active",
       "nrg": "0",
       "cd": "4",
-      "description": "",
-      "note": "Extracted from public guide HTML",
-      "priority": 3
-    },
-    {
-      "name": "Devout Faith",
-      "kind": "Reaction",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Magical DMG) Deals 70% DMG to all enemies in a straight line within 5 tiles in the target direction and inflicts × Active Skills for 2 turns. Recovers 2 NRG for every 1 enemy hit by skill.",
+      "note": "Deals 70% DMG to all enemies in a straight line within 5 tiles in the target direction and inflicts × Active Skills for 2 turns. Recovers 2 ",
       "priority": 3
     },
     {
@@ -100,58 +63,134 @@
       "kind": "Active",
       "nrg": "1",
       "cd": "3",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Magic DMG) Samantha deals 30% DMG to all enemies within 5 tiles around herself. Additionally dispels 3 buffs from enemies and 3 Debuffs from allies.",
+      "note": "Samantha deals 30% DMG to all enemies within 5 tiles around herself. Additionally dispels 3 buffs from enemies and 3 Debuffs from allies.",
       "priority": 3
     },
     {
-      "name": "Invigorating Strike",
-      "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "name": "Light of Judgement",
+      "kind": "Active",
+      "nrg": "3",
+      "cd": "0",
+      "description": "(Magical DMG) Single-target attack. Deals 140% DMG. After attacking, heals the ally with the lowest HP percentage in battle for 50% of the character's M.ATK. Skills That Can Be",
+      "note": "Single-target attack. Deals 140% DMG. After attacking, heals the ally with the lowest HP percentage in battle for 50% of the character's M.A",
       "priority": 3
     },
     {
-      "name": "Merciful Strike",
-      "kind": "Basic",
-      "nrg": "-",
-      "cd": "-",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "name": "P Skill Skill Range  Domain of Devotion",
+      "kind": "Active",
+      "nrg": "1",
+      "cd": "3",
+      "description": "(Healing) Instant Heals all allies within 3 tiles of the character for 30% of M.ATK, and grants them 1 stack of Radiant Shine , Anti Heal Immunity , and Bound Resistance for 2 turns. The SP Skill is unlocked when SP Samantha learns RK3 Prayer of Devotion and Samantha (Original) is enhanced to 3-stars. Skill",
+      "note": "Instant Heals all allies within 3 tiles of the character for 30% of M.ATK, and grants them 1 stack of Radiant Shine , Anti Heal Immunity , a",
       "priority": 3
     },
     {
-      "name": "Sacred Sanctuary",
+      "name": "Range  Battle Flag of Papal State -",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Leader's Aura) For all Papal States allies in battle, increases ATK by 10% and DEF by 20%. Light of Celestial Purge",
+      "note": "For all Papal States allies in battle, increases ATK by 10% and DEF by 20%. Light of Celestial Purge",
+      "priority": 3
+    },
+    {
+      "name": "RK1 Skill Range  NRG Restoration -",
+      "kind": "Passive",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Passive) At the end of the turn, recovers an additional 1 NRG. If NRG is less than 1, recovers another 1 NRG.",
+      "note": "At the end of the turn, recovers an additional 1 NRG. If NRG is less than 1, recovers another 1 NRG.",
+      "priority": 3
+    },
+    {
+      "name": "RK11 Skill Range  Sacred Sanctuary",
       "kind": "Active",
       "nrg": "3",
       "cd": "5",
-      "description": "",
-      "note": "Extracted from public guide HTML",
+      "description": "(Support) Samantha grants all allies within 5 tiles around herself DMG Reduction III and ▲Healing Received III for 2 turns. She gains Regenerate - Extra , expanding the effect range of her trait to 5 tiles and canceling the NRG consumption when triggering, lasting for 1 turn.",
+      "note": "Samantha grants all allies within 5 tiles around herself DMG Reduction III and ▲Healing Received III for 2 turns. She gains Regenerate - Ext",
+      "priority": 3
+    },
+    {
+      "name": "RK3 Skill Range  Radiant Stamp",
+      "kind": "Active",
+      "nrg": "1",
+      "cd": "2",
+      "description": "(Healing) Samantha heals all allies within 2 tiles around the target for 40% of her M.ATK. The central target receives an additional 40% of healing. After being healed all targets gain ▲DMG I and ▲P.DEF I for 2 turns. Divine Wrath",
+      "note": "Samantha heals all allies within 2 tiles around the target for 40% of her M.ATK. The central target receives an additional 40% of healing. A",
+      "priority": 3
+    },
+    {
+      "name": "RK5 Skill Range  Devout Faith -",
+      "kind": "Reaction",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Reaction) Gains Resolve if the character has 3 NRG. When Resolve is triggered, consumes 3 NRG to heal character's HP to 70%. Can be activated up to 2 times per battle. Defense (AoE) - [Reaction] Cost: - / CD: - (Reaction) When hit by an active AoE Attack, the DMG taken is decreased by 30%.",
+      "note": "Gains Resolve if the character has 3 NRG. When Resolve is triggered, consumes 3 NRG to heal character's HP to 70%. Can be activated up to 2 ",
+      "priority": 3
+    },
+    {
+      "name": "RK9 Skill Range  Invigorating Strike",
+      "kind": "Basic",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Basic Attack) Deals 100% physical DMG and additionally recovers 1 NRG.",
+      "note": "Deals 100% physical DMG and additionally recovers 1 NRG.",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Battle Flag of Papal State -",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Leader's Aura) For all Papal States allies in battle, increases ATK by 10% and DEF by 20%.",
+      "note": "For all Papal States allies in battle, increases ATK by 10% and DEF by 20%.",
+      "priority": 3
+    },
+    {
+      "name": "Skill Range  Radiant Stamp",
+      "kind": "Active",
+      "nrg": "1",
+      "cd": "2",
+      "description": "(Healing) Samantha heals all allies within 2 tiles around the target for 40% of her M.ATK. The central target receives an additional 40% of healing. After being healed all targets gain ▲DMG I and ▲P.DEF I for 2 turns.",
+      "note": "Samantha heals all allies within 2 tiles around the target for 40% of her M.ATK. The central target receives an additional 40% of healing. A",
+      "priority": 3
+    },
+    {
+      "name": "Soul Soothing",
+      "kind": "Active",
+      "nrg": "—",
+      "cd": "—",
+      "description": "(Healing) Heals the target by 75% of M.ATK.",
+      "note": "Heals the target by 75% of M.ATK.",
+      "priority": 3
+    },
+    {
+      "name": "SP Skill Skill Range  Domain of Devotion",
+      "kind": "Active",
+      "nrg": "1",
+      "cd": "3",
+      "description": "(Healing) Instant Heals all allies within 3 tiles of the character for 30% of M.ATK, and grants them 1 stack of Radiant Shine , Anti Heal Immunity , and Bound Resistance for 2 turns. The SP Skill is unlocked when SP Samantha learns RK3 Prayer of Devotion and Samantha (Original) is enhanced to 3-stars.",
+      "note": "Instant Heals all allies within 3 tiles of the character for 30% of M.ATK, and grants them 1 stack of Radiant Shine , Anti Heal Immunity , a",
       "priority": 3
     }
   ],
   "build": {
-    "basicAttack": "Energy Wave",
-    "reaction": "Devout Faith",
+    "basicAttack": "Merciful Strike",
+    "reaction": "",
+    "ascension": "",
     "skills": [
-      "Soul Soothing",
-      "Domain of Devotion",
-      "NRG Restoration",
-      "Light of Judgement",
-      "Radiant Stamp",
-      "Divine Wrath"
+      "Sacred Sanctuary Radiant Stamp NRG Restoration"
     ],
     "weapon": "",
-    "trinket": "Life Fondness",
-    "tarot": "Judgement"
+    "trinket": "",
+    "tarot": ""
   },
-  "summary": "is a healing-focused build.",
+  "summary": "here! Table of Contents Samantha Tier & Basic Info Strength & How to Use",
   "pros": [],
   "howToUse": "",
   "starPriority": "",
   "confidence": "medium",
-  "collectedAt": "2026-08-02T04:31:18.105Z",
-  "cleanedAt": "2026-08-02T04:32:57.415Z"
+  "collectedAt": "2026-08-02T04:48:37.036Z"
 }
