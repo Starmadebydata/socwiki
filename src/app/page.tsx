@@ -95,18 +95,20 @@ export default function HomePage() {
         </h2>
         <ul className="mt-3 space-y-2 text-sm text-muted">
           <li>
-            Visual refresh: role-colored portraits, character cards, and detail
-            hero layouts.
+            <strong className="text-foreground">Top 20 refined</strong> — SP
+            Inanna, Camelot, Taair, Col, Estra, Cocoa, and more now have
+            hand-written skills, NRG/CD notes, and how-to guides.
           </li>
           <li>
-            Roster at {all.length} units with full skill tables (type / NRG / CD
-            / priority).
+            Visual system: role-colored portraits, character cards, detail
+            heroes.
           </li>
           <li>
+            Full roster {all.length} units +{" "}
             <Link href="/weapons" className="text-link hover:underline">
-              Gear databases
-            </Link>{" "}
-            with Best-on reverse links.
+              gear databases
+            </Link>
+            .
           </li>
         </ul>
       </section>

@@ -1,7 +1,8 @@
 import type { Character, Role, Tier } from "@/types/character";
+import { getTop20Map } from "@/data/top20";
 
 /** Auto-maintained character DB — visual + skill table ready. */
-export const characters: Character[] = [
+const rawCharacters: Character[] = [
   {
     slug: "col",
     name: "Col",
@@ -5414,6 +5415,13 @@ export const characters: Character[] = [
     lastUpdated: "2026-08-02",
   },
 ];
+
+const TOP20 = getTop20Map();
+
+/** Top 20 hand-refined entries override generated stubs. */
+export const characters: Character[] = rawCharacters.map(
+  (c) => TOP20[c.slug] ?? c,
+);
 
 export function getAllCharacters(): Character[] {
   return characters;

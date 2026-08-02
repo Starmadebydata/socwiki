@@ -9,6 +9,7 @@ import {
   getCharacterBySlug,
   getCharacterMap,
 } from "@/data/characters";
+import { TOP20_SLUGS } from "@/data/top20";
 import { gearPath, getGearBySlug } from "@/data/gear";
 import { roleStyle } from "@/lib/role-styles";
 import { SITE_URL, pageTitle } from "@/lib/site";
@@ -50,6 +51,7 @@ export default async function CharacterPage({ params }: Props) {
   const trinket = getGearBySlug(c.build.trinketSlug);
   const tarot = getGearBySlug(c.build.tarotSlug);
   const rs = roleStyle(c.role);
+  const isRefined = TOP20_SLUGS.includes(c.slug);
 
   const gearRows = [
     ["Weapon", weapon],
@@ -144,6 +146,11 @@ export default async function CharacterPage({ params }: Props) {
                   {c.name}
                 </h1>
                 <TierBadge tier={c.tier.overall} />
+                {isRefined && (
+                  <span className="rounded-full border border-accent/40 bg-accent-soft px-2 py-0.5 text-[11px] font-semibold text-accent">
+                    Top 20 · Refined
+                  </span>
+                )}
               </div>
               <div className="mt-2 flex flex-wrap items-center gap-2">
                 <RolePill role={c.role} />
