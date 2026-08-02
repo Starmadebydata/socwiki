@@ -21,6 +21,7 @@
     "collect:merge": "node scripts/collect/merge-to-site.mjs",
     "collect:device-ocr": "node scripts/collect/apply-device-ocr.mjs",
     "collect:device-ocr:write": "node scripts/collect/apply-device-ocr.mjs --write",
+    "collect:portraits": "node scripts/collect/export-portraits.mjs",
     "collect": "npm run collect:public && npm run collect:reparse && npm run collect:validate",
     "collect:auto": "npm run collect && npm run build"
   },

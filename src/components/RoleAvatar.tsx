@@ -1,4 +1,5 @@
 import type { Role } from "@/types/character";
+import { getCharacterImage } from "@/data/character-images";
 import { roleStyle } from "@/lib/role-styles";
 
 type Size = "sm" | "md" | "lg" | "xl";
@@ -16,51 +17,70 @@ function initials(name: string) {
   return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
 }
 
-/** Decorative portrait placeholder — role-colored gradient, no official art. */
+/** Portrait when we have a client crop; otherwise role-colored initials placeholder. */
 export function RoleAvatar({
   name,
   role,
+  slug,
   size = "md",
   className = "",
 }: {
   name: string;
   role: Role;
+  /** When set, loads /characters/{slug}.webp if exported */
+  slug?: string;
   size?: Size;
   className?: string;
 }) {
   const style = roleStyle(role);
   const mono = initials(name);
+  const portrait = slug ? getCharacterImage(slug)?.portrait : undefined;
 
   return (
     <div
       className={`relative shrink-0 overflow-hidden rounded-2xl border border-white/10 shadow-lg ${sizes[size]} ${className}`}
-      style={{ background: style.gradient }}
+      style={portrait ? undefined : { background: style.gradient }}
       aria-hidden
     >
-      {/* grain / pattern */}
-      <div
-        className="absolute inset-0 opacity-30"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle at 30% 20%, rgba(255,255,255,0.35) 0%, transparent 45%), radial-gradient(circle at 80% 80%, rgba(0,0,0,0.35) 0%, transparent 50%)",
-        }}
-      />
-      <div
-        className="absolute inset-0 opacity-[0.12]"
-        style={{
-          backgroundImage:
-            "repeating-linear-gradient(-35deg, transparent, transparent 6px, rgba(255,255,255,0.4) 6px, rgba(255,255,255,0.4) 7px)",
-        }}
-      />
+      {portrait ? (
+        // eslint-disable-next-line @next/next/no-img-element -- static public webp, no remote loader
+        <img
+          src={portrait}
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover object-top"
+          loading="lazy"
+          decoding="async"
+        />
+      ) : (
+        <>
+          <div
+            className="absolute inset-0 opacity-30"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle at 30% 20%, rgba(255,255,255,0.35) 0%, transparent 45%), radial-gradient(circle at 80% 80%, rgba(0,0,0,0.35) 0%, transparent 50%)",
+            }}
+          />
+          <div
+            className="absolute inset-0 opacity-[0.12]"
+            style={{
+              backgroundImage:
+                "repeating-linear-gradient(-35deg, transparent, transparent 6px, rgba(255,255,255,0.4) 6px, rgba(255,255,255,0.4) 7px)",
+            }}
+          />
+          <span className="relative flex h-full w-full items-center justify-center font-bold tracking-wide text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.55)]">
+            {mono}
+          </span>
+        </>
+      )}
       {/* role ring */}
       <div
-        className="absolute bottom-1 right-1 h-2.5 w-2.5 rounded-full border border-black/30 sm:h-3 sm:w-3"
+        className="absolute bottom-1 right-1 z-10 h-2.5 w-2.5 rounded-full border border-black/30 sm:h-3 sm:w-3"
         style={{ backgroundColor: style.hex }}
         title={role}
       />
-      <span className="relative flex h-full w-full items-center justify-center font-bold tracking-wide text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.55)]">
-        {mono}
-      </span>
+      {portrait && (
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/25 to-transparent" />
+      )}
     </div>
   );
 }

@@ -23,7 +23,12 @@ export function CharacterCard({
         style={{ background: rs.hex }}
       />
       <div className={`flex gap-3 p-4 ${compact ? "items-center" : "items-start"}`}>
-        <RoleAvatar name={c.name} role={c.role} size={compact ? "md" : "lg"} />
+        <RoleAvatar
+          name={c.name}
+          role={c.role}
+          slug={c.slug}
+          size={compact ? "md" : "lg"}
+        />
         <div className="min-w-0 flex-1">
           <div className="flex items-start justify-between gap-2">
             <h3 className="truncate font-semibold text-foreground group-hover:text-accent">

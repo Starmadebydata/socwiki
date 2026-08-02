@@ -9,6 +9,7 @@ import {
   getCharacterBySlug,
   getCharacterMap,
 } from "@/data/characters";
+import { getCharacterImage } from "@/data/character-images";
 import { TOP20_SLUGS } from "@/data/top20";
 import { gearPath, getGearBySlug } from "@/data/gear";
 import { roleStyle } from "@/lib/role-styles";
@@ -52,6 +53,7 @@ export default async function CharacterPage({ params }: Props) {
   const tarot = getGearBySlug(c.build.tarotSlug);
   const rs = roleStyle(c.role);
   const isRefined = TOP20_SLUGS.includes(c.slug);
+  const images = getCharacterImage(c.slug);
 
   const gearRows = [
     ["Weapon", weapon],
@@ -133,13 +135,26 @@ export default async function CharacterPage({ params }: Props) {
           background: `linear-gradient(135deg, ${rs.soft} 0%, rgba(18,24,34,0.95) 48%, #121822 100%)`,
         }}
       >
+        {images?.art && (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={images.art}
+            alt=""
+            className="pointer-events-none absolute inset-y-0 right-0 h-full w-[55%] object-cover object-top opacity-35 sm:w-[48%] sm:opacity-45"
+            aria-hidden
+          />
+        )}
+        <div
+          className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#121822] via-[#121822]/92 to-transparent sm:via-[#121822]/80"
+          aria-hidden
+        />
         <div
           className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full opacity-30 blur-3xl"
           style={{ background: rs.hex }}
         />
         <div className="relative flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
           <div className="flex gap-4 sm:gap-5">
-            <RoleAvatar name={c.name} role={c.role} size="xl" />
+            <RoleAvatar name={c.name} role={c.role} slug={c.slug} size="xl" />
             <div>
               <div className="flex flex-wrap items-center gap-2">
                 <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
@@ -334,7 +349,12 @@ export default async function CharacterPage({ params }: Props) {
                     href={`/characters/${s.slug}`}
                     className="flex items-center gap-3 rounded-2xl border border-border bg-card p-3 hover:bg-card-hover"
                   >
-                    <RoleAvatar name={s.name} role={s.role} size="sm" />
+                    <RoleAvatar
+                      name={s.name}
+                      role={s.role}
+                      slug={s.slug}
+                      size="sm"
+                    />
                     <div className="min-w-0">
                       <div className="truncate font-medium">{s.name}</div>
                       <div className="text-xs text-muted">{s.role}</div>
