@@ -3,13 +3,13 @@ import type { Metadata } from "next";
 import { TierBadge } from "@/components/TierBadge";
 import { JsonLd } from "@/components/JsonLd";
 import { getAllCharacters, ROLES } from "@/data/characters";
-import type { Tier } from "@/types/character";
+import type { Role, Tier } from "@/types/character";
 import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Tier List (2026) - Best Characters",
   description:
-    "Updated SoC character tier list by role—DPS and Support rankings, reroll picks, and links to full builds. Meta for August 2026.",
+    "Updated Sword of Convallaria tier list by overall rank and by role—DPS and Support rankings, reroll picks, and build links. Meta pass: August 2026.",
   alternates: { canonical: "/tier-list" },
 };
 
@@ -23,6 +23,17 @@ export default function TierListPage() {
     units: chars.filter((c) => c.tier.overall === tier),
   })).filter((g) => g.units.length > 0);
 
+  const byRole = ROLES.map((role: Role) => ({
+    role,
+    units: chars
+      .filter((c) => c.role === role)
+      .sort(
+        (a, b) =>
+          TIER_ORDER.indexOf(a.tier.overall) -
+          TIER_ORDER.indexOf(b.tier.overall),
+      ),
+  }));
+
   const faqLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -32,7 +43,7 @@ export default function TierListPage() {
         name: "Who is the best character in Sword of Convallaria?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Meta leaders rotate with banners. As of the latest update, SSS/SS units such as SP Inanna and Camelot define the top of the list—always check role and content type.",
+          text: "Meta leaders rotate with banners. SSS/SS units such as SP Inanna, Camelot, SP Maitha, and Luccia/Elaman cores currently define the top—always check role and content type.",
         },
       },
       {
@@ -53,9 +64,9 @@ export default function TierListPage() {
         Sword of Convallaria Tier List (2026)
       </h1>
       <p className="mt-2 max-w-2xl text-muted">
-        Overall rankings for Legendary units currently in the SoC Wiki seed
-        database. Prefer favorites when content allows—use this list for
-        resource priority. Last meta pass: August 2026.
+        Overall rankings for {chars.length} Legendary units in the SoC Wiki
+        database, plus per-role tables. Prefer favorites when content allows—use
+        this list for resource priority. Last meta pass: August 2026.
       </p>
 
       <div className="mt-6 flex flex-wrap gap-2 text-sm">
@@ -65,6 +76,12 @@ export default function TierListPage() {
         >
           Reroll tier list
         </Link>
+        <a
+          href="#by-role"
+          className="rounded-lg border border-border bg-card px-3 py-1.5 text-muted hover:bg-card-hover hover:text-foreground"
+        >
+          Jump to by role
+        </a>
         {ROLES.map((role) => (
           <Link
             key={role}
@@ -85,6 +102,9 @@ export default function TierListPage() {
             >
               <TierBadge tier={tier} />
               <span>Tier</span>
+              <span className="text-sm font-normal text-muted">
+                ({units.length})
+              </span>
             </h2>
             <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
               {units.map((c) => (
@@ -100,6 +120,40 @@ export default function TierListPage() {
                     </div>
                   </div>
                   <span className="text-xs text-link">Build →</span>
+                </Link>
+              ))}
+            </div>
+          </section>
+        ))}
+      </div>
+
+      <div id="by-role" className="mt-16 space-y-10">
+        <h2 className="text-2xl font-bold">Tier list by role</h2>
+        {byRole.map(({ role, units }) => (
+          <section key={role}>
+            <div className="mb-3 flex items-center justify-between gap-2">
+              <h3 className="text-xl font-semibold">{role}</h3>
+              <Link
+                href={`/characters/role/${role.toLowerCase()}`}
+                className="text-sm text-link hover:underline"
+              >
+                All {role}s →
+              </Link>
+            </div>
+            <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+              {units.map((c) => (
+                <Link
+                  key={c.slug}
+                  href={`/characters/${c.slug}`}
+                  className="flex items-center justify-between rounded-xl border border-border bg-card px-4 py-3 hover:bg-card-hover"
+                >
+                  <div>
+                    <div className="font-medium">{c.name}</div>
+                    <div className="text-xs text-muted">
+                      {c.factions[0]}
+                    </div>
+                  </div>
+                  <TierBadge tier={c.tier.overall} />
                 </Link>
               ))}
             </div>
@@ -123,9 +177,7 @@ export default function TierListPage() {
             for skill trees and gear tables.
           </li>
         </ul>
-        <p className="mt-3 text-xs">
-          Canonical: {SITE_URL}/tier-list
-        </p>
+        <p className="mt-3 text-xs">Canonical: {SITE_URL}/tier-list</p>
       </section>
     </div>
   );

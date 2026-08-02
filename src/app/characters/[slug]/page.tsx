@@ -8,6 +8,7 @@ import {
   getCharacterBySlug,
   getCharacterMap,
 } from "@/data/characters";
+import { gearPath, getGearBySlug } from "@/data/gear";
 import { SITE_URL, pageTitle } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -42,9 +43,16 @@ export default async function CharacterPage({ params }: Props) {
   if (!c) notFound();
 
   const map = getCharacterMap();
-  const synergyChars = c.synergies
-    .map((s) => map[s])
-    .filter(Boolean);
+  const synergyChars = c.synergies.map((s) => map[s]).filter(Boolean);
+  const weapon = getGearBySlug(c.build.weaponSlug);
+  const trinket = getGearBySlug(c.build.trinketSlug);
+  const tarot = getGearBySlug(c.build.tarotSlug);
+
+  const gearRows = [
+    ["Weapon", weapon],
+    ["Trinket", trinket],
+    ["Tarot", tarot],
+  ] as const;
 
   const faqLd = {
     "@context": "https://schema.org",
@@ -55,7 +63,7 @@ export default async function CharacterPage({ params }: Props) {
         name: `What is the best build for ${c.name} in Sword of Convallaria?`,
         acceptedAnswer: {
           "@type": "Answer",
-          text: `Recommended loadout: ${c.build.basicAttack} / ${c.build.reaction} / skills ${c.build.skills.join(", ")}; gear ${c.build.weapon}, ${c.build.trinket}, ${c.build.tarot}.`,
+          text: `Recommended loadout: ${c.build.basicAttack} / ${c.build.reaction} / skills ${c.build.skills.join(", ")}; gear ${weapon?.name ?? c.build.weaponSlug}, ${trinket?.name ?? c.build.trinketSlug}, ${tarot?.name ?? c.build.tarotSlug}.`,
         },
       },
       {
@@ -114,10 +122,20 @@ export default async function CharacterPage({ params }: Props) {
       </nav>
 
       <header className="mb-8 flex flex-wrap items-start justify-between gap-4">
-        <div>
-          <h1 className="text-3xl font-bold">{c.name}</h1>
-          <p className="mt-2 max-w-2xl text-muted">{c.summary}</p>
-          <p className="mt-2 text-xs text-muted">Last updated: {c.lastUpdated}</p>
+        <div className="flex gap-4">
+          <div
+            className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl border border-border bg-accent-soft text-xl font-bold text-accent"
+            aria-hidden
+          >
+            {c.name.slice(0, 2)}
+          </div>
+          <div>
+            <h1 className="text-3xl font-bold">{c.name}</h1>
+            <p className="mt-2 max-w-2xl text-muted">{c.summary}</p>
+            <p className="mt-2 text-xs text-muted">
+              Last updated: {c.lastUpdated}
+            </p>
+          </div>
         </div>
         <div className="flex flex-wrap gap-2">
           <TierBadge tier={c.tier.overall} />
@@ -130,7 +148,6 @@ export default async function CharacterPage({ params }: Props) {
         </div>
       </header>
 
-      {/* Quick facts table */}
       <section className="mb-8 overflow-x-auto rounded-2xl border border-border">
         <table className="w-full text-sm">
           <tbody>
@@ -190,7 +207,6 @@ export default async function CharacterPage({ params }: Props) {
         </table>
       </section>
 
-      {/* Quick Build — first-screen intent */}
       <section className="mb-10" aria-labelledby="build-heading">
         <h2 id="build-heading" className="mb-3 text-xl font-semibold">
           Quick Build
@@ -200,23 +216,41 @@ export default async function CharacterPage({ params }: Props) {
             <thead className="bg-card text-muted">
               <tr>
                 <th className="px-4 py-2 text-left font-medium">Slot</th>
-                <th className="px-4 py-2 text-left font-medium">Recommendation</th>
+                <th className="px-4 py-2 text-left font-medium">
+                  Recommendation
+                </th>
               </tr>
             </thead>
             <tbody>
-              {(
-                [
-                  ["Basic Attack", c.build.basicAttack],
-                  ["Reaction", c.build.reaction],
-                  ["Skills", c.build.skills.join(" · ")],
-                  ["Weapon", c.build.weapon],
-                  ["Trinket", c.build.trinket],
-                  ["Tarot", c.build.tarot],
-                ] as const
-              ).map(([slot, value]) => (
-                <tr key={slot} className="border-t border-border">
-                  <td className="px-4 py-2 font-medium text-muted">{slot}</td>
-                  <td className="px-4 py-2">{value}</td>
+              <tr className="border-t border-border">
+                <td className="px-4 py-2 font-medium text-muted">
+                  Basic Attack
+                </td>
+                <td className="px-4 py-2">{c.build.basicAttack}</td>
+              </tr>
+              <tr className="border-t border-border">
+                <td className="px-4 py-2 font-medium text-muted">Reaction</td>
+                <td className="px-4 py-2">{c.build.reaction}</td>
+              </tr>
+              <tr className="border-t border-border">
+                <td className="px-4 py-2 font-medium text-muted">Skills</td>
+                <td className="px-4 py-2">{c.build.skills.join(" · ")}</td>
+              </tr>
+              {gearRows.map(([label, item]) => (
+                <tr key={label} className="border-t border-border">
+                  <td className="px-4 py-2 font-medium text-muted">{label}</td>
+                  <td className="px-4 py-2">
+                    {item ? (
+                      <Link
+                        href={gearPath(item)}
+                        className="text-link hover:underline"
+                      >
+                        {item.name}
+                      </Link>
+                    ) : (
+                      "—"
+                    )}
+                  </td>
                 </tr>
               ))}
             </tbody>
@@ -265,7 +299,7 @@ export default async function CharacterPage({ params }: Props) {
                   <td className="px-4 py-2 text-accent">
                     {"★".repeat(s.stars)}
                     <span className="text-muted">
-                      {"★".repeat(5 - s.stars)}
+                      {"★".repeat(Math.max(0, 5 - s.stars))}
                     </span>
                   </td>
                   <td className="px-4 py-2 text-muted">{s.note}</td>
@@ -282,16 +316,19 @@ export default async function CharacterPage({ params }: Props) {
             Synergies
           </h2>
           <div className="flex flex-wrap gap-2">
-            {synergyChars.map((s) => (
-              <Link
-                key={s.slug}
-                href={`/characters/${s.slug}`}
-                className="rounded-lg border border-border bg-card px-3 py-2 text-sm hover:bg-card-hover"
-              >
-                {s.name}{" "}
-                <span className="text-muted">({s.role})</span>
-              </Link>
-            ))}
+            {synergyChars.map(
+              (s) =>
+                s && (
+                  <Link
+                    key={s.slug}
+                    href={`/characters/${s.slug}`}
+                    className="rounded-lg border border-border bg-card px-3 py-2 text-sm hover:bg-card-hover"
+                  >
+                    {s.name}{" "}
+                    <span className="text-muted">({s.role})</span>
+                  </Link>
+                ),
+            )}
           </div>
         </section>
       )}

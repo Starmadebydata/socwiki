@@ -1,11 +1,18 @@
 import Link from "next/link";
 import { SearchBox } from "@/components/SearchBox";
 import { TierBadge } from "@/components/TierBadge";
-import { getAllCharacters, HUB_CATEGORIES, sortByOverallTier } from "@/data/characters";
+import {
+  getAllCharacters,
+  HUB_CATEGORIES,
+  sortByOverallTier,
+} from "@/data/characters";
+import { getAllGear } from "@/data/gear";
 import { SITE_DESCRIPTION, SITE_FULL_NAME } from "@/lib/site";
 
 export default function HomePage() {
-  const hot = sortByOverallTier(getAllCharacters()).slice(0, 12);
+  const all = getAllCharacters();
+  const hot = sortByOverallTier(all).slice(0, 12);
+  const gearCount = getAllGear().length;
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-10">
@@ -14,6 +21,12 @@ export default function HomePage() {
           {SITE_FULL_NAME}
         </h1>
         <p className="mx-auto mt-3 max-w-2xl text-muted">{SITE_DESCRIPTION}</p>
+        <p className="mt-3 text-sm text-muted">
+          <span className="text-foreground font-medium">{all.length}</span>{" "}
+          characters ·{" "}
+          <span className="text-foreground font-medium">{gearCount}</span> gear
+          entries · tier lists & team tools
+        </p>
         <div className="mt-8 flex justify-center">
           <SearchBox />
         </div>
@@ -76,22 +89,52 @@ export default function HomePage() {
         </h2>
         <ul className="mt-3 space-y-2 text-sm text-muted">
           <li>
-            <Link href="/characters/anna" className="text-link hover:underline">
-              Anna
+            Roster expanded to {all.length} character build pages with gear
+            deep-links.
+          </li>
+          <li>
+            <Link href="/weapons" className="text-link hover:underline">
+              Weapons
+            </Link>
+            ,{" "}
+            <Link href="/trinkets" className="text-link hover:underline">
+              trinkets
+            </Link>
+            , and{" "}
+            <Link href="/tarots" className="text-link hover:underline">
+              tarots
             </Link>{" "}
-            build page live for Sagas of Ice and Blood.
+            database with Best-on reverse links.
           </li>
           <li>
             <Link href="/tier-list" className="text-link hover:underline">
-              Character tier list
+              Tier list
             </Link>{" "}
-            refreshed for August 2026 meta.
+            now includes overall + by-role tables.
           </li>
           <li>
-            <Link href="/codes" className="text-link hover:underline">
-              Codes
-            </Link>{" "}
-            page — check active redeem codes.
+            New guides:{" "}
+            <Link
+              href="/guides/party-building"
+              className="text-link hover:underline"
+            >
+              party building
+            </Link>
+            ,{" "}
+            <Link
+              href="/guides/early-teams"
+              className="text-link hover:underline"
+            >
+              early teams
+            </Link>
+            ,{" "}
+            <Link
+              href="/guides/shard-priority"
+              className="text-link hover:underline"
+            >
+              shard priority
+            </Link>
+            .
           </li>
         </ul>
       </section>

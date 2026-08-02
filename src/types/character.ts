@@ -9,13 +9,16 @@ export type Rarity = "Legendary" | "Epic" | "Rare";
 
 export type Tier = "SSS" | "SS" | "S+" | "S" | "A" | "B" | "C";
 
+export type GearKind = "weapon" | "trinket" | "tarot";
+
 export interface CharacterBuild {
   basicAttack: string;
   reaction: string;
   skills: string[];
-  weapon: string;
-  trinket: string;
-  tarot: string;
+  /** Gear slugs — resolve display names via gear data */
+  weaponSlug: string;
+  trinketSlug: string;
+  tarotSlug: string;
 }
 
 export interface Character {
@@ -39,6 +42,17 @@ export interface Character {
   build: CharacterBuild;
   skillPriority: { name: string; stars: number; note: string }[];
   starPriority: string;
-  synergies: string[]; // character slugs
+  synergies: string[];
+  lastUpdated: string;
+}
+
+export interface GearItem {
+  slug: string;
+  name: string;
+  kind: GearKind;
+  rarity: Rarity | "Legendary" | "Epic" | "Rare";
+  summary: string;
+  effect: string;
+  bestFor: string[]; // character slugs
   lastUpdated: string;
 }
