@@ -27,20 +27,23 @@ export default function HomePage() {
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-10">
-      <section className="relative mb-14 overflow-hidden rounded-3xl border border-border bg-card/60 px-6 py-12 text-center sm:px-10">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(212,175,55,0.12),transparent_55%)]" />
+      <section className="soc-frame relative mb-14 overflow-hidden px-6 py-12 text-center sm:px-10">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(212,181,106,0.14),transparent_55%)]" />
         <div className="relative">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
-            Community Database
-          </p>
-          <h1 className="mt-3 text-3xl font-bold tracking-tight sm:text-5xl">
+          <p className="soc-heading-sm">Community Database</p>
+          <h1 className="font-display mt-3 text-3xl font-bold tracking-wide text-[var(--accent-bright)] sm:text-5xl">
             {SITE_FULL_NAME}
           </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-muted">{SITE_DESCRIPTION}</p>
+          <div className="soc-divider mx-auto my-5 max-w-md" />
+          <p className="mx-auto max-w-2xl text-muted">{SITE_DESCRIPTION}</p>
           <p className="mt-4 text-sm text-muted">
-            <span className="font-semibold text-foreground">{all.length}</span>{" "}
+            <span className="font-semibold text-[var(--accent-bright)]">
+              {all.length}
+            </span>{" "}
             characters ·{" "}
-            <span className="font-semibold text-foreground">{gearCount}</span>{" "}
+            <span className="font-semibold text-[var(--accent-bright)]">
+              {gearCount}
+            </span>{" "}
             gear entries · tier lists & team tools
           </p>
           <div className="mt-8 flex justify-center">
@@ -50,7 +53,7 @@ export default function HomePage() {
       </section>
 
       <section aria-labelledby="browse-heading" className="mb-14">
-        <h2 id="browse-heading" className="mb-4 text-lg font-semibold">
+        <h2 id="browse-heading" className="soc-heading mb-4 text-lg">
           Browse the database
         </h2>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
@@ -58,10 +61,10 @@ export default function HomePage() {
             <Link
               key={cat.href}
               href={cat.href}
-              className="group rounded-2xl border border-border bg-card p-5 transition hover:-translate-y-0.5 hover:border-accent/40 hover:bg-card-hover hover:shadow-lg"
+              className="soc-frame group p-5 transition hover:-translate-y-0.5 hover:border-[var(--border-bright)]"
             >
               <div className="text-xl">{HUB_ICONS[cat.title] ?? "✦"}</div>
-              <div className="mt-2 font-semibold text-foreground group-hover:text-accent">
+              <div className="font-display mt-2 font-semibold tracking-wide text-foreground group-hover:text-[var(--accent-bright)]">
                 {cat.title}
               </div>
               <p className="mt-1 text-sm text-muted">{cat.blurb}</p>
@@ -72,10 +75,13 @@ export default function HomePage() {
 
       <section aria-labelledby="hot-heading" className="mb-14">
         <div className="mb-4 flex items-end justify-between gap-4">
-          <h2 id="hot-heading" className="text-lg font-semibold">
+          <h2 id="hot-heading" className="soc-heading text-lg">
             Hot characters
           </h2>
-          <Link href="/characters" className="text-sm text-link hover:underline">
+          <Link
+            href="/characters"
+            className="text-sm text-link hover:text-[var(--link-hover)]"
+          >
             All characters →
           </Link>
         </div>
@@ -86,22 +92,26 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section
-        aria-labelledby="updates-heading"
-        className="rounded-2xl border border-border bg-card p-6"
-      >
-        <h2 id="updates-heading" className="text-lg font-semibold">
+      <section aria-labelledby="updates-heading" className="soc-frame p-6">
+        <div className="mb-4 flex justify-center sm:justify-start">
+          <span className="soc-ribbon">Latest updates</span>
+        </div>
+        <h2 id="updates-heading" className="sr-only">
           Latest updates
         </h2>
-        <ul className="mt-3 space-y-2 text-sm text-muted">
+        <ul className="mt-1 space-y-2 text-sm text-muted">
           <li>
-            <strong className="text-foreground">Top 20 refined</strong> — SP
-            Inanna, Camelot, Taair, Col, Estra, Cocoa, and more now have
-            hand-written skills, NRG/CD notes, and how-to guides.
+            <strong className="text-[var(--accent-bright)]">
+              Client portraits
+            </strong>{" "}
+            — Maitha, Crimson Falcon and captured roster units now show
+            in-game art.
           </li>
           <li>
-            Visual system: role-colored portraits, character cards, detail
-            heroes.
+            <strong className="text-[var(--accent-bright)]">
+              Device skill data
+            </strong>{" "}
+            — NRG/CD and tooltips from physical Pixel 7 captures.
           </li>
           <li>
             Full roster {all.length} units +{" "}

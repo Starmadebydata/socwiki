@@ -1,19 +1,29 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Cinzel, Source_Sans_3, JetBrains_Mono } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import { JsonLd } from "@/components/JsonLd";
 import { SITE_DESCRIPTION, SITE_FULL_NAME, SITE_NAME, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+/** Fantasy display titles — close to in-game serif headers */
+const fontDisplay = Cinzel({
+  variable: "--font-display",
   subsets: ["latin"],
+  weight: ["400", "600", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+/** Clean readable body */
+const fontBody = Source_Sans_3({
+  variable: "--font-body",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+const fontMono = JetBrains_Mono({
+  variable: "--font-mono",
+  subsets: ["latin"],
+  weight: ["400", "500"],
 });
 
 export const metadata: Metadata = {
@@ -78,7 +88,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col antialiased`}
+        className={`${fontDisplay.variable} ${fontBody.variable} ${fontMono.variable} flex min-h-screen flex-col antialiased`}
       >
         <JsonLd data={[websiteLd, orgLd]} />
         <Navbar />

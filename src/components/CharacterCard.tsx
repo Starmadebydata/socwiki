@@ -16,13 +16,17 @@ export function CharacterCard({
   return (
     <Link
       href={`/characters/${c.slug}`}
-      className="group relative flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition hover:-translate-y-0.5 hover:border-accent/35 hover:bg-card-hover hover:shadow-[0_12px_40px_rgba(0,0,0,0.35)]"
+      className="soc-frame group relative flex flex-col overflow-hidden transition hover:-translate-y-0.5 hover:border-[var(--border-bright)] hover:shadow-[0_0_28px_rgba(212,181,106,0.15)]"
     >
       <div
-        className="absolute inset-x-0 top-0 h-1 opacity-90"
-        style={{ background: rs.hex }}
+        className="absolute inset-x-0 top-0 z-10 h-[2px] opacity-90"
+        style={{
+          background: `linear-gradient(90deg, transparent, ${rs.hex}, var(--accent), transparent)`,
+        }}
       />
-      <div className={`flex gap-3 p-4 ${compact ? "items-center" : "items-start"}`}>
+      <div
+        className={`relative flex gap-3 p-4 ${compact ? "items-center" : "items-start"}`}
+      >
         <RoleAvatar
           name={c.name}
           role={c.role}
@@ -31,7 +35,7 @@ export function CharacterCard({
         />
         <div className="min-w-0 flex-1">
           <div className="flex items-start justify-between gap-2">
-            <h3 className="truncate font-semibold text-foreground group-hover:text-accent">
+            <h3 className="font-display truncate text-base font-semibold tracking-wide text-foreground group-hover:text-[var(--accent-bright)]">
               {c.name}
             </h3>
             <TierBadge tier={c.tier.overall} />

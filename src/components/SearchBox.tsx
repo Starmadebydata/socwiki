@@ -32,19 +32,21 @@ export function SearchBox() {
         value={q}
         onChange={(e) => setQ(e.target.value)}
         placeholder="Search characters, roles, factions…"
-        className="w-full rounded-xl border border-border bg-card px-4 py-3 text-foreground outline-none ring-accent placeholder:text-muted focus:ring-2"
+        className="w-full rounded-full border border-[var(--border-soft)] bg-[var(--card-deep)] px-5 py-3 text-foreground outline-none placeholder:text-muted focus:border-[var(--border-bright)] focus:shadow-[0_0_0_3px_var(--accent-soft)]"
         autoComplete="off"
       />
       {results.length > 0 && (
-        <ul className="absolute z-20 mt-2 w-full overflow-hidden rounded-xl border border-border bg-card shadow-xl">
+        <ul className="soc-frame absolute z-20 mt-2 w-full overflow-hidden shadow-xl">
           {results.map((c) => (
             <li key={c.slug}>
               <Link
                 href={`/characters/${c.slug}`}
-                className="flex items-center justify-between px-4 py-2.5 hover:bg-card-hover"
+                className="flex items-center justify-between border-b border-[var(--border-soft)]/40 px-4 py-2.5 last:border-0 hover:bg-[var(--accent-soft)]"
                 onClick={() => setQ("")}
               >
-                <span className="font-medium">{c.name}</span>
+                <span className="font-display font-medium tracking-wide">
+                  {c.name}
+                </span>
                 <span className="text-xs text-muted">
                   {c.role} · {c.tier.overall}
                 </span>
