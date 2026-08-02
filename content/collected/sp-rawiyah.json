@@ -1,0 +1,165 @@
+{
+  "slug": "sp-rawiyah",
+  "name": "SP Rawiyah",
+  "source": "public",
+  "sources": [
+    {
+      "type": "url",
+      "url": "https://gamewith.net/sword-of-convallaria/51911",
+      "fetchedAt": "2026-08-02T04:31:45.258Z",
+      "publisher": "gamewith"
+    }
+  ],
+  "role": "Seeker",
+  "factions": [
+    "Iria",
+    "SoC"
+  ],
+  "rarity": "Legendary",
+  "stats": {
+    "move": null,
+    "highJump": null,
+    "lowJump": null
+  },
+  "skills": [
+    {
+      "name": "Gale - Void Slash",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "0",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Mobile Crew",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "0",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Police Lasso",
+      "kind": "Active",
+      "nrg": "3",
+      "cd": "3",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Vital Guard",
+      "kind": "Active",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Gale Sword - Chaotic Flurry",
+      "kind": "Active",
+      "nrg": "4",
+      "cd": "0",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Gale - Draw Blade",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "0",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Powerful Attack",
+      "kind": "Active",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Fancy Footwork",
+      "kind": "Active",
+      "nrg": "2",
+      "cd": "0",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Hunting Impulse",
+      "kind": "Active",
+      "nrg": "3",
+      "cd": "0",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Valiant Vanguard",
+      "kind": "Active",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Slash",
+      "kind": "Basic",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Gale Dance - Sincerity",
+      "kind": "Active",
+      "nrg": "2",
+      "cd": "0",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Gale - Piercing Clouds",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "3",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    }
+  ],
+  "build": {
+    "basicAttack": "Gale - Void Slash",
+    "reaction": "Vital Guard",
+    "skills": [
+      "Mobile Crew",
+      "Police Lasso",
+      "Gale Sword - Chaotic Flurry",
+      "Gale - Draw Blade",
+      "Powerful Attack",
+      "Fancy Footwork"
+    ],
+    "weapon": "",
+    "trinket": "Maverick's Cloak",
+    "tarot": "Verdict of Justice"
+  },
+  "summary": "is a physical attacker with excellent mobility and area attack capabilities.",
+  "pros": [],
+  "howToUse": "",
+  "starPriority": "",
+  "confidence": "medium",
+  "collectedAt": "2026-08-02T04:31:45.258Z",
+  "cleanedAt": "2026-08-02T04:32:57.418Z"
+}

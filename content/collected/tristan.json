@@ -1,0 +1,163 @@
+{
+  "slug": "tristan",
+  "name": "Tristan",
+  "source": "public",
+  "sources": [
+    {
+      "type": "url",
+      "url": "https://gamewith.net/sword-of-convallaria/52554",
+      "fetchedAt": "2026-08-02T04:31:48.291Z",
+      "publisher": "gamewith"
+    }
+  ],
+  "role": "Destroyer",
+  "factions": [
+    "Union",
+    "SoC"
+  ],
+  "rarity": "Legendary",
+  "stats": {
+    "move": null,
+    "highJump": null,
+    "lowJump": null
+  },
+  "skills": [
+    {
+      "name": "Slash",
+      "kind": "Basic",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Explosive Luxite-Dust",
+      "kind": "Active",
+      "nrg": "2",
+      "cd": "0",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Furious Pursuit",
+      "kind": "Active",
+      "nrg": "2",
+      "cd": "0",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Knockback Pursuit",
+      "kind": "Active",
+      "nrg": "3",
+      "cd": "0",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Fervent Lunge",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "3",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Blazing Blood",
+      "kind": "Active",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Street Style",
+      "kind": "Reaction",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Controlled Demolition",
+      "kind": "Active",
+      "nrg": "2",
+      "cd": "3",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Sealing Attack",
+      "kind": "Basic",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Fatal Attack",
+      "kind": "Basic",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Family",
+      "kind": "Active",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Destructive Storm",
+      "kind": "Active",
+      "nrg": "3",
+      "cd": "2",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Assisting Cover",
+      "kind": "Reaction",
+      "note": "Name confirmed in page text",
+      "priority": 4,
+      "description": ""
+    }
+  ],
+  "build": {
+    "basicAttack": "Slash",
+    "reaction": "Assisting Cover",
+    "skills": [
+      "Explosive Luxite-Dust",
+      "Furious Pursuit",
+      "Knockback Pursuit",
+      "Fervent Lunge",
+      "Blazing Blood",
+      "Controlled Demolition"
+    ],
+    "weapon": "",
+    "trinket": "Maverick's Cloak",
+    "tarot": "Verdict of Justice"
+  },
+  "summary": "is also possible to use [One-Punch Burial] again on a group of enemies already affected by Vulnerable II.",
+  "pros": [],
+  "howToUse": "",
+  "starPriority": "",
+  "confidence": "medium",
+  "collectedAt": "2026-08-02T04:31:48.292Z",
+  "cleanedAt": "2026-08-02T04:32:57.418Z"
+}

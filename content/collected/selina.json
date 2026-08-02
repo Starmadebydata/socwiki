@@ -1,0 +1,156 @@
+{
+  "slug": "selina",
+  "name": "Selina",
+  "source": "public",
+  "sources": [
+    {
+      "type": "url",
+      "url": "https://gamewith.net/sword-of-convallaria/75813",
+      "fetchedAt": "2026-08-02T04:31:34.957Z",
+      "publisher": "gamewith"
+    }
+  ],
+  "role": "Seeker",
+  "factions": [
+    "Papal States",
+    "Union",
+    "SoC",
+    "Drifter"
+  ],
+  "rarity": "Legendary",
+  "stats": {
+    "move": null,
+    "highJump": null,
+    "lowJump": null
+  },
+  "skills": [
+    {
+      "name": "Slash",
+      "kind": "Basic",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Holy Sword - Full Moon",
+      "kind": "Active",
+      "nrg": "3",
+      "cd": "0",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Will to Survive",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "2",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Knight's Oath",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "4",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Holy Sword - Starfall Wrath",
+      "kind": "Active",
+      "nrg": "4",
+      "cd": "0",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Hardening",
+      "kind": "Reaction",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Rallying Banner",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "3",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Sword Inscription",
+      "kind": "Active",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Divine Verdict",
+      "kind": "Basic",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Critical Strike",
+      "kind": "Basic",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "All Preparations Complete",
+      "kind": "Active",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Holy Sword",
+      "kind": "Active",
+      "note": "Priority section extract",
+      "priority": 4,
+      "description": ""
+    }
+  ],
+  "build": {
+    "basicAttack": "Slash",
+    "reaction": "Hardening",
+    "skills": [
+      "Holy Sword - Full Moon",
+      "Will to Survive",
+      "Knight's Oath",
+      "Holy Sword - Starfall Wrath",
+      "Rallying Banner",
+      "Sword Inscription"
+    ],
+    "weapon": "",
+    "trinket": "Maverick's Cloak",
+    "tarot": "Verdict of Justice"
+  },
+  "summary": "Durable AoE Magic Attacker - Can Attack Consecutively - Grants Shields to Self and Allies - Can Adapt with Swordmarks How to Get - Obtain from Gacha (Summon) Selina Pros and Strength Selina's Character Overview AoE M.",
+  "pros": [],
+  "howToUse": "",
+  "starPriority": "",
+  "confidence": "medium",
+  "collectedAt": "2026-08-02T04:31:34.957Z",
+  "cleanedAt": "2026-08-02T04:32:57.416Z"
+}

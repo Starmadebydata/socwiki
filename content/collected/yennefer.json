@@ -1,0 +1,171 @@
+{
+  "slug": "yennefer",
+  "name": "Yennefer",
+  "source": "public",
+  "sources": [
+    {
+      "type": "url",
+      "url": "https://gamewith.net/sword-of-convallaria/71745",
+      "fetchedAt": "2026-08-02T04:31:27.811Z",
+      "publisher": "gamewith"
+    },
+    {
+      "type": "url",
+      "url": "https://dotgg.gg/sword-of-convallaria/yennefer/",
+      "fetchedAt": "2026-08-02T04:31:57.445Z",
+      "publisher": "dotgg"
+    }
+  ],
+  "role": "Destroyer",
+  "factions": [
+    "SoC",
+    "Drifter"
+  ],
+  "rarity": "Legendary",
+  "stats": {
+    "move": null,
+    "highJump": null,
+    "lowJump": null
+  },
+  "skills": [
+    {
+      "name": "Energy Wave",
+      "kind": "Basic",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Erosion",
+      "kind": "Active",
+      "nrg": "1",
+      "cd": "0",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Yennefer's Heal",
+      "kind": "Active",
+      "nrg": "1",
+      "cd": "0",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Corruption",
+      "kind": "Active",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Elemental Control",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "0",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Protection of Darkness",
+      "kind": "Reaction",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Evasive Shift",
+      "kind": "Reaction",
+      "nrg": "0",
+      "cd": "2",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Charming Illusion",
+      "kind": "Active",
+      "nrg": "2",
+      "cd": "3",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Portal",
+      "kind": "Active",
+      "nrg": "1",
+      "cd": "4",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Dispelling Strike",
+      "kind": "Basic",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Charged Attack",
+      "kind": "Basic",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Tissaia's Teaching",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "0",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Yennefer's Mockery",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "0",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    }
+  ],
+  "build": {
+    "basicAttack": "Energy Wave",
+    "reaction": "Protection of Darkness",
+    "skills": [
+      "Erosion",
+      "Yennefer's Heal",
+      "Corruption",
+      "Elemental Control",
+      "Charming Illusion",
+      "Portal"
+    ],
+    "weapon": "",
+    "trinket": "Life Fondness",
+    "tarot": "Judgement"
+  },
+  "summary": "Excels at AoE Attacks and Support Yennefer excels at AoE attacks and support.",
+  "pros": [],
+  "howToUse": "",
+  "starPriority": "",
+  "confidence": "medium",
+  "collectedAt": "2026-08-02T04:31:57.452Z",
+  "cleanedAt": "2026-08-02T04:32:57.419Z"
+}

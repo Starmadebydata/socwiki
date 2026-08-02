@@ -1,0 +1,149 @@
+{
+  "slug": "anna",
+  "name": "Anna",
+  "source": "public",
+  "sources": [
+    {
+      "type": "url",
+      "url": "https://gamewith.net/sword-of-convallaria/77281",
+      "fetchedAt": "2026-08-02T04:31:22.148Z",
+      "publisher": "gamewith"
+    }
+  ],
+  "role": "Breaker",
+  "factions": [
+    "Iria",
+    "SoC",
+    "Luccia",
+    "Drifter"
+  ],
+  "rarity": "Legendary",
+  "stats": {
+    "move": null,
+    "highJump": null,
+    "lowJump": null
+  },
+  "skills": [
+    {
+      "name": "Straight Shot",
+      "kind": "Basic",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Repelling Volley",
+      "kind": "Active",
+      "nrg": "1",
+      "cd": "0",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Freezing Slash",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "1",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Resourceful Tactics",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "3",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Hunter's Arsenal",
+      "kind": "Active",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Preemptive Intercept",
+      "kind": "Reaction",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Survival Master",
+      "kind": "Reaction",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Unyielding North",
+      "kind": "Active",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Powerful Attack",
+      "kind": "Basic",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Invigorating Strike",
+      "kind": "Basic",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Heart of the North",
+      "kind": "Active",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    }
+  ],
+  "build": {
+    "basicAttack": "Freezing Slash",
+    "reaction": "Preemptive Intercept",
+    "skills": [
+      "Repelling Volley",
+      "Resourceful Tactics",
+      "Hunter's Arsenal",
+      "Survival Master",
+      "Unyielding North",
+      "Heart of the North"
+    ],
+    "weapon": "",
+    "trinket": "",
+    "tarot": "Verdict of Justice"
+  },
+  "summary": "Excels at Alerts and Debuffs Anna's Trait triggers a [Forced Alert] at the end of an action.",
+  "pros": [],
+  "howToUse": "",
+  "starPriority": "",
+  "confidence": "medium",
+  "collectedAt": "2026-08-02T04:31:22.148Z",
+  "cleanedAt": "2026-08-02T04:32:57.409Z"
+}

@@ -1,0 +1,150 @@
+{
+  "slug": "estra",
+  "name": "Estra",
+  "source": "public",
+  "sources": [
+    {
+      "type": "url",
+      "url": "https://gamewith.net/sword-of-convallaria/55738",
+      "fetchedAt": "2026-08-02T04:31:02.186Z",
+      "publisher": "gamewith"
+    },
+    {
+      "type": "url",
+      "url": "https://dotgg.gg/sword-of-convallaria/estra/",
+      "fetchedAt": "2026-08-02T04:31:53.469Z",
+      "publisher": "dotgg"
+    }
+  ],
+  "role": "Seeker",
+  "factions": [
+    "Alacrity",
+    "SoC",
+    "Drifter"
+  ],
+  "rarity": "Legendary",
+  "stats": {
+    "move": null,
+    "highJump": null,
+    "lowJump": null
+  },
+  "skills": [
+    {
+      "name": "Shadow Blitz",
+      "kind": "Active",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Thunder Arrow",
+      "kind": "Active",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Shadow Step",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "4",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Hookshot",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "4",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Shadow Evasion",
+      "kind": "Reaction",
+      "nrg": "-",
+      "cd": "2",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Potion",
+      "kind": "Active",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Feverish Attack",
+      "kind": "Basic",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Spine Pierce",
+      "kind": "Basic",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Doom Decoy",
+      "kind": "Active",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "No Restraints",
+      "kind": "Active",
+      "nrg": "3",
+      "cd": "2",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Defense",
+      "kind": "Active",
+      "note": "Priority section extract",
+      "priority": 4,
+      "description": ""
+    }
+  ],
+  "build": {
+    "basicAttack": "Feverish Attack",
+    "reaction": "Shadow Step",
+    "skills": [
+      "Shadow Blitz",
+      "Thunder Arrow",
+      "Shadow Evasion",
+      "Hookshot",
+      "Potion",
+      "Doom Decoy"
+    ],
+    "weapon": "",
+    "trinket": "Cage Mask",
+    "tarot": "Verdict of Justice"
+  },
+  "summary": "is able to apply self-buff by using her [Potion] skill .",
+  "pros": [],
+  "howToUse": "",
+  "starPriority": "",
+  "confidence": "medium",
+  "collectedAt": "2026-08-02T04:31:53.481Z",
+  "cleanedAt": "2026-08-02T04:32:57.413Z"
+}

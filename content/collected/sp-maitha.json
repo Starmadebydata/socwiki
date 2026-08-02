@@ -1,0 +1,165 @@
+{
+  "slug": "sp-maitha",
+  "name": "SP Maitha",
+  "source": "public",
+  "sources": [
+    {
+      "type": "url",
+      "url": "https://gamewith.net/sword-of-convallaria/72572",
+      "fetchedAt": "2026-08-02T04:31:07.796Z",
+      "publisher": "gamewith"
+    }
+  ],
+  "role": "Watcher",
+  "factions": [
+    "Iria",
+    "SoC"
+  ],
+  "rarity": "Legendary",
+  "stats": {
+    "move": null,
+    "highJump": null,
+    "lowJump": null
+  },
+  "skills": [
+    {
+      "name": "Slash",
+      "kind": "Basic",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Whirling Hammer",
+      "kind": "Active",
+      "nrg": "1",
+      "cd": "0",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Maitha's Combo",
+      "kind": "Active",
+      "nrg": "2",
+      "cd": "4",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Bulwark Charge",
+      "kind": "Active",
+      "nrg": "1",
+      "cd": "0",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Crystal Burst Twin-Shot",
+      "kind": "Active",
+      "nrg": "2",
+      "cd": "0",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Emergency Toolbox",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "2",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Peak Performance",
+      "kind": "Active",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Reinforced Joints",
+      "kind": "Reaction",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Spiky Shield",
+      "kind": "Reaction",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Field Medic",
+      "kind": "Active",
+      "nrg": "3",
+      "cd": "0",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Feverish Attack",
+      "kind": "Basic",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Arm Slam",
+      "kind": "Basic",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Field",
+      "kind": "Active",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    }
+  ],
+  "build": {
+    "basicAttack": "Slash",
+    "reaction": "Reinforced Joints",
+    "skills": [
+      "Whirling Hammer",
+      "Maitha's Combo",
+      "Bulwark Charge",
+      "Emergency Toolbox",
+      "Peak Performance",
+      "Crystal Burst Twin-Shot"
+    ],
+    "weapon": "",
+    "trinket": "Great Company on the Journey",
+    "tarot": "Death"
+  },
+  "summary": "excels at using AoE attacks that deal Piercing DMG , allowing her to deal consistent amounts of damage even against enemies with high DEF or Shields.",
+  "pros": [],
+  "howToUse": "",
+  "starPriority": "",
+  "confidence": "medium",
+  "collectedAt": "2026-08-02T04:31:07.796Z",
+  "cleanedAt": "2026-08-02T04:32:57.417Z"
+}

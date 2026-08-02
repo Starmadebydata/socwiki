@@ -1,0 +1,301 @@
+{
+  "at": "2026-08-02T04:31:58.607Z",
+  "results": [
+    {
+      "slug": "sp-inanna",
+      "status": "ok",
+      "skills": 16,
+      "url": "https://gamewith.net/sword-of-convallaria/69479"
+    },
+    {
+      "slug": "col",
+      "status": "ok",
+      "skills": 16,
+      "url": "https://gamewith.net/sword-of-convallaria/48262"
+    },
+    {
+      "slug": "inanna",
+      "status": "ok",
+      "skills": 16,
+      "url": "https://gamewith.net/sword-of-convallaria/48251"
+    },
+    {
+      "slug": "taair",
+      "status": "ok",
+      "skills": 16,
+      "url": "https://gamewith.net/sword-of-convallaria/52064"
+    },
+    {
+      "slug": "estra",
+      "status": "ok",
+      "skills": 14,
+      "url": "https://gamewith.net/sword-of-convallaria/55738"
+    },
+    {
+      "slug": "camelot",
+      "status": "ok",
+      "skills": 16,
+      "url": "https://gamewith.net/sword-of-convallaria/71130"
+    },
+    {
+      "slug": "kvare",
+      "status": "ok",
+      "skills": 15,
+      "url": "https://gamewith.net/sword-of-convallaria/55001"
+    },
+    {
+      "slug": "cocoa",
+      "status": "ok",
+      "skills": 10,
+      "url": "https://gamewith.net/sword-of-convallaria/48200"
+    },
+    {
+      "slug": "sp-maitha",
+      "status": "ok",
+      "skills": 14,
+      "url": "https://gamewith.net/sword-of-convallaria/72572"
+    },
+    {
+      "slug": "sp-samantha",
+      "status": "ok",
+      "skills": 15,
+      "url": "https://gamewith.net/sword-of-convallaria/70706"
+    },
+    {
+      "slug": "maitha",
+      "status": "ok",
+      "skills": 15,
+      "url": "https://gamewith.net/sword-of-convallaria/48263"
+    },
+    {
+      "slug": "xavier",
+      "status": "ok",
+      "skills": 14,
+      "url": "https://gamewith.net/sword-of-convallaria/48265"
+    },
+    {
+      "slug": "rawiyah",
+      "status": "ok",
+      "skills": 14,
+      "url": "https://gamewith.net/sword-of-convallaria/48260"
+    },
+    {
+      "slug": "gloria",
+      "status": "ok",
+      "skills": 15,
+      "url": "https://gamewith.net/sword-of-convallaria/48258"
+    },
+    {
+      "slug": "faycal",
+      "status": "ok",
+      "skills": 13,
+      "url": "https://gamewith.net/sword-of-convallaria/48264"
+    },
+    {
+      "slug": "beryl",
+      "status": "ok",
+      "skills": 12,
+      "url": "https://gamewith.net/sword-of-convallaria/48269"
+    },
+    {
+      "slug": "samantha",
+      "status": "ok",
+      "skills": 13,
+      "url": "https://gamewith.net/sword-of-convallaria/48267"
+    },
+    {
+      "slug": "dantalion",
+      "status": "ok",
+      "skills": 13,
+      "url": "https://gamewith.net/sword-of-convallaria/48261"
+    },
+    {
+      "slug": "magnus",
+      "status": "ok",
+      "skills": 14,
+      "url": "https://gamewith.net/sword-of-convallaria/48249"
+    },
+    {
+      "slug": "anna",
+      "status": "ok",
+      "skills": 13,
+      "url": "https://gamewith.net/sword-of-convallaria/77281"
+    },
+    {
+      "slug": "credenza",
+      "status": "ok",
+      "skills": 15,
+      "url": "https://gamewith.net/sword-of-convallaria/70900"
+    },
+    {
+      "slug": "lutfi",
+      "status": "ok",
+      "skills": 15,
+      "url": "https://gamewith.net/sword-of-convallaria/69259"
+    },
+    {
+      "slug": "yserinde",
+      "status": "ok",
+      "skills": 15,
+      "url": "https://gamewith.net/sword-of-convallaria/71495"
+    },
+    {
+      "slug": "yennefer",
+      "status": "ok",
+      "skills": 15,
+      "url": "https://gamewith.net/sword-of-convallaria/71745"
+    },
+    {
+      "slug": "geralt",
+      "status": "ok",
+      "skills": 15,
+      "url": "https://gamewith.net/sword-of-convallaria/71746"
+    },
+    {
+      "slug": "triss",
+      "status": "ok",
+      "skills": 15,
+      "url": "https://gamewith.net/sword-of-convallaria/71744"
+    },
+    {
+      "slug": "ciri",
+      "status": "ok",
+      "skills": 12,
+      "url": "https://gamewith.net/sword-of-convallaria/71743"
+    },
+    {
+      "slug": "clara",
+      "status": "ok",
+      "skills": 13,
+      "url": "https://gamewith.net/sword-of-convallaria/75005"
+    },
+    {
+      "slug": "selina",
+      "status": "ok",
+      "skills": 15,
+      "url": "https://gamewith.net/sword-of-convallaria/75813"
+    },
+    {
+      "slug": "heshan",
+      "status": "ok",
+      "skills": 15,
+      "url": "https://gamewith.net/sword-of-convallaria/76224"
+    },
+    {
+      "slug": "shams",
+      "status": "ok",
+      "skills": 14,
+      "url": "https://gamewith.net/sword-of-convallaria/74060"
+    },
+    {
+      "slug": "shahnaz",
+      "status": "ok",
+      "skills": 15,
+      "url": "https://gamewith.net/sword-of-convallaria/76477"
+    },
+    {
+      "slug": "lukamar",
+      "status": "ok",
+      "skills": 14,
+      "url": "https://gamewith.net/sword-of-convallaria/73450"
+    },
+    {
+      "slug": "ayishah",
+      "status": "ok",
+      "skills": 16,
+      "url": "https://gamewith.net/sword-of-convallaria/67888"
+    },
+    {
+      "slug": "sp-nungal",
+      "status": "ok",
+      "skills": 16,
+      "url": "https://gamewith.net/sword-of-convallaria/72916"
+    },
+    {
+      "slug": "sp-rawiyah",
+      "status": "ok",
+      "skills": 16,
+      "url": "https://gamewith.net/sword-of-convallaria/51911"
+    },
+    {
+      "slug": "sp-faycal",
+      "status": "ok",
+      "skills": 13,
+      "url": "https://gamewith.net/sword-of-convallaria/73024"
+    },
+    {
+      "slug": "tristan",
+      "status": "ok",
+      "skills": 14,
+      "url": "https://gamewith.net/sword-of-convallaria/52554"
+    },
+    {
+      "slug": "simona",
+      "status": "ok",
+      "skills": 15,
+      "url": "https://gamewith.net/sword-of-convallaria/48201"
+    },
+    {
+      "slug": "sp-inanna",
+      "status": "ok",
+      "skills": 18
+    },
+    {
+      "slug": "col",
+      "status": "ok",
+      "skills": 16
+    },
+    {
+      "slug": "taair",
+      "status": "ok",
+      "skills": 16
+    },
+    {
+      "slug": "camelot",
+      "status": "ok",
+      "skills": 16
+    },
+    {
+      "slug": "estra",
+      "status": "ok",
+      "skills": 14
+    },
+    {
+      "slug": "kvare",
+      "status": "ok",
+      "skills": 15
+    },
+    {
+      "slug": "cocoa",
+      "status": "ok",
+      "skills": 10
+    },
+    {
+      "slug": "inanna",
+      "status": "ok",
+      "skills": 16
+    },
+    {
+      "slug": "xavier",
+      "status": "ok",
+      "skills": 14
+    },
+    {
+      "slug": "yserinde",
+      "status": "ok",
+      "skills": 15
+    },
+    {
+      "slug": "yennefer",
+      "status": "ok",
+      "skills": 15
+    },
+    {
+      "slug": "geralt",
+      "status": "ok",
+      "skills": 15
+    }
+  ],
+  "ok": 51,
+  "errors": 0
+}

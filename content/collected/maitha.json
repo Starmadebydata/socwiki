@@ -1,0 +1,179 @@
+{
+  "slug": "maitha",
+  "name": "Maitha",
+  "source": "public",
+  "sources": [
+    {
+      "type": "url",
+      "url": "https://gamewith.net/sword-of-convallaria/48263",
+      "fetchedAt": "2026-08-02T04:31:10.172Z",
+      "publisher": "gamewith"
+    }
+  ],
+  "role": "Defender",
+  "factions": [
+    "Iria",
+    "SoC"
+  ],
+  "rarity": "Legendary",
+  "stats": {
+    "move": null,
+    "highJump": null,
+    "lowJump": null
+  },
+  "skills": [
+    {
+      "name": "Slash",
+      "kind": "Basic",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Leg Slam",
+      "kind": "Active",
+      "nrg": "2",
+      "cd": "2",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Bulwark Charge",
+      "kind": "Active",
+      "nrg": "1",
+      "cd": "0",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Guard",
+      "kind": "Active",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Co-Defense",
+      "kind": "Active",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Maitha's Charge",
+      "kind": "Active",
+      "nrg": "1",
+      "cd": "5",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Endurance Activation",
+      "kind": "Reaction",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Block Counter",
+      "kind": "Reaction",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Bandage",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "3",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Armor-Piercing Strike",
+      "kind": "Basic",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Powerful Attack",
+      "kind": "Basic",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Maitha's Combo",
+      "kind": "Active",
+      "nrg": "2",
+      "cd": "4",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Invulnerable",
+      "kind": "Active",
+      "nrg": "1",
+      "cd": "5",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Battle Flag of Convallaria",
+      "kind": "Aura",
+      "note": "Name confirmed in page text",
+      "priority": 4,
+      "description": ""
+    },
+    {
+      "name": "Assisting Cover",
+      "kind": "Reaction",
+      "note": "Name confirmed in page text",
+      "priority": 4,
+      "description": ""
+    }
+  ],
+  "build": {
+    "basicAttack": "Slash",
+    "reaction": "Guard",
+    "skills": [
+      "Leg Slam",
+      "Bulwark Charge",
+      "Co-Defense",
+      "Maitha's Charge",
+      "Endurance Activation",
+      "Bandage"
+    ],
+    "weapon": "",
+    "trinket": "Great Company on the Journey",
+    "tarot": "Judgement"
+  },
+  "summary": "is a bonus [Come On, Everybody!] is primarily used to grant allies buffs.",
+  "pros": [],
+  "howToUse": "",
+  "starPriority": "",
+  "confidence": "medium",
+  "collectedAt": "2026-08-02T04:31:10.172Z",
+  "cleanedAt": "2026-08-02T04:32:57.415Z"
+}

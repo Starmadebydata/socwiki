@@ -1,0 +1,156 @@
+{
+  "slug": "credenza",
+  "name": "Credenza",
+  "source": "public",
+  "sources": [
+    {
+      "type": "url",
+      "url": "https://gamewith.net/sword-of-convallaria/70900",
+      "fetchedAt": "2026-08-02T04:31:22.942Z",
+      "publisher": "gamewith"
+    }
+  ],
+  "role": "Watcher",
+  "factions": [
+    "Papal States",
+    "SoC"
+  ],
+  "rarity": "Legendary",
+  "stats": {
+    "move": null,
+    "highJump": null,
+    "lowJump": null
+  },
+  "skills": [
+    {
+      "name": "Energy Wave",
+      "kind": "Basic",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Blazing Benediction",
+      "kind": "Active",
+      "nrg": "1",
+      "cd": "1",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Quiet Prayer",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "0",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Graceful Salvation",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "0",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Hierophany's Return",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "0",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Radiant Barrier",
+      "kind": "Reaction",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Protection of Light",
+      "kind": "Reaction",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Battle Flag of Papal State",
+      "kind": "Active",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Merciful Strike",
+      "kind": "Basic",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Hypnotic Attack",
+      "kind": "Basic",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Hymn of Absolution",
+      "kind": "Active",
+      "nrg": "3",
+      "cd": "0",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Trial of Radiance",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "0",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    }
+  ],
+  "build": {
+    "basicAttack": "Energy Wave",
+    "reaction": "Radiant Barrier",
+    "skills": [
+      "Blazing Benediction",
+      "Quiet Prayer",
+      "Graceful Salvation",
+      "Hierophany's Return",
+      "Battle Flag of Papal State",
+      "Hymn of Absolution"
+    ],
+    "weapon": "",
+    "trinket": "Life Fondness",
+    "tarot": "Judgement"
+  },
+  "summary": "is a character that specializes in supporting allies.",
+  "pros": [],
+  "howToUse": "",
+  "starPriority": "",
+  "confidence": "medium",
+  "collectedAt": "2026-08-02T04:31:22.942Z",
+  "cleanedAt": "2026-08-02T04:32:57.412Z"
+}

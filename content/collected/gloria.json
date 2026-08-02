@@ -1,0 +1,164 @@
+{
+  "slug": "gloria",
+  "name": "Gloria",
+  "source": "public",
+  "sources": [
+    {
+      "type": "url",
+      "url": "https://gamewith.net/sword-of-convallaria/48258",
+      "fetchedAt": "2026-08-02T04:31:14.730Z",
+      "publisher": "gamewith"
+    }
+  ],
+  "role": "Watcher",
+  "factions": [
+    "Iria",
+    "Union",
+    "SoC"
+  ],
+  "rarity": "Legendary",
+  "stats": {
+    "move": null,
+    "highJump": null,
+    "lowJump": null
+  },
+  "skills": [
+    {
+      "name": "Slash",
+      "kind": "Basic",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Longinus - Thrust",
+      "kind": "Active",
+      "nrg": "2",
+      "cd": "0",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Knightly Spirit",
+      "kind": "Active",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Solemnity",
+      "kind": "Active",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Longinus - Brilliance",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "4",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Lance of Longinus",
+      "kind": "Active",
+      "nrg": "1",
+      "cd": "4",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Front Defense",
+      "kind": "Reaction",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Counterattack",
+      "kind": "Reaction",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Vow of Justice",
+      "kind": "Active",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Silencing Attack",
+      "kind": "Basic",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Fair Duel",
+      "kind": "Active",
+      "nrg": "4",
+      "cd": "0",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Knight's Glory",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "4",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Longinus",
+      "kind": "Active",
+      "note": "Priority section extract",
+      "priority": 4,
+      "description": ""
+    }
+  ],
+  "build": {
+    "basicAttack": "Slash",
+    "reaction": "Counterattack",
+    "skills": [
+      "Longinus - Thrust",
+      "Knightly Spirit",
+      "Solemnity",
+      "Longinus - Brilliance",
+      "Lance of Longinus",
+      "Vow of Justice"
+    ],
+    "weapon": "",
+    "trinket": "",
+    "tarot": "Judgement"
+  },
+  "summary": "is a universally useful tool that allows you to chase fleeing targets, reach checkpoints in time, or even position your characters for better attacking angles.",
+  "pros": [],
+  "howToUse": "",
+  "starPriority": "",
+  "confidence": "medium",
+  "collectedAt": "2026-08-02T04:31:14.730Z",
+  "cleanedAt": "2026-08-02T04:32:57.414Z"
+}

@@ -1,0 +1,147 @@
+{
+  "slug": "dantalion",
+  "name": "Dantalion",
+  "source": "public",
+  "sources": [
+    {
+      "type": "url",
+      "url": "https://gamewith.net/sword-of-convallaria/48261",
+      "fetchedAt": "2026-08-02T04:31:19.690Z",
+      "publisher": "gamewith"
+    }
+  ],
+  "role": "Destroyer",
+  "factions": [
+    "Iria",
+    "SoC"
+  ],
+  "rarity": "Legendary",
+  "stats": {
+    "move": null,
+    "highJump": null,
+    "lowJump": null
+  },
+  "skills": [
+    {
+      "name": "Slash",
+      "kind": "Basic",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Dawnlight",
+      "kind": "Active",
+      "nrg": "3",
+      "cd": "0",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Unsheathe",
+      "kind": "Active",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Daybreak",
+      "kind": "Active",
+      "nrg": "2",
+      "cd": "2",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "NRG-Depleting Blow",
+      "kind": "Active",
+      "nrg": "1",
+      "cd": "4",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Tenacity",
+      "kind": "Reaction",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Destructive Storm",
+      "kind": "Active",
+      "nrg": "3",
+      "cd": "2",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "White Sword",
+      "kind": "Basic",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Shield-Break Attack",
+      "kind": "Basic",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Legacy of Comrades",
+      "kind": "Active",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Endless Dawn",
+      "kind": "Active",
+      "nrg": "4",
+      "cd": "0",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    }
+  ],
+  "build": {
+    "basicAttack": "Slash",
+    "reaction": "Tenacity",
+    "skills": [
+      "Dawnlight",
+      "Unsheathe",
+      "Daybreak",
+      "NRG-Depleting Blow",
+      "Destructive Storm",
+      "Legacy of Comrades"
+    ],
+    "weapon": "",
+    "trinket": "",
+    "tarot": "Judgement"
+  },
+  "summary": "is attacks scale off his Physical Attack stat.",
+  "pros": [],
+  "howToUse": "",
+  "starPriority": "",
+  "confidence": "medium",
+  "collectedAt": "2026-08-02T04:31:19.690Z",
+  "cleanedAt": "2026-08-02T04:32:57.412Z"
+}

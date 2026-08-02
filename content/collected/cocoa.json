@@ -1,0 +1,142 @@
+{
+  "slug": "cocoa",
+  "name": "Cocoa",
+  "source": "public",
+  "sources": [
+    {
+      "type": "url",
+      "url": "https://gamewith.net/sword-of-convallaria/48200",
+      "fetchedAt": "2026-08-02T04:31:07.000Z",
+      "publisher": "gamewith"
+    },
+    {
+      "type": "url",
+      "url": "https://dotgg.gg/sword-of-convallaria/cocoa/",
+      "fetchedAt": "2026-08-02T04:31:54.750Z",
+      "publisher": "dotgg"
+    }
+  ],
+  "role": "Defender",
+  "factions": [
+    "Iria",
+    "SoC"
+  ],
+  "rarity": "Legendary",
+  "stats": {
+    "move": null,
+    "highJump": null,
+    "lowJump": null
+  },
+  "skills": [
+    {
+      "name": "Slash",
+      "kind": "Basic",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Mountain Tribes",
+      "kind": "Active",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Crushing Bash",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "3",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Cocoa's Treasure Chest",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "0",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Block Enhancement",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "0",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Battle Flag of Vlder",
+      "kind": "Active",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Armor-Piercing Strike",
+      "kind": "Basic",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Invulnerable",
+      "kind": "Active",
+      "nrg": "1",
+      "cd": "5",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Iron Pot Stew",
+      "kind": "Active",
+      "nrg": "3",
+      "cd": "3",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Assisting Cover",
+      "kind": "Reaction",
+      "note": "Name confirmed in page text",
+      "priority": 4,
+      "description": ""
+    }
+  ],
+  "build": {
+    "basicAttack": "Slash",
+    "reaction": "Assisting Cover",
+    "skills": [
+      "Mountain Tribes",
+      "Cocoa's Treasure Chest",
+      "Block Enhancement",
+      "Battle Flag of Vlder",
+      "Invulnerable",
+      "Crushing Bash"
+    ],
+    "weapon": "",
+    "trinket": "Great Company on the Journey",
+    "tarot": ""
+  },
+  "summary": "is a very powerful buff, making Cocoa a top priority for 5-stars.",
+  "pros": [],
+  "howToUse": "",
+  "starPriority": "",
+  "confidence": "medium",
+  "collectedAt": "2026-08-02T04:31:54.751Z",
+  "cleanedAt": "2026-08-02T04:32:57.412Z"
+}

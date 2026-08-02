@@ -1,0 +1,166 @@
+{
+  "slug": "simona",
+  "name": "Simona",
+  "source": "public",
+  "sources": [
+    {
+      "type": "url",
+      "url": "https://gamewith.net/sword-of-convallaria/48201",
+      "fetchedAt": "2026-08-02T04:31:49.667Z",
+      "publisher": "gamewith"
+    }
+  ],
+  "role": "Watcher",
+  "factions": [
+    "Iria",
+    "Union",
+    "SoC"
+  ],
+  "rarity": "Legendary",
+  "stats": {
+    "move": null,
+    "highJump": null,
+    "lowJump": null
+  },
+  "skills": [
+    {
+      "name": "Energy Wave",
+      "kind": "Basic",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Ice Lance",
+      "kind": "Active",
+      "nrg": "1",
+      "cd": "0",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Icy Blast",
+      "kind": "Active",
+      "nrg": "2",
+      "cd": "3",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Ice Cone",
+      "kind": "Active",
+      "nrg": "2",
+      "cd": "0",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Ice Assault",
+      "kind": "Active",
+      "nrg": "1",
+      "cd": "4",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Ice-made Armor",
+      "kind": "Active",
+      "nrg": "2",
+      "cd": "4",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Iceshards",
+      "kind": "Reaction",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Protection of Ice",
+      "kind": "Reaction",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Flash Freezing",
+      "kind": "Active",
+      "nrg": "2",
+      "cd": "3",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Battle Flag of the Union",
+      "kind": "Active",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Ice-made Sword",
+      "kind": "Basic",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Ice Attack",
+      "kind": "Basic",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Will to Survive",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "2",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    }
+  ],
+  "build": {
+    "basicAttack": "Energy Wave",
+    "reaction": "Iceshards",
+    "skills": [
+      "Ice Lance",
+      "Icy Blast",
+      "Ice Cone",
+      "Ice Assault",
+      "Ice-made Armor",
+      "Flash Freezing"
+    ],
+    "weapon": "",
+    "trinket": "Life Fondness",
+    "tarot": "Judgement"
+  },
+  "summary": "Excels at hindering enemies Counters physical attackers High Physical Durability There are many ways to obtain Ice Armor (Physical Shield) through Traits and Skills.",
+  "pros": [],
+  "howToUse": "",
+  "starPriority": "",
+  "confidence": "medium",
+  "collectedAt": "2026-08-02T04:31:49.667Z",
+  "cleanedAt": "2026-08-02T04:32:57.416Z"
+}

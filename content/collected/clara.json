@@ -1,0 +1,144 @@
+{
+  "slug": "clara",
+  "name": "Clara",
+  "source": "public",
+  "sources": [
+    {
+      "type": "url",
+      "url": "https://gamewith.net/sword-of-convallaria/75005",
+      "fetchedAt": "2026-08-02T04:31:34.157Z",
+      "publisher": "gamewith"
+    }
+  ],
+  "role": "Defender",
+  "factions": [
+    "Union",
+    "SoC",
+    "Drifter"
+  ],
+  "rarity": "Legendary",
+  "stats": {
+    "move": null,
+    "highJump": null,
+    "lowJump": null
+  },
+  "skills": [
+    {
+      "name": "Slash",
+      "kind": "Basic",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Shield Up - Steadfast Defense",
+      "kind": "Active",
+      "nrg": "2",
+      "cd": "1",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Attack Command",
+      "kind": "Active",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "ll Range Absolute Steadfast Heavy Armor",
+      "kind": "Reaction",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "NRG Recovery",
+      "kind": "Reaction",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Dispelling Strike",
+      "kind": "Basic",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Shield Bash",
+      "kind": "Basic",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Knight's Faith",
+      "kind": "Active",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Knockback Combo",
+      "kind": "Active",
+      "nrg": "3",
+      "cd": "0",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Knight",
+      "kind": "Active",
+      "note": "Priority section extract",
+      "priority": 4,
+      "description": ""
+    },
+    {
+      "name": "Assisting Cover",
+      "kind": "Reaction",
+      "note": "Name confirmed in page text",
+      "priority": 4,
+      "description": ""
+    }
+  ],
+  "build": {
+    "basicAttack": "Slash",
+    "reaction": "Assisting Cover",
+    "skills": [
+      "Shield Up - Steadfast Defense",
+      "Attack Command",
+      "ll Range Absolute Steadfast Heavy Armor",
+      "NRG Recovery",
+      "Knight's Faith",
+      "Knockback Combo"
+    ],
+    "weapon": "",
+    "trinket": "",
+    "tarot": ""
+  },
+  "summary": "Specializes in Shields - Tanks both P.",
+  "pros": [],
+  "howToUse": "",
+  "starPriority": "",
+  "confidence": "medium",
+  "collectedAt": "2026-08-02T04:31:34.157Z",
+  "cleanedAt": "2026-08-02T04:32:57.412Z"
+}

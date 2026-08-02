@@ -1,0 +1,169 @@
+{
+  "slug": "kvare",
+  "name": "Kvare",
+  "source": "public",
+  "sources": [
+    {
+      "type": "url",
+      "url": "https://gamewith.net/sword-of-convallaria/55001",
+      "fetchedAt": "2026-08-02T04:31:05.423Z",
+      "publisher": "gamewith"
+    },
+    {
+      "type": "url",
+      "url": "https://dotgg.gg/sword-of-convallaria/kvare/",
+      "fetchedAt": "2026-08-02T04:31:53.998Z",
+      "publisher": "dotgg"
+    }
+  ],
+  "role": "Destroyer",
+  "factions": [
+    "Iria",
+    "SoC"
+  ],
+  "rarity": "Legendary",
+  "stats": {
+    "move": null,
+    "highJump": null,
+    "lowJump": null
+  },
+  "skills": [
+    {
+      "name": "Energy Wave",
+      "kind": "Basic",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Conviction",
+      "kind": "Active",
+      "nrg": "2",
+      "cd": "0",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Will of Victory",
+      "kind": "Active",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Unforgettable Erosion",
+      "kind": "Active",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Victory Before Battle",
+      "kind": "Active",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Kvare's Gift",
+      "kind": "Active",
+      "nrg": "-",
+      "cd": "1",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Sanctuary Emblem",
+      "kind": "Reaction",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Arcane Toxins",
+      "kind": "Active",
+      "nrg": "2",
+      "cd": "0",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Dark Withering",
+      "kind": "Active",
+      "nrg": "1",
+      "cd": "5",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Infectious Attack",
+      "kind": "Basic",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Silencing Attack",
+      "kind": "Basic",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Wither",
+      "kind": "Active",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Assisting Cover",
+      "kind": "Reaction",
+      "note": "Name confirmed in page text",
+      "priority": 4,
+      "description": ""
+    }
+  ],
+  "build": {
+    "basicAttack": "Energy Wave",
+    "reaction": "Assisting Cover",
+    "skills": [
+      "Conviction",
+      "Will of Victory",
+      "Unforgettable Erosion",
+      "Victory Before Battle",
+      "Kvare's Gift",
+      "Arcane Toxins"
+    ],
+    "weapon": "",
+    "trinket": "Life Fondness",
+    "tarot": "Death"
+  },
+  "summary": "is a character that excels in dealing continuous damage with [Life Loss], as well as Piercing DMG with his other skills.",
+  "pros": [],
+  "howToUse": "",
+  "starPriority": "",
+  "confidence": "medium",
+  "collectedAt": "2026-08-02T04:31:54.004Z",
+  "cleanedAt": "2026-08-02T04:32:57.414Z"
+}

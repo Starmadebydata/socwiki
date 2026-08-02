@@ -10,7 +10,13 @@
     "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
     "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
-    "cf-typegen": "wrangler types --env-interface CloudflareEnv ./cloudflare-env.d.ts"
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv ./cloudflare-env.d.ts",
+    "collect:public": "node scripts/collect/scrape-public.mjs",
+    "collect:clean": "node scripts/collect/clean-collected.mjs",
+    "collect:ocr": "node scripts/collect/ocr-screenshots.mjs",
+    "collect:validate": "node scripts/collect/validate.mjs",
+    "collect:merge": "node scripts/collect/merge-to-site.mjs",
+    "collect": "npm run collect:public && npm run collect:clean && npm run collect:validate"
   },
   "dependencies": {
     "@opennextjs/cloudflare": "^1.19.9",

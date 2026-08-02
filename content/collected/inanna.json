@@ -1,0 +1,178 @@
+{
+  "slug": "inanna",
+  "name": "Inanna",
+  "source": "public",
+  "sources": [
+    {
+      "type": "url",
+      "url": "https://gamewith.net/sword-of-convallaria/48251",
+      "fetchedAt": "2026-08-02T04:30:59.216Z",
+      "publisher": "gamewith"
+    },
+    {
+      "type": "url",
+      "url": "https://dotgg.gg/sword-of-convallaria/inanna/",
+      "fetchedAt": "2026-08-02T04:31:55.267Z",
+      "publisher": "dotgg"
+    }
+  ],
+  "role": "Watcher",
+  "factions": [
+    "Iria",
+    "SoC"
+  ],
+  "rarity": "Legendary",
+  "stats": {
+    "move": null,
+    "highJump": null,
+    "lowJump": null
+  },
+  "skills": [
+    {
+      "name": "Energy Wave",
+      "kind": "Basic",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Healing Spell",
+      "kind": "Active",
+      "nrg": "1",
+      "cd": "0",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "kill Range Convallaria - Blooming Horizon",
+      "kind": "Active",
+      "nrg": "2",
+      "cd": "0",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Princess's Prayer",
+      "kind": "Active",
+      "nrg": "2",
+      "cd": "3",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Defense Boost",
+      "kind": "Active",
+      "nrg": "1",
+      "cd": "3",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Battlefield Trial",
+      "kind": "Reaction",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Protection of Light",
+      "kind": "Reaction",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Soul Mate",
+      "kind": "Active",
+      "nrg": "2",
+      "cd": "2",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Light of Sanction",
+      "kind": "Active",
+      "nrg": "2",
+      "cd": "3",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Armor Piercing Strike",
+      "kind": "Basic",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Merciful Strike",
+      "kind": "Basic",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "DEF Command",
+      "kind": "Active",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Flight of the Princess",
+      "kind": "Active",
+      "nrg": "0",
+      "cd": "5",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Convallaria Swordplay",
+      "kind": "Active",
+      "note": "Name confirmed in page text",
+      "priority": 4,
+      "description": ""
+    }
+  ],
+  "build": {
+    "basicAttack": "Energy Wave",
+    "reaction": "Battlefield Trial",
+    "skills": [
+      "Healing Spell",
+      "kill Range Convallaria - Blooming Horizon",
+      "Princess's Prayer",
+      "Defense Boost",
+      "Soul Mate",
+      "Light of Sanction"
+    ],
+    "weapon": "",
+    "trinket": "Life Fondness",
+    "tarot": "The Empress"
+  },
+  "summary": "is already strong even without star upgrades, but she gets even better at each key star level.",
+  "pros": [],
+  "howToUse": "",
+  "starPriority": "",
+  "confidence": "medium",
+  "collectedAt": "2026-08-02T04:31:55.269Z",
+  "cleanedAt": "2026-08-02T04:32:57.414Z"
+}

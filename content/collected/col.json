@@ -1,0 +1,151 @@
+{
+  "slug": "col",
+  "name": "Col",
+  "source": "public",
+  "sources": [
+    {
+      "type": "url",
+      "url": "https://gamewith.net/sword-of-convallaria/48262",
+      "fetchedAt": "2026-08-02T04:30:57.833Z",
+      "publisher": "gamewith"
+    },
+    {
+      "type": "url",
+      "url": "https://dotgg.gg/sword-of-convallaria/col/",
+      "fetchedAt": "2026-08-02T04:31:51.440Z",
+      "publisher": "dotgg"
+    }
+  ],
+  "role": "Seeker",
+  "factions": [
+    "Papal States",
+    "Alacrity",
+    "SoC",
+    "Drifter"
+  ],
+  "rarity": "Legendary",
+  "stats": {
+    "move": null,
+    "highJump": null,
+    "lowJump": null
+  },
+  "skills": [
+    {
+      "name": "Flurry of Stabs",
+      "kind": "Active",
+      "nrg": "2",
+      "cd": "0",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Ambush",
+      "kind": "Active",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Shadow Gait",
+      "kind": "Active",
+      "nrg": "1",
+      "cd": "3",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Assault",
+      "kind": "Active",
+      "nrg": "1",
+      "cd": "3",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Mask",
+      "kind": "Active",
+      "nrg": "1",
+      "cd": "3",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Counterattack",
+      "kind": "Reaction",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Omen of Death",
+      "kind": "Active",
+      "nrg": "-",
+      "cd": "-",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Wipe Out",
+      "kind": "Active",
+      "nrg": "4",
+      "cd": "0",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Traceless Shadow",
+      "kind": "Active",
+      "nrg": "2",
+      "cd": "5",
+      "description": "",
+      "note": "Extracted from public guide HTML",
+      "priority": 3
+    },
+    {
+      "name": "Hidden Thorn",
+      "kind": "Basic",
+      "note": "Name confirmed in page text",
+      "priority": 4,
+      "description": ""
+    },
+    {
+      "name": "Eerie Footwork",
+      "kind": "Reaction",
+      "note": "Name confirmed in page text",
+      "priority": 4,
+      "description": ""
+    }
+  ],
+  "build": {
+    "basicAttack": "Hidden Thorn",
+    "reaction": "Counterattack",
+    "skills": [
+      "Flurry of Stabs",
+      "Ambush",
+      "Shadow Gait",
+      "Assault",
+      "Mask",
+      "Omen of Death"
+    ],
+    "weapon": "",
+    "trinket": "Maverick's Cloak",
+    "tarot": "Death"
+  },
+  "summary": "Able to Act Again with back or side kills.",
+  "pros": [],
+  "howToUse": "",
+  "starPriority": "",
+  "confidence": "medium",
+  "collectedAt": "2026-08-02T04:31:51.441Z",
+  "cleanedAt": "2026-08-02T04:32:57.412Z"
+}

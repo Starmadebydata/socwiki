@@ -50,3 +50,9 @@ next-env.d.ts
 
 
 !.dev.vars.example
+
+# Collection pipeline: keep normalized JSON, drop bulky HTML dumps
+/content/raw/public/*.html
+/content/raw/ocr/
+/content/raw/screenshots/*
+!/content/raw/screenshots/README.txt
