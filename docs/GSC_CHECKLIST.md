@@ -67,9 +67,17 @@ Weekly for 4 weeks, then monthly:
 | `https://www.socwiki.app` | **301** → `https://socwiki.app` |
 | Canonical tags | Absolute `https://socwiki.app/...` |
 
-**Implemented in app (2026-08-03):** `src/middleware.ts` issues 301s for www→apex and http→https on the Workers deployment. Wrangler OAuth is `zone:read` only, so Dashboard Redirect Rules / Always Use HTTPS could not be toggled via API from this machine.
+**Implemented on Cloudflare (2026-08-03):**
 
-**Optional (Dashboard, stronger edge behavior):** Cloudflare → `socwiki.app` → **SSL/TLS** → **Edge Certificates** → **Always Use HTTPS = On**. Then add a **Redirect Rule** (www → apex) if you want the 301 before the Worker runs.
+| Path | Mechanism |
+|------|-----------|
+| `www.socwiki.app/*` | Worker **`socwiki-www-redirect`** → 301 `https://socwiki.app$uri` |
+| `http://socwiki.app/*` | Main Worker edge patch (`scripts/patch-canonical-redirect.mjs`) + `src/middleware.ts` |
+| HTTPS apex | Served by main Worker `socwiki` (`socwiki.app/*` only) |
+
+Wrangler OAuth is `zone:read` only — Dashboard **Redirect Rules** / **Always Use HTTPS** cannot be toggled via API with this token. Worker-level 301s cover the same SEO outcome.
+
+**Deploy notes:** `npm run deploy` patches the OpenNext worker. After first setup, also run `npm run deploy:www-redirect` if the www Worker is missing.
 
 ## 6. AI / crawler notes
 

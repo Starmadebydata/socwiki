@@ -20,12 +20,6 @@ export function middleware(request: NextRequest) {
   const hostHeader = request.headers.get("host") ?? "";
   const host = hostHeader.split(":")[0].toLowerCase();
 
-  // Prefer proxy headers (Cloudflare / OpenNext); fall back to URL protocol.
-  const forwardedProto = (
-    request.headers.get("x-forwarded-proto") ??
-    request.nextUrl.protocol.replace(":", "")
-  ).toLowerCase();
-
   // Only touch production zone hosts — leave workers.dev / localhost alone
   const isProdHost =
     host === CANONICAL_HOST || host === `www.${CANONICAL_HOST}`;
@@ -33,8 +27,28 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
+  // Detect HTTP carefully: CF may omit x-forwarded-proto or set https after edge TLS.
+  // Cf-Visitor is the reliable Cloudflare signal: {"scheme":"http"|"https"}
+  let scheme = (
+    request.headers.get("x-forwarded-proto") ??
+    request.nextUrl.protocol.replace(":", "")
+  ).toLowerCase();
+  const cfVisitor = request.headers.get("cf-visitor");
+  if (cfVisitor) {
+    try {
+      const parsed = JSON.parse(cfVisitor) as { scheme?: string };
+      if (parsed.scheme) scheme = parsed.scheme.toLowerCase();
+    } catch {
+      /* ignore */
+    }
+  }
+  // Some proxies send "http,http" or multi-values
+  if (scheme.includes(",")) {
+    scheme = scheme.split(",")[0].trim();
+  }
+
   const isWww = host === `www.${CANONICAL_HOST}`;
-  const isHttp = forwardedProto === "http";
+  const isHttp = scheme === "http";
   if (!isWww && !isHttp) {
     return NextResponse.next();
   }

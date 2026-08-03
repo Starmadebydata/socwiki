@@ -24,8 +24,8 @@
   // Custom domain — attach after first deploy, or via CF Dashboard:
   // Workers → socwiki → Settings → Domains & Routes → Add socwiki.app
   "routes": [
-    { "pattern": "socwiki.app/*", "zone_name": "socwiki.app" },
-    { "pattern": "www.socwiki.app/*", "zone_name": "socwiki.app" }
+    { "pattern": "socwiki.app/*", "zone_name": "socwiki.app" }
+    // www.socwiki.app is handled by workers/www-redirect (301 → apex)
   ],
   // Optional workers.dev URL (enable in Dashboard if 404):
   // Workers → socwiki → Settings → Domains → workers.dev
