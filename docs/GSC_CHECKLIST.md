@@ -77,7 +77,13 @@ Weekly for 4 weeks, then monthly:
 
 Wrangler OAuth is `zone:read` only — Dashboard **Redirect Rules** / **Always Use HTTPS** cannot be toggled via API with this token. Worker-level 301s cover the same SEO outcome.
 
-**Deploy notes:** `npm run deploy` patches the OpenNext worker. After first setup, also run `npm run deploy:www-redirect` if the www Worker is missing.
+**Deploy notes:** Cloudflare Workers Builds command is `npm run deploy`, which:
+
+1. `opennextjs-cloudflare build`
+2. `scripts/patch-canonical-redirect.mjs` (apex http→https edge 301)
+3. `opennextjs-cloudflare deploy` (main Worker, `socwiki.app/*` only)
+4. `wrangler deploy -c workers/www-redirect` (`www.socwiki.app/*` → apex 301)
+
 
 ## 6. AI / crawler notes
 
