@@ -18,6 +18,7 @@ import {
   faqAnswers,
   gearDeepDive,
   investmentGuide,
+  playerNotes,
   roleMatchupBlurb,
   rotationTips,
   teamPlan,
@@ -94,6 +95,7 @@ export default async function CharacterPage({ params }: Props) {
 
   const gearLines = gearDeepDive(c, weapon, trinket, tarot);
   const tips = rotationTips(c);
+  const notes = playerNotes(c);
   const sameRole = getAllCharacters()
     .filter((x) => x.role === c.role && x.slug !== c.slug)
     .sort((a, b) => {
@@ -208,6 +210,25 @@ export default async function CharacterPage({ params }: Props) {
           </Link>
         </div>
       </header>
+
+      {/* Always-on readable notes (keeps non–Top 20 pages from feeling empty) */}
+      <section className="mb-8 soc-frame p-5" aria-labelledby="notes-h">
+        <h2 id="notes-h" className="soc-heading text-lg">
+          Player notes
+        </h2>
+        <div className="mt-3 space-y-3 text-sm leading-relaxed text-muted">
+          {notes.map((p) => (
+            <p key={p.slice(0, 40)}>{p}</p>
+          ))}
+        </div>
+        <p className="mt-3 text-xs text-muted">
+          Edited for SoC Wiki · contact{" "}
+          <a href="mailto:contact@socwiki.app" className="text-link hover:underline">
+            contact@socwiki.app
+          </a>{" "}
+          with corrections.
+        </p>
+      </section>
 
       {/* Stats strip */}
       <section className="mb-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">

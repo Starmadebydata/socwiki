@@ -30,6 +30,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/privacy",
     "/contact",
     "/editorial-policy",
+    "/disclaimer",
+    "/terms",
   ].map((path) => ({
     url: path === "/" ? SITE_URL : `${SITE_URL}${path}`,
     lastModified: new Date(),

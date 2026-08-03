@@ -45,6 +45,21 @@ const ROLE_JOB: Record<Role, string> = {
   Destroyer: "magical damage, DoT, and multi-target pressure",
 };
 
+/** Extra readable body for every character (including non–Top 20). */
+export function playerNotes(c: Character): string[] {
+  const m = MATCHUP[c.role];
+  const job = ROLE_JOB[c.role];
+  const factions = c.factions.join(", ");
+  return [
+    `${c.name} is a ${c.rarity} ${c.role} tagged with ${factions}. In practical terms they cover ${job}. ${c.summary}`,
+    c.howToUse,
+    m.advantage
+      ? `In the role triangle, lean on free damage into ${m.advantage}s${m.disadvantage ? ` and respect ${m.disadvantage}s` : ""}. Stars and gear still matter more than matchup alone on hard maps.`
+      : `Watch the magic lane carefully—${m.blurb} Pair them with a physical flex when the enemy Watcher count spikes.`,
+    `Star plan on this page (“${c.starPriority}”) is a budgeting hint: finish the first power spike that stabilizes clears, then reassess against your enabler and main carry before dumping every shard here.`,
+  ];
+}
+
 export function investmentGuide(c: Character): string {
   const overall = c.tier.overall;
   const reroll = c.tier.reroll;

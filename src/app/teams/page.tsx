@@ -21,8 +21,36 @@ export default function TeamsPage() {
       <div className="soc-divider my-5 max-w-md" />
       <p className="max-w-2xl text-muted">
         Start with curated comps, then experiment in the interactive builder.
-        Presets load with a single click and can be shared via URL.
+        Presets load with a single click and can be shared via URL. These are
+        teaching boards—not the only correct meta.
       </p>
+
+      <section className="mt-6 soc-frame p-5 text-sm leading-relaxed text-muted">
+        <h2 className="soc-heading text-base text-foreground">
+          How to read a preset
+        </h2>
+        <ul className="mt-2 list-disc space-y-1.5 pl-5">
+          <li>
+            <strong className="text-foreground">Goal label</strong> tells you
+            the job (story, survival, boss, spiral)—swap units if your roster
+            differs.
+          </li>
+          <li>
+            Keep at least one real enabler and one frontline before chasing
+            aura counts.
+          </li>
+          <li>
+            After loading a preset, check coach notes in the{" "}
+            <Link
+              href="/tools/team-builder"
+              className="text-link hover:underline"
+            >
+              Team Builder
+            </Link>{" "}
+            for missing Watcher/Defender/DPS holes.
+          </li>
+        </ul>
+      </section>
 
       <div className="mt-8">
         <Link

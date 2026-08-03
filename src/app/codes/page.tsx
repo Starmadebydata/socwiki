@@ -161,8 +161,36 @@ export default function CodesPage() {
         <strong className="text-[var(--accent-bright)]">
           {CODES_LIST_UPDATED}
         </strong>
-        .
+        . We only list strings for the official client redeem box—never APKs or
+        third-party “generators.”
       </p>
+
+      <section className="mt-6 soc-frame p-5 text-sm leading-relaxed text-muted">
+        <h2 className="soc-heading text-base text-foreground">
+          Before you paste a code
+        </h2>
+        <ul className="mt-2 list-disc space-y-1.5 pl-5">
+          <li>Update the game client so the redeem UI matches current builds.</li>
+          <li>
+            Redeem on the account you play—codes usually cannot move between
+            accounts once claimed.
+          </li>
+          <li>
+            If a code fails, try the next row; do not re-enter the same string
+            dozens of times (you will just waste time).
+          </li>
+          <li>
+            Found a working code we missed? Email{" "}
+            <a
+              href="mailto:contact@socwiki.app?subject=Code"
+              className="text-link hover:underline"
+            >
+              contact@socwiki.app
+            </a>{" "}
+            with the string and region.
+          </li>
+        </ul>
+      </section>
 
       <div className="mt-6 flex flex-wrap gap-2">
         <span className="soc-stat-chip">
@@ -196,6 +224,10 @@ export default function CodesPage() {
         <h2 id="how-to" className="soc-section-title mb-4">
           How to redeem
         </h2>
+        <p className="mb-4 max-w-2xl text-sm text-muted">
+          Official redeem only—through the in-game Settings flow below. We do
+          not host web redeem forms that ask for your password.
+        </p>
         <ol className="soc-notice space-y-2 text-sm text-muted">
           <li className="flex gap-3">
             <span className="font-display text-[var(--accent-bright)]">1</span>

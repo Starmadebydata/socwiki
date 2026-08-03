@@ -148,6 +148,43 @@ export function GearDetail({ item }: { item: GearItem }) {
             ) : null}
           </section>
 
+          <section className="soc-frame p-5" aria-labelledby="guide-h">
+            <h2 id="guide-h" className="soc-heading text-lg">
+              How to think about {item.name}
+            </h2>
+            <div className="mt-3 space-y-3 text-sm leading-relaxed text-muted">
+              <p>
+                {item.name} is a {item.rarity.toLowerCase()}{" "}
+                {kindLabel(item.kind).toLowerCase()} in the SoC Wiki library.{" "}
+                {item.summary} Treat the “Best on” list below as a living index
+                of who already references this piece in our Quick Builds—not a
+                claim that nobody else can wear it.
+              </p>
+              <p>
+                {(item.roles ?? []).length > 0
+                  ? `It shows up most often on ${(item.roles ?? []).join(", ")} kits`
+                  : "It is a flexible slot filler across several roles"}
+                {(item.tags ?? []).length
+                  ? ` and is tagged for ${(item.tags ?? []).slice(0, 4).join(", ")} play patterns`
+                  : ""}
+                . If two carries want the same legendary, park it on the unit
+                that actually finishes stages for you this week, then farm or
+                pull a substitute for the bench unit.
+              </p>
+              {item.howToGet ? (
+                <p>
+                  <strong className="text-foreground">How to get: </strong>
+                  {item.howToGet}
+                </p>
+              ) : null}
+              <p>
+                Numbers and passive wording can shift after balance patches.
+                When in doubt, re-open the item tooltip in-game and compare to
+                this page&apos;s last-updated date ({item.lastUpdated}).
+              </p>
+            </div>
+          </section>
+
           <section aria-labelledby="best-on-h">
             <div className="mb-3 flex items-end justify-between gap-3">
               <h2 id="best-on-h" className="soc-section-title">

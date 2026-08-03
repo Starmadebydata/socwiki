@@ -8,6 +8,24 @@ export const SITE_DESCRIPTION =
 
 export const TITLE_SUFFIX = "Sword of Convallaria Wiki";
 
+/** Public contact for readers, corrections, and AdSense/policy inquiries */
+export const CONTACT_EMAIL = "contact@socwiki.app";
+
+/**
+ * Site founder / primary editor persona (public E-E-A-T signals).
+ * Jason also founded windflashai.com and windflash.us.
+ */
+export const SITE_FOUNDER = {
+  name: "Jason",
+  role: "Founder & Lead Editor",
+  sites: [
+    { label: "WindFlash AI", href: "https://windflashai.com" },
+    { label: "WindFlash US", href: "https://windflash.us" },
+  ],
+  bioShort:
+    "Jason is the founder of SoC Wiki and a long-time Sword of Convallaria player who also builds AI and web products at WindFlash.",
+} as const;
+
 /**
  * Optional Google Search Console HTML-tag verification token.
  * Paste the content value from GSC (not the full meta tag). Leave empty if using DNS.

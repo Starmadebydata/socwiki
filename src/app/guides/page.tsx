@@ -119,8 +119,53 @@ export default function GuidesPage() {
       <div className="soc-divider my-5 max-w-md" />
       <p className="max-w-2xl text-muted">
         System explainers and new-player paths that plug into the character and
-        gear databases — not orphan blog posts.
+        gear databases — not orphan blog posts. Written for people clearing
+        content this week, not for keyword stuffing.
       </p>
+
+      <section className="mt-8 soc-frame p-5 text-sm leading-relaxed text-muted">
+        <h2 className="soc-heading text-base text-foreground">
+          How to use this library
+        </h2>
+        <ol className="mt-3 list-decimal space-y-2 pl-5">
+          <li>
+            <strong className="text-foreground">New account:</strong> Beginner →
+            Reroll → Early teams → redeem{" "}
+            <Link href="/codes" className="text-link hover:underline">
+              codes
+            </Link>
+            .
+          </li>
+          <li>
+            <strong className="text-foreground">Stuck on a stage:</strong> Role
+            matchups + Act Again + NRG, then rebuild in the{" "}
+            <Link
+              href="/tools/team-builder"
+              className="text-link hover:underline"
+            >
+              Team Builder
+            </Link>
+            .
+          </li>
+          <li>
+            <strong className="text-foreground">Investment week:</strong> Shard
+            priority +{" "}
+            <Link href="/tier-list" className="text-link hover:underline">
+              tier list
+            </Link>{" "}
+            before spreading resources.
+          </li>
+        </ol>
+        <p className="mt-3 text-xs">
+          Editor: Jason · Corrections:{" "}
+          <a
+            href="mailto:contact@socwiki.app"
+            className="text-link hover:underline"
+          >
+            contact@socwiki.app
+          </a>
+        </p>
+      </section>
 
       <section className="mt-10" aria-labelledby="start-here">
         <h2 id="start-here" className="soc-section-title mb-4">
