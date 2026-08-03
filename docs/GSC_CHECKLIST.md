@@ -58,15 +58,18 @@ Weekly for 4 weeks, then monthly:
 - **Enhancements** → FAQ / Breadcrumbs (if reported).
 - **Links** → External + internal once ranking starts.
 
-## 5. www / HTTPS hygiene (already expected)
+## 5. www / HTTPS hygiene
 
 | Check | Expected |
 |-------|----------|
-| `http://socwiki.app` | 301 → `https://socwiki.app` |
-| `https://www.socwiki.app` | 200 or 301 to bare domain (pick one canonical) |
+| `http://socwiki.app` | **301** → `https://socwiki.app` |
+| `http://www.socwiki.app` | **301** → `https://socwiki.app` |
+| `https://www.socwiki.app` | **301** → `https://socwiki.app` |
 | Canonical tags | Absolute `https://socwiki.app/...` |
 
-If both www and bare return 200 without redirect, set a Cloudflare **Bulk Redirect** or **Rules** 301 so only one host is canonical. Prefer **bare** `socwiki.app` (matches `SITE_URL`).
+**Implemented in app (2026-08-03):** `src/middleware.ts` issues 301s for www→apex and http→https on the Workers deployment. Wrangler OAuth is `zone:read` only, so Dashboard Redirect Rules / Always Use HTTPS could not be toggled via API from this machine.
+
+**Optional (Dashboard, stronger edge behavior):** Cloudflare → `socwiki.app` → **SSL/TLS** → **Edge Certificates** → **Always Use HTTPS = On**. Then add a **Redirect Rule** (www → apex) if you want the 301 before the Worker runs.
 
 ## 6. AI / crawler notes
 
