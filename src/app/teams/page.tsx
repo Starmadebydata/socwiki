@@ -1,50 +1,112 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { TEAM_PRESETS } from "@/data/team-presets";
+import { getCharacterBySlug } from "@/data/characters";
+import { RoleAvatar } from "@/components/RoleAvatar";
 
 export const metadata: Metadata = {
   title: "Teams",
   description:
-    "Sword of Convallaria team compositions—early game samples and Team Builder tool.",
+    "Sword of Convallaria team compositions — curated early comps and the interactive Team Builder.",
   alternates: { canonical: "/teams" },
 };
 
 export default function TeamsPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-10">
-      <h1 className="text-3xl font-bold">Teams</h1>
-      <p className="mt-3 max-w-2xl text-muted">
-        Start with curated early comps, then experiment in the interactive
-        builder.
+      <p className="soc-heading-sm">Comps</p>
+      <h1 className="font-display mt-2 text-3xl font-bold tracking-wide text-[var(--accent-bright)] sm:text-4xl">
+        Teams
+      </h1>
+      <div className="soc-divider my-5 max-w-md" />
+      <p className="max-w-2xl text-muted">
+        Start with curated comps, then experiment in the interactive builder.
+        Presets load with a single click and can be shared via URL.
       </p>
-      <div className="mt-8 grid gap-3 sm:grid-cols-2">
-        <Link
-          href="/guides/early-teams"
-          className="rounded-2xl border border-border bg-card p-5 hover:bg-card-hover"
-        >
-          <div className="font-semibold">Early game sample teams</div>
-          <p className="mt-1 text-sm text-muted">
-            Iria start, DoT pressure, and meta aspirational rosters.
-          </p>
-        </Link>
-        <Link
-          href="/guides/party-building"
-          className="rounded-2xl border border-border bg-card p-5 hover:bg-card-hover"
-        >
-          <div className="font-semibold">Party building theory</div>
-          <p className="mt-1 text-sm text-muted">
-            Role slots, enablers, and faction glue.
-          </p>
-        </Link>
+
+      <div className="mt-8">
         <Link
           href="/tools/team-builder"
-          className="rounded-2xl border border-accent/40 bg-accent-soft p-5 sm:col-span-2"
+          className="soc-frame group flex flex-col gap-2 p-6 transition hover:border-[var(--border-bright)] sm:flex-row sm:items-center sm:justify-between"
         >
-          <div className="font-semibold text-accent">Open Team Builder →</div>
-          <p className="mt-1 text-sm text-muted">
-            Pick up to 6 units; inspect role coverage and faction overlap.
-          </p>
+          <div>
+            <div className="font-display text-xl font-semibold tracking-wide text-[var(--accent-bright)]">
+              Open Team Builder
+            </div>
+            <p className="mt-1 text-sm text-muted">
+              Filter roster, load presets, check role/faction coverage, copy
+              share links.
+            </p>
+          </div>
+          <span className="soc-btn-accent soc-btn shrink-0 !px-5">
+            Launch →
+          </span>
         </Link>
       </div>
+
+      <section className="mt-12" aria-labelledby="presets">
+        <h2 id="presets" className="soc-section-title mb-4">
+          Curated presets
+        </h2>
+        <div className="grid gap-4 md:grid-cols-2">
+          {TEAM_PRESETS.map((p) => (
+            <div key={p.id} className="soc-frame flex flex-col p-5">
+              <div className="flex items-start justify-between gap-2">
+                <h3 className="font-display text-lg font-semibold tracking-wide">
+                  {p.name}
+                </h3>
+                <span className="text-[10px] uppercase tracking-wider text-[var(--accent)]">
+                  {p.goal}
+                </span>
+              </div>
+              <p className="mt-1 text-sm text-muted">{p.blurb}</p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {p.slugs.map((slug) => {
+                  const c = getCharacterBySlug(slug);
+                  if (!c) return null;
+                  return (
+                    <Link
+                      key={slug}
+                      href={`/characters/${slug}`}
+                      className="flex items-center gap-1.5 rounded-full border border-[var(--border-soft)] bg-[var(--card-deep)] pr-2.5"
+                    >
+                      <RoleAvatar
+                        name={c.name}
+                        role={c.role}
+                        slug={c.slug}
+                        size="sm"
+                        className="!h-8 !w-8"
+                      />
+                      <span className="text-xs">{c.name}</span>
+                    </Link>
+                  );
+                })}
+              </div>
+              <Link
+                href={`/tools/team-builder?team=${p.slugs.join(",")}`}
+                className="soc-btn mt-4 self-start !py-1.5 !text-xs"
+              >
+                Load in builder →
+              </Link>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-12 grid gap-3 sm:grid-cols-2">
+        <Link href="/guides/early-teams" className="soc-hub-tile">
+          <div className="font-display font-semibold">Early teams guide</div>
+          <p className="mt-1 text-sm text-muted">
+            Full write-up with swap rules and when to use each comp.
+          </p>
+        </Link>
+        <Link href="/guides/party-building" className="soc-hub-tile">
+          <div className="font-display font-semibold">Party building theory</div>
+          <p className="mt-1 text-sm text-muted">
+            Role slots, turn economy, and faction glue.
+          </p>
+        </Link>
+      </section>
     </div>
   );
 }
