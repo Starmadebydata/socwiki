@@ -5,7 +5,7 @@ import { SITE_URL } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
-    "",
+    "/",
     "/characters",
     "/tier-list",
     "/tier-list/reroll",
@@ -29,10 +29,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/contact",
     "/editorial-policy",
   ].map((path) => ({
-    url: `${SITE_URL}${path}`,
+    url: path === "/" ? SITE_URL : `${SITE_URL}${path}`,
     lastModified: new Date(),
     changeFrequency: "weekly" as const,
-    priority: path === "" ? 1 : 0.7,
+    priority: path === "/" ? 1 : 0.7,
   }));
 
   const characters = getAllCharacters().map((c) => ({

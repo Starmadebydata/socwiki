@@ -12,6 +12,14 @@ import {
 import { getCharacterImage } from "@/data/character-images";
 import { TOP20_SLUGS } from "@/data/top20";
 import { gearPath, getGearBySlug } from "@/data/gear";
+import {
+  faqAnswers,
+  gearDeepDive,
+  investmentGuide,
+  roleMatchupBlurb,
+  rotationTips,
+  teamPlan,
+} from "@/lib/character-content";
 import { roleStyle } from "@/lib/role-styles";
 import { SITE_URL, pageTitle } from "@/lib/site";
 
@@ -61,36 +69,38 @@ export default async function CharacterPage({ params }: Props) {
     ["Tarot", tarot],
   ] as const;
 
+  const faqs = faqAnswers(
+    c,
+    weapon?.name ?? c.build.weaponSlug,
+    trinket?.name ?? c.build.trinketSlug,
+    tarot?.name ?? c.build.tarotSlug,
+  );
+
   const faqLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: `What is the best build for ${c.name} in Sword of Convallaria?`,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: `Recommended loadout: ${c.build.basicAttack} / ${c.build.reaction} / skills ${c.build.skills.join(", ")}; gear ${weapon?.name ?? c.build.weaponSlug}, ${trinket?.name ?? c.build.trinketSlug}, ${tarot?.name ?? c.build.tarotSlug}.`,
-        },
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: f.a,
       },
-      {
-        "@type": "Question",
-        name: `What role is ${c.name}?`,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: `${c.name} is a ${c.rarity} ${c.role} in factions ${c.factions.join(", ")}. Overall tier: ${c.tier.overall}.`,
-        },
-      },
-      {
-        "@type": "Question",
-        name: `Is ${c.name} worth investing in?`,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: `Star priority: ${c.starPriority}. Reroll tier: ${c.tier.reroll}. ${c.summary}`,
-        },
-      },
-    ],
+    })),
   };
+
+  const gearLines = gearDeepDive(c, weapon, trinket, tarot);
+  const tips = rotationTips(c);
+  const sameRole = getAllCharacters()
+    .filter((x) => x.role === c.role && x.slug !== c.slug)
+    .sort((a, b) => {
+      const order = ["SSS", "SS", "S+", "S", "A", "B", "C"];
+      return (
+        order.indexOf(a.tier.overall) - order.indexOf(b.tier.overall) ||
+        a.name.localeCompare(b.name)
+      );
+    })
+    .slice(0, 4);
 
   const breadcrumbLd = {
     "@context": "https://schema.org",
@@ -134,9 +144,8 @@ export default async function CharacterPage({ params }: Props) {
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={images.art}
-            alt=""
+            alt={`${c.name} splash art`}
             className="pointer-events-none absolute inset-y-0 right-0 h-full w-[55%] object-cover object-top opacity-40 sm:w-[48%] sm:opacity-50"
-            aria-hidden
           />
         )}
         <div
@@ -199,6 +208,30 @@ export default async function CharacterPage({ params }: Props) {
             </div>
           </div>
         ))}
+      </section>
+
+      {/* Investment + matchup (SEO depth) */}
+      <section className="mb-10 grid gap-6 lg:grid-cols-2">
+        <div className="soc-frame p-5">
+          <h2 className="soc-heading mb-3 text-lg">
+            Is {c.name} worth building?
+          </h2>
+          <p className="text-sm leading-relaxed text-muted">
+            {investmentGuide(c)}
+          </p>
+        </div>
+        <div className="soc-frame p-5">
+          <h2 className="soc-heading mb-3 text-lg">Role & matchups</h2>
+          <p className="text-sm leading-relaxed text-muted">
+            {roleMatchupBlurb(c)}{" "}
+            <Link
+              href="/guides/role-matchups"
+              className="text-link hover:underline"
+            >
+              Full role chart →
+            </Link>
+          </p>
+        </div>
       </section>
 
       {/* Quick Build */}
@@ -270,6 +303,42 @@ export default async function CharacterPage({ params }: Props) {
             <span className="text-muted">Star priority: </span>
             <span className="text-accent">{c.starPriority}</span>
           </p>
+        </div>
+      </section>
+
+      <section className="mb-10 grid gap-6 lg:grid-cols-2">
+        <div className="soc-frame p-5">
+          <h2 className="soc-heading mb-3 text-lg">Gear deep dive</h2>
+          <ul className="list-disc space-y-2 pl-5 text-sm text-muted">
+            {gearLines.map((line) => (
+              <li key={line} className="text-foreground/90">
+                {line}
+              </li>
+            ))}
+          </ul>
+          <p className="mt-3 text-xs text-muted">
+            Open each gear page for alternatives and Best on lists.
+          </p>
+        </div>
+        <div className="soc-frame p-5">
+          <h2 className="soc-heading mb-3 text-lg">Team plan</h2>
+          <p className="text-sm leading-relaxed text-muted">{teamPlan(c)}</p>
+          <ul className="mt-3 list-disc space-y-1.5 pl-5 text-sm text-muted">
+            {tips.map((t) => (
+              <li key={t}>{t}</li>
+            ))}
+          </ul>
+          <div className="mt-4 flex flex-wrap gap-2 text-xs">
+            <Link href="/tools/team-builder" className="soc-btn !py-1">
+              Team Builder →
+            </Link>
+            <Link href="/guides/party-building" className="soc-btn !py-1">
+              Party building →
+            </Link>
+            <Link href="/guides/act-again" className="soc-btn !py-1">
+              Act Again →
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -363,28 +432,53 @@ export default async function CharacterPage({ params }: Props) {
         </section>
       )}
 
+      {sameRole.length > 0 && (
+        <section className="mb-10" aria-labelledby="same-role-heading">
+          <h2 id="same-role-heading" className="soc-heading mb-3 text-lg">
+            Other {c.role}s to compare
+          </h2>
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {sameRole.map((s) => (
+              <Link
+                key={s.slug}
+                href={`/characters/${s.slug}`}
+                className="flex items-center gap-3 rounded-2xl border border-border bg-card p-3 hover:bg-card-hover"
+              >
+                <RoleAvatar
+                  name={s.name}
+                  role={s.role}
+                  slug={s.slug}
+                  size="sm"
+                />
+                <div className="min-w-0 flex-1">
+                  <div className="truncate font-medium">{s.name}</div>
+                  <div className="text-xs text-muted">{s.tier.overall}</div>
+                </div>
+              </Link>
+            ))}
+          </div>
+          <p className="mt-3 text-sm text-muted">
+            Browse the full{" "}
+            <Link
+              href={`/characters/role/${c.role.toLowerCase()}`}
+              className="text-link hover:underline"
+            >
+              {c.role} roster
+            </Link>
+            .
+          </p>
+        </section>
+      )}
+
       <section className="panel mb-6 p-5">
         <h2 className="mb-3 text-lg font-semibold">FAQ</h2>
         <dl className="space-y-4 text-sm">
-          <div>
-            <dt className="font-medium">
-              What is the best build for {c.name}?
-            </dt>
-            <dd className="mt-1 text-muted">
-              Use Quick Build and the skill table above, then adjust for stage
-              constraints (NRG, cover, single vs multi).
-            </dd>
-          </div>
-          <div>
-            <dt className="font-medium">Is {c.name} good for rerolls?</dt>
-            <dd className="mt-1 text-muted">
-              Reroll tier: {c.tier.reroll}. See the{" "}
-              <Link href="/tier-list" className="text-link hover:underline">
-                full tier list
-              </Link>
-              .
-            </dd>
-          </div>
+          {faqs.map((f) => (
+            <div key={f.q}>
+              <dt className="font-medium">{f.q}</dt>
+              <dd className="mt-1 text-muted">{f.a}</dd>
+            </div>
+          ))}
         </dl>
       </section>
     </article>
