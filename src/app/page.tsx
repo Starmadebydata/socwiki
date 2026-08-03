@@ -33,6 +33,7 @@ function getFeaturedCharacters(all: ReturnType<typeof getAllCharacters>, limit =
 const HUB_ICONS: Record<string, string> = {
   Characters: "⚔",
   "Tier Lists": "🏆",
+  Factions: "🏛",
   Weapons: "🗡",
   Trinkets: "💍",
   "Tarot Whispers": "🃏",

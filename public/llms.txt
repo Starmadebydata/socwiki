@@ -16,6 +16,7 @@ Sitemap: https://socwiki.app/sitemap.xml
 - Trinkets: https://socwiki.app/trinkets
 - Tarot Whispers: https://socwiki.app/tarots
 - Teams: https://socwiki.app/teams
+- Factions: https://socwiki.app/factions
 - Team Builder: https://socwiki.app/tools/team-builder
 - Codes: https://socwiki.app/codes
 - Guides index: https://socwiki.app/guides

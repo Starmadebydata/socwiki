@@ -5549,6 +5549,7 @@ export const ROLES: Role[] = [
 export const HUB_CATEGORIES = [
   { href: "/characters", title: "Characters", blurb: "Builds, skill trees, and stats for every unit" },
   { href: "/tier-list", title: "Tier Lists", blurb: "Current meta rankings by role and mode" },
+  { href: "/factions", title: "Factions", blurb: "Iria, SoC, Union, Alacrity auras and sample cores" },
   { href: "/weapons", title: "Weapons", blurb: "Best weapons and who they belong on" },
   { href: "/trinkets", title: "Trinkets", blurb: "Trinket effects and recommended users" },
   { href: "/tarots", title: "Tarot Whispers", blurb: "Tarot rankings and pairings" },

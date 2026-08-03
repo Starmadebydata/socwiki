@@ -11,6 +11,8 @@ import {
 } from "@/data/characters";
 import { getCharacterImage } from "@/data/character-images";
 import { TOP20_SLUGS } from "@/data/top20";
+import { getTop20Deep } from "@/data/top20-deep";
+import { getFactionByName } from "@/data/factions";
 import { gearPath, getGearBySlug } from "@/data/gear";
 import {
   faqAnswers,
@@ -61,6 +63,7 @@ export default async function CharacterPage({ params }: Props) {
   const tarot = getGearBySlug(c.build.tarotSlug);
   const rs = roleStyle(c.role);
   const isRefined = TOP20_SLUGS.includes(c.slug);
+  const deep = getTop20Deep(c.slug);
   const images = getCharacterImage(c.slug);
 
   const gearRows = [
@@ -175,9 +178,22 @@ export default async function CharacterPage({ params }: Props) {
                 <RolePill role={c.role} />
                 <span className="text-xs text-muted">{c.rarity}</span>
                 <span className="text-xs text-muted">·</span>
-                <span className="text-xs text-muted">
-                  {c.factions.join(" · ")}
-                </span>
+                {c.factions.map((fname) => {
+                  const fac = getFactionByName(fname);
+                  return fac ? (
+                    <Link
+                      key={fname}
+                      href={`/factions/${fac.slug}`}
+                      className="text-xs text-link hover:underline"
+                    >
+                      {fname}
+                    </Link>
+                  ) : (
+                    <span key={fname} className="text-xs text-muted">
+                      {fname}
+                    </span>
+                  );
+                })}
               </div>
               <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted sm:text-base">
                 {c.summary}
@@ -210,6 +226,105 @@ export default async function CharacterPage({ params }: Props) {
         ))}
       </section>
 
+      {/* Top 20 hand-written deep guide */}
+      {deep && (
+        <section className="mb-10 space-y-6" aria-labelledby="deep-guide">
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="soc-ribbon">Top 20 deep guide</span>
+            <span className="text-xs text-muted">
+              Hand-written meta notes — not a scrape dump
+            </span>
+          </div>
+          <h2 id="deep-guide" className="sr-only">
+            {c.name} deep guide
+          </h2>
+          <div className="soc-frame space-y-3 p-5">
+            <h3 className="soc-heading text-lg">Overview</h3>
+            {deep.overview.map((p) => (
+              <p key={p.slice(0, 48)} className="text-sm leading-relaxed text-muted">
+                {p}
+              </p>
+            ))}
+          </div>
+          <div className="grid gap-6 lg:grid-cols-2">
+            <div className="soc-frame p-5">
+              <h3 className="soc-heading text-lg">Openers</h3>
+              <ol className="mt-2 list-decimal space-y-1.5 pl-5 text-sm text-muted">
+                {deep.openers.map((o) => (
+                  <li key={o}>{o}</li>
+                ))}
+              </ol>
+            </div>
+            <div className="soc-frame p-5">
+              <h3 className="soc-heading text-lg">Mid-fight</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted">
+                {deep.midFight}
+              </p>
+            </div>
+          </div>
+          <div className="soc-frame p-5">
+            <h3 className="soc-heading text-lg">Investment</h3>
+            <p className="mt-2 text-sm leading-relaxed text-muted">
+              {deep.investment}
+            </p>
+          </div>
+          {deep.sampleTeams.length > 0 && (
+            <div className="space-y-3">
+              <h3 className="soc-heading text-lg">Sample teams</h3>
+              <div className="grid gap-3 md:grid-cols-2">
+                {deep.sampleTeams.map((t) => (
+                  <div key={t.name} className="soc-frame p-4">
+                    <div className="font-display font-semibold tracking-wide">
+                      {t.name}
+                    </div>
+                    <p className="mt-1 text-xs text-muted">{t.blurb}</p>
+                    <div className="mt-3 flex flex-wrap gap-1.5">
+                      {t.slugs.map((s) => {
+                        const sc = map[s];
+                        if (!sc) return null;
+                        return (
+                          <Link
+                            key={s}
+                            href={`/characters/${s}`}
+                            className="rounded-full border border-[var(--border-soft)] bg-[var(--card-deep)] px-2 py-0.5 text-[11px] hover:border-[var(--border-bright)]"
+                          >
+                            {sc.name}
+                          </Link>
+                        );
+                      })}
+                    </div>
+                    <Link
+                      href={`/tools/team-builder?team=${t.slugs.join(",")}`}
+                      className="mt-3 inline-block text-xs text-link hover:underline"
+                    >
+                      Load in builder →
+                    </Link>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+          <div className="grid gap-6 lg:grid-cols-2">
+            <div className="soc-parchment p-5 text-sm text-[var(--ink-muted)]">
+              <h3 className="font-display font-semibold text-[var(--ink)]">
+                Pitfalls
+              </h3>
+              <ul className="mt-2 list-disc space-y-1 pl-5">
+                {deep.pitfalls.map((p) => (
+                  <li key={p}>{p}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="soc-frame p-5">
+              <h3 className="soc-heading text-lg">When to skip</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted">
+                {deep.whenSkip}
+              </p>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Investment + matchup (SEO depth) */}
       <section className="mb-10 grid gap-6 lg:grid-cols-2">
         <div className="soc-frame p-5">
@@ -217,11 +332,11 @@ export default async function CharacterPage({ params }: Props) {
             Is {c.name} worth building?
           </h2>
           <p className="text-sm leading-relaxed text-muted">
-            {investmentGuide(c)}
+            {deep?.investment ?? investmentGuide(c)}
           </p>
         </div>
         <div className="soc-frame p-5">
-          <h2 className="soc-heading mb-3 text-lg">Role & matchups</h2>
+          <h2 className="soc-heading mb-3 text-lg">Role and matchups</h2>
           <p className="text-sm leading-relaxed text-muted">
             {roleMatchupBlurb(c)}{" "}
             <Link

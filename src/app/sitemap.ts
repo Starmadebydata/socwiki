@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getAllCharacters, ROLES } from "@/data/characters";
+import { getAllFactions } from "@/data/factions";
 import { getAllGear, gearPath } from "@/data/gear";
 import { SITE_URL } from "@/lib/site";
 
@@ -23,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/trinkets",
     "/tarots",
     "/teams",
+    "/factions",
     "/tools/team-builder",
     "/about",
     "/privacy",
@@ -56,5 +58,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.65,
   }));
 
-  return [...staticRoutes, ...characters, ...roles, ...gear];
+  const factions = getAllFactions().map((f) => ({
+    url: `${SITE_URL}/factions/${f.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.6,
+  }));
+
+  return [...staticRoutes, ...characters, ...roles, ...gear, ...factions];
 }

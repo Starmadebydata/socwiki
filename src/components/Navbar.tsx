@@ -4,6 +4,7 @@ import { SITE_NAME } from "@/lib/site";
 const links = [
   { href: "/characters", label: "Characters" },
   { href: "/tier-list", label: "Tier List" },
+  { href: "/factions", label: "Factions" },
   { href: "/weapons", label: "Gear" },
   { href: "/guides", label: "Guides" },
   { href: "/codes", label: "Codes" },
