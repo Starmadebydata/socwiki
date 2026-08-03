@@ -20,6 +20,16 @@ export const GOOGLE_SITE_VERIFICATION =
 export const GA_MEASUREMENT_ID =
   process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? "G-D1R4M8PKM1";
 
+/**
+ * Bing / Yandex IndexNow API key.
+ * Public key file: `/{INDEXNOW_KEY}.txt` must serve the key as plain text.
+ * @see https://www.bing.com/indexnow/getstarted
+ */
+export const INDEXNOW_KEY =
+  process.env.INDEXNOW_KEY ?? "45d7f3435aced808778ed0f7305b5bd7";
+
+export const INDEXNOW_KEY_LOCATION = `${SITE_URL}/${INDEXNOW_KEY}.txt`;
+
 export function pageTitle(topic: string) {
   return `${topic} - ${TITLE_SUFFIX}`;
 }

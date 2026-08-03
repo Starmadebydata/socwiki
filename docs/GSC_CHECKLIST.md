@@ -90,6 +90,15 @@ Wrangler OAuth is `zone:read` only — Dashboard **Redirect Rules** / **Always U
 2. Caching → Configuration → **Purge Everything** after major SEO deploys if edges pin old 301/HTML
 3. Search Console verify + submit `https://socwiki.app/sitemap.xml`
 
+## Bing Webmaster + IndexNow
+
+1. Submit sitemap in Bing Webmaster Tools: `https://socwiki.app/sitemap.xml`
+2. **IndexNow** is configured in-repo:
+   - Public key file: `https://socwiki.app/{INDEXNOW_KEY}.txt` (see `src/lib/site.ts`)
+   - Submit all sitemap URLs: `npm run indexnow`
+   - Submit hub URLs only: `npm run indexnow:priority`
+3. After major content deploys, run `npm run indexnow:priority` (or full `indexnow`).
+
 
 ## 6. AI / crawler notes
 
