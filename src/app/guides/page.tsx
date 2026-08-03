@@ -61,9 +61,10 @@ const GUIDES: {
   {
     href: "/guides/role-matchups",
     title: "Role Matchups",
-    blurb: "Breaker, Defender, Seeker, Watcher, Destroyer explained.",
+    blurb:
+      "Visual triangle + magic pair chart, full table, and combat tips.",
     tag: "Systems",
-    read: "6 min",
+    read: "8 min",
   },
   {
     href: "/codes",
