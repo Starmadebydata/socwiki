@@ -11,7 +11,11 @@ import {
 } from "@/data/characters";
 import { getCharacterImage } from "@/data/character-images";
 import { TOP20_SLUGS } from "@/data/top20";
-import { getTop20Deep } from "@/data/top20-deep";
+import {
+  getCharacterDeep,
+  getPlayDiary,
+  isDeepGuided,
+} from "@/data/character-deep";
 import { getFactionByName } from "@/data/factions";
 import { gearPath, getGearBySlug } from "@/data/gear";
 import {
@@ -23,6 +27,7 @@ import {
   rotationTips,
   teamPlan,
 } from "@/lib/character-content";
+import { AuthorByline } from "@/components/AuthorByline";
 import { roleStyle } from "@/lib/role-styles";
 import { SITE_URL, pageTitle } from "@/lib/site";
 
@@ -64,7 +69,9 @@ export default async function CharacterPage({ params }: Props) {
   const tarot = getGearBySlug(c.build.tarotSlug);
   const rs = roleStyle(c.role);
   const isRefined = TOP20_SLUGS.includes(c.slug);
-  const deep = getTop20Deep(c.slug);
+  const deep = getCharacterDeep(c.slug);
+  const diary = getPlayDiary(c.slug);
+  const hasDeep = isDeepGuided(c.slug);
   const images = getCharacterImage(c.slug);
 
   const gearRows = [
@@ -175,6 +182,11 @@ export default async function CharacterPage({ params }: Props) {
                     Top 20 · Refined
                   </span>
                 )}
+                {hasDeep && !isRefined && (
+                  <span className="rounded-full border border-[var(--border-soft)] bg-[var(--card-deep)] px-2 py-0.5 text-[11px] font-semibold text-[var(--accent-bright)]">
+                    Deep guide
+                  </span>
+                )}
               </div>
               <div className="mt-2 flex flex-wrap items-center gap-2">
                 <RolePill role={c.role} />
@@ -247,11 +259,17 @@ export default async function CharacterPage({ params }: Props) {
         ))}
       </section>
 
-      {/* Top 20 hand-written deep guide */}
+      <div className="mb-8">
+        <AuthorByline updated={c.lastUpdated} compact />
+      </div>
+
+      {/* Hand-written deep guide (Top 20 + Top 30 extras) */}
       {deep && (
         <section className="mb-10 space-y-6" aria-labelledby="deep-guide">
           <div className="flex flex-wrap items-center gap-2">
-            <span className="soc-ribbon">Top 20 deep guide</span>
+            <span className="soc-ribbon">
+              {isRefined ? "Top 20 deep guide" : "Deep guide"}
+            </span>
             <span className="text-xs text-muted">
               Hand-written meta notes — not a scrape dump
             </span>
@@ -343,6 +361,16 @@ export default async function CharacterPage({ params }: Props) {
               </p>
             </div>
           </div>
+          {diary.length > 0 && (
+            <div className="soc-frame border-[var(--border-bright)]/40 p-5">
+              <h3 className="soc-heading text-lg">From the editor&apos;s clears</h3>
+              <div className="mt-3 space-y-3 text-sm leading-relaxed text-muted">
+                {diary.map((p) => (
+                  <p key={p.slice(0, 48)}>{p}</p>
+                ))}
+              </div>
+            </div>
+          )}
         </section>
       )}
 

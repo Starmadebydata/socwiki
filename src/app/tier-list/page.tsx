@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { CharacterCard } from "@/components/CharacterCard";
 import { TierBadge } from "@/components/TierBadge";
+import { AuthorByline } from "@/components/AuthorByline";
 import { JsonLd } from "@/components/JsonLd";
 import { getAllCharacters, ROLES } from "@/data/characters";
 import type { Role, Tier } from "@/types/character";
@@ -69,6 +70,9 @@ export default function TierListPage() {
         database, plus per-role tables. Prefer favorites when content allows—use
         this list for resource priority. Last meta pass: August 2026.
       </p>
+      <div className="mt-6">
+        <AuthorByline updated="2026-08-03" />
+      </div>
 
       <div className="mt-6 flex flex-wrap gap-2 text-sm">
         <Link

@@ -13,6 +13,7 @@ const LEGAL = [
   { href: "/editorial-policy", label: "Editorial" },
   { href: "/disclaimer", label: "Disclaimer" },
   { href: "/terms", label: "Terms" },
+  { href: "/changelog", label: "Changelog" },
 ];
 
 export function Footer() {

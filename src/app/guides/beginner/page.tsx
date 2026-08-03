@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { AuthorByline } from "@/components/AuthorByline";
 import { JsonLd } from "@/components/JsonLd";
 import { SITE_URL } from "@/lib/site";
 
@@ -81,6 +82,9 @@ export default function BeginnerGuidePage() {
         Sword of Convallaria Beginner Guide
       </h1>
       <div className="soc-divider my-5 max-w-md" />
+      <div className="mb-6">
+        <AuthorByline updated={UPDATED} />
+      </div>
       <p className="text-lg leading-relaxed text-[var(--foreground)]/90">
         A practical first-week path for new accounts: who to keep, what to
         spend, and how to stop wasting free damage. This guide links into the{" "}

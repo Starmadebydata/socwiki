@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { AuthorByline } from "@/components/AuthorByline";
 
 export const metadata: Metadata = {
   title: "Guides",
@@ -122,6 +123,9 @@ export default function GuidesPage() {
         gear databases — not orphan blog posts. Written for people clearing
         content this week, not for keyword stuffing.
       </p>
+      <div className="mt-6 max-w-3xl">
+        <AuthorByline updated="2026-08-03" compact />
+      </div>
 
       <section className="mt-8 soc-frame p-5 text-sm leading-relaxed text-muted">
         <h2 className="soc-heading text-base text-foreground">
