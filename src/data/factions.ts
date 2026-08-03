@@ -40,7 +40,8 @@ export const FACTIONS: FactionInfo[] = [
     ],
   },
   {
-    slug: "soc",
+    // Avoid bare "/factions/soc" — short "soc" path has been flaky on the edge.
+    slug: "soc-faction",
     name: "SoC",
     summary:
       "SoC (Sword of Convallaria) faction cores revolve around SP Maitha walls, SP Inanna enable, and premium mid-game spikes.",
