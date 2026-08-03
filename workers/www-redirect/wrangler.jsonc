@@ -1,13 +1,7 @@
-/**
- * Apex canonical redirect for www.socwiki.app → https://socwiki.app
- * Deployed separately so www never serves the main app.
- */
 {
   "name": "socwiki-www-redirect",
   "main": "src/index.js",
   "compatibility_date": "2026-08-01",
   "workers_dev": false,
-  "routes": [
-    { "pattern": "www.socwiki.app/*", "zone_name": "socwiki.app" }
-  ]
+  "routes": []
 }

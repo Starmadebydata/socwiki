@@ -23,23 +23,17 @@ export function middleware(request: NextRequest) {
   const hostHeader = request.headers.get("host") ?? "";
   const host = hostHeader.split(":")[0].toLowerCase();
 
+  // Only canonicalize www → apex. Never touch bare socwiki.app (avoids loops).
   if (host !== `www.${CANONICAL_HOST}`) {
     return NextResponse.next();
   }
 
-  const url = request.nextUrl.clone();
-  url.protocol = "https:";
-  url.hostname = CANONICAL_HOST;
-  url.port = "";
-  url.host = CANONICAL_HOST;
+  const dest = new URL(request.url);
+  dest.protocol = "https:";
+  dest.hostname = CANONICAL_HOST;
+  dest.port = "";
 
-  // Only redirect when the destination differs (never self-redirect).
-  if (url.href === request.nextUrl.href) {
-    return NextResponse.next();
-  }
-
-  const res = NextResponse.redirect(url, 301);
-  // Short cache so a bad rule cannot pin the edge for a day.
+  const res = NextResponse.redirect(dest.toString(), 301);
   res.headers.set("Cache-Control", "public, max-age=300, s-maxage=300");
   return res;
 }

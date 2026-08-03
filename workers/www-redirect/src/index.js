@@ -1,28 +1,19 @@
 /**
- * Permanent redirect: any request on www.socwiki.app → https://socwiki.app
- * Preserves path + query. Forces HTTPS.
+ * DEPRECATED — do not assign routes to this worker.
  *
- * Never runs on apex (route is www only). Short-ish cache so mistakes
- * cannot pin the edge for a day.
+ * www.socwiki.app is handled by the main `socwiki` Worker + src/middleware.ts
+ * so we never dual-deploy two scripts that can race on zone routes.
+ *
+ * Kept as a no-op safety valve: any residual traffic 301s to apex.
  */
 export default {
   async fetch(request) {
     const incoming = new URL(request.url);
-    // Only act on www; if this worker is mis-routed, refuse self-loops.
-    if (incoming.hostname !== "www.socwiki.app") {
-      return new Response("Not found", { status: 404 });
-    }
     const target = new URL(
       incoming.pathname + incoming.search,
       "https://socwiki.app",
     );
-    return new Response(null, {
-      status: 301,
-      headers: {
-        Location: target.toString(),
-        "Cache-Control": "public, max-age=600, s-maxage=3600",
-        Vary: "Host",
-      },
-    });
+    // Never 404 — always send users to the live apex site.
+    return Response.redirect(target.toString(), 301);
   },
 };
