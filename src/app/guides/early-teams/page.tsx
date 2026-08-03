@@ -4,6 +4,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { RoleAvatar } from "@/components/RoleAvatar";
 import { getCharacterBySlug } from "@/data/characters";
 import { SITE_URL } from "@/lib/site";
+import { AuthorByline } from "@/components/AuthorByline";
 
 export const metadata: Metadata = {
   title: "Best Early Game Teams (2026)",
@@ -147,6 +148,9 @@ export default function EarlyTeamsPage() {
         Best Early Game Teams
       </h1>
       <div className="soc-divider my-5 max-w-md" />
+      <div className="mb-6">
+        <AuthorByline updated={UPDATED} compact />
+      </div>
       <p className="text-lg leading-relaxed text-[var(--foreground)]/90">
         Sample Sword of Convallaria teams for new and returning accounts. These
         are{" "}

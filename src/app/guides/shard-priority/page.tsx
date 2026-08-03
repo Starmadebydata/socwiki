@@ -6,6 +6,7 @@ import { RoleAvatar } from "@/components/RoleAvatar";
 import { JsonLd } from "@/components/JsonLd";
 import { SITE_URL } from "@/lib/site";
 import type { Character, Tier } from "@/types/character";
+import { AuthorByline } from "@/components/AuthorByline";
 
 export const metadata: Metadata = {
   title: "Shard & Star Priority Guide (2026)",
@@ -108,6 +109,9 @@ export default function ShardPriorityPage() {
         Shard &amp; Star Priority
       </h1>
       <div className="soc-divider my-5 max-w-md" />
+      <div className="mb-6">
+        <AuthorByline updated={UPDATED} compact />
+      </div>
       <p className="text-lg leading-relaxed text-[var(--foreground)]/90">
         Stars multiply kit breakpoints—extra Act Again windows, aura power,
         survivability. Spreading shards evenly is the fastest way to feel weak.

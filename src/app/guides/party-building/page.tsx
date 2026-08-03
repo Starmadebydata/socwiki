@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { SITE_URL } from "@/lib/site";
+import { AuthorByline } from "@/components/AuthorByline";
 
 export const metadata: Metadata = {
   title: "Party Building Guide — Roles, Auras & Turn Economy",
@@ -81,6 +82,9 @@ export default function PartyBuildingPage() {
         Party Building Guide
       </h1>
       <div className="soc-divider my-5 max-w-md" />
+      <div className="mb-6">
+        <AuthorByline updated={UPDATED} compact />
+      </div>
       <p className="text-lg leading-relaxed text-[var(--foreground)]/90">
         A reliable Sword of Convallaria squad is less about six SSS names and
         more about{" "}

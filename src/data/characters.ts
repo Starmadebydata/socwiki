@@ -5426,6 +5426,50 @@ const AUTO = getAutoRefinedMap();
 const DEVICE = getDeviceOcrMap();
 const DEVICE_CHARS = getDeviceOcrCharacterMap();
 
+/**
+ * Detect wiki-scrape residue that should never win over hand-written seed copy.
+ * Common pattern from collect scripts: "here! Table of Contents X Tier & Basic Info…"
+ */
+function isScrapeJunk(text: string | undefined | null): boolean {
+  if (!text) return true;
+  const t = text.trim();
+  if (t.length < 8) return true;
+  if (/here!\s*Table of Contents/i.test(t)) return true;
+  if (/Table of Contents/i.test(t) && /Tier\s*&\s*Basic/i.test(t)) return true;
+  if (/Strength\s*&\s*How to Use/i.test(t) && t.length < 120) return true;
+  return false;
+}
+
+/** Prefer hand seed blurbs; only take auto/device text when seed is empty/junk and incoming is clean. */
+function pickBlurb(
+  incoming: string | undefined,
+  seed: string | undefined,
+): string {
+  const seedOk = seed && !isScrapeJunk(seed);
+  if (seedOk) return seed!;
+  const inOk = incoming && !isScrapeJunk(incoming);
+  if (inOk) return incoming!;
+  return seed || incoming || "";
+}
+
+/** Reject truncated skill-note pros like "Sword - X: An excellent Basic Attack that…" */
+function pickPros(
+  incoming: string[] | undefined,
+  seed: string[] | undefined,
+): string[] {
+  const seedOk = Boolean(seed?.length);
+  if (!incoming?.length) return seed ?? [];
+  const looksLikeSkillDump = incoming.some(
+    (p) =>
+      isScrapeJunk(p) ||
+      (/:\s*(An |A )(excellent |very |Skill |powerful )/i.test(p) &&
+        p.length > 50 &&
+        !/[.!?]$/.test(p.trim())),
+  );
+  if (looksLikeSkillDump && seedOk) return seed!;
+  return incoming;
+}
+
 function applyPartial(
   c: Character,
   a: Partial<Character> | undefined,
@@ -5438,9 +5482,10 @@ function applyPartial(
     move: a.move ?? c.move,
     highJump: a.highJump ?? c.highJump,
     lowJump: a.lowJump ?? c.lowJump,
-    summary: a.summary || c.summary,
-    pros: a.pros?.length ? a.pros : c.pros,
-    howToUse: a.howToUse || c.howToUse,
+    // Editorial fields: seed wins over scrape TOC / truncated dumps
+    summary: pickBlurb(a.summary, c.summary),
+    pros: pickPros(a.pros, c.pros),
+    howToUse: pickBlurb(a.howToUse, c.howToUse),
     build: a.build
       ? {
           basicAttack: a.build.basicAttack || c.build.basicAttack,

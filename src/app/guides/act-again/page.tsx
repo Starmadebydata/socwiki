@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { SITE_URL } from "@/lib/site";
+import { AuthorByline } from "@/components/AuthorByline";
 
 export const metadata: Metadata = {
   title: "Act Again Explained (SoC 2026)",
@@ -77,6 +78,9 @@ export default function ActAgainGuidePage() {
         Act Again Explained
       </h1>
       <div className="soc-divider my-5 max-w-md" />
+      <div className="mb-6">
+        <AuthorByline updated={UPDATED} compact />
+      </div>
       <p className="text-lg text-muted">
         Act Again is the turn-economy engine of Sword of Convallaria. One well-timed
         extra action often beats another mid-tier damage dealer on the bench.

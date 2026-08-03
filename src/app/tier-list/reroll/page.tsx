@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { AuthorByline } from "@/components/AuthorByline";
 import { TierBadge } from "@/components/TierBadge";
 import { RoleAvatar } from "@/components/RoleAvatar";
 import { JsonLd } from "@/components/JsonLd";
@@ -117,6 +118,9 @@ export default function RerollTierPage() {
         Reroll Guide &amp; Tier List
       </h1>
       <div className="soc-divider my-5 max-w-lg" />
+      <div className="mb-6 max-w-3xl">
+        <AuthorByline updated={UPDATED} compact />
+      </div>
       <p className="max-w-3xl text-lg leading-relaxed text-[var(--foreground)]/90">
         Who is worth restarting for in Sword of Convallaria, when to stop, and
         the full reroll ranking used across SoC Wiki. For late-game meta, use

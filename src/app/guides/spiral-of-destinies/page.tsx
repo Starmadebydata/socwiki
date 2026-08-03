@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { SITE_URL } from "@/lib/site";
+import { AuthorByline } from "@/components/AuthorByline";
 
 export const metadata: Metadata = {
   title: "Spiral of Destinies Guide (2026)",
@@ -77,6 +78,9 @@ export default function SpiralGuidePage() {
         Spiral of Destinies Guide
       </h1>
       <div className="soc-divider my-5 max-w-md" />
+      <div className="mb-6">
+        <AuthorByline updated={UPDATED} compact />
+      </div>
       <p className="text-lg text-muted">
         Spiral is where “good enough for story” stops working. Treat it as a
         checklist mode: matchups, NRG, stars, and a clear win condition.

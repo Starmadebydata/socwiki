@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { SITE_URL } from "@/lib/site";
+import { AuthorByline } from "@/components/AuthorByline";
 
 export const metadata: Metadata = {
   title: "NRG Guide (Energy & Batteries)",
@@ -77,6 +78,9 @@ export default function NrgGuidePage() {
         NRG Guide
       </h1>
       <div className="soc-divider my-5 max-w-md" />
+      <div className="mb-6">
+        <AuthorByline updated={UPDATED} compact />
+      </div>
       <p className="text-lg text-muted">
         NRG is why some teams look fine on paper and stall on turn 6. Manage energy
         like a second HP bar for your skill plan.

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { SITE_URL } from "@/lib/site";
 import type { Role } from "@/types/character";
+import { AuthorByline } from "@/components/AuthorByline";
 
 export const metadata: Metadata = {
   title: "Role Matchups Guide — Visual Chart (2026)",
@@ -123,6 +124,9 @@ export default function RoleMatchupsPage() {
         Role Matchups Guide
       </h1>
       <div className="soc-divider my-5 max-w-md" />
+      <div className="mb-6">
+        <AuthorByline updated={UPDATED} compact />
+      </div>
       <p className="text-lg leading-relaxed text-[var(--foreground)]/90">
         Five roles shape combat math in Sword of Convallaria. Attacking a
         countered role deals{" "}
