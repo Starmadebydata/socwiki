@@ -1,16 +1,26 @@
 /**
  * Permanent redirect: any request on www.socwiki.app → https://socwiki.app
- * Preserves path, query, and fragment-less URL. Forces HTTPS.
+ * Preserves path + query. Forces HTTPS.
+ *
+ * Never runs on apex (route is www only). Short-ish cache so mistakes
+ * cannot pin the edge for a day.
  */
 export default {
   async fetch(request) {
     const incoming = new URL(request.url);
-    const target = new URL(incoming.pathname + incoming.search, "https://socwiki.app");
+    // Only act on www; if this worker is mis-routed, refuse self-loops.
+    if (incoming.hostname !== "www.socwiki.app") {
+      return new Response("Not found", { status: 404 });
+    }
+    const target = new URL(
+      incoming.pathname + incoming.search,
+      "https://socwiki.app",
+    );
     return new Response(null, {
       status: 301,
       headers: {
         Location: target.toString(),
-        "Cache-Control": "public, max-age=3600, s-maxage=86400",
+        "Cache-Control": "public, max-age=600, s-maxage=3600",
         Vary: "Host",
       },
     });
