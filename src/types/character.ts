@@ -77,6 +77,8 @@ export interface GearItem {
   effect: string;
   bestFor: string[];
   lastUpdated: string;
+  /** Public path to gear icon webp, e.g. /gear/void-stab.webp */
+  icon?: string;
   /** Playstyle tags for filters & “good for” chips */
   tags?: string[];
   /** Roles that commonly equip this piece */

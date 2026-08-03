@@ -7,6 +7,7 @@ import {
 } from "@/data/gear";
 import type { GearItem } from "@/types/character";
 import { CharacterCard } from "@/components/CharacterCard";
+import { GearIcon } from "@/components/GearIcon";
 import { JsonLd } from "@/components/JsonLd";
 import { SITE_URL } from "@/lib/site";
 
@@ -25,9 +26,6 @@ export function GearDetail({ item }: { item: GearItem }) {
       : item.kind === "trinket"
         ? "/trinkets"
         : "/tarots";
-
-  const icon =
-    item.kind === "weapon" ? "🗡" : item.kind === "trinket" ? "💍" : "🃏";
 
   const breadcrumbLd = {
     "@context": "https://schema.org",
@@ -97,9 +95,7 @@ export function GearDetail({ item }: { item: GearItem }) {
       <header className="soc-frame relative mb-8 overflow-hidden p-5 sm:p-7">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(212,181,106,0.12),transparent_55%)]" />
         <div className="relative flex flex-col gap-5 sm:flex-row sm:items-start">
-          <div className="flex h-24 w-24 shrink-0 items-center justify-center rounded-2xl border border-[var(--border-bright)] bg-gradient-to-br from-[#3d4354] to-[#1a1e28] text-4xl shadow-[0_0_24px_rgba(212,181,106,0.15)]">
-            {icon}
-          </div>
+          <GearIcon item={item} size="lg" className="!rounded-2xl shadow-[0_0_24px_rgba(212,181,106,0.15)]" />
           <div className="min-w-0 flex-1">
             <p className="soc-heading-sm">
               {kindLabel(item.kind)} · {item.rarity}
@@ -189,9 +185,10 @@ export function GearDetail({ item }: { item: GearItem }) {
                   <li key={g.slug}>
                     <Link
                       href={gearPath(g)}
-                      className="flex items-start justify-between gap-3 py-3 transition hover:text-[var(--accent-bright)]"
+                      className="flex items-center gap-3 py-3 transition hover:text-[var(--accent-bright)]"
                     >
-                      <div>
+                      <GearIcon item={g} size="sm" />
+                      <div className="min-w-0 flex-1">
                         <div className="font-display font-semibold tracking-wide">
                           {g.name}
                         </div>

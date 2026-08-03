@@ -5523,6 +5523,21 @@ export function getCharactersUsingGear(gearSlug: string): Character[] {
   );
 }
 
+/** How many character builds equip each gear slug. */
+export function getGearUsageCounts(): Record<string, number> {
+  const counts: Record<string, number> = {};
+  for (const c of characters) {
+    for (const s of [
+      c.build.weaponSlug,
+      c.build.trinketSlug,
+      c.build.tarotSlug,
+    ]) {
+      counts[s] = (counts[s] ?? 0) + 1;
+    }
+  }
+  return counts;
+}
+
 export const ROLES: Role[] = [
   "Breaker",
   "Defender",

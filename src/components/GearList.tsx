@@ -5,6 +5,8 @@ import Link from "next/link";
 import type { GearItem, Rarity, Role } from "@/types/character";
 import { gearPath, kindLabel } from "@/data/gear";
 import { getCharactersUsingGear } from "@/data/characters";
+import { GearIcon } from "@/components/GearIcon";
+import { HotGear } from "@/components/HotGear";
 
 const RARITIES: Array<Rarity | "All"> = [
   "All",
@@ -86,7 +88,11 @@ export function GearList({
       <div className="soc-divider my-5 max-w-md" />
       <p className="max-w-2xl text-muted">{blurb}</p>
 
-      <div className="mt-6 flex flex-wrap items-center gap-2">
+      <div className="mt-10">
+        <HotGear kind={kind} limit={8} />
+      </div>
+
+      <div className="mt-2 flex flex-wrap items-center gap-2">
         <span className="soc-stat-chip">
           <strong>{filtered.length}</strong> / {items.length} shown
         </span>
@@ -152,6 +158,7 @@ export function GearList({
         <table className="soc-table min-w-[720px]">
           <thead>
             <tr>
+              <th className="w-14"> </th>
               <th>Name</th>
               <th>Rarity</th>
               <th>Roles</th>
@@ -164,6 +171,11 @@ export function GearList({
               const users = getCharactersUsingGear(item.slug).slice(0, 4);
               return (
                 <tr key={item.slug}>
+                  <td className="!pr-0">
+                    <Link href={gearPath(item)} className="inline-block">
+                      <GearIcon item={item} size="sm" />
+                    </Link>
+                  </td>
                   <td>
                     <Link
                       href={gearPath(item)}

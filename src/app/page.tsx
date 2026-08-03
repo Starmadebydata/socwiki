@@ -8,6 +8,7 @@ import {
 } from "@/data/characters";
 import { hasCharacterImage } from "@/data/character-images";
 import { getAllGear } from "@/data/gear";
+import { HotGear } from "@/components/HotGear";
 import { SITE_DESCRIPTION, SITE_FULL_NAME } from "@/lib/site";
 
 /**
@@ -204,6 +205,8 @@ export default function HomePage() {
             ))}
           </div>
         </section>
+
+        <HotGear limit={8} title="Hot gear in builds" />
 
         {/* ── Notice board ── */}
         <section aria-labelledby="updates-heading" className="soc-notice soc-ornate">
