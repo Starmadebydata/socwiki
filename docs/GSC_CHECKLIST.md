@@ -1,37 +1,99 @@
-# Google Search Console — socwiki.app
+# Google Search Console checklist — socwiki.app
 
-Deploy is live; GSC requires your Google account (cannot be completed from CLI alone).
+> Site code is ready (sitemap, robots, canonical, FAQ/Breadcrumb JSON-LD).  
+> **You** complete GSC in the browser with the Google account that owns the property.
 
-## Steps
+## 1. Property setup (one-time)
 
-1. Open [Google Search Console](https://search.google.com/search-console)
-2. **Add property** → URL prefix → `https://socwiki.app`
-3. Verify ownership (pick one):
-   - **HTML tag** — add to `src/app/layout.tsx` metadata `verification.google` and redeploy
-   - **DNS TXT** — Cloudflare DNS for `socwiki.app` (often easiest)
-   - **HTML file** — upload to `public/` and redeploy
-4. After verified:
-   - Sitemaps → submit `https://socwiki.app/sitemap.xml`
-   - Confirm `https://socwiki.app/robots.txt` is readable
-5. Optional: also add `https://www.socwiki.app` and set preferred canonical (apex)
+1. Open [Google Search Console](https://search.google.com/search-console).
+2. Add property → **URL prefix** → `https://socwiki.app`.
+3. Prefer **Domain** property `socwiki.app` if you can verify via Cloudflare DNS (covers www + bare).
 
-## Quick checks after verify
+### Verification options
 
-| URL | Expect |
-|-----|--------|
-| https://socwiki.app/ | 200, SoC Wiki home |
-| https://socwiki.app/sitemap.xml | XML urlset |
-| https://socwiki.app/robots.txt | Allow + Sitemap line |
-| https://socwiki.app/tier-list | Tier list H1 |
-| https://socwiki.app/characters/col | Col build page |
+| Method | How |
+|--------|-----|
+| **DNS TXT** (best) | Cloudflare → DNS → TXT `google-site-verification=…` from GSC |
+| **HTML file** | Upload the file GSC gives you under `public/` and redeploy |
+| **HTML meta tag** | Paste token into `src/lib/site.ts` as `GOOGLE_SITE_VERIFICATION` (wired in root layout) |
 
-## If using HTML meta verification
+After DNS verifies, you can remove temporary HTML file methods.
 
-```ts
-// layout.tsx metadata
-verification: {
-  google: "PASTE_TOKEN_FROM_GSC",
-},
+## 2. Submit sitemap
+
+1. GSC → **Sitemaps** → add: `https://socwiki.app/sitemap.xml`
+2. Confirm status becomes **Success** within 24–48h.
+3. Cross-check live:
+
+```bash
+curl -sI https://socwiki.app/sitemap.xml
+curl -s https://socwiki.app/robots.txt
 ```
 
-Then `npm run deploy`.
+Expected: `200`, `robots.txt` lists the same sitemap URL, host `https://socwiki.app`.
+
+## 3. URL inspection (first week)
+
+Inspect and **Request indexing** for:
+
+| Priority | URL |
+|----------|-----|
+| P0 | `/` |
+| P0 | `/tier-list` |
+| P0 | `/tier-list/reroll` |
+| P0 | `/codes` |
+| P0 | `/guides/beginner` |
+| P0 | `/tools/team-builder` |
+| P1 | `/guides`, `/teams`, `/weapons`, `/tarots`, `/characters` |
+| P1 | Top 10 character pages you care about |
+
+Do not bulk-request hundreds of URLs on day one; let the sitemap crawl first.
+
+## 4. Coverage & enhancements (ongoing)
+
+Weekly for 4 weeks, then monthly:
+
+- **Pages** → Indexed vs Not indexed (soft 404, excluded by noindex, crawled not indexed).
+- **Experience** → Core Web Vitals when data appears.
+- **Enhancements** → FAQ / Breadcrumbs (if reported).
+- **Links** → External + internal once ranking starts.
+
+## 5. www / HTTPS hygiene (already expected)
+
+| Check | Expected |
+|-------|----------|
+| `http://socwiki.app` | 301 → `https://socwiki.app` |
+| `https://www.socwiki.app` | 200 or 301 to bare domain (pick one canonical) |
+| Canonical tags | Absolute `https://socwiki.app/...` |
+
+If both www and bare return 200 without redirect, set a Cloudflare **Bulk Redirect** or **Rules** 301 so only one host is canonical. Prefer **bare** `socwiki.app` (matches `SITE_URL`).
+
+## 6. AI / crawler notes
+
+- `robots.txt` allows all user-agents and points at sitemap.
+- `public/llms.txt` summarizes the site for AI systems.
+- Do **not** block GPTBot / ClaudeBot / PerplexityBot unless you have a legal reason.
+
+## 7. After each content deploy
+
+1. Confirm deploy on Cloudflare Workers Builds is green.
+2. Spot-check 3 changed URLs return 200.
+3. Optional: URL Inspection → Request indexing for major new guides or new limited characters.
+
+## 8. Owner checklist (copy-paste)
+
+- [ ] Domain or URL-prefix property verified
+- [ ] Sitemap submitted and Success
+- [ ] Homepage + tier-list + codes + beginner requested
+- [ ] www vs bare single-host decision locked
+- [ ] First 7-day Pages report reviewed
+- [ ] (Optional) Bing Webmaster Tools same sitemap
+
+---
+
+**Code helpers in this repo**
+
+- `src/app/sitemap.ts` — dynamic sitemap
+- `src/app/robots.ts` — robots + sitemap host
+- `public/llms.txt` — AI-oriented site map
+- `src/lib/site.ts` — `SITE_URL`, optional `GOOGLE_SITE_VERIFICATION`

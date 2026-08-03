@@ -3,7 +3,10 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { getAllCharacters } from "@/data/characters";
-import { TEAM_PRESETS } from "@/data/team-presets";
+import {
+  TEAM_PRESETS,
+  formatTeamShareText,
+} from "@/data/team-presets";
 import type { Character, Role, Tier } from "@/types/character";
 import { RoleAvatar } from "@/components/RoleAvatar";
 import { TierBadge } from "@/components/TierBadge";
@@ -26,6 +29,14 @@ const counters: Record<Role, Role | null> = {
   Breaker: "Defender",
   Watcher: "Destroyer",
   Destroyer: null,
+};
+
+const roleColor: Record<Role, string> = {
+  Breaker: "#e74c3c",
+  Defender: "#27ae60",
+  Seeker: "#3498db",
+  Watcher: "#f1c40f",
+  Destroyer: "#9b59b6",
 };
 
 function parseTeamParam(raw: string | null): string[] {
@@ -58,6 +69,10 @@ export default function TeamBuilderPage() {
   const [factionFilter, setFactionFilter] = useState<string>("All");
   const [q, setQ] = useState("");
   const [shareState, setShareState] = useState<"idle" | "ok" | "err">("idle");
+  const [summaryState, setSummaryState] = useState<"idle" | "ok" | "err">(
+    "idle",
+  );
+  const [activePresetId, setActivePresetId] = useState<string | null>(null);
 
   // Load from URL once
   useEffect(() => {
@@ -68,9 +83,13 @@ export default function TeamBuilderPage() {
     const fromPreset = params.get("preset");
     if (fromTeam.length) {
       setPicked(fromTeam);
+      setActivePresetId(null);
     } else if (fromPreset) {
       const p = TEAM_PRESETS.find((x) => x.id === fromPreset);
-      if (p) setPicked(p.slugs.filter((s) => slugSet.has(s)).slice(0, MAX));
+      if (p) {
+        setPicked(p.slugs.filter((s) => slugSet.has(s)).slice(0, MAX));
+        setActivePresetId(p.id);
+      }
     }
     setHydrated(true);
   }, [slugSet]);
@@ -91,6 +110,7 @@ export default function TeamBuilderPage() {
   );
 
   const toggle = useCallback((slug: string) => {
+    setActivePresetId(null);
     setPicked((prev) => {
       if (prev.includes(slug)) return prev.filter((s) => s !== slug);
       if (prev.length >= MAX) return prev;
@@ -99,13 +119,17 @@ export default function TeamBuilderPage() {
   }, []);
 
   const loadPreset = useCallback(
-    (slugs: string[]) => {
+    (id: string, slugs: string[]) => {
+      setActivePresetId(id);
       setPicked(slugs.filter((s) => slugSet.has(s)).slice(0, MAX));
     },
     [slugSet],
   );
 
-  const clear = useCallback(() => setPicked([]), []);
+  const clear = useCallback(() => {
+    setActivePresetId(null);
+    setPicked([]);
+  }, []);
 
   const filteredRoster = useMemo(() => {
     const query = q.trim().toLowerCase();
@@ -145,6 +169,21 @@ export default function TeamBuilderPage() {
       return acc;
     }, {});
 
+  const matchupEdges = useMemo(() => {
+    const edges: { from: Character; into: Role; ok: boolean }[] = [];
+    for (const c of selected) {
+      const adv = counters[c.role];
+      if (!adv) continue;
+      const hasTarget = selected.some(
+        (o) => o.slug !== c.slug && o.role === adv,
+      );
+      // For coaching: show who on YOUR team counters which role (map prep)
+      edges.push({ from: c, into: adv, ok: true });
+      void hasTarget;
+    }
+    return edges;
+  }, [selected]);
+
   const warnings = useMemo(() => {
     const w: string[] = [];
     if (selected.length === 0) return w;
@@ -172,15 +211,61 @@ export default function TeamBuilderPage() {
     return w;
   }, [selected.length, roleCounts, factionCounts]);
 
+  function shareUrl() {
+    return `${window.location.origin}/tools/team-builder${teamQuery(picked)}`;
+  }
+
   async function copyShareLink() {
     try {
-      const url = `${window.location.origin}/tools/team-builder${teamQuery(picked)}`;
-      await navigator.clipboard.writeText(url);
+      await navigator.clipboard.writeText(shareUrl());
       setShareState("ok");
       window.setTimeout(() => setShareState("idle"), 1600);
     } catch {
       setShareState("err");
       window.setTimeout(() => setShareState("idle"), 2000);
+    }
+  }
+
+  async function copyTeamSummary() {
+    try {
+      const preset = activePresetId
+        ? TEAM_PRESETS.find((p) => p.id === activePresetId)
+        : undefined;
+      const text = formatTeamShareText(
+        selected.map((c) => `${c.name} (${c.role})`),
+        shareUrl(),
+        { goal: preset?.goal },
+      );
+      await navigator.clipboard.writeText(text);
+      setSummaryState("ok");
+      window.setTimeout(() => setSummaryState("idle"), 1600);
+    } catch {
+      setSummaryState("err");
+      window.setTimeout(() => setSummaryState("idle"), 2000);
+    }
+  }
+
+  async function nativeShare() {
+    if (!navigator.share) {
+      await copyShareLink();
+      return;
+    }
+    try {
+      const preset = activePresetId
+        ? TEAM_PRESETS.find((p) => p.id === activePresetId)
+        : undefined;
+      const text = formatTeamShareText(
+        selected.map((c) => c.name),
+        shareUrl(),
+        { goal: preset?.goal },
+      );
+      await navigator.share({
+        title: "SoC team — SoC Wiki",
+        text,
+        url: shareUrl(),
+      });
+    } catch {
+      /* user cancelled */
     }
   }
 
@@ -194,20 +279,28 @@ export default function TeamBuilderPage() {
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-10">
-      <p className="soc-heading-sm">Tools · v0.2</p>
+      <p className="soc-heading-sm">Tools · v0.3</p>
       <h1 className="font-display mt-2 text-3xl font-bold tracking-wide text-[var(--accent-bright)] sm:text-4xl">
         Team Builder
       </h1>
       <div className="soc-divider my-5 max-w-md" />
       <p className="max-w-2xl text-muted">
-        Pick up to {MAX} units, load a preset, and share a link. Coverage checks
-        role holes and faction clusters — pair with{" "}
+        Pick up to {MAX} units, load a preset, copy a share link or full team
+        summary. Coverage checks role holes, faction clusters, and matchup
+        edges — pair with{" "}
         <Link href="/guides/party-building" className="text-link hover:underline">
           party building
-        </Link>{" "}
-        and{" "}
+        </Link>
+        ,{" "}
         <Link href="/guides/early-teams" className="text-link hover:underline">
           early teams
+        </Link>
+        , and{" "}
+        <Link
+          href="/guides/spiral-of-destinies"
+          className="text-link hover:underline"
+        >
+          Spiral prep
         </Link>
         .
       </p>
@@ -218,24 +311,45 @@ export default function TeamBuilderPage() {
           Presets
         </h2>
         <div className="grid gap-2 sm:grid-cols-2">
-          {TEAM_PRESETS.map((p) => (
-            <button
-              key={p.id}
-              type="button"
-              onClick={() => loadPreset(p.slugs)}
-              className="soc-frame p-4 text-left transition hover:border-[var(--border-bright)]"
-            >
-              <div className="flex items-center justify-between gap-2">
-                <span className="font-display font-semibold tracking-wide">
-                  {p.name}
-                </span>
-                <span className="text-[10px] uppercase tracking-wider text-[var(--accent)]">
-                  {p.goal}
-                </span>
-              </div>
-              <p className="mt-1 text-xs text-muted">{p.blurb}</p>
-            </button>
-          ))}
+          {TEAM_PRESETS.map((p) => {
+            const active = activePresetId === p.id;
+            return (
+              <button
+                key={p.id}
+                type="button"
+                onClick={() => loadPreset(p.id, p.slugs)}
+                className={`soc-frame p-4 text-left transition hover:border-[var(--border-bright)] ${
+                  active ? "border-[var(--border-bright)] bg-[var(--accent-soft)]/40" : ""
+                }`}
+              >
+                <div className="flex items-center justify-between gap-2">
+                  <span className="font-display font-semibold tracking-wide">
+                    {p.name}
+                  </span>
+                  <span className="text-[10px] uppercase tracking-wider text-[var(--accent)]">
+                    {p.goal}
+                  </span>
+                </div>
+                <p className="mt-1 text-xs text-muted">{p.blurb}</p>
+                <div className="mt-3 flex flex-wrap gap-1">
+                  {p.slugs.map((slug) => {
+                    const c = all.find((x) => x.slug === slug);
+                    if (!c) return null;
+                    return (
+                      <RoleAvatar
+                        key={slug}
+                        name={c.name}
+                        role={c.role}
+                        slug={c.slug}
+                        size="sm"
+                        className="!h-7 !w-7"
+                      />
+                    );
+                  })}
+                </div>
+              </button>
+            );
+          })}
         </div>
       </section>
 
@@ -355,10 +469,30 @@ export default function TeamBuilderPage() {
                   disabled={picked.length === 0}
                 >
                   {shareState === "ok"
-                    ? "Copied"
+                    ? "Link copied"
                     : shareState === "err"
                       ? "Failed"
                       : "Copy link"}
+                </button>
+                <button
+                  type="button"
+                  onClick={copyTeamSummary}
+                  className="soc-btn !px-3 !py-1 text-xs"
+                  disabled={picked.length === 0}
+                >
+                  {summaryState === "ok"
+                    ? "Summary copied"
+                    : summaryState === "err"
+                      ? "Failed"
+                      : "Copy summary"}
+                </button>
+                <button
+                  type="button"
+                  onClick={nativeShare}
+                  className="soc-btn !px-3 !py-1 text-xs"
+                  disabled={picked.length === 0}
+                >
+                  Share…
                 </button>
                 <button
                   type="button"
@@ -397,6 +531,9 @@ export default function TeamBuilderPage() {
                       </Link>
                       <div className="text-[11px] text-muted">
                         {c.role} · {c.tier.overall}
+                        {counters[c.role]
+                          ? ` · strong vs ${counters[c.role]}`
+                          : ""}
                       </div>
                     </div>
                     <button
@@ -422,13 +559,18 @@ export default function TeamBuilderPage() {
                   <li key={role} className="flex items-center gap-2">
                     <span
                       className={`w-20 font-medium ${n ? "text-foreground" : "text-muted"}`}
+                      style={n ? { color: roleColor[role] } : undefined}
                     >
                       {role}
                     </span>
                     <div className="h-2 flex-1 overflow-hidden rounded-full bg-[var(--card-deep)]">
                       <div
-                        className="h-full rounded-full bg-[var(--accent)]/70 transition-all"
-                        style={{ width: `${Math.min(100, n * 34)}%` }}
+                        className="h-full rounded-full transition-all"
+                        style={{
+                          width: `${Math.min(100, n * 34)}%`,
+                          backgroundColor: roleColor[role],
+                          opacity: 0.75,
+                        }}
                       />
                     </div>
                     <span className="w-4 text-right text-xs text-muted">{n}</span>
@@ -441,6 +583,41 @@ export default function TeamBuilderPage() {
                 );
               })}
             </ul>
+          </div>
+
+          <div className="soc-frame p-5">
+            <div className="flex items-center justify-between gap-2">
+              <h2 className="soc-heading text-base">Matchup edges</h2>
+              <Link
+                href="/guides/role-matchups"
+                className="text-[10px] text-link hover:underline"
+              >
+                Full chart →
+              </Link>
+            </div>
+            {matchupEdges.length === 0 ? (
+              <p className="mt-2 text-sm text-muted">
+                Select units to see who they counter on the map.
+              </p>
+            ) : (
+              <ul className="mt-3 space-y-1.5 text-sm text-muted">
+                {matchupEdges.map(({ from, into }) => (
+                  <li
+                    key={`${from.slug}-${into}`}
+                    className="flex items-center gap-2"
+                  >
+                    <span className="text-foreground">{from.name}</span>
+                    <span className="text-[var(--accent)]">→</span>
+                    <span style={{ color: roleColor[into] }}>{into}</span>
+                  </li>
+                ))}
+                {!roleCounts.Destroyer && !roleCounts.Watcher ? null : (
+                  <li className="pt-1 text-[11px] text-muted">
+                    Magic lane: Watcher edges Destroyer (see full chart).
+                  </li>
+                )}
+              </ul>
+            )}
           </div>
 
           <div className="soc-frame p-5">
@@ -488,6 +665,8 @@ export default function TeamBuilderPage() {
             <code className="text-foreground/80">
               /tools/team-builder?team=inanna,col,cocoa
             </code>
+            {" · "}
+            <code className="text-foreground/80">?preset=spiral-ready</code>
           </div>
         </section>
       </div>

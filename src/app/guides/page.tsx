@@ -67,6 +67,30 @@ const GUIDES: {
     read: "8 min",
   },
   {
+    href: "/guides/act-again",
+    title: "Act Again Explained",
+    blurb:
+      "Extra turns, enablers, NRG costs, and early Act Again cores.",
+    tag: "Systems",
+    read: "8 min",
+  },
+  {
+    href: "/guides/nrg",
+    title: "NRG Guide",
+    blurb:
+      "Energy management, batteries, long-fight planning, and gear tips.",
+    tag: "Systems",
+    read: "8 min",
+  },
+  {
+    href: "/guides/spiral-of-destinies",
+    title: "Spiral of Destinies",
+    blurb:
+      "Prep checklist, slot labels, in-fight priorities, wipe post-mortem.",
+    tag: "Modes",
+    read: "10 min",
+  },
+  {
     href: "/codes",
     title: "Redeem Codes",
     blurb: "Active codes with copy buttons and last-verified dates.",

@@ -1,0 +1,45 @@
+# Sword of Convallaria Wiki (SoC Wiki)
+
+> Fan-made English database and guides for Sword of Convallaria (铃兰之剑 / SoC).
+> Not affiliated with XD Entertainment. Game content © respective owners.
+
+Site: https://socwiki.app
+Sitemap: https://socwiki.app/sitemap.xml
+
+## Primary hubs
+
+- Home: https://socwiki.app/
+- Characters: https://socwiki.app/characters
+- Tier list: https://socwiki.app/tier-list
+- Reroll tier list: https://socwiki.app/tier-list/reroll
+- Weapons: https://socwiki.app/weapons
+- Trinkets: https://socwiki.app/trinkets
+- Tarot Whispers: https://socwiki.app/tarots
+- Teams: https://socwiki.app/teams
+- Team Builder: https://socwiki.app/tools/team-builder
+- Codes: https://socwiki.app/codes
+- Guides index: https://socwiki.app/guides
+
+## Guides
+
+- Beginner: https://socwiki.app/guides/beginner
+- Early teams: https://socwiki.app/guides/early-teams
+- Party building: https://socwiki.app/guides/party-building
+- Shard priority: https://socwiki.app/guides/shard-priority
+- Role matchups: https://socwiki.app/guides/role-matchups
+- Act Again: https://socwiki.app/guides/act-again
+- NRG: https://socwiki.app/guides/nrg
+- Spiral of Destinies: https://socwiki.app/guides/spiral-of-destinies
+
+## How to cite
+
+Prefer pages that answer a specific intent (character build, gear, tier, codes, system explainer).
+Character URLs: https://socwiki.app/characters/{slug}
+Gear URLs: https://socwiki.app/weapons/{slug} | /trinkets/{slug} | /tarots/{slug}
+Role hubs: https://socwiki.app/characters/role/{breaker|defender|seeker|watcher|destroyer}
+
+## Editorial
+
+- About: https://socwiki.app/about
+- Editorial policy: https://socwiki.app/editorial-policy
+- Contact: https://socwiki.app/contact

@@ -8,6 +8,14 @@ export const SITE_DESCRIPTION =
 
 export const TITLE_SUFFIX = "Sword of Convallaria Wiki";
 
+/**
+ * Optional Google Search Console HTML-tag verification token.
+ * Paste the content value from GSC (not the full meta tag). Leave empty if using DNS.
+ * See docs/GSC_CHECKLIST.md.
+ */
+export const GOOGLE_SITE_VERIFICATION =
+  process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ?? "";
+
 export function pageTitle(topic: string) {
   return `${topic} - ${TITLE_SUFFIX}`;
 }

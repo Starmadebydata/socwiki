@@ -3,7 +3,13 @@ import { Cinzel, Source_Sans_3, JetBrains_Mono } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import { JsonLd } from "@/components/JsonLd";
-import { SITE_DESCRIPTION, SITE_FULL_NAME, SITE_NAME, SITE_URL } from "@/lib/site";
+import {
+  GOOGLE_SITE_VERIFICATION,
+  SITE_DESCRIPTION,
+  SITE_FULL_NAME,
+  SITE_NAME,
+  SITE_URL,
+} from "@/lib/site";
 import "./globals.css";
 
 /** Fantasy display titles — close to in-game serif headers */
@@ -44,11 +50,20 @@ export const metadata: Metadata = {
     siteName: SITE_FULL_NAME,
     title: `${SITE_FULL_NAME} - Characters, Tier Lists & Builds`,
     description: SITE_DESCRIPTION,
+    images: [
+      {
+        url: "/home-bg.webp",
+        width: 1200,
+        height: 630,
+        alt: `${SITE_FULL_NAME} battle art`,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: SITE_FULL_NAME,
     description: SITE_DESCRIPTION,
+    images: ["/home-bg.webp"],
   },
   robots: {
     index: true,
@@ -57,6 +72,9 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.svg",
   },
+  ...(GOOGLE_SITE_VERIFICATION
+    ? { verification: { google: GOOGLE_SITE_VERIFICATION } }
+    : {}),
 };
 
 export default function RootLayout({

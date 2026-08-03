@@ -1,11 +1,12 @@
 # SoC Wiki 进度盘点（相对 PRD）
 
-> 更新：2026-08-02  
+> 更新：2026-08-03  
 > 站点：https://socwiki.app  
 > 仓库：https://github.com/Starmadebydata/socwiki
 
----
+> **2026-08-03 冲刺**：GSC 清单 + llms.txt + robots AI 允许；Team Builder v0.3（8 presets / share summary）；gear 图标 GameWith 精确映射；新增 Act Again / NRG / Spiral 三篇系统 guide。
 
+---
 ## 一句话
 
 **2026-08-02 内容冲刺后：角色库与装备库已初具 wiki 形态，MVP 内容约 55–65%。**  
