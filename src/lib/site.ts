@@ -16,6 +16,10 @@ export const TITLE_SUFFIX = "Sword of Convallaria Wiki";
 export const GOOGLE_SITE_VERIFICATION =
   process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ?? "";
 
+/** Google Analytics 4 measurement ID (gtag.js). Override via env if needed. */
+export const GA_MEASUREMENT_ID =
+  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? "G-D1R4M8PKM1";
+
 export function pageTitle(topic: string) {
   return `${topic} - ${TITLE_SUFFIX}`;
 }

@@ -3,6 +3,7 @@ import { Cinzel, Source_Sans_3, JetBrains_Mono } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import { JsonLd } from "@/components/JsonLd";
+import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import {
   GOOGLE_SITE_VERIFICATION,
   SITE_DESCRIPTION,
@@ -107,6 +108,7 @@ export default function RootLayout({
       <body
         className={`${fontDisplay.variable} ${fontBody.variable} ${fontMono.variable} flex min-h-screen flex-col antialiased`}
       >
+        <GoogleAnalytics />
         <JsonLd data={[websiteLd, orgLd]} />
         <Navbar />
         <main className="flex-1">{children}</main>
