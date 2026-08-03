@@ -25,7 +25,7 @@ Refreshed for one-to-one name match where possible; remaining use closest GameWi
 | `newborn-blade` | `eq1.png` | exact |
 | `nrg-battery-charm` | `eq45.png` | ≈ Origin Hourglass |
 | `paradox-crystal-chain` | `eq116.png` | exact |
-| ``plague-wand` | `eq24.png` | ≈ Focus Wand |
+| `plague-wand` | `eq24.png` | ≈ Focus Wand |
 | `shadow-edge` | `eq126.png` | ≈ Deceptive Shadow |
 | `spear-of-iria` | `eq92.png` | ≈ Cornucopia Spear |
 | `staff-of-iria` | `eq95.png` | ≈ Cornucopia Staff (Iria set) |
