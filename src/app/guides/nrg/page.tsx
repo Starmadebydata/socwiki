@@ -4,7 +4,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "NRG Guide — Energy, Skills & Batteries (2026)",
+  title: "NRG Guide (Energy & Batteries)",
   description:
     "Sword of Convallaria NRG explained: how energy works, skill costs, battery supports, gear that helps, and how to avoid empty turns in long fights.",
   alternates: { canonical: "/guides/nrg" },

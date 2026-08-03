@@ -40,9 +40,8 @@ export const metadata: Metadata = {
   },
   description: SITE_DESCRIPTION,
   applicationName: SITE_NAME,
-  alternates: {
-    canonical: "/",
-  },
+  // Do not set a root canonical here — child routes without their own
+  // alternates would inherit "/" and look like duplicate homepage URLs.
   openGraph: {
     type: "website",
     locale: "en_US",

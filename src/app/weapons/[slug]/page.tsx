@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { GearDetail } from "@/components/GearDetail";
-import { getGearByKind, getGearBySlug } from "@/data/gear";
+import { gearMetaDescription, getGearByKind, getGearBySlug } from "@/data/gear";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!item || item.kind !== "weapon") return { title: "Not found" };
   return {
     title: `${item.name} Weapon Guide`,
-    description: `${item.name} in Sword of Convallaria: effect notes and Best on character list from SoC Wiki builds.`,
+    description: gearMetaDescription(item),
     alternates: { canonical: `/weapons/${item.slug}` },
   };
 }

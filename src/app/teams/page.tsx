@@ -5,9 +5,9 @@ import { getCharacterBySlug } from "@/data/characters";
 import { RoleAvatar } from "@/components/RoleAvatar";
 
 export const metadata: Metadata = {
-  title: "Teams",
+  title: "Best Teams & Comps",
   description:
-    "Sword of Convallaria team compositions — curated early comps and the interactive Team Builder.",
+    "Sword of Convallaria best teams and early comps: curated presets with role jobs, character links, and one-click load into the interactive Team Builder.",
   alternates: { canonical: "/teams" },
 };
 

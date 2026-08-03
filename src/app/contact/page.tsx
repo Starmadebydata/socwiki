@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Contact",
+  description:
+    "Contact SoC Wiki for corrections, data issues, or partnership inquiries about the Sword of Convallaria fan database at socwiki.app.",
   alternates: { canonical: "/contact" },
 };
 

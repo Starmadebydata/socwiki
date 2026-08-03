@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "About SoC Wiki — Sword of Convallaria community database.",
+  description:
+    "About SoC Wiki (socwiki.app): an independent fan database for Sword of Convallaria with builds, tier lists, codes, and team tools. Not affiliated with XD Entertainment.",
   alternates: { canonical: "/about" },
 };
 

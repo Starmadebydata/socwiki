@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { CharacterCard } from "@/components/CharacterCard";
 import { SearchBox } from "@/components/SearchBox";
@@ -10,6 +11,14 @@ import { hasCharacterImage } from "@/data/character-images";
 import { getAllGear } from "@/data/gear";
 import { HotGear } from "@/components/HotGear";
 import { SITE_DESCRIPTION, SITE_FULL_NAME } from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: `${SITE_FULL_NAME} - Characters, Tier Lists & Builds`,
+  },
+  description: SITE_DESCRIPTION,
+  alternates: { canonical: "/" },
+};
 
 /**
  * Featured rail: top tier first, but only units that have a portrait/art.

@@ -755,6 +755,26 @@ export function getAllGearTags(kind?: GearItem["kind"]): string[] {
   return [...set].sort((a, b) => a.localeCompare(b));
 }
 
+/** SEO meta description (~150–160 chars target) for gear detail pages. */
+export function gearMetaDescription(item: GearItem): string {
+  const kind =
+    item.kind === "weapon"
+      ? "weapon"
+      : item.kind === "trinket"
+        ? "trinket"
+        : "Tarot Whisper";
+  const effect = (item.summary || item.effect || "").replace(/\s+/g, " ").trim();
+  const when = (item.whenToUse || "").replace(/\s+/g, " ").trim();
+  const base = `${item.name} ${kind} in Sword of Convallaria (SoC): ${effect}`;
+  const withWhen = when ? `${base} When to use: ${when}` : base;
+  const tail = " Best on characters, effects, and alternatives on SoC Wiki.";
+  const full = `${withWhen}${tail}`;
+  if (full.length <= 160) return full;
+  // Prefer keeping name + summary + tail
+  const short = `${item.name} ${kind} in Sword of Convallaria: ${effect.slice(0, 90).replace(/\s+\S*$/, "")}… Best on list & alternatives — SoC Wiki.`;
+  return short.slice(0, 160);
+}
+
 export function kindLabel(kind: GearItem["kind"]): string {
   if (kind === "weapon") return "Weapon";
   if (kind === "trinket") return "Trinket";

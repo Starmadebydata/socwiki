@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Editorial Policy",
+  description:
+    "SoC Wiki editorial policy: how we rate tiers, update builds, source notes, and correct errors for Sword of Convallaria guides and databases.",
   alternates: { canonical: "/editorial-policy" },
 };
 

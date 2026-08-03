@@ -4,7 +4,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Act Again Explained — Extra Turns & Enablers (2026)",
+  title: "Act Again Explained (SoC 2026)",
   description:
     "Sword of Convallaria Act Again explained: how extra turns work, who enables them, NRG costs, positioning tips, and best early Act Again cores.",
   alternates: { canonical: "/guides/act-again" },

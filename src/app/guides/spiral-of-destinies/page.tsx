@@ -4,7 +4,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Spiral of Destinies Guide — Prep & Clear Tips (2026)",
+  title: "Spiral of Destinies Guide (2026)",
   description:
     "Sword of Convallaria Spiral of Destinies guide: what the mode tests, team prep, NRG and matchup planning, gear priorities, and common wipe reasons.",
   alternates: { canonical: "/guides/spiral-of-destinies" },

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
+  description:
+    "SoC Wiki privacy policy: how we handle analytics, cookies, and visitor data on socwiki.app. No account is required to browse the Sword of Convallaria wiki.",
   alternates: { canonical: "/privacy" },
 };
 

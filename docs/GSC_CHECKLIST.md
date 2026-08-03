@@ -80,9 +80,15 @@ Wrangler OAuth is `zone:read` only — Dashboard **Redirect Rules** / **Always U
 **Deploy notes:** Cloudflare Workers Builds command is `npm run deploy`, which:
 
 1. `opennextjs-cloudflare build`
-2. `scripts/patch-canonical-redirect.mjs` (apex http→https edge 301)
+2. `scripts/patch-canonical-redirect.mjs` (strips unsafe apex self-redirects; www is separate Worker)
 3. `opennextjs-cloudflare deploy` (main Worker, `socwiki.app/*` only)
 4. `wrangler deploy -c workers/www-redirect` (`www.socwiki.app/*` → apex 301)
+
+**Still Dashboard-only (zone:write required):**
+
+1. SSL/TLS → Edge Certificates → **Always Use HTTPS = On**
+2. Caching → Configuration → **Purge Everything** after major SEO deploys if edges pin old 301/HTML
+3. Search Console verify + submit `https://socwiki.app/sitemap.xml`
 
 
 ## 6. AI / crawler notes
