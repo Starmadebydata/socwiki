@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import { JsonLd } from "@/components/JsonLd";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
+import { MicrosoftClarity } from "@/components/MicrosoftClarity";
 import {
   GOOGLE_SITE_VERIFICATION,
   SITE_DESCRIPTION,
@@ -109,6 +110,7 @@ export default function RootLayout({
         className={`${fontDisplay.variable} ${fontBody.variable} ${fontMono.variable} flex min-h-screen flex-col antialiased`}
       >
         <GoogleAnalytics />
+        <MicrosoftClarity />
         <JsonLd data={[websiteLd, orgLd]} />
         <Navbar />
         <main className="flex-1">{children}</main>

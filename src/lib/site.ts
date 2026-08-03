@@ -38,6 +38,10 @@ export const GOOGLE_SITE_VERIFICATION =
 export const GA_MEASUREMENT_ID =
   process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? "G-D1R4M8PKM1";
 
+/** Microsoft Clarity project ID (socwiki.app). Override via env if needed. */
+export const CLARITY_PROJECT_ID =
+  process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID ?? "xwl5ypqew4";
+
 /**
  * Bing / Yandex IndexNow API key.
  * Public key file: `/{INDEXNOW_KEY}.txt` must serve the key as plain text.

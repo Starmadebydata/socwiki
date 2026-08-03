@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CONTACT_EMAIL, GA_MEASUREMENT_ID, SITE_NAME, SITE_URL } from "@/lib/site";
+import {
+  CLARITY_PROJECT_ID,
+  CONTACT_EMAIL,
+  GA_MEASUREMENT_ID,
+  SITE_NAME,
+  SITE_URL,
+} from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: `${SITE_NAME} privacy policy: analytics (Google Analytics), cookies, future ads, and how to contact us at ${CONTACT_EMAIL}.`,
+  description: `${SITE_NAME} privacy policy: analytics (Google Analytics, Microsoft Clarity), cookies, future ads, and how to contact us at ${CONTACT_EMAIL}.`,
   alternates: { canonical: "/privacy" },
 };
 
@@ -38,7 +44,11 @@ export default function PrivacyPage() {
             learn which pages are visited, approximate geography, device type,
             referrers, and similar aggregate metrics. Google may process data as
             described in Google&apos;s privacy documentation and may use cookies
-            or local storage.
+            or local storage. We also use Microsoft Clarity (project ID{" "}
+            <code className="text-foreground/90">{CLARITY_PROJECT_ID}</code>) for
+            session heatmaps and aggregated interaction insights; Microsoft may
+            process data under its privacy terms and may use cookies or similar
+            technologies.
           </li>
           <li>
             <strong className="text-foreground">Server / edge logs.</strong>{" "}
@@ -61,10 +71,11 @@ export default function PrivacyPage() {
 
         <h2 className="soc-heading text-xl text-foreground">Cookies</h2>
         <p>
-          Analytics cookies (or similar identifiers) may be set by Google when
-          Analytics loads. You can block cookies in your browser, use tracking
-          protection, or Google&apos;s opt-out tools. Essential hosting cookies
-          (if any) are used only to deliver the site securely.
+          Analytics cookies (or similar identifiers) may be set by Google Analytics
+          and Microsoft Clarity when those scripts load. You can block cookies in
+          your browser, use tracking protection, or the providers&apos; opt-out
+          tools. Essential hosting cookies (if any) are used only to deliver the
+          site securely.
         </p>
 
         <h2 className="soc-heading text-xl text-foreground">

@@ -26,7 +26,7 @@ const ENTRIES: Entry[] = [
       "Top 20 hand-written deep guides plus ranks 21–30 deep notes (Geralt, Lutfi, Marcille, collab and SP flex cores).",
       "Player notes on every character page; gear “how to think about” explainers.",
       "Faction hubs (/factions) with sample cores and roster cards.",
-      "Google Analytics 4 (G-D1R4M8PKM1); Bing IndexNow key + sitemap submit script.",
+      "Google Analytics 4 (G-D1R4M8PKM1); Microsoft Clarity (xwl5ypqew4); Bing IndexNow key + sitemap submit script.",
       "Single-Worker routing for www + apex to stop intermittent Not found races.",
       "Author bylines and this public changelog for E-E-A-T.",
     ],
