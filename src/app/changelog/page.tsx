@@ -6,7 +6,7 @@ import { SITE_FOUNDER } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Changelog",
   description:
-    "SoC Wiki public changelog: trust pages, Top 30 deep guides, factions, IndexNow, analytics, and site reliability fixes.",
+    "SoC Wiki public changelog: homepage index upgrade, trust pages, Top 30 deep guides, factions, analytics, and site reliability fixes.",
   alternates: { canonical: "/changelog" },
 };
 
@@ -17,6 +17,19 @@ type Entry = {
 };
 
 const ENTRIES: Entry[] = [
+  {
+    date: "2026-08-04",
+    title: "Homepage database index upgrade",
+    items: [
+      "Homepage rebuilt as a clearer database index: icon hub wall for Characters, Tier Lists, Factions, gear, Teams, Guides, and Codes.",
+      "Quick jump chips for all five roles and high-traffic systems (reroll, early teams, team builder, NRG, Act Again, Spiral, beginner, codes).",
+      "Spotlight banners for a current unit page and active redeem codes, with deep links into existing guides and lists.",
+      "About the game definition block plus a featured beginner guide card for first-visit orientation.",
+      "Did you know… trivia with links into role hubs, system guides, and the Tarot database.",
+      "Footer expanded into a mini site map (Database / Meta / Guides / Site) while keeping legal and contact links.",
+      "No URL or SEO architecture changes—same hubs and detail routes, denser internal navigation from home.",
+    ],
+  },
   {
     date: "2026-08-03",
     title: "Trust, Top 30 depth, and discoverability",

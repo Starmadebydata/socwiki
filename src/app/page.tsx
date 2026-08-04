@@ -5,11 +5,18 @@ import { SearchBox } from "@/components/SearchBox";
 import {
   getAllCharacters,
   HUB_CATEGORIES,
+  ROLES,
   sortByOverallTier,
 } from "@/data/characters";
 import { hasCharacterImage } from "@/data/character-images";
 import { getAllGear } from "@/data/gear";
+import {
+  HOME_BANNERS,
+  HOME_DYK,
+  HOME_FEATURED,
+} from "@/data/home";
 import { HotGear } from "@/components/HotGear";
+import { ROLE_STYLES } from "@/lib/role-styles";
 import { SITE_DESCRIPTION, SITE_FULL_NAME } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -24,12 +31,16 @@ export const metadata: Metadata = {
  * Featured rail: top tier first, but only units that have a portrait/art.
  * Falls back to any remaining imaged units so cards are never empty.
  */
-function getFeaturedCharacters(all: ReturnType<typeof getAllCharacters>, limit = 12) {
+function getFeaturedCharacters(
+  all: ReturnType<typeof getAllCharacters>,
+  limit = 12,
+) {
   const sorted = sortByOverallTier(all);
   const withImg = sorted.filter((c) => hasCharacterImage(c.slug));
   return withImg.slice(0, limit);
 }
 
+/** Icon-forward hub seals (same hrefs as HUB_CATEGORIES — no URL changes). */
 const HUB_ICONS: Record<string, string> = {
   Characters: "⚔",
   "Tier Lists": "🏆",
@@ -41,6 +52,18 @@ const HUB_ICONS: Record<string, string> = {
   Guides: "📖",
   Codes: "🎟",
 };
+
+/** Secondary index chips — only existing routes. */
+const SYSTEM_CHIPS = [
+  { href: "/tier-list/reroll", label: "Reroll" },
+  { href: "/guides/early-teams", label: "Early teams" },
+  { href: "/tools/team-builder", label: "Team builder" },
+  { href: "/guides/nrg", label: "NRG" },
+  { href: "/guides/act-again", label: "Act Again" },
+  { href: "/guides/spiral-of-destinies", label: "Spiral" },
+  { href: "/guides/beginner", label: "Beginner" },
+  { href: "/codes", label: "Codes" },
+] as const;
 
 function OrnateCorners() {
   return (
@@ -84,7 +107,6 @@ export default function HomePage() {
           }}
           aria-hidden
         />
-        {/* Ambient gold orbs */}
         <div
           className="soc-orb left-[8%] top-[20%] h-48 w-48 bg-[rgba(212,181,106,0.35)]"
           style={{ animationDelay: "0s" }}
@@ -100,8 +122,8 @@ export default function HomePage() {
       </div>
 
       <div className="mx-auto max-w-6xl px-4 pb-16 pt-6 sm:pt-10">
-        {/* ── Cinematic hero — no box, floating over art ── */}
-        <section className="relative mb-16 text-center sm:mb-20">
+        {/* ── Cinematic hero ── */}
+        <section className="relative mb-12 text-center sm:mb-14">
           <div className="soc-light-beam" aria-hidden />
 
           <div className="relative mx-auto max-w-3xl">
@@ -142,56 +164,279 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ── Asymmetric bento hubs ── */}
-        <section aria-labelledby="browse-heading" className="mb-16">
-          <h2 id="browse-heading" className="soc-section-title mb-5">
-            Browse the database
+        {/* ── Latest / utility banners (entity deep-links only) ── */}
+        <section
+          aria-labelledby="spotlight-heading"
+          className="mb-12 sm:mb-14"
+        >
+          <h2 id="spotlight-heading" className="sr-only">
+            Current spotlights
           </h2>
-          <div className="soc-bento">
-            {HUB_CATEGORIES.map((cat, i) => {
-              const featured = i === 0 || i === 5;
-              return (
+          <div className="soc-banner-grid">
+            {HOME_BANNERS.map((b) => (
+              <article key={b.href + b.title} className="soc-banner-card">
+                <div className="soc-banner-card-body">
+                  <span
+                    className={`soc-banner-badge ${
+                      b.badge === "Latest"
+                        ? "soc-banner-badge-latest"
+                        : "soc-banner-badge-codes"
+                    }`}
+                  >
+                    {b.badge}
+                  </span>
+                  <h3 className="soc-banner-title">
+                    <Link href={b.href} className="hover:underline">
+                      {b.title}
+                    </Link>
+                  </h3>
+                  <p className="soc-banner-summary">{b.summary}</p>
+                  {b.links && b.links.length > 0 && (
+                    <ul className="soc-banner-links">
+                      {b.links.map((l) => (
+                        <li key={l.href}>
+                          <Link href={l.href}>{l.label}</Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
                 <Link
-                  key={cat.href}
-                  href={cat.href}
-                  className={`soc-hub-tile group ${
-                    featured ? "sm:min-h-[7.5rem] sm:justify-center sm:py-6" : ""
-                  }`}
+                  href={b.href}
+                  className="soc-banner-media"
+                  tabIndex={-1}
+                  aria-hidden
                 >
-                  <div className="flex items-start gap-3">
-                    <span className="soc-hub-icon" aria-hidden>
-                      {HUB_ICONS[cat.title] ?? "✦"}
+                  {b.image ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={b.image} alt="" className="soc-banner-img" />
+                  ) : (
+                    <span className="soc-banner-glyph">
+                      {b.badge === "Codes" ? "🎟" : "✦"}
                     </span>
-                    <div className="min-w-0 flex-1">
-                      <div
-                        className={`font-display font-semibold tracking-wide text-foreground transition group-hover:text-[var(--accent-bright)] ${
-                          featured ? "text-lg sm:text-xl" : "text-base"
-                        }`}
-                      >
-                        {cat.title}
-                      </div>
-                      <p
-                        className={`mt-1 text-muted ${
-                          featured ? "text-sm leading-relaxed" : "text-xs sm:text-sm"
-                        }`}
-                      >
-                        {cat.blurb}
-                      </p>
-                    </div>
-                    <span
-                      className="mt-1 shrink-0 text-[var(--accent)] opacity-0 transition group-hover:translate-x-0.5 group-hover:opacity-100"
-                      aria-hidden
-                    >
-                      →
-                    </span>
-                  </div>
+                  )}
                 </Link>
-              );
-            })}
+              </article>
+            ))}
           </div>
         </section>
 
-        {/* ── Portrait rail — client-captured art first ── */}
+        {/* ── Icon index (ontology wall) ── */}
+        <section aria-labelledby="browse-heading" className="mb-10">
+          <h2 id="browse-heading" className="soc-section-title mb-5">
+            Browse the database
+          </h2>
+          <div className="soc-index-grid">
+            {HUB_CATEGORIES.map((cat) => (
+              <Link
+                key={cat.href}
+                href={cat.href}
+                className="soc-index-tile group"
+              >
+                <span className="soc-index-icon" aria-hidden>
+                  {HUB_ICONS[cat.title] ?? "✦"}
+                </span>
+                <span className="soc-index-label">{cat.title}</span>
+                <span className="soc-index-blurb">{cat.blurb}</span>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* ── Secondary chips: roles + systems (existing routes only) ── */}
+        <section
+          aria-labelledby="jump-heading"
+          className="soc-quick-index mb-14"
+        >
+          <h2 id="jump-heading" className="sr-only">
+            Jump to roles and systems
+          </h2>
+
+          <div className="soc-quick-row">
+            <span className="soc-quick-label">Roles</span>
+            <div className="soc-quick-chips" role="list">
+              {ROLES.map((role) => {
+                const style = ROLE_STYLES[role];
+                return (
+                  <Link
+                    key={role}
+                    href={`/characters/role/${role.toLowerCase()}`}
+                    className="soc-quick-chip"
+                    role="listitem"
+                    style={{
+                      borderColor: `${style.hex}55`,
+                      background: style.soft,
+                      color: style.hex,
+                    }}
+                  >
+                    {role}
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="soc-quick-row">
+            <span className="soc-quick-label">Systems & modes</span>
+            <div className="soc-quick-chips" role="list">
+              {SYSTEM_CHIPS.map((chip) => (
+                <Link
+                  key={chip.href}
+                  href={chip.href}
+                  className="soc-quick-chip soc-quick-chip-muted"
+                  role="listitem"
+                >
+                  {chip.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── About the game + Featured guide (definition + depth sample) ── */}
+        <section
+          aria-labelledby="about-game-heading"
+          className="soc-about-feature mb-16"
+        >
+          <div className="soc-about-block">
+            <h2 id="about-game-heading" className="soc-section-title mb-4">
+              About the game
+            </h2>
+            <div className="space-y-3 text-sm leading-relaxed text-muted sm:text-[0.95rem]">
+              <p>
+                <strong className="text-foreground">
+                  Sword of Convallaria (SoC)
+                </strong>{" "}
+                is a tactical turn-based RPG from XD Entertainment. You build
+                squads of{" "}
+                <Link href="/characters" className="text-link hover:underline">
+                  characters
+                </Link>{" "}
+                across five roles—Breaker, Defender, Destroyer, Watcher, and
+                Seeker—then clear story maps, trials, and{" "}
+                <Link
+                  href="/guides/spiral-of-destinies"
+                  className="text-link hover:underline"
+                >
+                  Spiral of Destinies
+                </Link>{" "}
+                with positioning, skill timing, and faction auras.
+              </p>
+              <p>
+                Power comes from kits plus gear:{" "}
+                <Link href="/weapons" className="text-link hover:underline">
+                  weapons
+                </Link>
+                ,{" "}
+                <Link href="/trinkets" className="text-link hover:underline">
+                  trinkets
+                </Link>
+                , and{" "}
+                <Link href="/tarots" className="text-link hover:underline">
+                  Tarot Whispers
+                </Link>
+                .{" "}
+                <Link href="/factions" className="text-link hover:underline">
+                  Factions
+                </Link>{" "}
+                (Iria, Union, Papal States, and more) reward stacking tags for
+                aura bonuses. Meta players track{" "}
+                <Link href="/tier-list" className="text-link hover:underline">
+                  tier lists
+                </Link>
+                ,{" "}
+                <Link href="/teams" className="text-link hover:underline">
+                  team comps
+                </Link>
+                , and pull value as banners rotate.
+              </p>
+              <p>
+                This fan-made{" "}
+                <Link href="/about" className="text-link hover:underline">
+                  SoC Wiki
+                </Link>{" "}
+                is a community database for builds, skill trees, gear reverse
+                links, and systems guides—not affiliated with the publisher.
+                New accounts can start with the{" "}
+                <Link
+                  href="/guides/beginner"
+                  className="text-link hover:underline"
+                >
+                  beginner guide
+                </Link>{" "}
+                or jump straight into the{" "}
+                <Link href="/characters" className="text-link hover:underline">
+                  full roster
+                </Link>
+                .
+              </p>
+            </div>
+          </div>
+
+          <aside
+            className="soc-featured-block"
+            aria-labelledby="featured-heading"
+          >
+            <span className="soc-banner-badge soc-banner-badge-guide">
+              {HOME_FEATURED.badge}
+            </span>
+            <h2
+              id="featured-heading"
+              className="font-display mt-3 text-lg font-semibold tracking-wide text-foreground sm:text-xl"
+            >
+              <Link
+                href={HOME_FEATURED.href}
+                className="transition hover:text-[var(--accent-bright)]"
+              >
+                {HOME_FEATURED.title}
+              </Link>
+            </h2>
+            <p className="mt-3 text-sm leading-relaxed text-muted">
+              {HOME_FEATURED.summary}
+            </p>
+            <ul className="soc-banner-links mt-4">
+              {HOME_FEATURED.links.map((l) => (
+                <li key={l.href}>
+                  <Link href={l.href}>{l.label}</Link>
+                </li>
+              ))}
+            </ul>
+            <Link
+              href={HOME_FEATURED.href}
+              className="soc-btn mt-5 inline-flex !py-1.5 !text-xs"
+            >
+              Read more →
+            </Link>
+          </aside>
+        </section>
+
+        {/* ── Did you know ── */}
+        <section
+          aria-labelledby="dyk-heading"
+          className="soc-dyk mb-16"
+        >
+          <h2 id="dyk-heading" className="soc-section-title mb-4">
+            Did you know…
+          </h2>
+          <ul className="soc-dyk-list">
+            {HOME_DYK.map((item) => (
+              <li key={item.href}>
+                <span className="soc-dyk-bullet" aria-hidden>
+                  ◆
+                </span>
+                <span>
+                  … that {item.text}{" "}
+                  <Link href={item.href} className="text-link hover:underline">
+                    {item.linkLabel}
+                  </Link>
+                  ?
+                </span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        {/* ── Portrait rail ── */}
         <section aria-labelledby="hot-heading" className="mb-16">
           <div className="mb-5 flex flex-wrap items-end justify-between gap-4">
             <div>
@@ -202,10 +447,7 @@ export default function HomePage() {
                 Meta picks · official client art when available
               </p>
             </div>
-            <Link
-              href="/characters"
-              className="soc-btn !py-1.5 !text-xs"
-            >
+            <Link href="/characters" className="soc-btn !py-1.5 !text-xs">
               All characters →
             </Link>
           </div>
@@ -219,7 +461,10 @@ export default function HomePage() {
         <HotGear limit={8} title="Hot gear in builds" />
 
         {/* ── Notice board ── */}
-        <section aria-labelledby="updates-heading" className="soc-notice soc-ornate">
+        <section
+          aria-labelledby="updates-heading"
+          className="soc-notice soc-ornate"
+        >
           <OrnateCorners />
           <div className="soc-ornate-inner">
             <div className="mb-4 flex justify-center sm:justify-start">
@@ -233,19 +478,20 @@ export default function HomePage() {
                 <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--accent-bright)] shadow-[0_0_8px_var(--accent)]" />
                 <span>
                   <strong className="text-[var(--accent-bright)]">
-                    Client portraits
+                    Homepage index
                   </strong>{" "}
-                  — Maitha, Crimson Falcon and captured roster units now show
-                  in-game art.
+                  — icon hub wall, role/system chips, and footer site map for
+                  faster jumps into the database.
                 </span>
               </li>
               <li className="flex gap-3">
                 <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--accent-bright)] shadow-[0_0_8px_var(--accent)]" />
                 <span>
                   <strong className="text-[var(--accent-bright)]">
-                    Device skill data
+                    Client portraits
                   </strong>{" "}
-                  — NRG/CD and tooltips from physical Pixel 7 captures.
+                  — Maitha, Crimson Falcon and captured roster units show
+                  in-game art when available.
                 </span>
               </li>
               <li className="flex gap-3">
@@ -254,6 +500,13 @@ export default function HomePage() {
                   Full roster {all.length} units +{" "}
                   <Link href="/weapons" className="text-link hover:underline">
                     gear databases
+                  </Link>
+                  . Site notes on the{" "}
+                  <Link
+                    href="/changelog"
+                    className="text-link hover:underline"
+                  >
+                    changelog
                   </Link>
                   .
                 </span>
